@@ -1,0 +1,15 @@
+Agenda
+
+1. Discuss leadership style
+2. Discuss game rules.
+	- Round
+	- Movement
+	- Direction
+	- Range
+	- User Operation
+3. Discuss platform
+	- Single/Multiple
+	- Mac OS/Windows/Linux/IOS/Android/Web
+4. Discuss interface
+
+(Monday, September 19, 2016)
