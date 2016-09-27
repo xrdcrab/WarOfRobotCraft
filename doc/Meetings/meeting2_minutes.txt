@@ -1,0 +1,62 @@
+Meeting 2
+Date: Sep 24, 2016 15:30 - 17:30
+Location: 4th Study Room, Pine Hall, Collage Quarter  
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Plans: discuss how to write the document and talk about each team member's tasks. Declare actors, and make a draft list of actions. 
+
+
+Topic: Decision making && information transfer/request
+Caller: Chen Yang
+Moderator: Ruida Xie
+Secretary: Chen Yang
+
+	1. Requirement document structure
+		○ Identify team
+			- Team mates describe
+				□ By each team member
+		○ Game description (2pages)
+			- Name 
+			- Players
+			- Rules (rounds, attack, move)
+			- Movement
+			- Map (diagram)
+			- Roles
+		○ Programming task
+			- Summary (language, platform)
+			- View - UI
+			- Model - forth 
+			- Controller - how to work
+		○ System diagram - last part
+			- Description
+				□ Actor
+				□ Actions
+			- Diagram
+		○ Scenario
+			- Each scenario:
+				□ Summary: describe the scenario in English
+				□ Action ( follow the note, secondary extension if useful )
+				□ Activity sequence diagram(flow chart)
+		○ Describe platform
+			- Hardware:  PC
+			- Software: JVM + Eclipse + Git
+		○ Summary - last part
+		
+			
+	2. Actor
+		○ Human player - Chen Yang
+		○ AI player - Shisong Wang
+		○ Referee - Ruida Xie
+		○ Battlefield - Jiahuan He
+	3. Action
+		○ Shoot
+		○ Move
+		○ Start game 
+		○ End game
+		○ Scan
+		○ Display fog of war
+		○ Timer
+		○ Give up
+		○ End round
+		○ Damage
+	
+	
