@@ -1,0 +1,5 @@
+	1. Disscuss frame of the document.
+	2. Determine the number of actors in the system.
+	3. Disscuss actions of each actors.
+	3. Assign different actors to each member within group.
+	
