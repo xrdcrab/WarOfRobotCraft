@@ -1,0 +1,10 @@
+	1. Transfer information: share each one's progress of their individual tasks of the document. 
+		a. Descriptions - Jiahuan He, Chen Fu
+		b. Programming tasks - Chen Fu
+		c. Scenarios: 
+			§ Human player - Chen Yang
+			§ AI player - Shisong Wang
+			§ Robot Librarian(Referee) - Ruida Xie
+			§ Map - Jiahuan He
+	2. Talk about everyone's difficulties and problems occurred during writing the document. 
+	
