@@ -1,0 +1,50 @@
+Meeting 3
+Date: Sep 27, 2016 16:35 - 16:50 with TA
+	  Sep 27, 2016 17:30 - 19:00 
+Location: Spinks S371, Health Science Library 2433 
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Plans: revise actors and scenarios.  
+
+
+Topic: Decision making && information transfer/request
+Caller: Chen Yang
+Moderator: Ruida Xie
+Secretary: Chen Yang
+
+	1. actors
+Human player
+Al player
+Map
+Robots Liberian
+Referee
+
+
+	2. Scenario
+	Referee:
+		Start game
+		End game
+		Start play
+		End play
+		Enumerate
+		Update stats
+		Download
+	Robot librarian
+		Register
+		Retire
+		Revise
+		Enumerate
+		Download
+	Map
+		Initialize map
+		Modify map
+		Clear map
+	Human player
+		Receive event
+		Respond
+	AI player
+		Receive input
+		Report 
+		Send message
+
+	
+	
