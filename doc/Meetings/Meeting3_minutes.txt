@@ -15,7 +15,7 @@ Secretary: Chen Yang
 Human player
 Al player
 Map
-Robots Liberian
+Robots Librarian
 Referee
 
 
@@ -45,6 +45,3 @@ Referee
 		Receive input
 		Report 
 		Send message
-
-	
-	
