@@ -1,0 +1,21 @@
+Meeting 4Date: Sep 29, 2016 18:00 - 20:50 Location: Health science library 2428
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen YangPlans: discuss and revise. 
+Topic: Decision making && information transfer/requestCaller: Shisong WangModerator: Chen FuSecretary: Jiahuan He
+
+
+	1. Review each one's work, but after discussion, we found that our original plan was inappropriate in some degree.
+	2. Then we revised the plan, and worked on a new system diagram together and came up with a solution. 
+	3. We also revised the ideas of actors and actions. 
+		Previous version actors: 
+			AI player
+			Human player
+			Robot librarian
+			Map 
+			Referee
+		New version actors: 
+			AI player
+			Human player
+			Robot librarian
+			Game master 
+		And relative use cases are modified correspondingly. 
+	4. Allocated tasks again. 
