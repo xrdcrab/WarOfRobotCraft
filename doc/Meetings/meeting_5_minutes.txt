@@ -1,0 +1,21 @@
+Meeting 5
+Date: Oct 1, 2016 17:00 - 23:50 
+Location: CQ Birch Hall 4th floor study room
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Plans: discuss and revise. 
+Topic: Decision making && information transfer/request
+Caller: Chen Yang
+Moderator: Ruida Xie
+Secretary: Chen Yang
+
+1. Go through and check each member’s doc;
+	check each member’s doc line by line
+	modify content, grammar and spelling
+2. discuss interface and write it down into requirement document;
+	interface for human player
+	interface for AI player
+	interface for game master
+	interface for robot librarian
+3. merger each one’s doc into a whole requirement document
+	merger each one’s doc
+	format the doc in a consistent format
