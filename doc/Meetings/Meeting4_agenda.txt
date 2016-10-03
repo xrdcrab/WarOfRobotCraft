@@ -1,0 +1,4 @@
+1. Review everyone's task.
+2. Modify and confirm each section of document.
+3. Discuss the use cases, reduce the number of the use cases.
+4. Figure out the system diagram.
