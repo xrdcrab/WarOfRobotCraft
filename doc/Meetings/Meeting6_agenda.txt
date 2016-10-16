@@ -1,0 +1,11 @@
+1 Talk about the requirement document.
+	Problems & Difficulties? 
+	Suggestions? 
+	Any revision of our ground rules? 
+	Any good things to keep? Bad things to give up? 
+2 Next due: Oct23 — an architecture and design document
+	
+	Plans ?
+	Ideas? 
+	When to start? 
+	Schedule? 
