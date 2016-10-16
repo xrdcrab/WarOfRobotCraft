@@ -1,0 +1,19 @@
+Meeting 7
+Date: Oct 11, 2016 16:35 - 16:50 
+Location: Spinks S342
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Plans: Discuss design document structure and assign task to group member.
+Topic: Decision making
+Caller: Shisong Wang
+Moderator: Jiahuan He
+Secretary: Chen Yang
+
+
+1. Component design doc should have at least three parts: describe and clarify architecture, design details (including UML diagram and English description), changes we made from requirement document.
+2. In the second part, we should provide detail of functions and parameters
+3. Assign different actors in our system to each person in the group.
+	Chen Yang: AI player 
+	Shicong Wang: Robot librarian
+	Chen Fu: Human Player
+	Ruida Xie & Jiahuan He: Game master
+4. Summarizing our idea in the next meeting.
