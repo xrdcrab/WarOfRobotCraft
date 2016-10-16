@@ -1,0 +1,18 @@
+Meeting 6
+Date: Oct 4, 2016 16:35 - 16:50 
+Location: Spinks S342
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Plans: review. 
+Caller: Shisong Wang
+Moderator: Jiahuan He
+Secretary: Chen Yang
+	
+Problems:
+	1. Meeting time problem
+	Jiahuan thinks meeting is too long, reducing meeting time
+	2. Git
+	For tag problem, TA suggest to ask for the professor
+	3. Next due
+	Start at next week
+	4. Design document components
+	Deciding after next lecture.
