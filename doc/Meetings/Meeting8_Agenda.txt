@@ -1,0 +1,11 @@
+1. Discuss about the feedback of requirement document.
+	• almost no written portions--only section 6 had paragraphs; 
+	• some spelling mistakes and grammar mistakes 
+	• actors: okay but how is AI an actor--if you explained in words, I would understand 
+	• actions: significant problems here: 
+		§ how is animation an action? 
+		§ how does operate use report but AI doesn't? 
+		§ load and save game: good additional action. 
+	• your commit log shows a completed document dumped into the repository as a single commit ... this does not show me that you're following our process, sharing work among the team, and able to effectively use source-code management tools--shame on you! only 4 meetings and agendas --- the TAs and one other in total? that's not enough 
+	• OVERALL: SATISFACTORY
+2. Discuss the classes for design document.
