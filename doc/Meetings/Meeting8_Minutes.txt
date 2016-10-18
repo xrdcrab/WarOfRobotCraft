@@ -1,0 +1,9 @@
+Meeting 8Date: Oct 18, 2016 16:35 - 16:50 Location: Spinks meeting room
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen YangPlans: revision. 
+Topic: Decision making && information transfer/requestCaller: TAModerator: Jiahuan HeSecretary: Chen Yang
+	
+	1. Discuss the feedback of requirement document
+	NB: We should write more descriptions about classes in English words, but not be long
+	2. For next document submission, tag it in git at last time
+	3. Forth language to implement the robot
+Think about classes, and discuss classes next meeting
