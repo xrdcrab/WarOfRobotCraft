@@ -1,0 +1,2 @@
+1. Discuss the how to apply the MVC architecture in our project.
+2. Discuss what classes we need in our project.
