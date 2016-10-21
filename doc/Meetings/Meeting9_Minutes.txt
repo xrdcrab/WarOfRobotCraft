@@ -1,0 +1,18 @@
+Meeting 9Date: Oct 18, 2016 16:35 - 16:50 Location: CQ Pine Hall 4th floor study room
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen YangPlans: revision. 
+Topic: Decision making && information transfer/requestCaller: Ruida XieModerator: Chen YangSecretary: Shisong Wang
+
+
+	1. Discuss MVC architecture
+	- Mode, View and Controller are in separate package
+	2. Discuss Mode class
+	- Class Player 
+		- Class Human player
+		- Class AI Player
+	- Class Robot
+	3. Discuss View class
+	- GameStartView
+	- SetGameModeView
+	- GameBoardView
+	- PlayerStatusView
+	- GarageView
