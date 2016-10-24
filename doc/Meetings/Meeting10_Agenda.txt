@@ -1,0 +1,6 @@
+Topic: Decision making && information transfer/request
+
+1. Discuss packages, classes and methods of each class. 
+2. Discuss each components of MVC architecture in our system.
+3. Discuss the outcome of each one's work. 
+4. Try to merge some determined parts into a complete draft. 
