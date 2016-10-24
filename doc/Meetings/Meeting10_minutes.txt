@@ -1,0 +1,63 @@
+Meeting 10
+Date: Oct 21, 2016 17:30 - 23:50 Location: CQ Pine Hall 4th floor study room
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+ Topic: Decision making && information transfer/request
+Caller: Chen Fu
+Moderator: Chen Yang
+Secretary: Shisong Wang
+
+1. Talked about the model class and its methods.  
+
+	• Model
+		○ 3DCoordinate
+			§ _x : int
+			§ _y : int
+			§ _z : int
+		○ Game
+			§ _positionPlayerPairList : ArrayList<Pair<int, Player>>
+			§ _playerNumber : int {2, 3, 6}
+			§ _gameMode : enum {}
+			§ _currentPlayer : Player
+			§ getCurrentPlayer() : Player
+			§ setPlayerPosition() : void
+			§ nextPlayer() : void
+			§ updateRobot() : void
+			§ updatePlayer() : void
+			§ runPlay() : void
+		○ Map
+			§ _coordinateMistQuartet : ArrayList<Quartet<int, int, int, bool>>
+			§ _mapSize : int {5, 7}
+			§ setMapSize(int mapSize) : void
+			§ updateMist() : void
+		○ Player
+			§ _name : string
+			§ _score : int
+			§ _scoutRobot : Robot
+			§ _sniperRobot : Robot
+			§ _tankRobot : Robot
+			§ isDead() : bool
+			§ getCurrentRobot() : Robot
+			§ nextRobot() : void
+		○ HumanPlayer : Player
+			§ Move()
+			§ Turn()
+			§ Shoot(): coordinate
+		○ AIPlayer
+		○ Robot
+			§ _type : enum {scout, sniper, tank}
+			§ _name : string
+			§ c_attackPoint : int
+			§ _healthPoint : int
+			§ _movementPoint : int
+			§ _rangePoint : int
+			§ _x : int
+			§ _y : int
+			§ _z : int
+			§ _direction : int {1, 2, 3, 4, 5}
+			§ _hasMoved : bool
+			§ turn(int coordinate) : void
+			§ move() : void
+			§ damaged(int attackPoint) : void
+			§ isDead() : bool
+			§ shoot(): coordinate
+	
