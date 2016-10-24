@@ -1,0 +1,13 @@
+Meeting 11
+Date: Oct 22, 2016 15:00 - 11:50 Location: CQ Pine Hall 4th floor study room
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Topic: Decision making && information transfer/request
+Caller: Chen Fu
+Moderator: Chen Yang
+Secretary: Shisong Wang
+
+
+1. Made up the view and controller packages, 
+2. Revised the model packages. Added some new methods and made some revisions. 
+3. Discussed again about the architecture of the system.  
+4. Worked together on the document. 
