@@ -1,0 +1,11 @@
+Meeting 12Date: Oct 25, 2016 16:30 - 16:45 Location: Spinks study room
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen YangPlans: revision. 
+Topic: Decision making && information transfer/requestCaller: Ruida XieModerator: Chen YangSecretary: Shisong Wang
+
+
+	1. How to use interpreter
+	- Forth --> interpreter --> json --> java
+	- Java read the json-seperated words to java methods then running it
+
+	2. Coding Style file
+Discuss for next meeting
