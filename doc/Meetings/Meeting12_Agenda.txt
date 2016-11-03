@@ -1,0 +1,4 @@
+1. Discuss AI and interpreter
+2. Discuss the next step
+	a. Coding style
+	b. Test document
