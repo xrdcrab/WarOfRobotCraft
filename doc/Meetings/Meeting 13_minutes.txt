@@ -10,3 +10,4 @@ Secretary: Chen Yang
 
 1. Get the comment of design document from TA.
 2. Made the decision to choose Google coding style.
+3. Arrange our next group meeting
