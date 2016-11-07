@@ -1,0 +1,12 @@
+Meeting 17
+Date: Nov 6, 2016 21:30 - 22:30
+
+Location: CQ Pine Hall 4th Floor. 
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Topic: Decision making
+Moderator: Ruida Xie
+Secretary: Shisong Wang
+Caller: Chen Yang
+
+1. Determine the changes we made from our design document and write in the test document.
+2. Modify the format of our test plan.
