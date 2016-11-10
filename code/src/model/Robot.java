@@ -150,11 +150,17 @@ public class Robot {
 	
 	/**
 	 * this method is to move a robot
-	 * @param coor the coordinate that the robot moves to
 	 */
-	public void move(Coordinate coor) {
-		if ( !this.isDead() && this.getMovementPoint() >= 0 ) {
-			this.coord = coor;
+	public void move() {
+		if(this.isDead()){
+			throw new Exception("Died robot cannot move.")
+		} else {
+			if(this.getMovementPoint() > 0){
+				this.setCoord(this.getCoord().getNewCoordinate(this.direction, 1));
+				this.movementPoint --;
+			} else {
+				return;
+			}
 		}
 	}
 	
