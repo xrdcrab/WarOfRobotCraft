@@ -1,5 +1,7 @@
 package model;
 
+import sun.security.provider.JavaKeyStore.CaseExactJKS;
+
 /**
  * this class is to create a coordinate in a map
  * the coordinate is defined by 3 directions in a panel, 
@@ -128,5 +130,46 @@ public class Coordinate {
 	public void moveZNegative(int step) {
 		this.z -= step;
 		this.x += step;
+	}
+	
+	/**
+	 * To get a new coordinate according to a direction and a distance.
+	 * @param direction the direction of the new coordinate from the original coordinate
+	 * @param distance the distance of the new coordinate from the original coordinate
+	 * @return a new coordinate according to the given direction and distance
+	 */
+	public Coordinate getNewCoordinate(int direction, int distance){
+		Coordinate newCoordindate = new Coordinate(x, y, z);
+		
+		switch (direction){
+		case 0:
+			newCoordindate.moveXPositive(distance);
+			newCoordindate.moveYNegative(distance);
+			break;
+		case 1:
+			newCoordindate.moveYNegative(distance);
+			newCoordindate.moveZPositive(distance);
+			break;
+		case 2:
+			newCoordindate.moveXNegative(direction);
+			newCoordindate.moveZPositive(distance);
+			break;
+		case 3:
+			newCoordindate.moveYPositive(distance);
+			newCoordindate.moveXNegative(distance);
+			break;
+		case 4:
+			newCoordindate.moveYPositive(distance);
+			newCoordindate.moveZNegative(distance);
+			break;
+		case 5:
+			newCoordindate.moveXPositive(distance);
+			newCoordindate.moveZNegative(distance);
+			break;
+		default:
+			break;
+		}
+		
+		return newCoordindate;
 	}
 }
