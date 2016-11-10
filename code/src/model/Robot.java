@@ -1,6 +1,8 @@
 package model;
 
-import java.awt.*;;
+import java.awt.*;
+
+import javafx.util.Pair;;
 /**
  * this class is to create a robot
  */
@@ -150,13 +152,14 @@ public class Robot {
 	
 	/**
 	 * this method is to move a robot
+	 * @throws Exception 
 	 */
-	public void move() {
+	public void move() throws Exception {
 		if(this.isDead()){
-			throw new Exception("Died robot cannot move.")
+			throw new Exception("Died robot cannot move.");
 		} else {
 			if(this.getMovementPoint() > 0){
-				this.setCoord(this.getCoord().getNewCoordinate(this.direction, 1));
+				this.coord = this.coord.getNewCoordinate(this.direction, 1);
 				this.movementPoint --;
 			} else {
 				return;
@@ -177,8 +180,20 @@ public class Robot {
 	/**
 	 * this method is to shoot at a specific record
 	 * @param targetRange the range that to shoot at
+	 * @throws Exception 
 	 */
-	public Pair<Coordinate, Integer> shoot(Coordinate targetRange) {
-		
+	public Pair<Coordinate, Integer> shoot(int distance) throws Exception {
+		if(this.isDead()){
+			throw new Exception("Died robot cannot shoot.");
+		} else {
+			if(this.hasShot){
+				throw new Exception("Cannot shoot twice in one play.");
+			} else {
+				return (new Pair<Coordinate, Integer>(
+						this.coord.getNewCoordinate(this.direction, distance),
+						this.attackPoint)
+						);
+			}
+		}
 	}
 }
