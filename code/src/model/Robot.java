@@ -1,8 +1,7 @@
 package model;
 
-import java.awt.*;
+import javafx.util.Pair;
 
-import javafx.util.Pair;;
 /**
  * this class is to create a robot
  */
