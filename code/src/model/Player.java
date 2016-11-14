@@ -13,6 +13,16 @@ public class Player {
 	Robot sniperRobot;
 	Robot tankRobot;
 	
+	public Player(String name, int score, Robot scoutRobot, Robot sniperRobot, Robot tankRobot) {
+		super();
+		this.name = name;
+		this.score = score;
+		this.currentRobot = null;
+		this.scoutRobot = scoutRobot;
+		this.sniperRobot = sniperRobot;
+		this.tankRobot = tankRobot;
+	}
+
 	/**
 	 * this method is to determine whether all the robot are dead. 
 	 */
