@@ -1,6 +1,7 @@
 package model;
 
-import sun.security.provider.JavaKeyStore.CaseExactJKS;
+import com.sun.accessibility.internal.resources.accessibility_sv;
+import com.sun.org.apache.xpath.internal.operations.And;
 
 /**
  * this class is to create a coordinate in a map
@@ -133,12 +134,25 @@ public class Coordinate {
 	}
 	
 	/**
+	 * Check if the coordinate is in the range of map
+	 * @param mapSize the size of map
+	 * @return true if the coordinate is in the map range; false otherwise
+	 */
+	private boolean checkRange(int mapSize) {
+		return (Math.abs(this.x) <= mapSize
+				&& Math.abs(this.y) <= mapSize
+				&& Math.abs(this.z) <= mapSize);
+	}
+	
+	/**
 	 * To get a new coordinate according to a direction and a distance.
 	 * @param direction the direction of the new coordinate from the original coordinate
 	 * @param distance the distance of the new coordinate from the original coordinate
+	 * @param mapSize the size of map
 	 * @return a new coordinate according to the given direction and distance
+	 * @throws Exception 
 	 */
-	public Coordinate getNewCoordinate(int direction, int distance){
+	public Coordinate getNewCoordinate(int direction, int distance, int mapSize) throws Exception{
 		Coordinate newCoordindate = new Coordinate(x, y, z);
 		
 		switch (direction){
@@ -151,7 +165,7 @@ public class Coordinate {
 			newCoordindate.moveZPositive(distance);
 			break;
 		case 2:
-			newCoordindate.moveXNegative(direction);
+			newCoordindate.moveXNegative(distance);
 			newCoordindate.moveZPositive(distance);
 			break;
 		case 3:
@@ -168,6 +182,10 @@ public class Coordinate {
 			break;
 		default:
 			break;
+		}
+		
+		if(!newCoordindate.checkRange(mapSize)){
+			throw new Exception("The coordinate is out of the range.");
 		}
 		
 		return newCoordindate;

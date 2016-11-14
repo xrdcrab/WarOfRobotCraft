@@ -1,8 +1,7 @@
 package model;
 
-import java.awt.*;
+import javafx.util.Pair;
 
-import javafx.util.Pair;;
 /**
  * this class is to create a robot
  */
@@ -152,14 +151,19 @@ public class Robot {
 	
 	/**
 	 * this method is to move a robot
+	 * @param mapSize the size of map
 	 * @throws Exception 
 	 */
-	public void move() throws Exception {
+	public void move(int mapSize) throws Exception {
 		if(this.isDead()){
 			throw new Exception("Died robot cannot move.");
 		} else {
 			if(this.getMovementPoint() > 0){
-				this.coord = this.coord.getNewCoordinate(this.direction, 1);
+				try{
+					this.coord = this.coord.getNewCoordinate(this.direction, 1, mapSize);
+				} catch (Exception e) {
+					throw new Exception("The move is out of map range.");
+				}
 				this.movementPoint --;
 			} else {
 				return;
@@ -179,20 +183,28 @@ public class Robot {
 	
 	/**
 	 * this method is to shoot at a specific record
-	 * @param targetRange the range that to shoot at
+	 * @param distance the distance to shoot
+	 * @param mapSize the size of map
 	 * @throws Exception 
 	 */
-	public Pair<Coordinate, Integer> shoot(int distance) throws Exception {
+	public Pair<Coordinate, Integer> shoot(int distance, int mapSize) throws Exception {
 		if(this.isDead()){
 			throw new Exception("Died robot cannot shoot.");
 		} else {
 			if(this.hasShot){
 				throw new Exception("Cannot shoot twice in one play.");
 			} else {
-				return (new Pair<Coordinate, Integer>(
-						this.coord.getNewCoordinate(this.direction, distance),
-						this.attackPoint)
-						);
+				Pair<Coordinate, Integer> pair;
+				try{
+					pair = new Pair<Coordinate, Integer>(
+						this.coord.getNewCoordinate(this.direction, distance, mapSize),
+						this.attackPoint);
+				} catch (Exception e) {
+					throw new Exception("The move is out of map range.");
+				}
+				
+				
+				return pair;
 			}
 		}
 	}
