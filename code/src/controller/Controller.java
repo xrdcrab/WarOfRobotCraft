@@ -38,6 +38,7 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameStartView().getExitButton().addActionListener(this);
 		this.getGameStartView().getStartButton().addActionListener(this);
 		this.getGameStartView().getGarageButton().addActionListener(this);
+		this.getSetGameModeView().getConfirmButton().addActionListener(this);
 	}
 	
 	/**
@@ -103,8 +104,8 @@ public class Controller implements ActionListener, KeyListener {
 			System.exit(0);
 		}
 		// confirm button
-		else if ( e.getSource().equals(null) ) {
-			
+		else if ( e.getSource().equals(this.getSetGameModeView().getConfirmButton() ) ) {
+			//int playerNum = this.getSetGameModeView();
 		}
 	}
 

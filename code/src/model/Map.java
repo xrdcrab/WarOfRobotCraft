@@ -59,7 +59,7 @@ public class Map {
 	/**
 	 * this method is to update the mist when robot moved
 	 */
-	public void updateMist () {
+	public void updateMist() {
 		
 	}
 
