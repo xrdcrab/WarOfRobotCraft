@@ -28,9 +28,6 @@ public class SetGameModeView extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        pvpRadioButton = new javax.swing.JRadioButton();
-        avaRadioButton = new javax.swing.JRadioButton();
-        pvaRadioButton = new javax.swing.JRadioButton();
         twoPlayersRadioButton = new javax.swing.JRadioButton();
         threePlayersRadioButton = new javax.swing.JRadioButton();
         sixPlayersRadioButton = new javax.swing.JRadioButton();
@@ -49,42 +46,24 @@ public class SetGameModeView extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1003, 748));
         setPreferredSize(new java.awt.Dimension(1003, 748));
 
-        buttonGroup1.add(pvpRadioButton);
-        pvpRadioButton.setText("Human VS Human");
-        pvpRadioButton.setToolTipText("");
-        pvpRadioButton.setBorderPainted(true);
-        pvpRadioButton.setMargin(new java.awt.Insets(1, 1, 1, 1));
-
-        buttonGroup1.add(avaRadioButton);
-        avaRadioButton.setText("AI VS AI");
-        avaRadioButton.setToolTipText("");
-        avaRadioButton.setAutoscrolls(true);
-        avaRadioButton.setBorderPainted(true);
-        avaRadioButton.setMargin(new java.awt.Insets(1, 1, 1, 1));
-        avaRadioButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                avaRadioButtonActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(pvaRadioButton);
-        pvaRadioButton.setText("Human VS AI");
-        pvaRadioButton.setToolTipText("");
-        pvaRadioButton.setBorderPainted(true);
-        pvaRadioButton.setMargin(new java.awt.Insets(1, 1, 1, 1));
-        pvaRadioButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pvaRadioButtonActionPerformed(evt);
-            }
-        });
-
         buttonGroup2.add(twoPlayersRadioButton);
         twoPlayersRadioButton.setText("Two Players");
         twoPlayersRadioButton.setBorderPainted(true);
+        twoPlayersRadioButton.setMaximumSize(new java.awt.Dimension(200, 50));
+        twoPlayersRadioButton.setMinimumSize(new java.awt.Dimension(200, 50));
+        twoPlayersRadioButton.setPreferredSize(new java.awt.Dimension(200, 50));
+        twoPlayersRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                twoPlayersRadioButtonActionPerformed(evt);
+            }
+        });
 
         buttonGroup2.add(threePlayersRadioButton);
         threePlayersRadioButton.setText("Three Players");
         threePlayersRadioButton.setBorderPainted(true);
+        threePlayersRadioButton.setMaximumSize(new java.awt.Dimension(200, 50));
+        threePlayersRadioButton.setMinimumSize(new java.awt.Dimension(200, 50));
+        threePlayersRadioButton.setPreferredSize(new java.awt.Dimension(200, 50));
         threePlayersRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 threePlayersRadioButtonActionPerformed(evt);
@@ -94,6 +73,9 @@ public class SetGameModeView extends javax.swing.JFrame {
         buttonGroup2.add(sixPlayersRadioButton);
         sixPlayersRadioButton.setText("Six players");
         sixPlayersRadioButton.setBorderPainted(true);
+        sixPlayersRadioButton.setMaximumSize(new java.awt.Dimension(200, 50));
+        sixPlayersRadioButton.setMinimumSize(new java.awt.Dimension(200, 50));
+        sixPlayersRadioButton.setPreferredSize(new java.awt.Dimension(200, 50));
 
         playerTypeComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
 
@@ -127,38 +109,29 @@ public class SetGameModeView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(429, 429, 429)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(playerTypeComboBox6, 0, 159, Short.MAX_VALUE)
+                    .addComponent(confirmButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(playerTypeComboBox6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(playerTypeComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(playerTypeComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(confirmButton, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                         .addComponent(playerTypeComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(playerTypeComboBox3, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(playerTypeComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pvpRadioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(avaRadioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pvaRadioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(twoPlayersRadioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(threePlayersRadioButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(sixPlayersRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)))
+                        .addComponent(sixPlayersRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(429, 429, 429))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(pvpRadioButton)
+                .addGap(81, 81, 81)
+                .addComponent(twoPlayersRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(avaRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(threePlayersRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pvaRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(twoPlayersRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(threePlayersRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sixPlayersRadioButton)
-                .addGap(18, 18, 18)
+                .addComponent(sixPlayersRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addComponent(playerTypeComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(playerTypeComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -170,21 +143,13 @@ public class SetGameModeView extends javax.swing.JFrame {
                 .addComponent(playerTypeComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(playerTypeComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(confirmButton)
-                .addGap(30, 30, 30))
+                .addGap(51, 51, 51)
+                .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void avaRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avaRadioButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_avaRadioButtonActionPerformed
-
-    private void pvaRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pvaRadioButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pvaRadioButtonActionPerformed
 
     private void threePlayersRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threePlayersRadioButtonActionPerformed
         // TODO add your handling code here:
@@ -197,6 +162,11 @@ public class SetGameModeView extends javax.swing.JFrame {
     private void playerTypeComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerTypeComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_playerTypeComboBox2ActionPerformed
+
+    private void twoPlayersRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoPlayersRadioButtonActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_twoPlayersRadioButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,7 +205,6 @@ public class SetGameModeView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton avaRadioButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton confirmButton;
@@ -245,8 +214,6 @@ public class SetGameModeView extends javax.swing.JFrame {
     private javax.swing.JComboBox playerTypeComboBox4;
     private javax.swing.JComboBox playerTypeComboBox5;
     private javax.swing.JComboBox playerTypeComboBox6;
-    private javax.swing.JRadioButton pvaRadioButton;
-    private javax.swing.JRadioButton pvpRadioButton;
     private javax.swing.JRadioButton sixPlayersRadioButton;
     private javax.swing.JRadioButton threePlayersRadioButton;
     private javax.swing.JRadioButton twoPlayersRadioButton;
