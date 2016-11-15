@@ -38,7 +38,8 @@ public class GameStartView extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1003, 748));
         getContentPane().setLayout(null);
 
-        exitButton.setText("Exit");
+        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Exit.jpg"))); // NOI18N
+        exitButton.setBorderPainted(false);
         exitButton.setContentAreaFilled(false);
         exitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,25 +49,28 @@ public class GameStartView extends javax.swing.JFrame {
         getContentPane().add(exitButton);
         exitButton.setBounds(370, 550, 260, 80);
 
-        startButton.setText("Start");
-        startButton.setContentAreaFilled(false);
+        startButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/start.jpg"))); // NOI18N
+        startButton.setBorderPainted(false);
         startButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startButtonActionPerformed(evt);
             }
         });
         getContentPane().add(startButton);
-        startButton.setBounds(370, 350, 260, 80);
+        startButton.setBounds(370, 350, 250, 80);
 
-        garageButton.setText("Garage");
+        garageButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Garage.jpg"))); // NOI18N
+        garageButton.setBorderPainted(false);
         garageButton.setContentAreaFilled(false);
+        garageButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/start.jpg"))); // NOI18N
+        garageButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Exit.jpg"))); // NOI18N
         garageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 garageButtonActionPerformed(evt);
             }
         });
         getContentPane().add(garageButton);
-        garageButton.setBounds(370, 450, 260, 80);
+        garageButton.setBounds(380, 450, 250, 70);
 
         gameNameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Start2.jpg"))); // NOI18N
         getContentPane().add(gameNameLabel);
