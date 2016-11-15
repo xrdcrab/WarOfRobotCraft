@@ -101,26 +101,31 @@ public class Game {
 	
 	public void updateGame(Pair<Coordinate, Integer> pair) {
 		// update robots
+		this.setAlivePlayerNum(0);
 		for ( Integer key: playerMap.keySet() ) {
-			// case 1: the scout robot is get damaged
-			Robot targetScout = this.getPlayerMap().get(key).getScoutRobot();
-			if ( targetScout.getCoord().equals(pair.getKey()) ) {
-				targetScout.damaged(pair.getValue());
-			}
-			// case 2: the sniper robot is get damaged
-			Robot targetSniper = this.getPlayerMap().get(key).getSniperRobot();
-			if ( targetSniper.getCoord().equals(pair.getKey()) ) {
-				targetScout.damaged(pair.getValue());
-			}
-			// case 3: the tank robot is get damaged
-			Robot targetTank = this.getPlayerMap().get(key).getTankRobot();
-			if ( targetTank.getCoord().equals(pair.getKey()) ) {
-				targetScout.damaged(pair.getValue());
-			}
+			Player traversedPlayer = this.getPlayerMap().get(key);
+			if ( !traversedPlayer.isDead() ) {
+				// case 1: the scout robot is get damaged
+				if ( !traversedPlayer.getScoutRobot().isDead() 
+						&& traversedPlayer.getScoutRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getScoutRobot().damaged(pair.getValue());
+				}
+				// case 2: the sniper robot is get damaged
+				if ( !traversedPlayer.getSniperRobot().isDead() 
+						&& traversedPlayer.getSniperRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getSniperRobot().damaged(pair.getValue());
+				}
+				// case 3: the tank robot is get damaged
+				if ( !traversedPlayer.getTankRobot().isDead() 
+						&& traversedPlayer.getTankRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getTankRobot().damaged(pair.getValue());
+				}
+				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
+			}			
 		}
-		// update players
 		
 		// update map
+		
 	}
 	
 	/**
