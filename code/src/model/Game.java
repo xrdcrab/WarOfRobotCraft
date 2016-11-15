@@ -20,7 +20,7 @@ public class Game {
 	private Player currentPlayer;
 	
 	/** the map for the game */
-	private Map map;
+	private Map gameMap;
 
 	/**
 	 * @param playerMap
@@ -34,11 +34,11 @@ public class Game {
 		this.playerNum = playerNum;
 		this.playerMap = new HashMap<Integer, Player>();
 		this.currentPlayer = currentPlayer;
-		this.map = map;
+		this.gameMap = map;
 	}
 	
 	/**
-	 * 
+	 * this method is to overload the constructor above with two parameters
 	 * @param playerMap
 	 * @param playerNum
 	 */
@@ -47,6 +47,8 @@ public class Game {
 		
 		this.playerNum = playerNum;
 		this.playerMap = new HashMap<Integer, Player>();
+		this.gameMap = new Map(playerNum);
+		this.currentPlayer = null;
 	}
 	
 }
