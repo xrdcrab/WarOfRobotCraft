@@ -1,7 +1,6 @@
 package model;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 
 /**
  * this class is to build up the game, 
@@ -22,19 +21,25 @@ public class Game {
 	/** the map for the game */
 	private Map gameMap;
 
+	/** the number of alive player */
+	private int alivePlayerNum;
+	
 	/**
 	 * @param playerMap
 	 * @param playerNum
 	 * @param currentPlayer
 	 * @param map
 	 */
-	public Game(HashMap<Integer, Player> playerMap, int playerNum, int currentPlayer, Map map) {
+	public Game(HashMap<Integer, Player> playerMap, 
+			int playerNum, int currentPlayer, 
+			Map map, int alivePlayerNum) {
 		super();
 		
 		this.playerNum = playerNum;
 		this.playerMap = new HashMap<Integer, Player>();
 		this.currentPlayerIndex = currentPlayer;
 		this.gameMap = map;
+		this.alivePlayerNum = alivePlayerNum;
 	}
 	
 	/**
@@ -49,6 +54,7 @@ public class Game {
 		this.playerMap = new HashMap<Integer, Player>();
 		this.gameMap = new Map(playerNum);
 		this.currentPlayerIndex = -1;
+		this.alivePlayerNum = this.playerNum;
 	}
 	
 	/**
@@ -59,12 +65,38 @@ public class Game {
 	public void goNextPlayer(){
 		if (this.getCurrentPlayerIndex()<0||this.currentPlayerIndex>=5){
 			this.setCurrentPlayerIndex(0);
+			this.setAlivePlayerNum(0);
 		}
 		else{
 			this.setCurrentPlayerIndex(this.currentPlayerIndex+1);
-		}
+			if (!this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead()) {
+				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
+			}			
+		}		
 	}
 
+	/**
+	 * this method is to run a play
+	 */
+	public void runPlay() {
+
+		while ( this.getAlivePlayerNum() > 1 ) {
+			if ( !this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead() ) {
+				
+			}
+			
+			this.goNextPlayer();
+		}
+	}
+	
+	public void updateGame(Coordinate shotTarget) {
+		// update robots
+		//for ( )
+		// update players
+		
+		// update map
+	}
+	
 	/**
 	 * @return the playerMap
 	 */
@@ -119,6 +151,20 @@ public class Game {
 	 */
 	public void setGameMap(Map gameMap) {
 		this.gameMap = gameMap;
+	}
+
+	/**
+	 * @return the alivePlayerNum
+	 */
+	public int getAlivePlayerNum() {
+		return alivePlayerNum;
+	}
+
+	/**
+	 * @param alivePlayerNum the alivePlayerNum to set
+	 */
+	public void setAlivePlayerNum(int alivePlayerNum) {
+		this.alivePlayerNum = alivePlayerNum;
 	}
 
 	
