@@ -25,9 +25,12 @@ public class Map {
 		super();
 		if ( mapSize == 5 || mapSize == 7 ) {
 			this.mapSize = mapSize;
-		}	
-		this.coordinateMap = new HashMap<Coordinate, Boolean>();
-		this.initializeMap();
+			this.coordinateMap = new HashMap<Coordinate, Boolean>();
+			this.initializeMap();
+		}
+		
+		
+		
 		/**
 		for (Pair<Coordinate, Boolean> pair : coordinateList) {
 			
