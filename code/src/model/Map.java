@@ -14,7 +14,7 @@ public class Map {
 	private int mapSize;
 
 	/** the coordinate list for the map */
-	private LinkedList<Pair<Coordinate, Boolean>> coordinateList;
+	//private LinkedList<Pair<Coordinate, Boolean>> coordinateList;
 	private HashMap<Coordinate, Boolean> coordinateMap;
 	
 	/**
@@ -26,34 +26,58 @@ public class Map {
 		if ( mapSize == 5 || mapSize == 7 ) {
 			this.mapSize = mapSize;
 		}	
+		this.coordinateMap = new HashMap<Coordinate, Boolean>();
+		
+		/**
 		for (Pair<Coordinate, Boolean> pair : coordinateList) {
-			/**
+			
 			pair = new Pair<Coordinate, Boolean>(
 					new Coordinate ( x,  y,  z), 
-					false);*/
-		}
+					false);
+		} */
 	}
 
+	/**
+	 * this method is to initialize map, 
+	 * which is to set all coordinates to false
+	 */
+	public void initializeMap() {
+		
+	}
+	
 	/**
 	 * this method is to update the mist when robot moved
 	 */
 	public void updateMist () {
 		
 	}
-	
+
+	/**
+	 * @return the mapSize
+	 */
 	public int getMapSize() {
 		return mapSize;
 	}
 
+	/**
+	 * @param mapSize the mapSize to set
+	 */
 	public void setMapSize(int mapSize) {
 		this.mapSize = mapSize;
 	}
 
-	public LinkedList<Pair<Coordinate, Boolean>> getCoordinateList() {
-		return coordinateList;
+	/**
+	 * @return the coordinateMap
+	 */
+	public HashMap<Coordinate, Boolean> getCoordinateMap() {
+		return coordinateMap;
 	}
 
-	public void setCoordinateList(LinkedList<Pair<Coordinate, Boolean>> coordinateList) {
-		this.coordinateList = coordinateList;
+	/**
+	 * @param coordinateMap the coordinateMap to set
+	 */
+	public void setCoordinateMap(HashMap<Coordinate, Boolean> coordinateMap) {
+		this.coordinateMap = coordinateMap;
 	}
+	
 }
