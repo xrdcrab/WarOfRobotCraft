@@ -16,7 +16,7 @@ public class Controller implements ActionListener, KeyListener {
 
 	private Game game;
 	private GameStartView gameStartView;
-	private SetGameModelView setGameModelView;
+	private SetGameModeView setGameModeView;
 	
 	/**
 	 * this constructor is for the game entry point
@@ -71,15 +71,15 @@ public class Controller implements ActionListener, KeyListener {
 	/**
 	 * @return the setGameModelView
 	 */
-	public SetGameModelView getSetGameModelView() {
-		return setGameModelView;
+	public SetGameModeView getSetGameModeView() {
+		return setGameModeView;
 	}
 
 	/**
 	 * @param setGameModelView the setGameModelView to set
 	 */
-	public void setSetGameModelView(SetGameModelView setGameModelView) {
-		this.setGameModelView = setGameModelView;
+	public void setSetGameModeView(SetGameModeView setGameModeView) {
+		this.setGameModeView = setGameModeView;
 	}
 
 	/**
@@ -89,10 +89,10 @@ public class Controller implements ActionListener, KeyListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		// start game button
-		if ( e.getSource().equals(this.getSetGameModelView()) ) {
+		if ( e.getSource().equals(this.getGameStartView().getStartButton()) ) {
 			this.getGameStartView().setVisible(false);
-			this.setGameModelView = new SetGameModelView();
-			this.getSetGameModelView().setVisible(true);
+			this.setGameModeView = new SetGameModeView();
+			this.getSetGameModeView().setVisible(true);
 		} 
 		// garage button
 		else if ( e.getSource().equals(null) ) {
@@ -102,7 +102,7 @@ public class Controller implements ActionListener, KeyListener {
 		else if ( e.getSource().equals(this.getGameStartView().getExitButton()) ) {
 			System.exit(0);
 		}
-		// initial game board button
+		// confirm button
 		else if ( e.getSource().equals(null) ) {
 			
 		}
