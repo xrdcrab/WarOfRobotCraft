@@ -6,8 +6,7 @@
 package view;
 
 /**
- *
- * @author chen
+ * 
  */
 public class SetGameModelView extends javax.swing.JFrame {
 

@@ -128,4 +128,61 @@ public class GameStartView extends javax.swing.JFrame {
     private javax.swing.JButton garageButton;
     private javax.swing.JButton startButton;
     // End of variables declaration//GEN-END:variables
+	/**
+	 * @return the exitButton
+	 */
+	public javax.swing.JButton getExitButton() {
+		return exitButton;
+	}
+
+	/**
+	 * @param exitButton the exitButton to set
+	 */
+	public void setExitButton(javax.swing.JButton exitButton) {
+		this.exitButton = exitButton;
+	}
+
+	/**
+	 * @return the gameNameLabel
+	 */
+	public javax.swing.JLabel getGameNameLabel() {
+		return gameNameLabel;
+	}
+
+	/**
+	 * @param gameNameLabel the gameNameLabel to set
+	 */
+	public void setGameNameLabel(javax.swing.JLabel gameNameLabel) {
+		this.gameNameLabel = gameNameLabel;
+	}
+
+	/**
+	 * @return the garageButton
+	 */
+	public javax.swing.JButton getGarageButton() {
+		return garageButton;
+	}
+
+	/**
+	 * @param garageButton the garageButton to set
+	 */
+	public void setGarageButton(javax.swing.JButton garageButton) {
+		this.garageButton = garageButton;
+	}
+
+	/**
+	 * @return the startButton
+	 */
+	public javax.swing.JButton getStartButton() {
+		return startButton;
+	}
+
+	/**
+	 * @param startButton the startButton to set
+	 */
+	public void setStartButton(javax.swing.JButton startButton) {
+		this.startButton = startButton;
+	}
+    
+
 }

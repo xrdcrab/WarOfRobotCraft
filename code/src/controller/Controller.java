@@ -5,13 +5,69 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 
 import model.*;
+import view.*;
 
 /**
  * this class is to build up the controller to control the game system
  */
 public class Controller implements ActionListener, KeyListener {
+
+	private Game game;
+	private GameStartView gameStartView;
+	
+	
+	/**
+	 * this constructor is for the game entry point
+	 * 
+	 * @param gameStartView the start view for the game system
+	 */
+	public Controller() {
+		super();
+
+		this.gameStartView = new GameStartView();
+		this.getGameStartView().setVisible(true);
+		this.addListener();
+	}
+
+	/**
+	 * this method is to add listener for all buttons
+	 */
+	private void addListener() {
+		this.getGameStartView().getExitButton().addActionListener(this);
+		this.getGameStartView().getStartButton().addActionListener(this);
+		this.getGameStartView().getGarageButton().addActionListener(this);
+	}
+	
+	/**
+	 * @return the game
+	 */
+	public Game getGame() {
+		return game;
+	}
+
+	/**
+	 * @param game the game to set
+	 */
+	public void setGame(Game game) {
+		this.game = game;
+	}
+
+	/**
+	 * @return the gameStartView
+	 */
+	public GameStartView getGameStartView() {
+		return gameStartView;
+	}
+
+	/**
+	 * @param gameStartView the gameStartView to set
+	 */
+	public void setGameStartView(GameStartView gameStartView) {
+		this.gameStartView = gameStartView;
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -25,7 +81,7 @@ public class Controller implements ActionListener, KeyListener {
 			
 		}
 		// exit button
-		else if ( e.getSource().equals(null) ) {
+		else if ( e.getSource().equals(this.getGameStartView().getExitButton()) ) {
 			System.exit(0);
 		}
 		// initial game board button
