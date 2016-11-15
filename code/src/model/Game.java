@@ -1,6 +1,7 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Timer;
 
 /**
  * this class is to build up the game, 
@@ -82,7 +83,12 @@ public class Game {
 
 		while ( this.getAlivePlayerNum() > 1 ) {
 			if ( !this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead() ) {
-				
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
 			this.goNextPlayer();
