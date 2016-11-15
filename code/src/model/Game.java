@@ -37,5 +37,16 @@ public class Game {
 		this.map = map;
 	}
 	
+	/**
+	 * 
+	 * @param playerMap
+	 * @param playerNum
+	 */
+	public Game(HashMap<Integer, Player> playerMap, int playerNum) {
+		super();
+		
+		this.playerNum = playerNum;
+		this.playerMap = new HashMap<Integer, Player>();
+	}
 	
 }
