@@ -102,7 +102,7 @@ public class Controller implements ActionListener, KeyListener {
 		else if ( e.getSource().equals(this.getGameStartView().getExitButton()) ) {
 			System.exit(0);
 		}
-		// initial game board button
+		// confirm button
 		else if ( e.getSource().equals(null) ) {
 			
 		}

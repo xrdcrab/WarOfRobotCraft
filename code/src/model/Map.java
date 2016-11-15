@@ -45,10 +45,12 @@ public class Map {
 	 * which is to set all coordinates to false
 	 */
 	private void initializeMap() {
-		for ( int i = - this.getMapSize(); i <= this.getMapSize(); i++ ) {
-			for ( int j = - this.getMapSize(); j <= this.getMapSize(); j++ ) {
-				for ( int k = - this.getMapSize(); k <= this.getMapSize(); k++ ) {
-					this.getCoordinateMap().put(new Coordinate(i,j,k), false);
+		for ( int i = 1 - this.getMapSize(); i < this.getMapSize(); i++ ) {
+			for ( int j = 1 - this.getMapSize(); j < this.getMapSize(); j++ ) {
+				for ( int k = 1 - this.getMapSize(); k < this.getMapSize(); k++ ) {
+					if ( i + j + k == 0 ) {
+						this.getCoordinateMap().put(new Coordinate(i,j,k), false);
+					}					
 				}
 			}
 		}
