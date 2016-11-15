@@ -206,4 +206,173 @@ public class SetGameModelView extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     // End of variables declaration//GEN-END:variables
+	/**
+	 * @return the buttonGroup1
+	 */
+	public javax.swing.ButtonGroup getButtonGroup1() {
+		return buttonGroup1;
+	}
+
+	/**
+	 * @param buttonGroup1 the buttonGroup1 to set
+	 */
+	public void setButtonGroup1(javax.swing.ButtonGroup buttonGroup1) {
+		this.buttonGroup1 = buttonGroup1;
+	}
+
+	/**
+	 * @return the buttonGroup2
+	 */
+	public javax.swing.ButtonGroup getButtonGroup2() {
+		return buttonGroup2;
+	}
+
+	/**
+	 * @param buttonGroup2 the buttonGroup2 to set
+	 */
+	public void setButtonGroup2(javax.swing.ButtonGroup buttonGroup2) {
+		this.buttonGroup2 = buttonGroup2;
+	}
+
+	/**
+	 * @return the jButton1
+	 */
+	public javax.swing.JButton getjButton1() {
+		return jButton1;
+	}
+
+	/**
+	 * @param jButton1 the jButton1 to set
+	 */
+	public void setjButton1(javax.swing.JButton jButton1) {
+		this.jButton1 = jButton1;
+	}
+
+	/**
+	 * @return the jComboBox1
+	 */
+	public javax.swing.JComboBox<String> getjComboBox1() {
+		return jComboBox1;
+	}
+
+	/**
+	 * @param jComboBox1 the jComboBox1 to set
+	 */
+	public void setjComboBox1(javax.swing.JComboBox<String> jComboBox1) {
+		this.jComboBox1 = jComboBox1;
+	}
+
+	/**
+	 * @return the jComboBox2
+	 */
+	public javax.swing.JComboBox<String> getjComboBox2() {
+		return jComboBox2;
+	}
+
+	/**
+	 * @param jComboBox2 the jComboBox2 to set
+	 */
+	public void setjComboBox2(javax.swing.JComboBox<String> jComboBox2) {
+		this.jComboBox2 = jComboBox2;
+	}
+
+	/**
+	 * @return the jComboBox3
+	 */
+	public javax.swing.JComboBox<String> getjComboBox3() {
+		return jComboBox3;
+	}
+
+	/**
+	 * @param jComboBox3 the jComboBox3 to set
+	 */
+	public void setjComboBox3(javax.swing.JComboBox<String> jComboBox3) {
+		this.jComboBox3 = jComboBox3;
+	}
+
+	/**
+	 * @return the jRadioButton1
+	 */
+	public javax.swing.JRadioButton getjRadioButton1() {
+		return jRadioButton1;
+	}
+
+	/**
+	 * @param jRadioButton1 the jRadioButton1 to set
+	 */
+	public void setjRadioButton1(javax.swing.JRadioButton jRadioButton1) {
+		this.jRadioButton1 = jRadioButton1;
+	}
+
+	/**
+	 * @return the jRadioButton2
+	 */
+	public javax.swing.JRadioButton getjRadioButton2() {
+		return jRadioButton2;
+	}
+
+	/**
+	 * @param jRadioButton2 the jRadioButton2 to set
+	 */
+	public void setjRadioButton2(javax.swing.JRadioButton jRadioButton2) {
+		this.jRadioButton2 = jRadioButton2;
+	}
+
+	/**
+	 * @return the jRadioButton3
+	 */
+	public javax.swing.JRadioButton getjRadioButton3() {
+		return jRadioButton3;
+	}
+
+	/**
+	 * @param jRadioButton3 the jRadioButton3 to set
+	 */
+	public void setjRadioButton3(javax.swing.JRadioButton jRadioButton3) {
+		this.jRadioButton3 = jRadioButton3;
+	}
+
+	/**
+	 * @return the jRadioButton4
+	 */
+	public javax.swing.JRadioButton getjRadioButton4() {
+		return jRadioButton4;
+	}
+
+	/**
+	 * @param jRadioButton4 the jRadioButton4 to set
+	 */
+	public void setjRadioButton4(javax.swing.JRadioButton jRadioButton4) {
+		this.jRadioButton4 = jRadioButton4;
+	}
+
+	/**
+	 * @return the jRadioButton5
+	 */
+	public javax.swing.JRadioButton getjRadioButton5() {
+		return jRadioButton5;
+	}
+
+	/**
+	 * @param jRadioButton5 the jRadioButton5 to set
+	 */
+	public void setjRadioButton5(javax.swing.JRadioButton jRadioButton5) {
+		this.jRadioButton5 = jRadioButton5;
+	}
+
+	/**
+	 * @return the jRadioButton6
+	 */
+	public javax.swing.JRadioButton getjRadioButton6() {
+		return jRadioButton6;
+	}
+
+	/**
+	 * @param jRadioButton6 the jRadioButton6 to set
+	 */
+	public void setjRadioButton6(javax.swing.JRadioButton jRadioButton6) {
+		this.jRadioButton6 = jRadioButton6;
+	}
+    
+    
 }
