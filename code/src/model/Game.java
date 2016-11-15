@@ -1,7 +1,11 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.Timer;
+
+import javafx.util.Pair;
 
 /**
  * this class is to build up the game, 
@@ -95,9 +99,25 @@ public class Game {
 		}
 	}
 	
-	public void updateGame(Coordinate shotTarget) {
+	public void updateGame(Pair<Coordinate, Integer> pair) {
 		// update robots
-		//for ( )
+		for ( Integer key: playerMap.keySet() ) {
+			// case 1: the scout robot is get damaged
+			Robot targetScout = this.getPlayerMap().get(key).getScoutRobot();
+			if ( targetScout.getCoord().equals(pair.getKey()) ) {
+				targetScout.damaged(pair.getValue());
+			}
+			// case 2: the sniper robot is get damaged
+			Robot targetSniper = this.getPlayerMap().get(key).getSniperRobot();
+			if ( targetSniper.getCoord().equals(pair.getKey()) ) {
+				targetScout.damaged(pair.getValue());
+			}
+			// case 3: the tank robot is get damaged
+			Robot targetTank = this.getPlayerMap().get(key).getTankRobot();
+			if ( targetTank.getCoord().equals(pair.getKey()) ) {
+				targetScout.damaged(pair.getValue());
+			}
+		}
 		// update players
 		
 		// update map
