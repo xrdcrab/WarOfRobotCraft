@@ -28,16 +28,6 @@ public class Map {
 			this.coordinateMap = new HashMap<Coordinate, Boolean>();
 			this.initializeMap();
 		}
-		
-		
-		
-		/**
-		for (Pair<Coordinate, Boolean> pair : coordinateList) {
-			
-			pair = new Pair<Coordinate, Boolean>(
-					new Coordinate ( x,  y,  z), 
-					false);
-		} */
 	}
 
 	/**
