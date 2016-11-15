@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseListener;
 
 import model.*;
 import view.*;
@@ -17,7 +16,7 @@ public class Controller implements ActionListener, KeyListener {
 
 	private Game game;
 	private GameStartView gameStartView;
-	
+	private SetGameModelView setGameModelView;
 	
 	/**
 	 * this constructor is for the game entry point
@@ -69,12 +68,31 @@ public class Controller implements ActionListener, KeyListener {
 		this.gameStartView = gameStartView;
 	}
 
+	/**
+	 * @return the setGameModelView
+	 */
+	public SetGameModelView getSetGameModelView() {
+		return setGameModelView;
+	}
+
+	/**
+	 * @param setGameModelView the setGameModelView to set
+	 */
+	public void setSetGameModelView(SetGameModelView setGameModelView) {
+		this.setGameModelView = setGameModelView;
+	}
+
+	/**
+	 * this method is to define the action for each button when clicked
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		// start game button
-		if ( e.getSource().equals(null) ) {
-			
+		if ( e.getSource().equals(this.getSetGameModelView()) ) {
+			this.getGameStartView().setVisible(false);
+			this.setGameModelView = new SetGameModelView();
+			this.getSetGameModelView().setVisible(true);
 		} 
 		// garage button
 		else if ( e.getSource().equals(null) ) {
