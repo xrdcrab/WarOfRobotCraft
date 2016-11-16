@@ -48,9 +48,12 @@ public class Map {
 	
 	/**
 	 * this method is to update the mist when robot moved
+	 * @param currentPlayer the current player of the game
 	 */
-	public void updateMist() {
-		
+	public void updateMist(Player currentPlayer) {
+		for ( Coordinate coord: currentPlayer.getViewRangeList() ) {
+			this.getCoordinateMap().replace(coord, true);
+		}
 	}
 
 	/**
