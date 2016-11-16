@@ -99,23 +99,41 @@ public class Game {
 //		}
 //	}
 	
+        private boolean areAllRobotsPlayed(Player currentPlayer){
+            
+        }
+        
 	/**
 	 * 
 	 */
 	public void runPlay() {
-//		if the current player's current robot has not moved
-		if(!this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
-			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
-			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
+            // end the current play
+            this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+            
+            // enter the next play
+            this.goNextPlayer();
+            
+            Player currentPlayer = getPlayerMap().get(this.getCurrentPlayerIndex());
+            
+            // it is a new turn
+            if(areAllRobotsPlayed(currentPlayer)){
+                currentPlayer.getScoutRobot().setHasMoved(false);
+                currentPlayer.getSniperRobot().setHasMoved(false);
+                currentPlayer.getTankRobot().setHasMoved(false);
+            }
+            
+            currentPlayer.getCurrentRobot().resetStatus();
+            
+//            //if the current player's current robot has not moved
+//		if(!this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
+//			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+//			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
 //			this.goNextPlayer();
-		}
-//		else if the current player's current robot has moved, end this turn. 
-		else{
-			
-		}
-		
-		
-		
+//		}
+//		//else if the current player's current robot has moved, end this turn. 
+//		else{
+//			
+//		}
 	}
 	
 	
