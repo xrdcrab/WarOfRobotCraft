@@ -241,5 +241,10 @@ public class Coordinate {
                 
                 boolean b = new Coordinate(1, 2, 3).equals(new Coordinate(1, 2, 3));
                 b = new Coordinate(1, 2, 3).equals(new Coordinate(1, 2, 2));
+                
+                LinkedList<Coordinate> list1 = new Coordinate(0, 0, 0).getRange(1, 5);
+                LinkedList<Coordinate> list2 = new Coordinate(1, -1, 0).getRange(1, 5);
+                list1.removeAll(list2);
+                list1.addAll(list2);
 	}
 }
