@@ -2,6 +2,7 @@ package model;
 
 import com.sun.accessibility.internal.resources.accessibility_sv;
 import com.sun.org.apache.xpath.internal.operations.And;
+import java.util.LinkedList;
 
 /**
  * this class is to create a coordinate in a map
@@ -190,4 +191,24 @@ public class Coordinate {
 		
 		return newCoordindate;
 	}
-}
+        
+        public LinkedList<Coordinate> getRange(int range, int mapSize){
+            LinkedList<Coordinate> rangeList = new LinkedList<>();
+            
+            for(int x = 0; (x < range - 1) && (this.x + x < mapSize); x++){
+                for(int y = 0; (y < range - 1) && (this.y + y < mapSize); y++){
+                    for(int z = 0; (z < range - 1) && (this.z + z < mapSize); z++){
+                        rangeList.add(new Coordinate(this.x + x, this.y + y, this.z + z));
+                        rangeList.add(new Coordinate(this.x - x, this.y - y, this.z - z));
+                    }
+                }
+            }
+            rangeList.add(new Coordinate(x, y, z));
+            
+            return rangeList;
+        }
+        
+        public static void main(String[] args) {
+            LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
+        }
+    }
