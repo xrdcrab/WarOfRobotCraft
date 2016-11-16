@@ -53,6 +53,19 @@ public class HumanPlayer extends Player{
 	public void turn(int direction){
 		this.getCurrentRobot().turn(direction);
 	}
+	
+	/**
+	 * a robot of the player fires to the direction it facing.
+	 * @param Coordinate, the coordinate of the target.
+	 */
+	public void shoot(int distance, int mapSize){
+		try {
+			this.getCurrentRobot().shoot(distance, mapSize);
+		} 
+		catch (Exception e) {
+			
+		}
+	}
 
 
 }
