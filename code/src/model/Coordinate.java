@@ -233,9 +233,38 @@ public class Coordinate {
 		
 		return initialMap;
 	}
+        @Override
+        public boolean equals(Object obj){
+            if(obj == null){
+                return false;
+            }
+            if(!Coordinate.class.isAssignableFrom(obj.getClass())){
+                return false;
+            }
+            final Coordinate coord = (Coordinate)obj;
+            if(this.x != coord.x ){
+                return false;
+            }
+            if(this.y != coord.y){
+                return false;
+            }
+            if(this.z != coord.z){
+                return false;
+            }
+            
+            return true;
+        };
 
 	public static void main(String[] args) {
 		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
 		rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
+                
+                boolean b = new Coordinate(1, 2, 3).equals(new Coordinate(1, 2, 3));
+                b = new Coordinate(1, 2, 3).equals(new Coordinate(1, 2, 2));
+                
+                LinkedList<Coordinate> list1 = new Coordinate(0, 0, 0).getRange(1, 5);
+                LinkedList<Coordinate> list2 = new Coordinate(1, -1, 0).getRange(1, 5);
+                list1.removeAll(list2);
+                list1.addAll(list2);
 	}
 }
