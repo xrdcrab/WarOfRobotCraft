@@ -99,7 +99,12 @@ public class Game {
 		}
 	}
 	
-	public void updateGame(Pair<Coordinate, Integer> pair) {
+	/**
+	 * this method is to update the game when player perform actions: move or shoot
+	 * 
+	 * @param pair the the pair that
+	 */
+	public void updateGameShoot(Pair<Coordinate, Integer> pair) {
 		// update robots
 		this.setAlivePlayerNum(0);
 		for ( Integer key: playerMap.keySet() ) {
@@ -123,9 +128,14 @@ public class Game {
 				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
 			}			
 		}
-		
-		// update map
-		
+	}
+	
+	/**
+	 * this method is to update the game when the current player moving
+	 * @param currentPlayer the current player execute moving
+	 */
+	public void updateGameMove(Player currentPlayer) {
+		this.getGameMap().updateMist(currentPlayer);
 	}
 	
 	/**

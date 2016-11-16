@@ -9,7 +9,7 @@ import java.util.LinkedList;
  which are i, y, z.
  */
 public class Coordinate {
-	/** coordinate i **/
+	/** coordinate x **/
 	private int x;
 	
 	/** coordinate y **/
@@ -32,9 +32,9 @@ public class Coordinate {
 	
 	
 	/**
-	 * this method is to get the i coordinate
+	 * this method is to get the x coordinate
 	 * 
-	 * @return i the i coordinate
+	 * @return x the x coordinate
 	 */
 	public int getX() {
 		return x;
@@ -42,7 +42,7 @@ public class Coordinate {
 
 
 	/**
-	 * this method is to set the i coordinate
+	 * this method is to set the x coordinate
 	 */
 	public void setX(int x) {
 		this.x = x;
@@ -86,7 +86,7 @@ public class Coordinate {
 
 
 	/**
-	 * this method is to move along the i positive direction within give steps
+	 * this method is to move along the x positive direction within give steps
 	 */
 	public void moveXPositive(int step) {
 		this.x += step;
@@ -94,7 +94,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the i negative direction within give steps
+	 * this method is to move along the x negative direction within give steps
 	 */
 	public void moveXNegative(int step) {
 		this.x -= step;
@@ -102,7 +102,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the i positive direction within give steps
+	 * this method is to move along the y positive direction within give steps
 	 */
 	public void moveYPositive(int step) {
 		this.y += step;
@@ -110,7 +110,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the i negative direction within give steps
+	 * this method is to move along the y negative direction within give steps
 	 */
 	public void moveYNegative(int step) {
 		this.y -= step;
@@ -233,27 +233,32 @@ public class Coordinate {
 		
 		return initialMap;
 	}
-        @Override
-        public boolean equals(Object obj){
-            if(obj == null){
-                return false;
-            }
-            if(!Coordinate.class.isAssignableFrom(obj.getClass())){
-                return false;
-            }
-            final Coordinate coord = (Coordinate)obj;
-            if(this.x != coord.x ){
-                return false;
-            }
-            if(this.y != coord.y){
-                return false;
-            }
-            if(this.z != coord.z){
-                return false;
-            }
-            
-            return true;
-        };
+	
+	/**
+	 * this method is used to compare two coordinate object
+	 * @param obj the coordinate object to be compared with
+	 */
+	@Override
+	public boolean equals(Object obj){
+		if(obj == null){
+			return false;
+		}
+		if(!Coordinate.class.isAssignableFrom(obj.getClass())){
+			return false;
+		}
+		final Coordinate coord = (Coordinate)obj;
+		if(this.x != coord.x ){
+			return false;
+		}
+		if(this.y != coord.y){
+			return false;
+		}
+		if(this.z != coord.z){
+			return false;
+		}
+
+		return true;
+	};
 
 	public static void main(String[] args) {
 		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
