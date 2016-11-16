@@ -6,11 +6,11 @@ import java.util.LinkedList;
 
 /**
  * this class is to create a coordinate in a map
- * the coordinate is defined by 3 directions in a panel, 
- * which are x, y, z.
+ the coordinate is defined by 3 directions in a panel, 
+ which are i, y, z.
  */
 public class Coordinate {
-	/** coordinate x **/
+	/** coordinate i **/
 	private int x;
 	
 	/** coordinate y **/
@@ -33,9 +33,9 @@ public class Coordinate {
 	
 	
 	/**
-	 * this method is to get the x coordinate
+	 * this method is to get the i coordinate
 	 * 
-	 * @return x the x coordinate
+	 * @return i the i coordinate
 	 */
 	public int getX() {
 		return x;
@@ -43,7 +43,7 @@ public class Coordinate {
 
 
 	/**
-	 * this method is to set the x coordinate
+	 * this method is to set the i coordinate
 	 */
 	public void setX(int x) {
 		this.x = x;
@@ -87,7 +87,7 @@ public class Coordinate {
 
 
 	/**
-	 * this method is to move along the x positive direction within give steps
+	 * this method is to move along the i positive direction within give steps
 	 */
 	public void moveXPositive(int step) {
 		this.x += step;
@@ -95,7 +95,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the x negative direction within give steps
+	 * this method is to move along the i negative direction within give steps
 	 */
 	public void moveXNegative(int step) {
 		this.x -= step;
@@ -103,7 +103,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the x positive direction within give steps
+	 * this method is to move along the i positive direction within give steps
 	 */
 	public void moveYPositive(int step) {
 		this.y += step;
@@ -111,7 +111,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the x negative direction within give steps
+	 * this method is to move along the i negative direction within give steps
 	 */
 	public void moveYNegative(int step) {
 		this.y -= step;
@@ -140,9 +140,9 @@ public class Coordinate {
 	 * @return true if the coordinate is in the map range; false otherwise
 	 */
 	private boolean checkRange(int mapSize) {
-		return (Math.abs(this.x) <= mapSize
-				&& Math.abs(this.y) <= mapSize
-				&& Math.abs(this.z) <= mapSize);
+		return (Math.abs(this.x) < mapSize
+                    && Math.abs(this.y) < mapSize
+                    && Math.abs(this.z) < mapSize);
 	}
 	
 	/**
@@ -192,23 +192,33 @@ public class Coordinate {
 		return newCoordindate;
 	}
         
-        public LinkedList<Coordinate> getRange(int range, int mapSize){
+        public LinkedList<Coordinate> getRange(int range, int mapSize){;
             LinkedList<Coordinate> rangeList = new LinkedList<>();
             
-            for(int x = 0; (x < range - 1) && (this.x + x < mapSize); x++){
-                for(int y = 0; (y < range - 1) && (this.y + y < mapSize); y++){
-                    for(int z = 0; (z < range - 1) && (this.z + z < mapSize); z++){
-                        rangeList.add(new Coordinate(this.x + x, this.y + y, this.z + z));
-                        rangeList.add(new Coordinate(this.x - x, this.y - y, this.z - z));
-                    }
+            rangeList.add(this);
+            for(int i = 0; i < range; i++){
+                rangeList.add(new Coordinate(this.x + i, this.y - i, this.z));
+                rangeList.add(new Coordinate(this.x + i, this.y, this.z - i));
+                rangeList.add(new Coordinate(this.x - i, this.y + i, this.z));
+                rangeList.add(new Coordinate(this.x, this.y + i, this.z - i));
+                rangeList.add(new Coordinate(this.x - i, this.y, this.z + i));
+                rangeList.add(new Coordinate(this.x, this.y - i, this.z + i));
+            }
+            
+            LinkedList<Coordinate> removeList = new LinkedList<>();
+            for(Coordinate coor : rangeList){
+                if(!coor.checkRange(mapSize)){
+                    removeList.add(coor);
                 }
             }
-            rangeList.add(new Coordinate(x, y, z));
+            
+            rangeList.removeAll(removeList);
             
             return rangeList;
         }
         
         public static void main(String[] args) {
-            LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
+            LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(3, 5);
+            rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
         }
     }
