@@ -6,6 +6,8 @@
 package model;
 
 import java.util.LinkedList;
+
+import javafx.util.Pair;
 import model.Map;
 
 
@@ -57,14 +59,17 @@ public class HumanPlayer extends Player{
 	/**
 	 * a robot of the player fires to the direction it facing.
 	 * @param Coordinate, the coordinate of the target.
+	 * @return Pair<Coordinate, Integer> contain the shoot target coordinate and the attack point.
 	 */
-	public void shoot(int distance, int mapSize){
+	public Pair<Coordinate, Integer> shoot(int distance, int mapSize){
+		Pair<Coordinate, Integer> pair = null;
 		try {
-			this.getCurrentRobot().shoot(distance, mapSize);
+			pair = this.getCurrentRobot().shoot(distance, mapSize);
 		} 
 		catch (Exception e) {
 			
 		}
+		return pair;
 	}
 
 
