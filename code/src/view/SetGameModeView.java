@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.Color;
+
 /**
  * 
  */
@@ -15,6 +17,7 @@ public class SetGameModeView extends javax.swing.JFrame {
      */
     public SetGameModeView() {
         initComponents();
+       this.getContentPane().setBackground( Color.WHITE );
     }
 
     /**
