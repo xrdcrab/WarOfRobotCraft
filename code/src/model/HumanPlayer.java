@@ -16,7 +16,13 @@ import model.Map;
 public class HumanPlayer extends Player{
 
 	/**
-	 * constructor
+	 * this constructor is to create a HumanPlayer for the game
+	 * @param name the name of the player
+	 * @param score the score of the player
+	 * @param scoutRobot scout robot of this player
+	 * @param sniperRobot sniper robot of this player
+	 * @param tankRobot tank robot of this player
+	 * @param viewRangeList 
 	 */
 	public HumanPlayer (String name, 
 			  			int score, 
@@ -26,7 +32,19 @@ public class HumanPlayer extends Player{
 			  			LinkedList<Coordinate> viewRangeList) {
 		super(name, score, scoutRobot, sniperRobot, tankRobot, viewRangeList);
 	}
-
+	
+	/**
+	 * this method moves a robot of the player one cell forward
+	 * @throws Exception 
+	 */
+	public void move() throws Exception{
+		try{
+			this.getCurrentRobot().move(Map.getMapSize());
+		}
+		catch (Exception e){
+			
+		}
+	}
 
 
 }
