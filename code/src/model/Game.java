@@ -99,6 +99,11 @@ public class Game {
 		}
 	}
 	
+	/**
+	 * this method is to update the game when player perform actions: move or shoot
+	 * 
+	 * @param pair the the pair that
+	 */
 	public void updateGame(Pair<Coordinate, Integer> pair) {
 		// update robots
 		this.setAlivePlayerNum(0);
