@@ -1,9 +1,10 @@
 package model;
 
+import java.time.Clock;
 import java.util.HashMap;
 import java.util.LinkedList;
+import sun.security.util.AbstractAlgorithmConstraints;
 
-import javafx.util.Pair;
 
 /**
  * this class is to create a map of the game
@@ -28,26 +29,16 @@ public class Map {
 			this.coordinateMap = new HashMap<Coordinate, Boolean>();
 			this.initializeMap();
 		}
-		
-		
-		
-		/**
-		for (Pair<Coordinate, Boolean> pair : coordinateList) {
-			
-			pair = new Pair<Coordinate, Boolean>(
-					new Coordinate ( x,  y,  z), 
-					false);
-		} */
 	}
 
-	/**
+	/**coordinateMap
 	 * this method is to initialize map, 
 	 * which is to set all coordinates to false
 	 */
 	private void initializeMap() {
 		for ( int i = 1 - this.getMapSize(); i < this.getMapSize(); i++ ) {
 			for ( int j = 1 - this.getMapSize(); j < this.getMapSize(); j++ ) {
-				for ( int k = 1 - this.getMapSize(); k < this.getMapSize(); k++ ) {
+				for ( int k = 1 - this.getMapSize(); k <= i; k++ ) {
 					if ( i + j + k == 0 ) {
 						this.getCoordinateMap().put(new Coordinate(i,j,k), false);
 					}					
@@ -58,10 +49,18 @@ public class Map {
 	
 	/**
 	 * this method is to update the mist when robot moved
+	 * @param currentPlayer the current player of the game
 	 */
-	public void updateMist() {
-		
+	public void updateMist(Player currentPlayer) {
+		getCoordinateMap().forEach((coord, isVisible) -> {
+                    if(currentPlayer.getViewRangeList().contains(coord)){
+                        isVisible = false;
+                    } else{
+                        isVisible = true;
+                    }
+                });
 	}
+        
 
 	/**
 	 * @return the mapSize
@@ -91,4 +90,11 @@ public class Map {
 		this.coordinateMap = coordinateMap;
 	}
 	
+        
+        public static void main(String[] args) {
+            Map map = new Map(5);
+            map.initializeMap();
+           System.out.println(map.getCoordinateMap().size());
+            map.updateMist(null);
+        }
 }

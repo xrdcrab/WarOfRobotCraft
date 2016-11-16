@@ -1,5 +1,7 @@
 package model;
 
+import java.util.LinkedList;
+
 /**
  * This is a model class of Player.
  *
@@ -13,7 +15,16 @@ public class Player {
 	Robot sniperRobot;
 	Robot tankRobot;
 	
-	public Player(String name, int score, Robot scoutRobot, Robot sniperRobot, Robot tankRobot) {
+	/** the view range for a player, 
+	 * which takes all the range from belonging robots */
+	private LinkedList<Coordinate> viewRangeList;
+	
+	public Player(String name, 
+				  int score, 
+				  Robot scoutRobot,
+				  Robot sniperRobot, 
+				  Robot tankRobot,
+				  LinkedList<Coordinate> viewRangeList) {
 		super();
 		this.name = name;
 		this.score = score;
@@ -21,6 +32,7 @@ public class Player {
 		this.scoutRobot = scoutRobot;
 		this.sniperRobot = sniperRobot;
 		this.tankRobot = tankRobot;
+		this.viewRangeList = viewRangeList;
 	}
 
 	/**
@@ -55,6 +67,39 @@ public class Player {
 		}
 	}
 
+	public void setViewRange() {
+		
+		// dump all the elements for the previous view range
+		this.setViewRangeList( new LinkedList<Coordinate>() );
+		
+		/** get new range from a robot */
+		LinkedList<Coordinate> newList = new LinkedList<Coordinate>();
+		
+		// add the scout robot view range
+		if ( !this.getScoutRobot().isDead() && 
+				newList.addAll(this.getScoutRobot().getViewRangeList()) ) {
+			this.setViewRangeList( newList );
+		}
+		
+		// add the scout robot view range		
+		if ( !this.getSniperRobot().isDead() ) {
+			for ( Coordinate coord: this.getSniperRobot().getViewRangeList() ) {
+				if ( !this.getViewRangeList().contains(coord) ) {
+					this.getViewRangeList().add(coord);
+				}
+			}
+		}
+		
+		// add the scout robot view range
+		if ( !this.getTankRobot().isDead() ) {
+			for ( Coordinate coord: this.getTankRobot().getViewRangeList() ) {
+				if ( !this.getViewRangeList().contains(coord) ) {
+					this.getViewRangeList().add(coord);
+				}
+			}
+		}
+	}
+	
 	/**
 	 * @return the name
 	 */
@@ -130,6 +175,20 @@ public class Player {
 	 */
 	public void setCurrentRobot(Robot currentRobot) {
 		this.currentRobot = currentRobot;
+	}
+
+	/**
+	 * @return the viewRangeList
+	 */
+	public LinkedList<Coordinate> getViewRangeList() {
+		return viewRangeList;
+	}
+
+	/**
+	 * @param viewRangeList the viewRangeList to set
+	 */
+	public void setViewRangeList(LinkedList<Coordinate> viewRangeList) {
+		this.viewRangeList = viewRangeList;
 	}
 	
 	
