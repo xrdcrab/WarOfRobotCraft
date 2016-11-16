@@ -1,5 +1,6 @@
 package model;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
@@ -213,6 +214,25 @@ public class Coordinate {
 		return rangeList;
 	}
         
+	/**
+	 * this method is to create the map with center point
+	 * 
+	 * @param mapSize the map size
+	 * @return rangeList the list of the all the hexagons in the range
+	 */
+	public HashMap<Coordinate, Boolean> getRange(int mapSize) {
+		HashMap<Coordinate, Boolean> initialMap = new HashMap<Coordinate, Boolean>();
+		mapSize -= 1;
+		for ( int x = this.getX() - mapSize; x <= this.getX() + mapSize; x++ ) {
+			for ( int y = Math.max(this.getY() - mapSize, - x - (this.getZ()+mapSize)); 
+					y <= Math.min(this.getY() + mapSize, - x - (this.getZ() - mapSize)); y++ ) {
+				int z = - x - y;				
+				initialMap.put( new Coordinate(x, y, z), false);
+			}
+		}
+		
+		return initialMap;
+	}
         @Override
         public boolean equals(Object obj){
             if(obj == null){
