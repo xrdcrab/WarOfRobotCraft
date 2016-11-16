@@ -83,21 +83,45 @@ public class Game {
 	/**
 	 * this method is to run a play
 	 */
+//	public void runPlay() {
+//
+//		while ( this.getAlivePlayerNum() > 1 ) {
+//			if ( !this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead() ) {
+//				try {
+//					this.wait();
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//			
+//			this.goNextPlayer();
+//		}
+//	}
+	
+	/**
+	 * 
+	 */
 	public void runPlay() {
-
-		while ( this.getAlivePlayerNum() > 1 ) {
-			if ( !this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead() ) {
-				try {
-					this.wait();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			
+//		if the current player's current robot has not moved
+		if(!this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
+			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
 			this.goNextPlayer();
 		}
+//		else if the current player's current robot has moved, end this turn. 
+		else{
+			
+		}
+		
+		
+		
 	}
+	
+	
+	
+	
+	
 	
 	/**
 	 * this method is to update the game when player perform actions: move or shoot
