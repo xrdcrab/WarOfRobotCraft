@@ -26,6 +26,9 @@ public class Robot {
 	/** robot movement point **/
 	private int movementPoint;
 	
+	/** robot view range */
+	private int range;
+	
 	/** robot absolute coordinate **/
 	private Coordinate coord;
 	
@@ -219,6 +222,22 @@ public class Robot {
 
 
 	/**
+	 * @return the range
+	 */
+	public int getRange() {
+		return range;
+	}
+
+
+	/**
+	 * @param range the range to set
+	 */
+	public void setRange(int range) {
+		this.range = range;
+	}
+
+
+	/**
 	 * this method is to determine whether the robot is dead
 	 * @return true if the robot is dead, false otherwise
 	 */
@@ -294,5 +313,13 @@ public class Robot {
 				return pair;
 			}
 		}
+	}
+	
+	/**
+	 * this method is to set the view range list for a robot
+	 * @param mapSize the size of the map
+	 */
+	public void setViewRange(int mapSize) {
+		this.setViewRangeList(this.getCoord().getRange(this.getRange(), mapSize));
 	}
 }
