@@ -292,6 +292,7 @@ public class Robot {
 	 * @param distance the distance to shoot
 	 * @param mapSize the size of map
 	 * @throws Exception 
+	 * @return Pair<Coordinate, Integer> contain the shoot target coordinate and the attack point.
 	 */
 	public Pair<Coordinate, Integer> shoot(int distance, int mapSize) throws Exception {
 		if(this.isDead()){
