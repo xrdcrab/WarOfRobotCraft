@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 
+import javafx.util.Pair;
 import model.*;
 import view.*;
 
@@ -18,6 +19,12 @@ public class Controller implements ActionListener, KeyListener {
 	private Game game;
 	private GameStartView gameStartView;
 	private SetGameModeView setGameModeView;
+	
+	private boolean isMoveMode;
+	private boolean isShootMode;
+	
+	private int shootDistance;
+	private Pair<Coordinate, Integer> shootTarget;
 	
 	/**
 	 * this constructor is for the game entry point
@@ -85,6 +92,63 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
+	 * @return the isMoveMode
+	 */
+	public boolean isMoveMode() {
+		return isMoveMode;
+	}
+
+	/**
+	 * @param isMoveMode the isMoveMode to set
+	 */
+	public void setMoveMode(boolean isMoveMode) {
+		this.isMoveMode = isMoveMode;
+	}
+
+	/**
+	 * @return the isShootMode
+	 */
+	public boolean isShootMode() {
+		return isShootMode;
+	}
+
+	/**
+	 * @param isShootMode the isShootMode to set
+	 */
+	public void setShootMode(boolean isShootMode) {
+		this.isShootMode = isShootMode;
+	}
+
+	
+	/**
+	 * @return the shootDistance
+	 */
+	public int getShootDistance() {
+		return shootDistance;
+	}
+
+	/**
+	 * @param shootDistance the shootDistance to set
+	 */
+	public void setShootDistance(int shootDistance) {
+		this.shootDistance = shootDistance;
+	}
+
+	/**
+	 * @return the shootTarget
+	 */
+	public Pair<Coordinate, Integer> getShootTarget() {
+		return shootTarget;
+	}
+
+	/**
+	 * @param shootTarget the shootTarget to set
+	 */
+	public void setShootTarget(Pair<Coordinate, Integer> shootTarget) {
+		this.shootTarget = shootTarget;
+	}
+
+	/**
 	 * this method is to define the action for each button when clicked
 	 */
 	@Override
@@ -148,17 +212,34 @@ public class Controller implements ActionListener, KeyListener {
 	public void keyReleased(KeyEvent e) {
 		
 		// move 
-		if ( e.getKeyCode() == 'M') {
+		if ( e.getKeyChar() == 'm' || e.getKeyChar() == 'M' ) {
+			// move the current robot of the current player
 			try {
 				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
 					.getCurrentRobot().move(
 						this.getGame().getGameMap().getMapSize());
 			} catch (Exception e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+			// update the game after the move action
+			this.getGame().updateGameMove(
+					this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex()));
 		}
 		// shoot
+		else if ( e.getKeyChar() == 's' || e.getKeyChar() == 'S' ) {
+			// the current robot of the current player shoot
+			try {
+				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
+					.getCurrentRobot().shoot(this.getShootDistance(), 
+											this.getGame().getGameMap().getMapSize());
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			// update the game after the shoot action
+			this.getGame().updateGameShoot(this.getShootTarget());
+		}
+		
+		
 	}
 
 
