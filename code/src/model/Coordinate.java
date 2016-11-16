@@ -156,28 +156,28 @@ public class Coordinate {
 		
 		switch (direction){
 		case 0:
-			newCoordindate.moveXPositive(distance);
-			newCoordindate.moveYNegative(distance);
+			newCoordindate.x++;
+			newCoordindate.y--;
 			break;
 		case 1:
-			newCoordindate.moveYNegative(distance);
-			newCoordindate.moveZPositive(distance);
+			newCoordindate.y--;
+			newCoordindate.z++;
 			break;
 		case 2:
-			newCoordindate.moveXNegative(distance);
-			newCoordindate.moveZPositive(distance);
+			newCoordindate.x--;
+			newCoordindate.z++;
 			break;
 		case 3:
-			newCoordindate.moveYPositive(distance);
-			newCoordindate.moveXNegative(distance);
+			newCoordindate.y++;
+			newCoordindate.x--;
 			break;
 		case 4:
-			newCoordindate.moveYPositive(distance);
-			newCoordindate.moveZNegative(distance);
+			newCoordindate.y++;
+			newCoordindate.z--;
 			break;
 		case 5:
-			newCoordindate.moveXPositive(distance);
-			newCoordindate.moveZNegative(distance);
+			newCoordindate.x++;
+			newCoordindate.z--;
 			break;
 		default:
 			break;
@@ -214,7 +214,7 @@ public class Coordinate {
 	}
 
 	public static void main(String[] args) {
-		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(3, 5);
+		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
 		rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
 	}
 }
