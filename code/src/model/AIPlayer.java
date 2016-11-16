@@ -1,17 +1,9 @@
-/*
- * Name: Ruida Xie
- * NSID: rux793
- * Student Number: 11194258
- */
+
 package model;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 
-/**
- * @author ruidaxie
- *
- */
 public class AIPlayer extends Player {
 
 	/** all the enemy robots with coordinate */
