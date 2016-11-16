@@ -1,7 +1,5 @@
 package model;
 
-import com.sun.accessibility.internal.resources.accessibility_sv;
-import com.sun.org.apache.xpath.internal.operations.And;
 import java.util.LinkedList;
 
 /**
