@@ -39,9 +39,9 @@ public class HumanPlayer extends Player{
 	 * this method moves a robot of the player one cell forward
 	 * @throws Exception 
 	 */
-	public void move(){
+	public void move(int mapSize){
 		try{
-			this.getCurrentRobot().move(Map.mapSize);
+			this.getCurrentRobot().move(mapSize);
 		}
 		catch (Exception e){
 			
