@@ -1,8 +1,4 @@
-/*
- * Name: Ruida Xie
- * NSID: rux793
- * Student Number: 11194258
- */
+
 package model;
 
 import java.util.LinkedList;
@@ -11,10 +7,6 @@ import javafx.util.Pair;
 import model.Map;
 
 
-/**
- * @author ruidaxie
- *
- */
 public class HumanPlayer extends Player{
 
 	/**
