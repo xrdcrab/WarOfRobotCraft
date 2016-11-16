@@ -100,7 +100,11 @@ public class Game {
 //	}
 	
         private boolean areAllRobotsPlayed(Player currentPlayer){
+            boolean scoutPlayed = currentPlayer.getScoutRobot().isHasMoved();
+            boolean sniperPlayed = currentPlayer.getScoutRobot().isHasMoved();
+            boolean tankPlayed = currentPlayer.getTankRobot().isHasMoved();
             
+            return scoutPlayed && sniperPlayed && tankPlayed;
         }
         
 	/**
