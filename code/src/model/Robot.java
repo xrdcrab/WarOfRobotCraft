@@ -94,7 +94,7 @@ public class Robot {
 
 
 	/**
-	 * @return the attackPoint
+	 * @return the attackPoint, int value, unique by robot type.
 	 */
 	public int getAttackPoint() {
 		return attackPoint;
@@ -110,7 +110,7 @@ public class Robot {
 
 
 	/**
-	 * @return the healthPoint
+	 * @return the healthPoint, int value, unique by robot type.
 	 */
 	public int getHealthPoint() {
 		return healthPoint;
@@ -126,7 +126,7 @@ public class Robot {
 
 
 	/**
-	 * @return the movementPoint
+	 * @return the movementPoint, int value, unique by robot type.
 	 */
 	public int getMovementPoint() {
 		return movementPoint;
@@ -158,7 +158,7 @@ public class Robot {
 
 
 	/**
-	 * @return the direction
+	 * @return the direction, int value range form 0 to 5
 	 */
 	public int getDirection() {
 		return direction;
@@ -174,7 +174,7 @@ public class Robot {
 
 
 	/**
-	 * @return the hasMoved
+	 * @return the hasMoved boolean value
 	 */
 	public boolean isHasMoved() {
 		return hasMoved;
@@ -190,7 +190,7 @@ public class Robot {
 
 
 	/**
-	 * @return the hasShot
+	 * @return the hasShot boolean value
 	 */
 	public boolean isHasShot() {
 		return hasShot;
@@ -222,7 +222,7 @@ public class Robot {
 
 
 	/**
-	 * @return the range
+	 * @return the visible range of the robot
 	 */
 	public int getRange() {
 		return range;
@@ -258,7 +258,7 @@ public class Robot {
 	/**
 	 * this method is to move a robot
 	 * @param mapSize the size of map
-	 * @throws Exception 
+	 * @throws Exception when robot is dead or move out of the map range.
 	 */
 	public void move(int mapSize) throws Exception {
 		if(this.isDead()){
@@ -309,8 +309,6 @@ public class Robot {
 				} catch (Exception e) {
 					throw new Exception("The move is out of map range.");
 				}
-				
-				
 				return pair;
 			}
 		}
