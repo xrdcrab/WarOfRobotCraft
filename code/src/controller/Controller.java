@@ -138,8 +138,10 @@ public class Controller implements ActionListener, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
+		// go the next player when a play finished
+		if ( e.getKeyCode() == KeyEvent.VK_SPACE ) {
+			this.getGame().goNextPlayer();
+		}
 	}
 
 	@Override
