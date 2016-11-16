@@ -1,9 +1,6 @@
 package model;
 
-import java.time.Clock;
 import java.util.HashMap;
-import java.util.LinkedList;
-import sun.security.util.AbstractAlgorithmConstraints;
 
 
 /**
@@ -36,15 +33,9 @@ public class Map {
 	 * which is to set all coordinates to false
 	 */
 	private void initializeMap() {
-		for ( int i = 1 - this.getMapSize(); i < this.getMapSize(); i++ ) {
-			for ( int j = 1 - this.getMapSize(); j < this.getMapSize(); j++ ) {
-				for ( int k = 1 - this.getMapSize(); k <= i; k++ ) {
-					if ( i + j + k == 0 ) {
-						this.getCoordinateMap().put(new Coordinate(i,j,k), false);
-					}					
-				}
-			}
-		}
+		
+		Coordinate center = new Coordinate(0,0,0);
+		this.coordinateMap = center.getRange(this.getMapSize());
 	}
 	
 	/**
