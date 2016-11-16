@@ -107,7 +107,7 @@ public class Game {
 		if(!this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
 			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
 			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
-			this.goNextPlayer();
+//			this.goNextPlayer();
 		}
 //		else if the current player's current robot has moved, end this turn. 
 		else{
