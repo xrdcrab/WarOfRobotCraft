@@ -190,33 +190,31 @@ public class Coordinate {
 		return newCoordindate;
 	}
         
-        public LinkedList<Coordinate> getRange(int range, int mapSize){;
-            LinkedList<Coordinate> rangeList = new LinkedList<>();
-            
-            rangeList.add(this);
-            for(int i = 0; i < range; i++){
-                rangeList.add(new Coordinate(this.x + i, this.y - i, this.z));
-                rangeList.add(new Coordinate(this.x + i, this.y, this.z - i));
-                rangeList.add(new Coordinate(this.x - i, this.y + i, this.z));
-                rangeList.add(new Coordinate(this.x, this.y + i, this.z - i));
-                rangeList.add(new Coordinate(this.x - i, this.y, this.z + i));
-                rangeList.add(new Coordinate(this.x, this.y - i, this.z + i));
-            }
-            
-            LinkedList<Coordinate> removeList = new LinkedList<>();
-            for(Coordinate coor : rangeList){
-                if(!coor.checkRange(mapSize)){
-                    removeList.add(coor);
-                }
-            }
-            
-            rangeList.removeAll(removeList);
-            
-            return rangeList;
-        }
-        
-        public static void main(String[] args) {
-            LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(3, 5);
-            rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
-        }
-    }
+	/**
+	 * this method is to get the hexagons in the range of a center hexagon
+	 * 
+	 * @param range the range to search 
+	 * @param mapSize the map size
+	 * @return rangeList the list of the all the hexagons in the range
+	 */
+	public LinkedList<Coordinate> getRange(int range, int mapSize) {
+		LinkedList<Coordinate> rangeList = new LinkedList<>();
+
+		for ( int x = this.getX() - range; x <= this.getX() + range; x++ ) {
+			for ( int y = Math.max(this.getY() - range, - x - (this.getZ()+range)); 
+					y <= Math.min(this.getY() + range, - x - (this.getZ() - range)); y++ ) {
+				int z = - x - y;
+				Coordinate newCoord = new Coordinate(x, y, z);
+				if ( newCoord.checkRange(mapSize))
+					rangeList.add( newCoord );
+			}
+		}
+
+		return rangeList;
+	}
+
+	public static void main(String[] args) {
+		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(3, 5);
+		rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
+	}
+}

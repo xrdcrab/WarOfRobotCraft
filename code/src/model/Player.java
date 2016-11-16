@@ -1,5 +1,7 @@
 package model;
 
+import java.util.LinkedList;
+
 /**
  * This is a model class of Player.
  *
@@ -12,6 +14,10 @@ public class Player {
 	Robot scoutRobot;
 	Robot sniperRobot;
 	Robot tankRobot;
+	
+	/** the view range for a player, 
+	 * which takes all the range from belonging robots */
+	private LinkedList<Coordinate> viewRangeList;
 	
 	public Player(String name, int score, Robot scoutRobot, Robot sniperRobot, Robot tankRobot) {
 		super();
@@ -55,6 +61,15 @@ public class Player {
 		}
 	}
 
+	public void setViewRange() {
+		// get new range from a robot
+		for ( Coordinate coord : this.getScoutRobot().getViewRangeList() ) {
+			
+		}
+		// match with the current view range
+		
+	}
+	
 	/**
 	 * @return the name
 	 */
@@ -130,6 +145,20 @@ public class Player {
 	 */
 	public void setCurrentRobot(Robot currentRobot) {
 		this.currentRobot = currentRobot;
+	}
+
+	/**
+	 * @return the viewRangeList
+	 */
+	public LinkedList<Coordinate> getViewRangeList() {
+		return viewRangeList;
+	}
+
+	/**
+	 * @param viewRangeList the viewRangeList to set
+	 */
+	public void setViewRangeList(LinkedList<Coordinate> viewRangeList) {
+		this.viewRangeList = viewRangeList;
 	}
 	
 	
