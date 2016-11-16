@@ -1,0 +1,2 @@
+1. Disscuss move(), turn(), shoot() methods.
+2. Arrange the next meeting and schedule the rest work.
