@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Map {
 
 	/** the size of any side of the map */
-	static int mapSize;
+	private int mapSize;
 
 	/** the coordinate list for the map */
 	//private LinkedList<Pair<Coordinate, Boolean>> coordinateList;
