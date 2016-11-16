@@ -68,12 +68,12 @@ public class Game {
 	 * @precondition  currentPlayerIndex>=5 or currentPlayerIndex<0
 	 */
 	public void goNextPlayer(){
-		if (this.getCurrentPlayerIndex()<0||this.currentPlayerIndex>=5){
+		if (this.getCurrentPlayerIndex() < 0||this.currentPlayerIndex >= this.playerNum){
 			this.setCurrentPlayerIndex(0);
 			this.setAlivePlayerNum(0);
 		}
 		else{
-			this.setCurrentPlayerIndex(this.currentPlayerIndex+1);
+			this.setCurrentPlayerIndex(this.currentPlayerIndex + 1);
 			if (!this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead()) {
 				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
 			}			
