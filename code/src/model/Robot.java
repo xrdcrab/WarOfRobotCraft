@@ -14,6 +14,7 @@ public class Robot {
 		scout, sniper, tank
 	};
 	
+	/**	robot type **/
 	private RobotType type;
 	
 	/** robot name **/
@@ -77,6 +78,25 @@ public class Robot {
 		this.hasShot = hasShot;
 		this.viewRangeList = viewRangeList;
 	}
+
+	
+
+	/**
+	 * @return the type
+	 */
+	public RobotType getType() {
+		return type;
+	}
+
+
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(RobotType type) {
+		this.type = type;
+	}
+
 
 
 	/**
