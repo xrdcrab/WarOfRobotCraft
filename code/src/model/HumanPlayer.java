@@ -45,6 +45,14 @@ public class HumanPlayer extends Player{
 			
 		}
 	}
+	
+	/**
+	 * this method makes a robot of the player face a different direction.
+	 * @param direction, the direction to which the robot will face
+	 */
+	public void turn(int direction){
+		this.getCurrentRobot().turn(direction);
+	}
 
 
 }
