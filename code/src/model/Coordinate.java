@@ -1,15 +1,14 @@
 package model;
 
-import com.sun.accessibility.internal.resources.accessibility_sv;
-import com.sun.org.apache.xpath.internal.operations.And;
+import java.util.LinkedList;
 
 /**
  * this class is to create a coordinate in a map
- * the coordinate is defined by 3 directions in a panel, 
- * which are x, y, z.
+ the coordinate is defined by 3 directions in a panel, 
+ which are i, y, z.
  */
 public class Coordinate {
-	/** coordinate x **/
+	/** coordinate i **/
 	private int x;
 	
 	/** coordinate y **/
@@ -32,9 +31,9 @@ public class Coordinate {
 	
 	
 	/**
-	 * this method is to get the x coordinate
+	 * this method is to get the i coordinate
 	 * 
-	 * @return x the x coordinate
+	 * @return i the i coordinate
 	 */
 	public int getX() {
 		return x;
@@ -42,7 +41,7 @@ public class Coordinate {
 
 
 	/**
-	 * this method is to set the x coordinate
+	 * this method is to set the i coordinate
 	 */
 	public void setX(int x) {
 		this.x = x;
@@ -86,7 +85,7 @@ public class Coordinate {
 
 
 	/**
-	 * this method is to move along the x positive direction within give steps
+	 * this method is to move along the i positive direction within give steps
 	 */
 	public void moveXPositive(int step) {
 		this.x += step;
@@ -94,7 +93,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the x negative direction within give steps
+	 * this method is to move along the i negative direction within give steps
 	 */
 	public void moveXNegative(int step) {
 		this.x -= step;
@@ -102,7 +101,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the x positive direction within give steps
+	 * this method is to move along the i positive direction within give steps
 	 */
 	public void moveYPositive(int step) {
 		this.y += step;
@@ -110,7 +109,7 @@ public class Coordinate {
 	}
 	
 	/**
-	 * this method is to move along the x negative direction within give steps
+	 * this method is to move along the i negative direction within give steps
 	 */
 	public void moveYNegative(int step) {
 		this.y -= step;
@@ -139,9 +138,9 @@ public class Coordinate {
 	 * @return true if the coordinate is in the map range; false otherwise
 	 */
 	private boolean checkRange(int mapSize) {
-		return (Math.abs(this.x) <= mapSize
-				&& Math.abs(this.y) <= mapSize
-				&& Math.abs(this.z) <= mapSize);
+		return (Math.abs(this.x) < mapSize
+                    && Math.abs(this.y) < mapSize
+                    && Math.abs(this.z) < mapSize);
 	}
 	
 	/**
@@ -157,28 +156,28 @@ public class Coordinate {
 		
 		switch (direction){
 		case 0:
-			newCoordindate.moveXPositive(distance);
-			newCoordindate.moveYNegative(distance);
+			newCoordindate.x++;
+			newCoordindate.y--;
 			break;
 		case 1:
-			newCoordindate.moveYNegative(distance);
-			newCoordindate.moveZPositive(distance);
+			newCoordindate.y--;
+			newCoordindate.z++;
 			break;
 		case 2:
-			newCoordindate.moveXNegative(distance);
-			newCoordindate.moveZPositive(distance);
+			newCoordindate.x--;
+			newCoordindate.z++;
 			break;
 		case 3:
-			newCoordindate.moveYPositive(distance);
-			newCoordindate.moveXNegative(distance);
+			newCoordindate.y++;
+			newCoordindate.x--;
 			break;
 		case 4:
-			newCoordindate.moveYPositive(distance);
-			newCoordindate.moveZNegative(distance);
+			newCoordindate.y++;
+			newCoordindate.z--;
 			break;
 		case 5:
-			newCoordindate.moveXPositive(distance);
-			newCoordindate.moveZNegative(distance);
+			newCoordindate.x++;
+			newCoordindate.z--;
 			break;
 		default:
 			break;
@@ -189,5 +188,63 @@ public class Coordinate {
 		}
 		
 		return newCoordindate;
+	}
+        
+	/**
+	 * this method is to get the hexagons in the range of a center hexagon
+	 * 
+	 * @param range the range to search 
+	 * @param mapSize the map size
+	 * @return rangeList the list of the all the hexagons in the range
+	 */
+	public LinkedList<Coordinate> getRange(int range, int mapSize) {
+		LinkedList<Coordinate> rangeList = new LinkedList<>();
+
+		for ( int x = this.getX() - range; x <= this.getX() + range; x++ ) {
+			for ( int y = Math.max(this.getY() - range, - x - (this.getZ()+range)); 
+					y <= Math.min(this.getY() + range, - x - (this.getZ() - range)); y++ ) {
+				int z = - x - y;
+				Coordinate newCoord = new Coordinate(x, y, z);
+				if ( newCoord.checkRange(mapSize))
+					rangeList.add( newCoord );
+			}
+		}
+
+		return rangeList;
+	}
+        
+        @Override
+        public boolean equals(Object obj){
+            if(obj == null){
+                return false;
+            }
+            if(!Coordinate.class.isAssignableFrom(obj.getClass())){
+                return false;
+            }
+            final Coordinate coord = (Coordinate)obj;
+            if(this.x != coord.x ){
+                return false;
+            }
+            if(this.y != coord.y){
+                return false;
+            }
+            if(this.z != coord.z){
+                return false;
+            }
+            
+            return true;
+        };
+
+	public static void main(String[] args) {
+		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
+		rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
+                
+                boolean b = new Coordinate(1, 2, 3).equals(new Coordinate(1, 2, 3));
+                b = new Coordinate(1, 2, 3).equals(new Coordinate(1, 2, 2));
+                
+                LinkedList<Coordinate> list1 = new Coordinate(0, 0, 0).getRange(1, 5);
+                LinkedList<Coordinate> list2 = new Coordinate(1, -1, 0).getRange(1, 5);
+                list1.removeAll(list2);
+                list1.addAll(list2);
 	}
 }

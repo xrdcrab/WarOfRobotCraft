@@ -1,6 +1,11 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Timer;
+
+import javafx.util.Pair;
 
 /**
  * this class is to build up the game, 
@@ -82,19 +87,45 @@ public class Game {
 
 		while ( this.getAlivePlayerNum() > 1 ) {
 			if ( !this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead() ) {
-				
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
 			this.goNextPlayer();
 		}
 	}
 	
-	public void updateGame(Coordinate shotTarget) {
+	public void updateGame(Pair<Coordinate, Integer> pair) {
 		// update robots
-		//for ( )
-		// update players
+		this.setAlivePlayerNum(0);
+		for ( Integer key: playerMap.keySet() ) {
+			Player traversedPlayer = this.getPlayerMap().get(key);
+			if ( !traversedPlayer.isDead() ) {
+				// case 1: the scout robot is get damaged
+				if ( !traversedPlayer.getScoutRobot().isDead() 
+						&& traversedPlayer.getScoutRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getScoutRobot().damaged(pair.getValue());
+				}
+				// case 2: the sniper robot is get damaged
+				if ( !traversedPlayer.getSniperRobot().isDead() 
+						&& traversedPlayer.getSniperRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getSniperRobot().damaged(pair.getValue());
+				}
+				// case 3: the tank robot is get damaged
+				if ( !traversedPlayer.getTankRobot().isDead() 
+						&& traversedPlayer.getTankRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getTankRobot().damaged(pair.getValue());
+				}
+				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
+			}			
+		}
 		
 		// update map
+		
 	}
 	
 	/**

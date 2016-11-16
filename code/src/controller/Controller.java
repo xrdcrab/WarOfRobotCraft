@@ -123,8 +123,19 @@ public class Controller implements ActionListener, KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
+		// move 
+		if ( e.getKeyCode() == 'M') {
+			try {
+				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
+					.getCurrentRobot().move(
+						this.getGame().getGameMap().getMapSize());
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+		// shoot
 	}
 
 
