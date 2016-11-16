@@ -18,7 +18,7 @@ public class Game {
 	private HashMap<Integer, Player> playerMap;
 	
 	/** the number of players within the game */
-	private int playerNum;
+	private int playerNumber;
 	
 	/** the current player for the game */
 	private int currentPlayerIndex;
@@ -27,39 +27,39 @@ public class Game {
 	private Map gameMap;
 
 	/** the number of alive player */
-	private int alivePlayerNum;
+	private int alivePlayerNumber;
 	
 	/**
 	 * @param playerMap
-	 * @param playerNum
+	 * @param playerNumber
 	 * @param currentPlayer
 	 * @param map
 	 */
 	public Game(HashMap<Integer, Player> playerMap, 
-			int playerNum, int currentPlayer, 
-			Map map, int alivePlayerNum) {
+			int playerNumber, int currentPlayer, 
+			Map map, int alivePlayerNumber) {
 		super();
 		
-		this.playerNum = playerNum;
+		this.playerNumber = playerNumber;
 		this.playerMap = new HashMap<Integer, Player>();
 		this.currentPlayerIndex = currentPlayer;
 		this.gameMap = map;
-		this.alivePlayerNum = alivePlayerNum;
+		this.alivePlayerNumber = alivePlayerNumber;
 	}
 	
 	/**
 	 * this method is to overload the constructor above with two parameters
 	 * @param playerMap
-	 * @param playerNum
+	 * @param playerNumber
 	 */
-	public Game(HashMap<Integer, Player> playerMap, int playerNum) {
+	public Game(HashMap<Integer, Player> playerMap, int playerNumber) {
 		super();
 		
-		this.playerNum = playerNum;
+		this.playerNumber = playerNumber;
 		this.playerMap = new HashMap<Integer, Player>();
-		this.gameMap = new Map(playerNum);
+		this.gameMap = new Map(playerNumber);
 		this.currentPlayerIndex = -1;
-		this.alivePlayerNum = this.playerNum;
+		this.alivePlayerNumber = this.playerNumber;
 	}
 	
 	/**
@@ -68,14 +68,14 @@ public class Game {
 	 * @precondition  currentPlayerIndex>=5 or currentPlayerIndex<0
 	 */
 	public void goNextPlayer(){
-		if (this.getCurrentPlayerIndex() < 0||this.currentPlayerIndex >= this.playerNum){
+		if (this.getCurrentPlayerIndex() < 0||this.currentPlayerIndex >= this.playerNumber){
 			this.setCurrentPlayerIndex(0);
-			this.setAlivePlayerNum(0);
+			this.setAlivePlayerNumber(0);
 		}
 		else{
 			this.setCurrentPlayerIndex(this.currentPlayerIndex + 1);
 			if (!this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead()) {
-				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
+				this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
 			}			
 		}		
 	}
@@ -152,7 +152,7 @@ public class Game {
 	 */
 	public void updateGameShoot(Pair<Coordinate, Integer> pair) {
 		// update robots
-		this.setAlivePlayerNum(0);
+		this.setAlivePlayerNumber(0);
 		for ( Integer key: playerMap.keySet() ) {
 			Player traversedPlayer = this.getPlayerMap().get(key);
 			if ( !traversedPlayer.isDead() ) {
@@ -171,7 +171,7 @@ public class Game {
 						&& traversedPlayer.getTankRobot().getCoord().equals(pair.getKey()) ) {
 					traversedPlayer.getTankRobot().damaged(pair.getValue());
 				}
-				this.setAlivePlayerNum(this.getAlivePlayerNum() + 1);
+				this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
 			}			
 		}
 	}
@@ -199,17 +199,17 @@ public class Game {
 	}
 
 	/**
-	 * @return the playerNum
+	 * @return the playerNumber
 	 */
-	public int getPlayerNum() {
-		return playerNum;
+	public int getPlayerNumber() {
+		return playerNumber;
 	}
 
 	/**
-	 * @param playerNum the playerNum to set
+	 * @param playerNumber the playerNumber to set
 	 */
-	public void setPlayerNum(int playerNum) {
-		this.playerNum = playerNum;
+	public void setPlayerNumber(int playerNumber) {
+		this.playerNumber = playerNumber;
 	}
 
 	/**
@@ -241,17 +241,17 @@ public class Game {
 	}
 
 	/**
-	 * @return the alivePlayerNum
+	 * @return the alivePlayerNumber
 	 */
-	public int getAlivePlayerNum() {
-		return alivePlayerNum;
+	public int getAlivePlayerNumber() {
+		return alivePlayerNumber;
 	}
 
 	/**
-	 * @param alivePlayerNum the alivePlayerNum to set
+	 * @param alivePlayerNumber the alivePlayerNumber to set
 	 */
-	public void setAlivePlayerNum(int alivePlayerNum) {
-		this.alivePlayerNum = alivePlayerNum;
+	public void setAlivePlayerNumber(int alivePlayerNumber) {
+		this.alivePlayerNumber = alivePlayerNumber;
 	}
 
 	
