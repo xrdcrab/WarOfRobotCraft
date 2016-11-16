@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 import javafx.util.Pair;
 import model.*;
@@ -197,7 +198,8 @@ public class Controller implements ActionListener, KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+		LinkedList<Integer> numberList = new LinkedList<Integer>();
+		//numberList.add(Integer.parseUnsignedInt(e.getKeyChar(), 0));
 	}
 
 	@Override
