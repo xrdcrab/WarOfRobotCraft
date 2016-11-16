@@ -47,7 +47,7 @@ public class Robot {
 	private LinkedList<Coordinate> viewRangeList;
 	
 	/**getRange() method
-	 * this constructor is to create a robot with paramaters
+	 * this constructor is to create a robot with parameters
 	 * @param type
 	 * @param name
 	 * @param attackPoint
