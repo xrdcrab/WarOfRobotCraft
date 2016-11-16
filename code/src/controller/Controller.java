@@ -111,7 +111,7 @@ public class Controller implements ActionListener, KeyListener {
 			
 			if ( this.getSetGameModeView().getTwoPlayersRadioButton().isSelected() ) {
 				playerNum = 2;
-				playerMap.put(0, new Player("", 0, new Robot()));
+				//playerMap.put(0, new Player("", 0, new Robot()));
 			}
 			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
 				playerNum = 3;
@@ -123,7 +123,7 @@ public class Controller implements ActionListener, KeyListener {
 			
 			
 			if ( playerNum != -1 ) {
-				this.setGame(new Game(playerNum, ));
+				//this.setGame(new Game(playerNum, ));
 			}
 			
 			
