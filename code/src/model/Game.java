@@ -133,6 +133,10 @@ public class Game {
 		
 	}
 	
+	public void updateGameMove(Player currentPlayer) {
+		
+	}
+	
 	/**
 	 * @return the playerMap
 	 */
