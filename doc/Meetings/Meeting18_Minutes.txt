@@ -1,0 +1,13 @@
+Meeting 18
+Date: Nov 15, 2016 15:35 - 16:53 
+Location: Spinks S342
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Topic: Decision making
+Caller: TA
+Moderator: Shisong Wang
+Secretary: Chen Yang
+
+1. Show only relative coordinates within the visiable range of the robot.
+2. Do not remove the turn() method.
+3. Use keyboard as the input tool.
+4. Team members will finish model package tomorrow afternoon.
