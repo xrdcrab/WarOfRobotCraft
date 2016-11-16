@@ -1,9 +1,10 @@
 package model;
 
+import java.time.Clock;
 import java.util.HashMap;
 import java.util.LinkedList;
+import sun.security.util.AbstractAlgorithmConstraints;
 
-import javafx.util.Pair;
 
 /**
  * this class is to create a map of the game
@@ -30,7 +31,7 @@ public class Map {
 		}
 	}
 
-	/**
+	/**coordinateMap
 	 * this method is to initialize map, 
 	 * which is to set all coordinates to false
 	 */
@@ -51,10 +52,11 @@ public class Map {
 	 * @param currentPlayer the current player of the game
 	 */
 	public void updateMist(Player currentPlayer) {
-		for ( Coordinate coord: currentPlayer.getViewRangeList() ) {
-			this.getCoordinateMap().replace(coord, true);
-		}
+		getCoordinateMap().forEach((coord, isVisible) -> {
+                    System.out.println(coord + "");
+                });
 	}
+        
 
 	/**
 	 * @return the mapSize
@@ -84,4 +86,11 @@ public class Map {
 		this.coordinateMap = coordinateMap;
 	}
 	
+        
+        public static void main(String[] args) {
+            Map map = new Map(7);
+            map.initializeMap();
+           System.out.println(map.getCoordinateMap().size());
+            map.updateMist(null);
+        }
 }

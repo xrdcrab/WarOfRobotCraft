@@ -212,6 +212,8 @@ public class Coordinate {
 
 		return rangeList;
 	}
+        
+        
 
 	public static void main(String[] args) {
 		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
