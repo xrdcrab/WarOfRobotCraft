@@ -38,7 +38,7 @@ public class Map {
 	private void initializeMap() {
 		for ( int i = 1 - this.getMapSize(); i < this.getMapSize(); i++ ) {
 			for ( int j = 1 - this.getMapSize(); j < this.getMapSize(); j++ ) {
-				for ( int k = 1 - this.getMapSize(); k < this.getMapSize(); k++ ) {
+				for ( int k = 1 - this.getMapSize(); k <= i; k++ ) {
 					if ( i + j + k == 0 ) {
 						this.getCoordinateMap().put(new Coordinate(i,j,k), false);
 					}					
@@ -53,7 +53,7 @@ public class Map {
 	 */
 	public void updateMist(Player currentPlayer) {
 		getCoordinateMap().forEach((coord, isVisible) -> {
-                    System.out.println(coord + "");
+                    System.out.println(coord.getX() + "," + coord.getY() + "," + coord.getZ() + ":" + isVisible);
                 });
 	}
         
@@ -88,7 +88,7 @@ public class Map {
 	
         
         public static void main(String[] args) {
-            Map map = new Map(7);
+            Map map = new Map(5);
             map.initializeMap();
            System.out.println(map.getCoordinateMap().size());
             map.updateMist(null);
