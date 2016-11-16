@@ -16,13 +16,16 @@ import view.*;
  * this class is to build up the controller to control the game system
  */
 public class Controller implements ActionListener, KeyListener {
-
+	private enum OperationMode{move, shoot, turn}
+	
 	private Game game;
 	private GameStartView gameStartView;
 	private SetGameModeView setGameModeView;
 	
-	private boolean isMoveMode;
-	private boolean isShootMode;
+	//private boolean isMoveMode;
+	//private boolean isShootMode;
+	//private boolean isTurnMode;
+	private OperationMode operationMode;
 	
 	private int shootDistance;
 	private Pair<Coordinate, Integer> shootTarget;
@@ -96,31 +99,33 @@ public class Controller implements ActionListener, KeyListener {
 	 * @return the isMoveMode
 	 */
 	public boolean isMoveMode() {
-		return isMoveMode;
+		return this.operationMode == OperationMode.move;
 	}
 
 	/**
 	 * @param isMoveMode the isMoveMode to set
 	 */
-	public void setMoveMode(boolean isMoveMode) {
-		this.isMoveMode = isMoveMode;
-	}
+//	public void setMoveMode(boolean isMoveMode) {
+//		this.isMoveMode = isMoveMode;
+//	}
 
 	/**
 	 * @return the isShootMode
 	 */
 	public boolean isShootMode() {
-		return isShootMode;
+		return this.operationMode == OperationMode.shoot;
 	}
 
 	/**
 	 * @param isShootMode the isShootMode to set
 	 */
-	public void setShootMode(boolean isShootMode) {
-		this.isShootMode = isShootMode;
-	}
+//	public void setShootMode(boolean isShootMode) {
+//		this.isShootMode = isShootMode;
+//	}
 
-	
+	/**
+	 * 
+	 */
 	/**
 	 * @return the shootDistance
 	 */
@@ -240,7 +245,8 @@ public class Controller implements ActionListener, KeyListener {
 			// update the game after the shoot action
 			this.getGame().updateGameShoot(this.getShootTarget());
 		}
-		
+		// turn
+		else if ( )
 		
 	}
 
