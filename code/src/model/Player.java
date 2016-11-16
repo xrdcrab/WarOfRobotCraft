@@ -2,6 +2,8 @@ package model;
 
 import java.util.LinkedList;
 
+import model.Robot.RobotType;
+
 /**
  * This is a model class of Player.
  *
@@ -35,6 +37,21 @@ public class Player {
 		this.viewRangeList = viewRangeList;
 	}
 
+	/**
+	 * this constructor is used when a new player create when the game get started
+	 * @param coord
+	 * @param viewRangeList
+	 */
+	public Player (Coordinate coord, LinkedList<Coordinate> viewRangeList) {
+		this.name = "";
+		this.score = 0;
+		this.currentRobot = null;
+		this.scoutRobot = new Robot(RobotType.scout, "", 1, 1, 3, coord, 0, false, false, viewRangeList);
+		this.sniperRobot = new Robot(RobotType.sniper, "", 2, 2, 2, coord, 0, false, false, viewRangeList);
+		this.tankRobot = new Robot(RobotType.tank, "", 3, 3, 1, coord, 0, false, false, viewRangeList);
+		this.viewRangeList = viewRangeList;
+	}
+	
 	/**
 	 * this method is to determine whether all the robot are dead. 
 	 */

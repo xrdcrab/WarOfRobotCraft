@@ -10,9 +10,11 @@ import javafx.util.Pair;
 public class Robot {
 	
 	/** robot type **/
-	private enum type {
+	protected enum RobotType {
 		scout, sniper, tank
 	};
+	
+	private RobotType type;
 	
 	/** robot name **/
 	private String name;
@@ -54,7 +56,7 @@ public class Robot {
 	 * @param coord
 	 * @param direction
 	 */
-	public Robot (type type, 
+	public Robot (RobotType type, 
 				String name, 
 				int attackPoint,
 				int healthPoint,

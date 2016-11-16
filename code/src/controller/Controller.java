@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.HashMap;
 
 import model.*;
 import view.*;
@@ -105,7 +106,27 @@ public class Controller implements ActionListener, KeyListener {
 		}
 		// confirm button
 		else if ( e.getSource().equals(this.getSetGameModeView().getConfirmButton() ) ) {
-			//int playerNum = this.getSetGameModeView();
+			int playerNum = -1;
+			HashMap<Integer, Player> playerMap = new HashMap<Integer, Player>();
+			
+			if ( this.getSetGameModeView().getTwoPlayersRadioButton().isSelected() ) {
+				playerNum = 2;
+				playerMap.put(0, new Player("", 0, new Robot()));
+			}
+			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
+				playerNum = 3;
+			}
+			else if ( this.getSetGameModeView().getSixPlayersRadioButton().isSelected() ) {
+				playerNum = 6;
+			}
+			
+			
+			
+			if ( playerNum != -1 ) {
+				this.setGame(new Game(playerNum, ));
+			}
+			
+			
 		}
 	}
 
