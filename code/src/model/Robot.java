@@ -343,4 +343,31 @@ public class Robot {
 	public void setViewRange(int mapSize) {
 		this.setViewRangeList(this.getCoord().getRange(this.getRange(), mapSize));
 	}
+	
+	/**
+	 * This method is to reset a robot's status into initial status.
+	 */
+	public void resetStatus(){
+		this.setHasShot(false);
+		switch(this.type){
+		case scout:
+			this.setHealthPoint(1);
+			this.setMovementPoint(3);
+			break;
+		case sniper:
+			this.setHealthPoint(2);
+			this.setMovementPoint(2);
+			break;
+		case tank:
+			this.setHealthPoint(3);
+			this.setMovementPoint(1);
+			break;
+		default:
+			break;
+		}
+	}
 }
+
+
+
+
