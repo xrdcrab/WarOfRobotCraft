@@ -41,7 +41,7 @@ public class HumanPlayer extends Player{
 	 */
 	public void move(){
 		try{
-			this.getCurrentRobot().move(Map.getMapSize());
+			this.getCurrentRobot().move(Map.mapSize);
 		}
 		catch (Exception e){
 			
