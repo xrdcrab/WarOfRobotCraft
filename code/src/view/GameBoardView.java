@@ -6,6 +6,9 @@
 package view;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Timer;
+import model.Coordinate;
 
 /**
  *
@@ -99,13 +102,11 @@ public class GameBoardView extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 1003, 748));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1003, 748));
-        setPreferredSize(new java.awt.Dimension(1003, 748));
 
         gameBoardPanel.setBackground(new java.awt.Color(255, 255, 255));
         gameBoardPanel.setBounds(new java.awt.Rectangle(0, 0, 600, 480));
         gameBoardPanel.setMaximumSize(new java.awt.Dimension(600, 480));
         gameBoardPanel.setPreferredSize(new java.awt.Dimension(600, 480));
-        gameBoardPanel.setSize(new java.awt.Dimension(600, 480));
 
         hexagonLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
@@ -637,6 +638,20 @@ public class GameBoardView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void formWindowOpened(java.awt.event.WindowEvent evt) { 
+            
+    }
+    
+    public void setTimerNumber(int number){
+        timerLabel.setText("" + number);
+       
+    }
+    
+    public void updateMist(HashMap<Coordinate, Boolean> hashMap){
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
