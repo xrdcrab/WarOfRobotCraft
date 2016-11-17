@@ -144,7 +144,9 @@ public class Controller implements ActionListener, KeyListener {
 			 * @param direction
 			 */
 			private void turnOperation(int direction) {
-				
+				getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+					.getCurrentRobot().turn(direction);
+				//update UI here
 			}
 			
 			/**
@@ -152,7 +154,16 @@ public class Controller implements ActionListener, KeyListener {
 			 * @param shootDistance
 			 */
 			private void shootOperation(int shootDistance){
+				Pair<Coordinate, Integer> pair = null;
+				try {
+					pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+					.getCurrentRobot().shoot(shootDistance, getGame().getGameMap().getMapSize());
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 				
+				getGame().updateGameShoot(pair);
+				//update UI here
 			}
 			
 			/**
@@ -160,7 +171,7 @@ public class Controller implements ActionListener, KeyListener {
 			 */
 			private void moveOperation() {
 				try {
-					getGame().getPlayerMap().get(getGame().getCurrentPlayerIndex())
+					getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
 						.getCurrentRobot().move(
 							getGame().getGameMap().getMapSize());
 				} catch (Exception e1) {
@@ -168,7 +179,7 @@ public class Controller implements ActionListener, KeyListener {
 				}
 				// update the game after the move action
 				getGame().updateGameMove(
-						getGame().getPlayerMap().get(getGame().getCurrentPlayerIndex()));
+						getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
 			}
 		});
 		//this.getSetGameModeView().getConfirmButton().addActionListener(this);
@@ -346,11 +357,11 @@ public class Controller implements ActionListener, KeyListener {
 		// confirm button
 		else if ( e.getSource().equals(this.getSetGameModeView().getConfirmButton() ) ) {
 			int playerNum = -1;
-			HashMap<Integer, Player> playerMap = new HashMap<Integer, Player>();
+			HashMap<Integer, Player> PlayerHashMap = new HashMap<Integer, Player>();
 			
 			if ( this.getSetGameModeView().getTwoPlayersRadioButton().isSelected() ) {
 				playerNum = 2;
-				//playerMap.put(0, new Player("", 0, new Robot()));
+				//PlayerHashMap.put(0, new Player("", 0, new Robot()));
 			}
 			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
 				playerNum = 3;
@@ -391,7 +402,7 @@ public class Controller implements ActionListener, KeyListener {
 		if ( e.getKeyChar() == 'm' || e.getKeyChar() == 'M' ) {
 			// move the current robot of the current player
 			try {
-				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
+				this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex())
 					.getCurrentRobot().move(
 						this.getGame().getGameMap().getMapSize());
 			} catch (Exception e1) {
@@ -399,13 +410,13 @@ public class Controller implements ActionListener, KeyListener {
 			}
 			// update the game after the move action
 			this.getGame().updateGameMove(
-					this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex()));
+					this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex()));
 		}
 		// shoot
 		else if ( e.getKeyChar() == 's' || e.getKeyChar() == 'S' ) {
 			// the current robot of the current player shoot
 			try {
-				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
+				this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex())
 					.getCurrentRobot().shoot(this.getShootDistance(), 
 											this.getGame().getGameMap().getMapSize());
 			} catch (Exception e1) {
