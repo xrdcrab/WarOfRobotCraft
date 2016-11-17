@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import javafx.scene.Parent;
 import javafx.util.Pair;
 import model.*;
 import view.*;
@@ -18,7 +19,7 @@ import view.*;
  * this class is to build up the controller to control the game system
  */
 public class Controller implements ActionListener, KeyListener {
-	private enum OperationMode{move, shoot, turn}
+	private enum OperationMode{shoot, turn}
 	
 	private Game game;
 	private GameStartView gameStartView;
@@ -60,15 +61,18 @@ public class Controller implements ActionListener, KeyListener {
 				if(e.getID() == KeyEvent.KEY_PRESSED){
 					switch (e.getKeyCode()) {
 					case KeyEvent.VK_M:
-						// set operation mode to move
+						// move robot
+						this.moveOperation();
 						System.out.println("Pressed M");
 						break;
 					case KeyEvent.VK_S:
 						// set operation mode to shoot
+						operationMode = OperationMode.shoot;
 						System.out.println("Pressed S");
 						break;
 					case KeyEvent.VK_T:
 						// set operation mode to turn
+						operationMode = OperationMode.turn;
 						System.out.println("Pressed T");
 						break;
 					case KeyEvent.VK_0:
@@ -143,8 +147,28 @@ public class Controller implements ActionListener, KeyListener {
 				
 			}
 			
+			/**
+			 * 
+			 * @param shootDistance
+			 */
 			private void shootOperation(int shootDistance){
 				
+			}
+			
+			/**
+			 * this method is a helper function for robot move
+			 */
+			private void moveOperation() {
+				try {
+					getGame().getPlayerMap().get(getGame().getCurrentPlayerIndex())
+						.getCurrentRobot().move(
+							getGame().getGameMap().getMapSize());
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+				// update the game after the move action
+				getGame().updateGameMove(
+						getGame().getPlayerMap().get(getGame().getCurrentPlayerIndex()));
 			}
 		});
 		//this.getSetGameModeView().getConfirmButton().addActionListener(this);
@@ -218,9 +242,9 @@ public class Controller implements ActionListener, KeyListener {
 	/**
 	 * @return true if the operation mode is move mode, false otherwise
 	 */
-	public boolean isMoveMode() {
-		return this.operationMode == OperationMode.move;
-	}
+//	public boolean isMoveMode() {
+//		return this.operationMode == OperationMode.move;
+//	}
 
 	/**
 	 * @param isMoveMode the isMoveMode to set
