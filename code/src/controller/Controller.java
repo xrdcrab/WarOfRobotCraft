@@ -63,6 +63,7 @@ public class Controller implements ActionListener, KeyListener {
 					case KeyEvent.VK_SPACE:
 						System.out.println("Pressed Space");
 						getGame().runPlay();
+                                                // update UI here
 						break;
 					case KeyEvent.VK_M:
 						// move robot
