@@ -1,5 +1,7 @@
 package controller;
 
+import java.awt.KeyEventDispatcher;
+import java.awt.KeyboardFocusManager;
 import java.awt.event.ActionEvent;
 
 import java.awt.event.ActionListener;
@@ -51,7 +53,101 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameStartView().getExitButton().addActionListener(this);
 		this.getGameStartView().getStartButton().addActionListener(this);
 		this.getGameStartView().getGarageButton().addActionListener(this);
-		this.getSetGameModeView().getConfirmButton().addActionListener(this);
+		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher(){
+			
+			@Override
+			public boolean dispatchKeyEvent(KeyEvent e) {
+				if(e.getID() == KeyEvent.KEY_PRESSED){
+					switch (e.getKeyCode()) {
+					case KeyEvent.VK_M:
+						// set operation mode to move
+						System.out.println("Pressed M");
+						break;
+					case KeyEvent.VK_S:
+						// set operation mode to shoot
+						System.out.println("Pressed S");
+						break;
+					case KeyEvent.VK_T:
+						// set operation mode to turn
+						System.out.println("Pressed T");
+						break;
+					case KeyEvent.VK_0:
+						System.out.println("Pressed 0");
+						// if the operation mode is turn
+						if (operationMode == OperationMode.turn) {
+							this.turnOperation(0);
+						}
+						// if the operation mode is shoot
+						else if (operationMode == OperationMode.shoot) {
+							this.shootOperation(0);
+						}
+						break;
+					case KeyEvent.VK_1:
+						System.out.println("Pressed 1");
+						// if the operation mode is turn
+						if (operationMode == OperationMode.turn) {
+							this.turnOperation(1);
+						}
+						// if the operation mode is shoot
+						else if (operationMode == OperationMode.shoot) {
+							this.shootOperation(1);
+						}
+						break;
+					case KeyEvent.VK_2:	
+						System.out.println("Pressed 2");
+						// if the operation mode is turn
+						if (operationMode == OperationMode.turn) {
+							this.turnOperation(2);
+						}
+						// if the operation mode is shoot
+						else if (operationMode == OperationMode.shoot) {
+							this.shootOperation(2);
+						}
+						break;
+					case KeyEvent.VK_3:
+						System.out.println("Pressed 3");
+						// if the operation mode is turn
+						if (operationMode == OperationMode.turn) {
+							this.turnOperation(3);
+						}
+						// if the operation mode is shoot
+						else if (operationMode == OperationMode.shoot) {
+							this.shootOperation(3);
+						}
+						break;
+					case KeyEvent.VK_4:
+						System.out.println("Pressed 4");
+						// if the operation mode is turn
+						if (operationMode == OperationMode.turn) {
+							this.turnOperation(4);
+						}
+						break;
+					case KeyEvent.VK_5:
+						System.out.println("Pressed 5");
+						// if the operation mode is turn
+						if (operationMode == OperationMode.turn) {
+							this.turnOperation(5);
+						}
+						break;
+					}
+				}
+				
+				return true;
+			}
+			
+			/**
+			 * 
+			 * @param direction
+			 */
+			private void turnOperation(int direction) {
+				
+			}
+			
+			private void shootOperation(int shootDistance){
+				
+			}
+		});
+		//this.getSetGameModeView().getConfirmButton().addActionListener(this);
 	}
 	
 	/**
@@ -294,20 +390,11 @@ public class Controller implements ActionListener, KeyListener {
 			// update the game after the shoot action
 			this.getGame().updateGameShoot(this.getShootTarget());
 		}
-		// turn
-		else if ( e.getKeyChar() == 't' || e.getKeyChar() == 'T' ) {
-			// the current robot of the current player shoot
-			try {
-				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
-					.getCurrentRobot().turn(direction);
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
-			// update the game after the shoot action
-			this.getGame().updateGameMove(currentPlayer);
-		}
+		
 		
 	}
+
+	
 
 
 }
