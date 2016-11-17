@@ -27,6 +27,7 @@ public class Controller implements ActionListener, KeyListener {
 	//private boolean isTurnMode;
 	private OperationMode operationMode;
 	
+
 	private int shootDistance;
 	private Pair<Coordinate, Integer> shootTarget;
 	
@@ -94,9 +95,32 @@ public class Controller implements ActionListener, KeyListener {
 	public void setSetGameModeView(SetGameModeView setGameModeView) {
 		this.setGameModeView = setGameModeView;
 	}
-
+	
+	/**
+	 * this method will get the Operation Mode
+	 * @return operationMode
+	 */
+	public OperationMode getOperationMode() {
+		return operationMode;
+	}
+	
+	/**
+	 * this method is to set Operation Mode
+	 * @param operationMode
+	 */
+	public void setOperationMode(OperationMode operationMode) {
+		this.operationMode = operationMode;
+	}
+	
 	/**
 	 * @return the isMoveMode
+	 */
+//	public boolean isMoveMode() {
+//		return this.isMoveMode;
+//	}
+	
+	/**
+	 * @return true if the operation mode is move mode, false otherwise
 	 */
 	public boolean isMoveMode() {
 		return this.operationMode == OperationMode.move;
@@ -112,6 +136,13 @@ public class Controller implements ActionListener, KeyListener {
 	/**
 	 * @return the isShootMode
 	 */
+//	public boolean isShootMode() {
+//		return this.isShootMode;
+//	}
+	
+	/**
+	 * @return true if the Operation Mode is shoot mode
+	 */
 	public boolean isShootMode() {
 		return this.operationMode == OperationMode.shoot;
 	}
@@ -122,10 +153,28 @@ public class Controller implements ActionListener, KeyListener {
 //	public void setShootMode(boolean isShootMode) {
 //		this.isShootMode = isShootMode;
 //	}
+	
+	/**
+	 * @return the isTurnMode
+	 */
+//	public boolean isTurnMode() {
+//		return this.isTurnMode;
+//	}
 
 	/**
-	 * 
+	 * @return the true if the Operation Mode is turn mode
 	 */
+	public boolean isTurnMode() {
+		return this.operationMode == OperationMode.turn;
+	}
+
+	/**
+	 * @param isTurnMode the isTurnMode to set
+	 */
+//	public void setTurnMode(boolean isTurnMode) {
+//		this.isTurnMode = isTurnMode;
+//	}
+	
 	/**
 	 * @return the shootDistance
 	 */
@@ -246,7 +295,17 @@ public class Controller implements ActionListener, KeyListener {
 			this.getGame().updateGameShoot(this.getShootTarget());
 		}
 		// turn
-		else if ( )
+		else if ( e.getKeyChar() == 't' || e.getKeyChar() == 'T' ) {
+			// the current robot of the current player shoot
+			try {
+				this.getGame().getPlayerMap().get(this.getGame().getCurrentPlayerIndex())
+					.getCurrentRobot().turn(direction);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			// update the game after the shoot action
+			this.getGame().updateGameMove(currentPlayer);
+		}
 		
 	}
 
