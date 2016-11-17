@@ -60,6 +60,10 @@ public class Controller implements ActionListener, KeyListener {
 			public boolean dispatchKeyEvent(KeyEvent e) {
 				if(e.getID() == KeyEvent.KEY_PRESSED){
 					switch (e.getKeyCode()) {
+					case KeyEvent.VK_SPACE:
+						System.out.println("Pressed Space");
+						getGame().runPlay();
+						break;
 					case KeyEvent.VK_M:
 						// move robot
 						this.moveOperation();
@@ -391,6 +395,7 @@ public class Controller implements ActionListener, KeyListener {
 	public void keyPressed(KeyEvent e) {
 		// go the next player when a play finished
 		if ( e.getKeyCode() == KeyEvent.VK_SPACE ) {
+			System.out.print("abc");
 			this.getGame().goNextPlayer();
 		}
 	}
