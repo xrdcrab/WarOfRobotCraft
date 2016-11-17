@@ -15,7 +15,7 @@ public class Game {
 
 	/** player list to hold all players */
 	//private LinkedList<Player> playerList;
-	private HashMap<Integer, Player> playerMap;
+	private HashMap<Integer, Player> playerHashMap;
 	
 	/** the number of players within the game */
 	private int playerNumber;
@@ -30,18 +30,18 @@ public class Game {
 	private int alivePlayerNumber;
 	
 	/**
-	 * @param playerMap
+	 * @param playerHashMap
 	 * @param playerNumber
 	 * @param currentPlayer
 	 * @param map
 	 */
-	public Game(HashMap<Integer, Player> playerMap, 
+	public Game(HashMap<Integer, Player> playerHashMap, 
 			int playerNumber, int currentPlayer, 
 			Map map, int alivePlayerNumber) {
 		super();
 		
 		this.playerNumber = playerNumber;
-		this.playerMap = new HashMap<Integer, Player>();
+		this.playerHashMap = new HashMap<Integer, Player>();
 		this.currentPlayerIndex = currentPlayer;
 		this.gameMap = map;
 		this.alivePlayerNumber = alivePlayerNumber;
@@ -49,14 +49,14 @@ public class Game {
 	
 	/**
 	 * this method is to overload the constructor above with two parameters
-	 * @param playerMap
+	 * @param playerHashMap
 	 * @param playerNumber
 	 */
-	public Game(HashMap<Integer, Player> playerMap, int playerNumber) {
+	public Game(HashMap<Integer, Player> playerHashMap, int playerNumber) {
 		super();
 		
 		this.playerNumber = playerNumber;
-		this.playerMap = new HashMap<Integer, Player>();
+		this.playerHashMap = new HashMap<Integer, Player>();
 		this.gameMap = new Map(playerNumber);
 		this.currentPlayerIndex = -1;
 		this.alivePlayerNumber = this.playerNumber;
@@ -74,7 +74,7 @@ public class Game {
 		}
 		else{
 			this.setCurrentPlayerIndex(this.currentPlayerIndex + 1);
-			if (!this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead()) {
+			if (!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead()) {
 				this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
 			}			
 		}		
@@ -86,7 +86,7 @@ public class Game {
 //	public void runPlay() {
 //
 //		while ( this.getAlivePlayerNum() > 1 ) {
-//			if ( !this.getPlayerMap().get(this.getCurrentPlayerIndex()).isDead() ) {
+//			if ( !this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead() ) {
 //				try {
 //					this.wait();
 //				} catch (InterruptedException e) {
@@ -112,12 +112,12 @@ public class Game {
 	 */
 	public void runPlay() {
             // end the current play
-            this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+            this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
             
             // enter the next play
             this.goNextPlayer();
             
-            Player currentPlayer = getPlayerMap().get(this.getCurrentPlayerIndex());
+            Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
             
             // it is a new turn
             if(areAllRobotsPlayed(currentPlayer)){
@@ -129,9 +129,9 @@ public class Game {
             currentPlayer.getCurrentRobot().resetStatus();
             
 //            //if the current player's current robot has not moved
-//		if(!this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
-//			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
-//			this.getPlayerMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
+//		if(!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
+//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
 //			this.goNextPlayer();
 //		}
 //		//else if the current player's current robot has moved, end this turn. 
@@ -153,8 +153,8 @@ public class Game {
 	public void updateGameShoot(Pair<Coordinate, Integer> pair) {
 		// update robots
 		this.setAlivePlayerNumber(0);
-		for ( Integer key: playerMap.keySet() ) {
-			Player traversedPlayer = this.getPlayerMap().get(key);
+		for ( Integer key: playerHashMap.keySet() ) {
+			Player traversedPlayer = this.getPlayerHashMap().get(key);
 			if ( !traversedPlayer.isDead() ) {
 				// case 1: the scout robot is get damaged
 				if ( !traversedPlayer.getScoutRobot().isDead() 
@@ -185,17 +185,17 @@ public class Game {
 	}
 	
 	/**
-	 * @return the playerMap
+	 * @return the playerHashMap
 	 */
-	public HashMap<Integer, Player> getPlayerMap() {
-		return playerMap;
+	public HashMap<Integer, Player> getPlayerHashMap() {
+		return playerHashMap;
 	}
 
 	/**
-	 * @param playerMap the playerMap to set
+	 * @param playerHashMap the playerHashMap to set
 	 */
-	public void setPlayerMap(HashMap<Integer, Player> playerMap) {
-		this.playerMap = playerMap;
+	public void setPlayerHashMap(HashMap<Integer, Player> playerHashMap) {
+		this.playerHashMap = playerHashMap;
 	}
 
 	/**
