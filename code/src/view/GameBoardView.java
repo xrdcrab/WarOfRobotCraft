@@ -17,6 +17,10 @@ import model.Coordinate;
 public class GameBoardView extends javax.swing.JFrame {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
      * Creates new form GameBoardView
      */
     public GameBoardView() {

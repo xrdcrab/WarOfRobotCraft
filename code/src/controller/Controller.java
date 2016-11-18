@@ -57,6 +57,8 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameStartView().getExitButton().addActionListener(this);
 		this.getGameStartView().getStartButton().addActionListener(this);
 		this.getGameStartView().getGarageButton().addActionListener(this);
+		this.getSetGameModeView().getConfirmButton().addActionListener(this);
+		
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher(){
 			
 			@Override
@@ -373,11 +375,11 @@ public class Controller implements ActionListener, KeyListener {
 			
 		}
 		// exit button
-		else if ( e.getSource().equals(this.getGameStartView().getExitButton()) ) {
+		else if ( e.getSource().equals( this.getGameStartView().getExitButton()) ) {
 			System.exit(0);
 		}
 		// confirm button
-		else if ( e.getSource().equals(this.getSetGameModeView().getConfirmButton() ) ) {
+		else if ( e.getSource().equals( this.getSetGameModeView().getConfirmButton() ) ) {
 			
 			int playerNum = -1;			
 			HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
@@ -430,7 +432,7 @@ public class Controller implements ActionListener, KeyListener {
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox5(), 
 						new Coordinate(0, -6, 6), 7, playerHashMap, 4);
-				// puple player: index 5
+				// purple player: index 5
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox6(), 
 						new Coordinate(-6, 0, 6), 7, playerHashMap, 5);
@@ -440,10 +442,21 @@ public class Controller implements ActionListener, KeyListener {
 				this.game = new Game(playerHashMap, playerNum);
 				this.gameBoardView = new GameBoardView();
 				this.getGameBoardView().setVisible(true);
-			}		
+				this.getSetGameModeView().setVisible(false);
+			}
+			if (this.getSetGameModeView().getConfirmButton() == null)
+				System.out.println('y');
 		}
 	}
 
+	/**
+	 * this method is to help the confirm button action perform initialize players
+	 * @param comboBox
+	 * @param initialCoord
+	 * @param mapSize
+	 * @param playerHashMap
+	 * @param playerIndex
+	 */
 	private void initializePlayer ( JComboBox comboBox,
 									Coordinate initialCoord, 
 									int mapSize, 
