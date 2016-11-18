@@ -369,13 +369,14 @@ public class Controller implements ActionListener, KeyListener {
 			
 			if ( this.getSetGameModeView().getTwoPlayersRadioButton().isSelected() ) {
 				playerNum = 2;
-				
+				// red player: index 0
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox1(), 
 						new Coordinate(-4, 4, 0), 
 						5, 
 						playerHashMap,
 						0);
+				// green player: index 3
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox4(), 
 						new Coordinate(4, -4, 0), 
@@ -385,11 +386,31 @@ public class Controller implements ActionListener, KeyListener {
 			}
 			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
 				playerNum = 3;
+				// red player: index 0
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox1(), 
+						new Coordinate(-4, 4, 0), 
+						5, 
+						playerHashMap,
+						0);
+				// yellow player: index 2
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox1(), 
+						new Coordinate(4, 0, -4), 
+						5, 
+						playerHashMap,
+						2);
+				// blue player: index 4
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox1(), 
+						new Coordinate(0, -4, 4), 
+						5, 
+						playerHashMap,
+						4);
 			}
 			else if ( this.getSetGameModeView().getSixPlayersRadioButton().isSelected() ) {
 				playerNum = 6;
-			}
-			
+			}			
 						
 			if ( playerNum != -1 ) {
 				this.game = new Game(playerHashMap, playerNum);
