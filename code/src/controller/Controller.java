@@ -361,12 +361,27 @@ public class Controller implements ActionListener, KeyListener {
 		}
 		// confirm button
 		else if ( e.getSource().equals(this.getSetGameModeView().getConfirmButton() ) ) {
-			int playerNum = -1;
+			
+			int playerNum = -1;			
 			HashMap<Integer, Player> PlayerHashMap = new HashMap<Integer, Player>();
 			
 			if ( this.getSetGameModeView().getTwoPlayersRadioButton().isSelected() ) {
 				playerNum = 2;
+				//for ( int i = 0; i < playerNum; i++ ) {
+					if ( this.getSetGameModeView().getPlayerTypeComboBox1().getSelectedItem() 
+							instanceof 
+								AIPlayer ) {
+						AIPlayer newPlayer = new AIPlayer(new Coordinate(-4, 4, 0), 5);
+						PlayerHashMap.put(0, newPlayer);
+					}
+					else {
+						
+					}
+				//}
+				
+				//Player newPlayer0 = new Player()
 				//PlayerHashMap.put(0, new Player("", 0, new Robot()));
+					
 			}
 			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
 				playerNum = 3;
@@ -375,8 +390,7 @@ public class Controller implements ActionListener, KeyListener {
 				playerNum = 6;
 			}
 			
-			
-			
+						
 			if ( playerNum != -1 ) {
 				//this.setGame(new Game(playerNum, ));
 			}

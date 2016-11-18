@@ -42,14 +42,17 @@ public class Player {
 	 * @param coord
 	 * @param viewRangeList
 	 */
-	public Player (Coordinate coord, LinkedList<Coordinate> viewRangeList) {
+	public Player ( Coordinate initialCoord, int mapSize ) {
 		this.name = "";
 		this.score = 0;
 		this.currentRobot = null;
-		this.scoutRobot = new Robot(RobotType.scout, "", 1, 1, 3, coord, 0, false, false, viewRangeList);
-		this.sniperRobot = new Robot(RobotType.sniper, "", 2, 2, 2, coord, 0, false, false, viewRangeList);
-		this.tankRobot = new Robot(RobotType.tank, "", 3, 3, 1, coord, 0, false, false, viewRangeList);
-		this.viewRangeList = viewRangeList;
+		this.scoutRobot = new Robot(
+				RobotType.scout, "", 1, 1, 3, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
+		this.sniperRobot = new Robot(
+				RobotType.sniper, "", 2, 2, 2, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
+		this.tankRobot = new Robot(
+				RobotType.tank, "", 3, 3, 1, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
+		this.viewRangeList = initialCoord.getRange(3, mapSize);
 	}
 	
 	/**

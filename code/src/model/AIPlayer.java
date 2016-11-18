@@ -29,6 +29,18 @@ public class AIPlayer extends Player {
 		super(name, score, scoutRobot, sniperRobot, tankRobot, viewRangeList);
 		this.enemyMap = new HashMap<Coordinate, LinkedList<Robot>>();
 	}
+	
+	/**
+	 * this constructor is to construct the AI player with 
+	 * initial coordinate and the map size
+	 * 
+	 * @param initialCoord
+	 * @param mapSize
+	 */
+	public AIPlayer ( Coordinate initialCoord, int mapSize ) {
+		super ( initialCoord, mapSize );
+		this.enemyMap = new HashMap<Coordinate, LinkedList<Robot>>();
+	}
 
 	/**
 	 * this method is to scan all the coordinates the player can see,
