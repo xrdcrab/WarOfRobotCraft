@@ -26,6 +26,7 @@ public class Controller implements ActionListener, KeyListener {
 	private Game game;
 	private GameStartView gameStartView;
 	private SetGameModeView setGameModeView;
+	private GameBoardView gameBoardView;
 	
 	//private boolean isMoveMode;
 	//private boolean isShootMode;
@@ -279,6 +280,20 @@ public class Controller implements ActionListener, KeyListener {
 //	}
 	
 	/**
+	 * @return the gameBoardView
+	 */
+	public GameBoardView getGameBoardView() {
+		return gameBoardView;
+	}
+
+	/**
+	 * @param gameBoardView the gameBoardView to set
+	 */
+	public void setGameBoardView(GameBoardView gameBoardView) {
+		this.gameBoardView = gameBoardView;
+	}
+
+	/**
 	 * @return true if the Operation Mode is shoot mode
 	 */
 	public boolean isShootMode() {
@@ -372,51 +387,60 @@ public class Controller implements ActionListener, KeyListener {
 				// red player: index 0
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox1(), 
-						new Coordinate(-4, 4, 0), 
-						5, 
-						playerHashMap,
-						0);
+						new Coordinate(-4, 4, 0), 5, playerHashMap, 0);
 				// green player: index 3
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox4(), 
-						new Coordinate(4, -4, 0), 
-						5, 
-						playerHashMap,
-						3);	
+						new Coordinate(4, -4, 0), 5, playerHashMap, 3);	
 			}
 			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
 				playerNum = 3;
 				// red player: index 0
 				this.initializePlayer(
 						this.getSetGameModeView().getPlayerTypeComboBox1(), 
-						new Coordinate(-4, 4, 0), 
-						5, 
-						playerHashMap,
-						0);
+						new Coordinate(-4, 4, 0), 5, playerHashMap, 0);
 				// yellow player: index 2
 				this.initializePlayer(
-						this.getSetGameModeView().getPlayerTypeComboBox1(), 
-						new Coordinate(4, 0, -4), 
-						5, 
-						playerHashMap,
-						2);
+						this.getSetGameModeView().getPlayerTypeComboBox3(), 
+						new Coordinate(4, 0, -4), 5, playerHashMap, 2);
 				// blue player: index 4
 				this.initializePlayer(
-						this.getSetGameModeView().getPlayerTypeComboBox1(), 
-						new Coordinate(0, -4, 4), 
-						5, 
-						playerHashMap,
-						4);
+						this.getSetGameModeView().getPlayerTypeComboBox5(), 
+						new Coordinate(0, -4, 4), 5, playerHashMap, 4);
 			}
 			else if ( this.getSetGameModeView().getSixPlayersRadioButton().isSelected() ) {
 				playerNum = 6;
+				// red player: index 0
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox1(), 
+						new Coordinate(-6, 6, 0), 7, playerHashMap, 0);
+				// orange player: index 1
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox2(), 
+						new Coordinate(0, 6, -6), 7, playerHashMap, 1);
+				// yellow player: index 2
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox3(), 
+						new Coordinate(6, 0, -6), 7, playerHashMap, 2);
+				// green player: index 3
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox4(), 
+						new Coordinate(6, -6, 0), 7, playerHashMap, 3);
+				// blue player: index 4
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox5(), 
+						new Coordinate(0, -6, 6), 7, playerHashMap, 4);
+				// puple player: index 5
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox6(), 
+						new Coordinate(-6, 0, 6), 7, playerHashMap, 5);
 			}			
 						
 			if ( playerNum != -1 ) {
 				this.game = new Game(playerHashMap, playerNum);
-			}
-			
-			
+				this.gameBoardView = new GameBoardView();
+				this.getGameBoardView().setVisible(true);
+			}		
 		}
 	}
 
