@@ -4,9 +4,10 @@ package model;
 import java.util.LinkedList;
 
 import javafx.util.Pair;
-import model.Map;
 
-
+/**
+ * this class is to create a human player for the game
+ */
 public class HumanPlayer extends Player{
 
 	/**
@@ -25,6 +26,17 @@ public class HumanPlayer extends Player{
 			  			Robot tankRobot,
 			  			LinkedList<Coordinate> viewRangeList) {
 		super(name, score, scoutRobot, sniperRobot, tankRobot, viewRangeList);
+	}
+	
+	/**
+	 * this constructor is to construct the AI player with 
+	 * initial coordinate and the map size
+	 * 
+	 * @param initialCoord the initial coordinate for the player
+	 * @param mapSize the map size for the game
+	 */
+	public HumanPlayer ( Coordinate initialCoord, int mapSize ) {
+		super ( initialCoord, mapSize );
 	}
 	
 	/**

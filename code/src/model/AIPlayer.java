@@ -34,8 +34,8 @@ public class AIPlayer extends Player {
 	 * this constructor is to construct the AI player with 
 	 * initial coordinate and the map size
 	 * 
-	 * @param initialCoord
-	 * @param mapSize
+	 * @param initialCoord the initial coordinate for the player
+	 * @param mapSize the map size for the game
 	 */
 	public AIPlayer ( Coordinate initialCoord, int mapSize ) {
 		super ( initialCoord, mapSize );
