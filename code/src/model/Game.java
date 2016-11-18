@@ -58,11 +58,36 @@ public class Game {
 		
 		this.playerNumber = playerNumber;
 		this.playerHashMap = new HashMap<Integer, Player>();
-		this.gameMap = new Map(playerNumber);
+		this.gameMap = new Map( this.playerNumToMapSize( playerNumber ) );
 		this.currentPlayerIndex = -1;
 		this.alivePlayerNumber = this.playerNumber;
 	}
 	
+	/**
+	 * this method is to shift the number of player to the map size accordingly
+	 * 
+	 * @param playerNum the number of player that the game has
+	 * @return mapSize the map size corresponding to the number of player
+	 */
+	private int playerNumToMapSize( int playerNum ) {
+		int mapSize = -1;
+		
+		switch ( playerNum ) {
+			case 2:
+				mapSize = 5;
+				break;
+			case 3:
+				mapSize = 5;
+				break;
+			case 6:
+				mapSize = 7;
+				break;
+			default:
+				mapSize = -1;
+		}
+		
+		return mapSize;
+	}
 	/**
 	 * This method is to go next player. 
 	 * @precondition 0<=currentPlayerIndex<5

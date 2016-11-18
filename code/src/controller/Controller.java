@@ -10,6 +10,8 @@ import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import javax.swing.JComboBox;
+
 import javafx.scene.Parent;
 import javafx.util.Pair;
 import model.*;
@@ -363,25 +365,23 @@ public class Controller implements ActionListener, KeyListener {
 		else if ( e.getSource().equals(this.getSetGameModeView().getConfirmButton() ) ) {
 			
 			int playerNum = -1;			
-			HashMap<Integer, Player> PlayerHashMap = new HashMap<Integer, Player>();
+			HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
 			
 			if ( this.getSetGameModeView().getTwoPlayersRadioButton().isSelected() ) {
 				playerNum = 2;
-				//for ( int i = 0; i < playerNum; i++ ) {
-					if ( this.getSetGameModeView().getPlayerTypeComboBox1().getSelectedItem() 
-							instanceof 
-								AIPlayer ) {
-						AIPlayer newPlayer = new AIPlayer(new Coordinate(-4, 4, 0), 5);
-						PlayerHashMap.put(0, newPlayer);
-					}
-					else {
-						
-					}
-				//}
 				
-				//Player newPlayer0 = new Player()
-				//PlayerHashMap.put(0, new Player("", 0, new Robot()));
-					
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox1(), 
+						new Coordinate(-4, 4, 0), 
+						5, 
+						playerHashMap,
+						0);
+				this.initializePlayer(
+						this.getSetGameModeView().getPlayerTypeComboBox4(), 
+						new Coordinate(4, -4, 0), 
+						5, 
+						playerHashMap,
+						3);	
 			}
 			else if ( this.getSetGameModeView().getThreePlayersRadioButton().isSelected() ) {
 				playerNum = 3;
@@ -392,13 +392,29 @@ public class Controller implements ActionListener, KeyListener {
 			
 						
 			if ( playerNum != -1 ) {
-				//this.setGame(new Game(playerNum, ));
+				this.game = new Game(playerHashMap, playerNum);
 			}
 			
 			
 		}
 	}
 
+	private void initializePlayer ( JComboBox comboBox,
+									Coordinate initialCoord, 
+									int mapSize, 
+									HashMap<Integer, Player> playerHashMap,
+									int playerIndex
+									) {
+		Player newPlayer;
+		if ( comboBox.getSelectedItem() instanceof AIPlayer ) {
+			newPlayer = new AIPlayer( new Coordinate(-4, 4, 0), 5 );
+		}
+		else {
+			newPlayer = new HumanPlayer( new Coordinate(4, -4, 0), 5 );
+		}
+		playerHashMap.put(playerIndex, newPlayer);
+	}
+	
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
