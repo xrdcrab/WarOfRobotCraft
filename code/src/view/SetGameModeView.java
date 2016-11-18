@@ -16,8 +16,6 @@ public class SetGameModeView extends javax.swing.JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-
 	/**
      * Creates new form SetGameModelView
      */
@@ -323,9 +321,9 @@ public class SetGameModeView extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton confirmButton;
     private javax.swing.JLabel greenLabel;
-    private javax.swing.JComboBox<String> playerTypeComboBox1;
-    private javax.swing.JComboBox<String> playerTypeComboBox2;
-    private javax.swing.JComboBox<String> playerTypeComboBox3;
+    private javax.swing.JComboBox playerTypeComboBox1;
+    private javax.swing.JComboBox playerTypeComboBox2;
+    private javax.swing.JComboBox playerTypeComboBox3;
     private javax.swing.JComboBox playerTypeComboBox4;
     private javax.swing.JComboBox playerTypeComboBox5;
     private javax.swing.JComboBox playerTypeComboBox6;

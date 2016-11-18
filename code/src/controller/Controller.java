@@ -57,7 +57,6 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameStartView().getExitButton().addActionListener(this);
 		this.getGameStartView().getStartButton().addActionListener(this);
 		this.getGameStartView().getGarageButton().addActionListener(this);
-		this.getSetGameModeView().getConfirmButton().addActionListener(this);
 		
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher(){
 			
@@ -368,6 +367,7 @@ public class Controller implements ActionListener, KeyListener {
 		if ( e.getSource().equals(this.getGameStartView().getStartButton()) ) {
 			this.getGameStartView().setVisible(false);
 			this.setGameModeView = new SetGameModeView();
+			this.getSetGameModeView().getConfirmButton().addActionListener(this);
 			this.getSetGameModeView().setVisible(true);
 		} 
 		// garage button
@@ -443,9 +443,13 @@ public class Controller implements ActionListener, KeyListener {
 				this.gameBoardView = new GameBoardView();
 				this.getGameBoardView().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
-			}
-			if (this.getSetGameModeView().getConfirmButton() == null)
-				System.out.println('y');
+				//System.out.print(playerNum + '\n');
+				for ( int i = 0; i < 6; i++ ) {
+					if (playerHashMap.get(i) != null) {
+						System.out.println("player" + i);
+					}
+				}
+			}			
 		}
 	}
 
