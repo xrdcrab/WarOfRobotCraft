@@ -1048,7 +1048,6 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
-        <Property name="opaque" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="endPlayButton">
@@ -1070,7 +1069,6 @@
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
-        <Property name="opaque" type="boolean" value="false"/>
       </Properties>
     </Component>
   </SubComponents>

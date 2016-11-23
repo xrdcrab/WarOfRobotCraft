@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.Color;
+import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
 import model.Coordinate;
@@ -620,7 +621,6 @@ public class GameBoardView extends javax.swing.JFrame {
         homeButton.setToolTipText("");
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
-        homeButton.setOpaque(false);
 
         endPlayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/endPlay.png"))); // NOI18N
         endPlayButton.setBorderPainted(false);
@@ -634,7 +634,6 @@ public class GameBoardView extends javax.swing.JFrame {
         giveUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/giveUp.png"))); // NOI18N
         giveUpButton.setBorderPainted(false);
         giveUpButton.setContentAreaFilled(false);
-        giveUpButton.setOpaque(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -854,4 +853,9 @@ public class GameBoardView extends javax.swing.JFrame {
 	public void setTimerLabel(javax.swing.JLabel timerLabel) {
 		this.timerLabel = timerLabel;
 	}
+        
+        public Field getHexagonField(Coordinate coord) throws NoSuchFieldException{
+            Class<?> gameBoardViewClass = this.getClass();
+            return gameBoardViewClass.getField(coord.toString());
+        }
 }
