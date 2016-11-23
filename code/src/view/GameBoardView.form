@@ -40,9 +40,23 @@
               <Component id="gameBoardPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="463" max="-2" attributes="0"/>
-              <Component id="timerLabel" min="-2" pref="76" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="463" max="-2" attributes="0"/>
+                      <Component id="timerLabel" min="-2" pref="76" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="homeButton" min="-2" pref="60" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="374" max="-2" attributes="0"/>
+                      <Component id="endPlayButton" min="-2" pref="55" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                      <Component id="giveUpButton" min="-2" pref="55" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -50,11 +64,18 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Component id="homeButton" min="-2" pref="47" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="timerLabel" min="-2" pref="66" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="gameBoardPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="134" max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="endPlayButton" max="32767" attributes="0"/>
+                  <Component id="giveUpButton" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,9 +85,6 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[0, 0, 600, 480]"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[600, 480]"/>
@@ -1020,7 +1038,39 @@
           <Color blue="d4" green="b4" red="98" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="10"/>
-        <Property name="ignoreRepaint" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="homeButton">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Resources/Home.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="opaque" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="endPlayButton">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Resources/endPlay.png"/>
+        </Property>
+        <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="endPlayButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="giveUpButton">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Resources/giveUp.png"/>
+        </Property>
+        <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="opaque" type="boolean" value="false"/>
       </Properties>
     </Component>
   </SubComponents>

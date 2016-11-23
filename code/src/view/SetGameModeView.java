@@ -38,9 +38,9 @@ public class SetGameModeView extends javax.swing.JFrame {
         twoPlayersRadioButton = new javax.swing.JRadioButton();
         threePlayersRadioButton = new javax.swing.JRadioButton();
         sixPlayersRadioButton = new javax.swing.JRadioButton();
-        playerTypeComboBox1 = new javax.swing.JComboBox<String>();
-        playerTypeComboBox2 = new javax.swing.JComboBox<String>();
-        playerTypeComboBox3 = new javax.swing.JComboBox<String>();
+        playerTypeComboBox1 = new javax.swing.JComboBox<>();
+        playerTypeComboBox2 = new javax.swing.JComboBox<>();
+        playerTypeComboBox3 = new javax.swing.JComboBox<>();
         confirmButton = new javax.swing.JButton();
         playerTypeComboBox4 = new javax.swing.JComboBox();
         playerTypeComboBox5 = new javax.swing.JComboBox();
@@ -112,24 +112,22 @@ public class SetGameModeView extends javax.swing.JFrame {
         sixPlayersRadioButton.setBounds(660, 150, 200, 50);
 
         playerTypeComboBox1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        playerTypeComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
+        playerTypeComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "AI" }));
         playerTypeComboBox1.setAlignmentX(0.0F);
         playerTypeComboBox1.setAlignmentY(0.0F);
         playerTypeComboBox1.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox1.setMinimumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox1.setPreferredSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox1.setSize(new java.awt.Dimension(200, 50));
         getContentPane().add(playerTypeComboBox1);
         playerTypeComboBox1.setBounds(660, 230, 200, 50);
 
         playerTypeComboBox2.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        playerTypeComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
+        playerTypeComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "AI" }));
         playerTypeComboBox2.setAlignmentX(0.0F);
         playerTypeComboBox2.setAlignmentY(0.0F);
         playerTypeComboBox2.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox2.setMinimumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox2.setPreferredSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox2.setSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playerTypeComboBox2ActionPerformed(evt);
@@ -139,13 +137,12 @@ public class SetGameModeView extends javax.swing.JFrame {
         playerTypeComboBox2.setBounds(660, 280, 200, 50);
 
         playerTypeComboBox3.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        playerTypeComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
+        playerTypeComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "AI" }));
         playerTypeComboBox3.setAlignmentX(0.0F);
         playerTypeComboBox3.setAlignmentY(0.0F);
         playerTypeComboBox3.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox3.setMinimumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox3.setPreferredSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox3.setSize(new java.awt.Dimension(200, 50));
         getContentPane().add(playerTypeComboBox3);
         playerTypeComboBox3.setBounds(660, 330, 200, 50);
 
@@ -167,7 +164,6 @@ public class SetGameModeView extends javax.swing.JFrame {
         playerTypeComboBox4.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox4.setMinimumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox4.setPreferredSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox4.setSize(new java.awt.Dimension(200, 50));
         getContentPane().add(playerTypeComboBox4);
         playerTypeComboBox4.setBounds(660, 380, 200, 50);
 
@@ -178,7 +174,6 @@ public class SetGameModeView extends javax.swing.JFrame {
         playerTypeComboBox5.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox5.setMinimumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox5.setPreferredSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox5.setSize(new java.awt.Dimension(200, 50));
         getContentPane().add(playerTypeComboBox5);
         playerTypeComboBox5.setBounds(660, 430, 200, 50);
 
@@ -189,7 +184,6 @@ public class SetGameModeView extends javax.swing.JFrame {
         playerTypeComboBox6.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox6.setMinimumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox6.setPreferredSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox6.setSize(new java.awt.Dimension(200, 50));
         getContentPane().add(playerTypeComboBox6);
         playerTypeComboBox6.setBounds(660, 480, 200, 50);
 
@@ -321,9 +315,9 @@ public class SetGameModeView extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton confirmButton;
     private javax.swing.JLabel greenLabel;
-    private javax.swing.JComboBox playerTypeComboBox1;
-    private javax.swing.JComboBox playerTypeComboBox2;
-    private javax.swing.JComboBox playerTypeComboBox3;
+    private javax.swing.JComboBox<String> playerTypeComboBox1;
+    private javax.swing.JComboBox<String> playerTypeComboBox2;
+    private javax.swing.JComboBox<String> playerTypeComboBox3;
     private javax.swing.JComboBox playerTypeComboBox4;
     private javax.swing.JComboBox playerTypeComboBox5;
     private javax.swing.JComboBox playerTypeComboBox6;
