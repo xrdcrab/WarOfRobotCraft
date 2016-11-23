@@ -513,6 +513,11 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
+    private JLabel getRobotLabel(int playerPosition, String robotType) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
+        Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+        robotField.setAccessible(true);
+        return (JLabel)robotField.get(this);
+    }
     
     public JLabel getHexagonLabel(String coordString) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
         //Class<?> gameBoardViewClass = GameBoardView.class;
