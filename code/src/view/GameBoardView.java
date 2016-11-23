@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
+import javax.swing.JLabel;
 import model.Coordinate;
 
 /**
@@ -695,6 +696,14 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
+        
+    public JLabel getHexagonLabel(String coordString) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
+        Class<?> gameBoardViewClass = GameBoardView.class;
+        Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+        labelField.setAccessible(true);
+        return (JLabel)labelField.get(this);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -721,7 +730,7 @@ public class GameBoardView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -834,6 +843,10 @@ public class GameBoardView extends javax.swing.JFrame {
 	}
 
 	/**
+        
+        public static void main(String[] args) {
+            
+        }
 	 * @param homeButton the homeButton to set
 	 */
 	public void setHomeButton(javax.swing.JButton homeButton) {
@@ -853,9 +866,4 @@ public class GameBoardView extends javax.swing.JFrame {
 	public void setTimerLabel(javax.swing.JLabel timerLabel) {
 		this.timerLabel = timerLabel;
 	}
-        
-        public Field getHexagonField(Coordinate coord) throws NoSuchFieldException{
-            Class<?> gameBoardViewClass = this.getClass();
-            return gameBoardViewClass.getField(coord.toString());
-        }
 }

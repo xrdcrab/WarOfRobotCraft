@@ -1,8 +1,13 @@
 package warOfRobotCraft;
 
 import controller.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JLabel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
+import model.Coordinate;
+import view.GameBoardView;
 
 /**
  * this is the game system entry point
@@ -27,6 +32,18 @@ public class initial {
                 }
             }
             
-            Controller newGame = new Controller();
+            // testing
+//            JLabel jLabel;
+//            try {
+//                jLabel = new GameBoardView().getHexagonLabel(new Coordinate(0, 0, 0).toString());
+//            } catch (NoSuchFieldException ex) {
+//                Logger.getLogger(initial.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (IllegalArgumentException ex) {
+//                Logger.getLogger(initial.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (IllegalAccessException ex) {
+//                Logger.getLogger(initial.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            
+//            Controller newGame = new Controller();
 	}
 }
