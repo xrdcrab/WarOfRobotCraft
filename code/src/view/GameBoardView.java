@@ -20,6 +20,8 @@ public class GameBoardView extends javax.swing.JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+        
+        
 	/**
      * Creates new form GameBoardView
      */
@@ -470,7 +472,7 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
-    public void updatePlayerDamaged(int playerPosition, int attackPoint){
+    public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint){
         
     }
     
