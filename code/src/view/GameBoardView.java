@@ -695,11 +695,15 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
-    public void updateRobotDestruction(int playerPosition, String RobotType, boolean hasDestroyed){
+    public void updateRobotDestruction(int playerPosition, String RobotType){
         
     }
     
-    public void updatePlayerDeath(int playerPosition, boolean hasDied){
+    public void updatePlayerDamaged(int playerPosition, int attackPoint){
+        
+    }
+    
+    public void updatePlayerDeath(int playerPosition){
         
     }
     
