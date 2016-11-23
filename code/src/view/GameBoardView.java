@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 
 /**
@@ -513,17 +515,24 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
-    private JLabel getRobotLabel(int playerPosition, String robotType) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
-        Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
-        robotField.setAccessible(true);
-        return (JLabel)robotField.get(this);
+    private JLabel getRobotLabel(int playerPosition, String robotType){
+            try {
+                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+                robotField.setAccessible(true);
+                return (JLabel)robotField.get(this);
+            } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException ex) {
+                return null;
+            }
     }
     
-    public JLabel getHexagonLabel(String coordString) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
-        //Class<?> gameBoardViewClass = GameBoardView.class;
-        Field labelField = gameBoardViewClass.getDeclaredField(coordString);
-        labelField.setAccessible(true);
-        return (JLabel)labelField.get(this);
+    public JLabel getHexagonLabel(String coordString){
+            try {
+                Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+                labelField.setAccessible(true);
+                return (JLabel)labelField.get(this);
+            } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException ex) {
+                return  null;
+            }
     }
     
     /**
