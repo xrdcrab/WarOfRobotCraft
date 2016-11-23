@@ -21,6 +21,8 @@ public class GameBoardView extends javax.swing.JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
         
+        private Class<?> gameBoardViewClass = GameBoardView.class;
+        
         private JLabel player0_scout;
         private JLabel player0_sniper;
         private JLabel player0_tank;
@@ -511,9 +513,9 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
-        
+    
     public JLabel getHexagonLabel(String coordString) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
-        Class<?> gameBoardViewClass = GameBoardView.class;
+        //Class<?> gameBoardViewClass = GameBoardView.class;
         Field labelField = gameBoardViewClass.getDeclaredField(coordString);
         labelField.setAccessible(true);
         return (JLabel)labelField.get(this);
