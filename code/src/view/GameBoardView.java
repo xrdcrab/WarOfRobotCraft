@@ -38,67 +38,67 @@ public class GameBoardView extends javax.swing.JFrame {
     private void initComponents() {
 
         gameBoardPanel = new javax.swing.JPanel();
-        hexagonLabel29 = new javax.swing.JLabel();
-        hexagonLabel27 = new javax.swing.JLabel();
-        hexagonLabel28 = new javax.swing.JLabel();
-        hexagonLabel34 = new javax.swing.JLabel();
-        hexagonLabel35 = new javax.swing.JLabel();
-        hexagonLabel30 = new javax.swing.JLabel();
-        hexagonLabel31 = new javax.swing.JLabel();
-        hexagonLabel32 = new javax.swing.JLabel();
-        hexagonLabel33 = new javax.swing.JLabel();
-        hexagonLabel1 = new javax.swing.JLabel();
-        hexagonLabel36 = new javax.swing.JLabel();
-        hexagonLabel37 = new javax.swing.JLabel();
-        hexagonLabel38 = new javax.swing.JLabel();
-        hexagonLabel39 = new javax.swing.JLabel();
-        hexagonLabel41 = new javax.swing.JLabel();
-        hexagonLabel40 = new javax.swing.JLabel();
-        hexagonLabel42 = new javax.swing.JLabel();
-        hexagonLabel43 = new javax.swing.JLabel();
-        hexagonLabel44 = new javax.swing.JLabel();
-        hexagonLabel45 = new javax.swing.JLabel();
-        hexagonLabel46 = new javax.swing.JLabel();
-        hexagonLabel47 = new javax.swing.JLabel();
-        hexagonLabel48 = new javax.swing.JLabel();
-        hexagonLabel49 = new javax.swing.JLabel();
-        hexagonLabel50 = new javax.swing.JLabel();
-        hexagonLabel56 = new javax.swing.JLabel();
-        hexagonLabel55 = new javax.swing.JLabel();
-        hexagonLabel54 = new javax.swing.JLabel();
-        hexagonLabel53 = new javax.swing.JLabel();
-        hexagonLabel52 = new javax.swing.JLabel();
-        hexagonLabel51 = new javax.swing.JLabel();
-        hexagonLabel57 = new javax.swing.JLabel();
-        hexagonLabel58 = new javax.swing.JLabel();
-        hexagonLabel59 = new javax.swing.JLabel();
-        hexagonLabel60 = new javax.swing.JLabel();
-        hexagonLabel61 = new javax.swing.JLabel();
-        hexagonLabel19 = new javax.swing.JLabel();
-        hexagonLabel20 = new javax.swing.JLabel();
-        hexagonLabel21 = new javax.swing.JLabel();
-        hexagonLabel22 = new javax.swing.JLabel();
-        hexagonLabel23 = new javax.swing.JLabel();
-        hexagonLabel24 = new javax.swing.JLabel();
-        hexagonLabel25 = new javax.swing.JLabel();
-        hexagonLabel26 = new javax.swing.JLabel();
-        hexagonLabel18 = new javax.swing.JLabel();
-        hexagonLabel17 = new javax.swing.JLabel();
-        hexagonLabel16 = new javax.swing.JLabel();
-        hexagonLabel15 = new javax.swing.JLabel();
-        hexagonLabe14 = new javax.swing.JLabel();
-        hexagonLabel13 = new javax.swing.JLabel();
-        hexagonLabel12 = new javax.swing.JLabel();
-        hexagonLabel6 = new javax.swing.JLabel();
-        hexagonLabel7 = new javax.swing.JLabel();
-        hexagonLabel8 = new javax.swing.JLabel();
-        hexagonLabel9 = new javax.swing.JLabel();
-        hexagonLabel10 = new javax.swing.JLabel();
-        hexagonLabel11 = new javax.swing.JLabel();
-        hexagonLabel5 = new javax.swing.JLabel();
-        hexagonLabel4 = new javax.swing.JLabel();
-        hexagonLabel3 = new javax.swing.JLabel();
-        hexagonLabel2 = new javax.swing.JLabel();
+        n2p2z0 = new javax.swing.JLabel();
+        n4p4z0 = new javax.swing.JLabel();
+        n3p3z0 = new javax.swing.JLabel();
+        p3n3z0 = new javax.swing.JLabel();
+        p4n4z0 = new javax.swing.JLabel();
+        n1p1z0 = new javax.swing.JLabel();
+        z0z0z0 = new javax.swing.JLabel();
+        p1n1z0 = new javax.swing.JLabel();
+        p2n2z0 = new javax.swing.JLabel();
+        z0p4n4 = new javax.swing.JLabel();
+        n4p3p1 = new javax.swing.JLabel();
+        n3p2p1 = new javax.swing.JLabel();
+        n2p1p1 = new javax.swing.JLabel();
+        n1z0p1 = new javax.swing.JLabel();
+        p1n2p1 = new javax.swing.JLabel();
+        z0n1p1 = new javax.swing.JLabel();
+        p2n3p1 = new javax.swing.JLabel();
+        p3n4p1 = new javax.swing.JLabel();
+        n4p2p2 = new javax.swing.JLabel();
+        n3p1p2 = new javax.swing.JLabel();
+        n2z0p2 = new javax.swing.JLabel();
+        n1n1p2 = new javax.swing.JLabel();
+        z0n2p2 = new javax.swing.JLabel();
+        p1n3p2 = new javax.swing.JLabel();
+        p2n4p2 = new javax.swing.JLabel();
+        p1n4p3 = new javax.swing.JLabel();
+        z0n3p3 = new javax.swing.JLabel();
+        n1n2p3 = new javax.swing.JLabel();
+        n2n1p3 = new javax.swing.JLabel();
+        n3z0p3 = new javax.swing.JLabel();
+        n4p1p3 = new javax.swing.JLabel();
+        n4z0p4 = new javax.swing.JLabel();
+        n3n1p4 = new javax.swing.JLabel();
+        n2n2p4 = new javax.swing.JLabel();
+        n1n3p4 = new javax.swing.JLabel();
+        z0n4p4 = new javax.swing.JLabel();
+        n3p4n1 = new javax.swing.JLabel();
+        n2p3n1 = new javax.swing.JLabel();
+        n1p2n1 = new javax.swing.JLabel();
+        z0p1n1 = new javax.swing.JLabel();
+        p1z0n1 = new javax.swing.JLabel();
+        p2n1n1 = new javax.swing.JLabel();
+        p3n2n1 = new javax.swing.JLabel();
+        p4n3n1 = new javax.swing.JLabel();
+        p4n2n2 = new javax.swing.JLabel();
+        p3n1n2 = new javax.swing.JLabel();
+        p2z0n2 = new javax.swing.JLabel();
+        p1p1n2 = new javax.swing.JLabel();
+        z0p2n2 = new javax.swing.JLabel();
+        n1p3n2 = new javax.swing.JLabel();
+        n2p4n2 = new javax.swing.JLabel();
+        n1p4n3 = new javax.swing.JLabel();
+        z0p3n3 = new javax.swing.JLabel();
+        p1p2n3 = new javax.swing.JLabel();
+        p2p1n3 = new javax.swing.JLabel();
+        p3z0n3 = new javax.swing.JLabel();
+        p4n1n3 = new javax.swing.JLabel();
+        p4z0n4 = new javax.swing.JLabel();
+        p3p1n4 = new javax.swing.JLabel();
+        p2p2n4 = new javax.swing.JLabel();
+        p1p3n4 = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
         homeButton = new javax.swing.JButton();
         endPlayButton = new javax.swing.JButton();
@@ -114,127 +114,127 @@ public class GameBoardView extends javax.swing.JFrame {
         gameBoardPanel.setMaximumSize(new java.awt.Dimension(600, 480));
         gameBoardPanel.setPreferredSize(new java.awt.Dimension(600, 480));
 
-        hexagonLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2p2z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n4p4z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n3p3z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p3n3z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p4n4z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1p1z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0z0z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1n1z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2n2z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0p4n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n4p3p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n3p2p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2p1p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1z0p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1n2p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0n1p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2n3p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p3n4p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n4p2p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n3p1p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2z0p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1n1p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0n2p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1n3p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2n4p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1n4p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0n3p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1n2p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2n1p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n3z0p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n4p1p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n4z0p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n3n1p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2n2p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1n3p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0n4p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n3p4n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2p3n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1p2n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0p1n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1z0n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2n1n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p3n2n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p4n3n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p4n2n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p3n1n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2z0n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1p1n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabe14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0p2n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1p3n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n2p4n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        n1p4n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        z0p3n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1p2n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2p1n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p3z0n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p4n1n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p4z0n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p3p1n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p2p2n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
-        hexagonLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
+        p1p3n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Polygon.png"))); // NOI18N
 
         javax.swing.GroupLayout gameBoardPanelLayout = new javax.swing.GroupLayout(gameBoardPanel);
         gameBoardPanel.setLayout(gameBoardPanelLayout);
@@ -247,182 +247,182 @@ public class GameBoardView extends javax.swing.JFrame {
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                                 .addGap(33, 33, 33)
-                                .addComponent(hexagonLabel13))
-                            .addComponent(hexagonLabel6))
+                                .addComponent(n1p3n2))
+                            .addComponent(n1p4n3))
                         .addGap(32, 32, 32)
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                                 .addGap(33, 33, 33)
-                                .addComponent(hexagonLabel3))
-                            .addComponent(hexagonLabel8)))
+                                .addComponent(p2p2n4))
+                            .addComponent(p1p2n3)))
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
-                        .addComponent(hexagonLabel37)
+                        .addComponent(n3p2p1)
                         .addGap(32, 32, 32)
-                        .addComponent(hexagonLabel30)))
+                        .addComponent(n1p1z0)))
                 .addGap(32, 32, 32)
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addGap(66, 66, 66)
-                        .addComponent(hexagonLabel25))
-                    .addComponent(hexagonLabel41)))
+                        .addComponent(p3n2n1))
+                    .addComponent(p1n2p1)))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addComponent(hexagonLabel51)
+                .addComponent(n4p1p3)
                 .addGap(98, 98, 98)
-                .addComponent(hexagonLabel59))
+                .addComponent(n2n2p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addComponent(hexagonLabel52))
+                .addComponent(n3z0p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(hexagonLabel36))
+                .addComponent(n4p3p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(133, 133, 133)
-                .addComponent(hexagonLabel57))
+                .addComponent(n4z0p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(331, 331, 331)
-                .addComponent(hexagonLabel16))
+                .addComponent(p2z0n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(199, 199, 199)
-                .addComponent(hexagonLabel46))
+                .addComponent(n2z0p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(265, 265, 265)
-                .addComponent(hexagonLabel47))
+                .addComponent(n1n1p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addComponent(hexagonLabel20))
+                .addComponent(n2p3n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(331, 331, 331)
-                .addComponent(hexagonLabel32))
+                .addComponent(p1n1z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(364, 364, 364)
-                .addComponent(hexagonLabel24))
+                .addComponent(p2n1n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addComponent(hexagonLabel21))
+                .addComponent(n1p2n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(529, 529, 529)
-                .addComponent(hexagonLabel35))
+                .addComponent(p4n4z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(133, 133, 133)
-                .addComponent(hexagonLabel45))
+                .addComponent(n3p1p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(298, 298, 298)
-                .addComponent(hexagonLabel54))
+                .addComponent(n1n2p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(298, 298, 298)
-                .addComponent(hexagonLabel40))
+                .addComponent(z0n1p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(265, 265, 265)
-                .addComponent(hexagonLabel31))
+                .addComponent(z0z0z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(463, 463, 463)
-                .addComponent(hexagonLabel34))
+                .addComponent(p3n3z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addComponent(hexagonLabel28))
+                .addComponent(n3p3z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(232, 232, 232)
-                .addComponent(hexagonLabel53))
+                .addComponent(n2n1p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(397, 397, 397)
-                .addComponent(hexagonLabel5))
+                .addComponent(p4z0n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(496, 496, 496)
-                .addComponent(hexagonLabel26))
+                .addComponent(p4n3n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addComponent(hexagonLabel7))
+                .addComponent(z0p3n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(331, 331, 331)
-                .addComponent(hexagonLabel4))
+                .addComponent(p3p1n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(397, 397, 397)
-                .addComponent(hexagonLabel17))
+                .addComponent(p3n1n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(133, 133, 133)
-                .addComponent(hexagonLabel29))
+                .addComponent(n2p2z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(298, 298, 298)
-                .addComponent(hexagonLabel23))
+                .addComponent(p1z0n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(199, 199, 199)
-                .addComponent(hexagonLabel2))
+                .addComponent(p1p3n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(298, 298, 298)
-                .addComponent(hexagonLabel9))
+                .addComponent(p2p1n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(463, 463, 463)
-                .addComponent(hexagonLabel50))
+                .addComponent(p2n4p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(1, 1, 1)
-                .addComponent(hexagonLabel27))
+                .addComponent(n4p4z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(397, 397, 397)
-                .addComponent(hexagonLabel33))
+                .addComponent(p2n2z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(364, 364, 364)
-                .addComponent(hexagonLabel10))
+                .addComponent(p3z0n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(199, 199, 199)
-                .addComponent(hexagonLabel58))
+                .addComponent(n3n1p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(199, 199, 199)
-                .addComponent(hexagonLabe14))
+                .addComponent(z0p2n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(430, 430, 430)
-                .addComponent(hexagonLabel42))
+                .addComponent(p2n3p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(133, 133, 133)
-                .addComponent(hexagonLabel1))
+                .addComponent(z0p4n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(496, 496, 496)
-                .addComponent(hexagonLabel43))
+                .addComponent(p3n4p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(463, 463, 463)
-                .addComponent(hexagonLabel18))
+                .addComponent(p4n2n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(hexagonLabel19))
+                .addComponent(n3p4n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(397, 397, 397)
-                .addComponent(hexagonLabel49))
+                .addComponent(p1n3p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(265, 265, 265)
-                .addComponent(hexagonLabel15))
+                .addComponent(p1p1n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(430, 430, 430)
-                .addComponent(hexagonLabel56))
+                .addComponent(p1n4p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(430, 430, 430)
-                .addComponent(hexagonLabel11))
+                .addComponent(p4n1n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(331, 331, 331)
-                .addComponent(hexagonLabel60))
+                .addComponent(n1n3p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(232, 232, 232)
-                .addComponent(hexagonLabel22))
+                .addComponent(z0p1n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(364, 364, 364)
-                .addComponent(hexagonLabel55))
+                .addComponent(z0n3p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addComponent(hexagonLabel12))
+                .addComponent(n2p4n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(232, 232, 232)
-                .addComponent(hexagonLabel39))
+                .addComponent(n1z0p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addComponent(hexagonLabel44))
+                .addComponent(n4p2p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(397, 397, 397)
-                .addComponent(hexagonLabel61))
+                .addComponent(z0n4p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addComponent(hexagonLabel38))
+                .addComponent(n2p1p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(331, 331, 331)
-                .addComponent(hexagonLabel48))
+                .addComponent(z0n2p2))
         );
         gameBoardPanelLayout.setVerticalGroup(
             gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -431,185 +431,185 @@ public class GameBoardView extends javax.swing.JFrame {
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hexagonLabel3)
+                            .addComponent(p2p2n4)
                             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                                 .addGap(51, 51, 51)
                                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                                         .addGap(51, 51, 51)
-                                        .addComponent(hexagonLabel13))
-                                    .addComponent(hexagonLabel6)
-                                    .addComponent(hexagonLabel8))))
+                                        .addComponent(n1p3n2))
+                                    .addComponent(n1p4n3)
+                                    .addComponent(p1p2n3))))
                         .addGap(36, 36, 36)
                         .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                                 .addGap(51, 51, 51)
-                                .addComponent(hexagonLabel37))
-                            .addComponent(hexagonLabel30)))
+                                .addComponent(n3p2p1))
+                            .addComponent(n1p1z0)))
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addGap(153, 153, 153)
-                        .addComponent(hexagonLabel25)
+                        .addComponent(p3n2n1)
                         .addGap(36, 36, 36)
-                        .addComponent(hexagonLabel41)))
+                        .addComponent(p1n2p1)))
                 .addGap(36, 36, 36)
                 .addGroup(gameBoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hexagonLabel51)
+                    .addComponent(n4p1p3)
                     .addGroup(gameBoardPanelLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(hexagonLabel59))))
+                        .addComponent(n2n2p4))))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(360, 360, 360)
-                .addComponent(hexagonLabel52))
+                .addComponent(n3z0p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(hexagonLabel36))
+                .addComponent(n4p3p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(411, 411, 411)
-                .addComponent(hexagonLabel57))
+                .addComponent(n4z0p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(hexagonLabel16))
+                .addComponent(p2z0n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel46))
+                .addComponent(n2z0p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel47))
+                .addComponent(n1n1p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel20))
+                .addComponent(n2p3n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel32))
+                .addComponent(p1n1z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel24))
+                .addComponent(p2n1n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel21))
+                .addComponent(n1p2n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel35))
+                .addComponent(p4n4z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel45))
+                .addComponent(n3p1p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(360, 360, 360)
-                .addComponent(hexagonLabel54))
+                .addComponent(n1n2p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(hexagonLabel40))
+                .addComponent(z0n1p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel31))
+                .addComponent(z0z0z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel34))
+                .addComponent(p3n3z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel28))
+                .addComponent(n3p3z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(360, 360, 360)
-                .addComponent(hexagonLabel53))
+                .addComponent(n2n1p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addComponent(hexagonLabel5))
+                .addComponent(p4z0n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel26))
+                .addComponent(p4n3n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(hexagonLabel7))
+                .addComponent(z0p3n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addComponent(hexagonLabel4))
+                .addComponent(p3p1n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(hexagonLabel17))
+                .addComponent(p3n1n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel29))
+                .addComponent(n2p2z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel23))
+                .addComponent(p1z0n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addComponent(hexagonLabel2))
+                .addComponent(p1p3n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(hexagonLabel9))
+                .addComponent(p2p1n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel50))
+                .addComponent(p2n4p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel27))
+                .addComponent(n4p4z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(207, 207, 207)
-                .addComponent(hexagonLabel33))
+                .addComponent(p2n2z0))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(hexagonLabel10))
+                .addComponent(p3z0n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(411, 411, 411)
-                .addComponent(hexagonLabel58))
+                .addComponent(n3n1p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(hexagonLabe14))
+                .addComponent(z0p2n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(hexagonLabel42))
+                .addComponent(p2n3p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addComponent(hexagonLabel1))
+                .addComponent(z0p4n4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(hexagonLabel43))
+                .addComponent(p3n4p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(hexagonLabel18))
+                .addComponent(p4n2n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel19))
+                .addComponent(n3p4n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel49))
+                .addComponent(p1n3p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(hexagonLabel15))
+                .addComponent(p1p1n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(360, 360, 360)
-                .addComponent(hexagonLabel56))
+                .addComponent(p1n4p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(hexagonLabel11))
+                .addComponent(p4n1n3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(411, 411, 411)
-                .addComponent(hexagonLabel60))
+                .addComponent(n1n3p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(hexagonLabel22))
+                .addComponent(z0p1n1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(360, 360, 360)
-                .addComponent(hexagonLabel55))
+                .addComponent(z0n3p3))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(hexagonLabel12))
+                .addComponent(n2p4n2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(hexagonLabel39))
+                .addComponent(n1z0p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel44))
+                .addComponent(n4p2p2))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(411, 411, 411)
-                .addComponent(hexagonLabel61))
+                .addComponent(z0n4p4))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(hexagonLabel38))
+                .addComponent(n2p1p1))
             .addGroup(gameBoardPanelLayout.createSequentialGroup()
                 .addGap(309, 309, 309)
-                .addComponent(hexagonLabel48))
+                .addComponent(z0n2p2))
         );
 
         timerLabel.setBackground(new java.awt.Color(255, 255, 255));
@@ -736,68 +736,68 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JButton endPlayButton;
     private javax.swing.JPanel gameBoardPanel;
     private javax.swing.JButton giveUpButton;
-    private javax.swing.JLabel hexagonLabe14;
-    private javax.swing.JLabel hexagonLabel1;
-    private javax.swing.JLabel hexagonLabel10;
-    private javax.swing.JLabel hexagonLabel11;
-    private javax.swing.JLabel hexagonLabel12;
-    private javax.swing.JLabel hexagonLabel13;
-    private javax.swing.JLabel hexagonLabel15;
-    private javax.swing.JLabel hexagonLabel16;
-    private javax.swing.JLabel hexagonLabel17;
-    private javax.swing.JLabel hexagonLabel18;
-    private javax.swing.JLabel hexagonLabel19;
-    private javax.swing.JLabel hexagonLabel2;
-    private javax.swing.JLabel hexagonLabel20;
-    private javax.swing.JLabel hexagonLabel21;
-    private javax.swing.JLabel hexagonLabel22;
-    private javax.swing.JLabel hexagonLabel23;
-    private javax.swing.JLabel hexagonLabel24;
-    private javax.swing.JLabel hexagonLabel25;
-    private javax.swing.JLabel hexagonLabel26;
-    private javax.swing.JLabel hexagonLabel27;
-    private javax.swing.JLabel hexagonLabel28;
-    private javax.swing.JLabel hexagonLabel29;
-    private javax.swing.JLabel hexagonLabel3;
-    private javax.swing.JLabel hexagonLabel30;
-    private javax.swing.JLabel hexagonLabel31;
-    private javax.swing.JLabel hexagonLabel32;
-    private javax.swing.JLabel hexagonLabel33;
-    private javax.swing.JLabel hexagonLabel34;
-    private javax.swing.JLabel hexagonLabel35;
-    private javax.swing.JLabel hexagonLabel36;
-    private javax.swing.JLabel hexagonLabel37;
-    private javax.swing.JLabel hexagonLabel38;
-    private javax.swing.JLabel hexagonLabel39;
-    private javax.swing.JLabel hexagonLabel4;
-    private javax.swing.JLabel hexagonLabel40;
-    private javax.swing.JLabel hexagonLabel41;
-    private javax.swing.JLabel hexagonLabel42;
-    private javax.swing.JLabel hexagonLabel43;
-    private javax.swing.JLabel hexagonLabel44;
-    private javax.swing.JLabel hexagonLabel45;
-    private javax.swing.JLabel hexagonLabel46;
-    private javax.swing.JLabel hexagonLabel47;
-    private javax.swing.JLabel hexagonLabel48;
-    private javax.swing.JLabel hexagonLabel49;
-    private javax.swing.JLabel hexagonLabel5;
-    private javax.swing.JLabel hexagonLabel50;
-    private javax.swing.JLabel hexagonLabel51;
-    private javax.swing.JLabel hexagonLabel52;
-    private javax.swing.JLabel hexagonLabel53;
-    private javax.swing.JLabel hexagonLabel54;
-    private javax.swing.JLabel hexagonLabel55;
-    private javax.swing.JLabel hexagonLabel56;
-    private javax.swing.JLabel hexagonLabel57;
-    private javax.swing.JLabel hexagonLabel58;
-    private javax.swing.JLabel hexagonLabel59;
-    private javax.swing.JLabel hexagonLabel6;
-    private javax.swing.JLabel hexagonLabel60;
-    private javax.swing.JLabel hexagonLabel61;
-    private javax.swing.JLabel hexagonLabel7;
-    private javax.swing.JLabel hexagonLabel8;
-    private javax.swing.JLabel hexagonLabel9;
     private javax.swing.JButton homeButton;
+    private javax.swing.JLabel n1n1p2;
+    private javax.swing.JLabel n1n2p3;
+    private javax.swing.JLabel n1n3p4;
+    private javax.swing.JLabel n1p1z0;
+    private javax.swing.JLabel n1p2n1;
+    private javax.swing.JLabel n1p3n2;
+    private javax.swing.JLabel n1p4n3;
+    private javax.swing.JLabel n1z0p1;
+    private javax.swing.JLabel n2n1p3;
+    private javax.swing.JLabel n2n2p4;
+    private javax.swing.JLabel n2p1p1;
+    private javax.swing.JLabel n2p2z0;
+    private javax.swing.JLabel n2p3n1;
+    private javax.swing.JLabel n2p4n2;
+    private javax.swing.JLabel n2z0p2;
+    private javax.swing.JLabel n3n1p4;
+    private javax.swing.JLabel n3p1p2;
+    private javax.swing.JLabel n3p2p1;
+    private javax.swing.JLabel n3p3z0;
+    private javax.swing.JLabel n3p4n1;
+    private javax.swing.JLabel n3z0p3;
+    private javax.swing.JLabel n4p1p3;
+    private javax.swing.JLabel n4p2p2;
+    private javax.swing.JLabel n4p3p1;
+    private javax.swing.JLabel n4p4z0;
+    private javax.swing.JLabel n4z0p4;
+    private javax.swing.JLabel p1n1z0;
+    private javax.swing.JLabel p1n2p1;
+    private javax.swing.JLabel p1n3p2;
+    private javax.swing.JLabel p1n4p3;
+    private javax.swing.JLabel p1p1n2;
+    private javax.swing.JLabel p1p2n3;
+    private javax.swing.JLabel p1p3n4;
+    private javax.swing.JLabel p1z0n1;
+    private javax.swing.JLabel p2n1n1;
+    private javax.swing.JLabel p2n2z0;
+    private javax.swing.JLabel p2n3p1;
+    private javax.swing.JLabel p2n4p2;
+    private javax.swing.JLabel p2p1n3;
+    private javax.swing.JLabel p2p2n4;
+    private javax.swing.JLabel p2z0n2;
+    private javax.swing.JLabel p3n1n2;
+    private javax.swing.JLabel p3n2n1;
+    private javax.swing.JLabel p3n3z0;
+    private javax.swing.JLabel p3n4p1;
+    private javax.swing.JLabel p3p1n4;
+    private javax.swing.JLabel p3z0n3;
+    private javax.swing.JLabel p4n1n3;
+    private javax.swing.JLabel p4n2n2;
+    private javax.swing.JLabel p4n3n1;
+    private javax.swing.JLabel p4n4z0;
+    private javax.swing.JLabel p4z0n4;
     private javax.swing.JLabel timerLabel;
+    private javax.swing.JLabel z0n1p1;
+    private javax.swing.JLabel z0n2p2;
+    private javax.swing.JLabel z0n3p3;
+    private javax.swing.JLabel z0n4p4;
+    private javax.swing.JLabel z0p1n1;
+    private javax.swing.JLabel z0p2n2;
+    private javax.swing.JLabel z0p3n3;
+    private javax.swing.JLabel z0p4n4;
+    private javax.swing.JLabel z0z0z0;
     // End of variables declaration//GEN-END:variables
 }
