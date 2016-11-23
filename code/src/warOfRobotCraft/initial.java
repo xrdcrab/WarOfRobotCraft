@@ -44,6 +44,6 @@ public class initial {
 //                Logger.getLogger(initial.class.getName()).log(Level.SEVERE, null, ex);
 //            }
 //            
-//            Controller newGame = new Controller();
+            Controller newGame = new Controller();
 	}
 }
