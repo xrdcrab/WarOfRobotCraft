@@ -176,7 +176,7 @@ public class Game {
 	 * 
 	 * @param pair the the pair that
 	 */
-	public void updateGameShoot(Pair<Coordinate, Integer> pair) {
+	public void updateGameShootDamaged(Pair<Coordinate, Integer> pair) {
 		// update robots
 		this.setAlivePlayerNumber(0);
 		for ( Integer key: playerHashMap.keySet() ) {
@@ -200,6 +200,53 @@ public class Game {
 				this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
 			}			
 		}
+	}
+	
+	/**
+	 * this method is to get the dead robot that shot by other robot
+	 * @param pair the coordinate and the damage point that a robot got
+	 * @return deadRobotList the dead robots list 
+	 */
+	public LinkedList<Pair<Integer, String>> updateGameShootDead(Pair<Coordinate, Integer> pair) {
+		LinkedList<Pair<Integer, String>> deadRobotList = 
+				new LinkedList<Pair<Integer, String>>();
+		
+		this.setAlivePlayerNumber(0);
+		for ( Integer key: playerHashMap.keySet() ) {
+			Player traversedPlayer = this.getPlayerHashMap().get(key);
+			if ( !traversedPlayer.isDead() ) {
+				// case 1: the scout robot is get damaged 
+				if ( !traversedPlayer.getScoutRobot().isDead() 
+						&& traversedPlayer.getScoutRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getScoutRobot().damaged(pair.getValue());
+					if ( traversedPlayer.getScoutRobot().isDead() ) {
+						deadRobotList.add(new Pair<Integer, String>(key, 
+								traversedPlayer.getScoutRobot().getType().toString()));
+					}
+				}
+				// case 2: the sniper robot is get damaged 
+				if ( !traversedPlayer.getSniperRobot().isDead() 
+						&& traversedPlayer.getSniperRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getSniperRobot().damaged(pair.getValue());
+					if ( traversedPlayer.getSniperRobot().isDead() ) {
+						deadRobotList.add(new Pair<Integer, String>(key, 
+								traversedPlayer.getSniperRobot().getType().toString()));
+					}
+				}
+				// case 3: the tank robot is get damaged 
+				if ( !traversedPlayer.getTankRobot().isDead() 
+						&& traversedPlayer.getTankRobot().getCoord().equals(pair.getKey()) ) {
+					traversedPlayer.getTankRobot().damaged(pair.getValue());
+					if ( traversedPlayer.getTankRobot().isDead() ) {
+						deadRobotList.add(new Pair<Integer, String>(key, 
+								traversedPlayer.getTankRobot().getType().toString()));
+					}
+				}
+				this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
+			}			
+		}
+		
+		return deadRobotList;
 	}
 	
 	/**

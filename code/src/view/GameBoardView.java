@@ -9,7 +9,7 @@ import java.awt.Color;
 import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
-import model.Coordinate;
+import javax.swing.JLabel;
 
 /**
  * this class is to create the view the game board
@@ -462,8 +462,36 @@ public class GameBoardView extends javax.swing.JFrame {
        
     }
     
-    public void updateMist(HashMap<Coordinate, Boolean> hashMap){
+    public void updateMist(HashMap<String, Boolean> hashMap){
         
+    }
+    
+    public void updateRobotDestruction(int playerPosition, String RobotType){
+        
+    }
+    
+    public void updatePlayerDamaged(int playerPosition, int attackPoint){
+        
+    }
+    
+    public void updatePlayerDeath(int playerPosition){
+        
+    }
+    
+    public void updateCurrentPlayer(int playerPosition){
+        
+    }
+    
+    public void updateRobotLocation(int playerPosition, String RobotType, String destination){
+        
+    }
+    
+        
+    public JLabel getHexagonLabel(String coordString) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
+        Class<?> gameBoardViewClass = GameBoardView.class;
+        Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+        labelField.setAccessible(true);
+        return (JLabel)labelField.get(this);
     }
     
     /**
@@ -492,7 +520,7 @@ public class GameBoardView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -608,6 +636,10 @@ public class GameBoardView extends javax.swing.JFrame {
 	}
 
 	/**
+        
+        public static void main(String[] args) {
+            
+        }
 	 * @param homeButton the homeButton to set
 	 */
 	public void setHomeButton(javax.swing.JButton homeButton) {
@@ -627,9 +659,4 @@ public class GameBoardView extends javax.swing.JFrame {
 	public void setTimerLabel(javax.swing.JLabel timerLabel) {
 		this.timerLabel = timerLabel;
 	}
-        
-        public Field getHexagonField(Coordinate coord) throws NoSuchFieldException{
-            Class<?> gameBoardViewClass = this.getClass();
-            return gameBoardViewClass.getField(coord.toString());
-        }
 }
