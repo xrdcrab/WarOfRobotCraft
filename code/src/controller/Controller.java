@@ -12,7 +12,6 @@ import java.util.LinkedList;
 
 import javax.swing.JComboBox;
 
-import javafx.scene.Parent;
 import javafx.util.Pair;
 import model.*;
 import view.*;
@@ -440,6 +439,7 @@ public class Controller implements ActionListener, KeyListener {
 						
 			if ( playerNum != -1 ) {
 				this.game = new Game(playerHashMap, playerNum);
+				this.getGame().setCurrentPlayerIndex(0);
 				this.gameBoardView = new GameBoardView();
 				this.getGameBoardView().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
@@ -448,6 +448,15 @@ public class Controller implements ActionListener, KeyListener {
 					if (playerHashMap.get(i) != null) {
 						System.out.println("player" + i);
 					}
+				}
+				try {
+					if (this.getClass().getField("game").equals(null)) System.out.println("game");
+				} catch (NoSuchFieldException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (SecurityException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 			}			
 		}
