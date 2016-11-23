@@ -1,0 +1,12 @@
+Meeting 19
+Date: Nov 22, 2016 15:30 - 16:40 
+Location: Spinks S342
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang 
+Topic: information request
+Caller: TA
+Moderator: Jiahuan He
+Secretary: Chen Yang
+
+1. 27th due: Code review, preliminary Code, Pair programming document
+2. Interpreter: Writing it as testing purpose first.
+3. Testing document is not graded yet.
