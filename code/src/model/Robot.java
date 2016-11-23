@@ -1,7 +1,6 @@
 package model;
 
 import java.util.LinkedList;
-
 import javafx.util.Pair;
 
 /**
@@ -366,6 +365,7 @@ public class Robot {
 			break;
 		}
 	}
+	
 }
 
 

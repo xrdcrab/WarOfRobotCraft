@@ -211,6 +211,20 @@ public class Player {
 		this.viewRangeList = viewRangeList;
 	}
 	
-	
+	/**
+	 * this method will set all alive robots of this player to death
+	 * @return nothing
+	 */
+	public void surrender() {
+		if ( this.getScoutRobot().getHealthPoint() > 0 ) {
+			this.getScoutRobot().setHealthPoint(0);
+		}
+		if ( this.getSniperRobot().getHealthPoint() > 0 ) {
+			this.getSniperRobot().setHealthPoint(0);
+		}
+		if ( this.getTankRobot().getHealthPoint() > 0 ) {
+			this.getTankRobot().setHealthPoint(0);
+		}
+	}
 
 }
