@@ -21,6 +21,29 @@ public class GameBoardView extends javax.swing.JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
         
+        private JLabel player0_scout;
+        private JLabel player0_sniper;
+        private JLabel player0_tank;
+        
+        private JLabel player1_scout;
+        private JLabel player1_sniper;
+        private JLabel player1_tank;
+        
+        private JLabel player2_scout;
+        private JLabel player2_sniper;
+        private JLabel player2_tank;
+        
+        private JLabel player3_scout;
+        private JLabel player3_sniper;
+        private JLabel player3_tank;
+        
+        private JLabel player4_scout;
+        private JLabel player4_sniper;
+        private JLabel player4_tank;
+        
+        private JLabel player5_scout;
+        private JLabel player5_sniper;
+        private JLabel player5_tank;
         
 	/**
      * Creates new form GameBoardView
