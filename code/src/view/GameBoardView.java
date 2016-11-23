@@ -10,7 +10,6 @@ import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
 import javax.swing.JLabel;
-import model.Coordinate;
 
 /**
  * this class is to create the view the game board
@@ -692,7 +691,23 @@ public class GameBoardView extends javax.swing.JFrame {
        
     }
     
-    public void updateMist(HashMap<Coordinate, Boolean> hashMap){
+    public void updateMist(HashMap<String, Boolean> hashMap){
+        
+    }
+    
+    public void updateRobotDestruction(int playerPosition, String RobotType, boolean hasDestroyed){
+        
+    }
+    
+    public void updatePlayerDeath(int playerPosition, boolean hasDied){
+        
+    }
+    
+    public void updateCurrentPlayer(int playerPosition){
+        
+    }
+    
+    public void updateRobotLocation(int playerPosition, String RobotType, String destination){
         
     }
     
