@@ -170,8 +170,13 @@ public class Controller implements ActionListener, KeyListener {
 					e.printStackTrace();
 				}
 				
-				getGame().updateGameShoot(pair);
+				getGame().updateGameShootDamaged(pair);
 				//update UI here
+				for ( Pair<Integer, String> deadRobot: getGame().updateGameShootDead(pair)) {
+					getGameBoardView().updateRobotDestruction(
+							deadRobot.getKey(), deadRobot.getValue());
+				}
+				
 			}
 			
 			/**
@@ -498,6 +503,7 @@ public class Controller implements ActionListener, KeyListener {
 									HashMap<Integer, Player> playerHashMap,
 									int playerIndex
 									) {
+		// model part
 		Player newPlayer;
 		if ( comboBox.getSelectedItem() instanceof AIPlayer ) {
 			newPlayer = new AIPlayer( new Coordinate(-4, 4, 0), 5 );
@@ -506,6 +512,9 @@ public class Controller implements ActionListener, KeyListener {
 			newPlayer = new HumanPlayer( new Coordinate(4, -4, 0), 5 );
 		}
 		playerHashMap.put(playerIndex, newPlayer);
+		
+		// view part
+		
 	}
 	
 	@Override
@@ -552,7 +561,7 @@ public class Controller implements ActionListener, KeyListener {
 				e1.printStackTrace();
 			}
 			// update the game after the shoot action
-			this.getGame().updateGameShoot(this.getShootTarget());
+			this.getGame().updateGameShootDamaged(this.getShootTarget());
 		}
 		
 		
