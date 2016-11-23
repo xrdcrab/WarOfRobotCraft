@@ -1,7 +1,6 @@
 
 package view;
 
-import javax.swing.Icon;
 import javax.swing.JLabel;
 
 
@@ -11,6 +10,11 @@ import javax.swing.JLabel;
 public class RobotLabel extends JLabel {
     
     /**
+	 * default serialVersionUID 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * this class is to create the robot label with icon
      * @param playerIndex
      * @param robotType 
