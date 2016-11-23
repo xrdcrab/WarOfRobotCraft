@@ -471,6 +471,7 @@ public class Controller implements ActionListener, KeyListener {
 			// call surrender() method
 			this.getGame().getPlayerHashMap().get( getGame().getCurrentPlayerIndex() )
 			.surrender();
+			this.getGameBoardView().updatePlayerDeath( this.getGame().getCurrentPlayerIndex() );
 		}
 	}
 
