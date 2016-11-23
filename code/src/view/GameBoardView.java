@@ -529,8 +529,18 @@ public class GameBoardView extends javax.swing.JFrame {
                 Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
                 robotField.setAccessible(true);
                 return (JLabel)robotField.get(this);
-            } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException ex) {
+            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
                 return null;
+            }
+    }
+    
+    private void setRobotLabel(int playerPosition, String robotType, JLabel value){
+            try {
+                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+                robotField.setAccessible(true);
+                robotField.set(robotField, value);
+            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+                // do nothing
             }
     }
     
@@ -539,7 +549,7 @@ public class GameBoardView extends javax.swing.JFrame {
                 Field labelField = gameBoardViewClass.getDeclaredField(coordString);
                 labelField.setAccessible(true);
                 return (JLabel)labelField.get(this);
-            } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException ex) {
+            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
                 return  null;
             }
     }
