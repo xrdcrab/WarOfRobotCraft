@@ -460,6 +460,10 @@ public class Controller implements ActionListener, KeyListener {
 				}
 			}			
 		}
+		// end play button
+		else if ( e.getSource().equals( this.getGameBoardView().getEndPlayButton() ) ) {
+			this.getGame().runPlay();
+		}
 	}
 
 	/**

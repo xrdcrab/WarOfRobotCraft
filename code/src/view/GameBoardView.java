@@ -11,8 +11,7 @@ import java.util.Timer;
 import model.Coordinate;
 
 /**
- *
- * @author chf354
+ * this class is to create the view the game board
  */
 public class GameBoardView extends javax.swing.JFrame {
 
@@ -800,4 +799,59 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JButton homeButton;
     private javax.swing.JLabel timerLabel;
     // End of variables declaration//GEN-END:variables
+	/**
+	 * @return the endPlayButton
+	 */
+	public javax.swing.JButton getEndPlayButton() {
+		return endPlayButton;
+	}
+
+	/**
+	 * @param endPlayButton the endPlayButton to set
+	 */
+	public void setEndPlayButton(javax.swing.JButton endPlayButton) {
+		this.endPlayButton = endPlayButton;
+	}
+
+	/**
+	 * @return the giveUpButton
+	 */
+	public javax.swing.JButton getGiveUpButton() {
+		return giveUpButton;
+	}
+
+	/**
+	 * @param giveUpButton the giveUpButton to set
+	 */
+	public void setGiveUpButton(javax.swing.JButton giveUpButton) {
+		this.giveUpButton = giveUpButton;
+	}
+
+	/**
+	 * @return the homeButton
+	 */
+	public javax.swing.JButton getHomeButton() {
+		return homeButton;
+	}
+
+	/**
+	 * @param homeButton the homeButton to set
+	 */
+	public void setHomeButton(javax.swing.JButton homeButton) {
+		this.homeButton = homeButton;
+	}
+
+	/**
+	 * @return the timerLabel
+	 */
+	public javax.swing.JLabel getTimerLabel() {
+		return timerLabel;
+	}
+
+	/**
+	 * @param timerLabel the timerLabel to set
+	 */
+	public void setTimerLabel(javax.swing.JLabel timerLabel) {
+		this.timerLabel = timerLabel;
+	}
 }
