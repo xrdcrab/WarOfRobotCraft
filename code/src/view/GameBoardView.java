@@ -100,6 +100,9 @@ public class GameBoardView extends javax.swing.JFrame {
         hexagonLabel3 = new javax.swing.JLabel();
         hexagonLabel2 = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
+        homeButton = new javax.swing.JButton();
+        endPlayButton = new javax.swing.JButton();
+        giveUpButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -108,7 +111,6 @@ public class GameBoardView extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1003, 748));
 
         gameBoardPanel.setBackground(new java.awt.Color(255, 255, 255));
-        gameBoardPanel.setBounds(new java.awt.Rectangle(0, 0, 600, 480));
         gameBoardPanel.setMaximumSize(new java.awt.Dimension(600, 480));
         gameBoardPanel.setPreferredSize(new java.awt.Dimension(600, 480));
 
@@ -614,7 +616,26 @@ public class GameBoardView extends javax.swing.JFrame {
         timerLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(152, 180, 212));
         timerLabel.setText("10");
-        timerLabel.setIgnoreRepaint(true);
+
+        homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Home.png"))); // NOI18N
+        homeButton.setToolTipText("");
+        homeButton.setBorderPainted(false);
+        homeButton.setContentAreaFilled(false);
+        homeButton.setOpaque(false);
+
+        endPlayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/endPlay.png"))); // NOI18N
+        endPlayButton.setBorderPainted(false);
+        endPlayButton.setContentAreaFilled(false);
+        endPlayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                endPlayButtonActionPerformed(evt);
+            }
+        });
+
+        giveUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/giveUp.png"))); // NOI18N
+        giveUpButton.setBorderPainted(false);
+        giveUpButton.setContentAreaFilled(false);
+        giveUpButton.setOpaque(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -625,22 +646,42 @@ public class GameBoardView extends javax.swing.JFrame {
                 .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(201, 201, 201))
             .addGroup(layout.createSequentialGroup()
-                .addGap(463, 463, 463)
-                .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(463, 463, 463)
+                        .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(374, 374, 374)
+                        .addComponent(endPlayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(146, 146, 146)
+                        .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(21, 21, 21)
+                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(endPlayButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(38, 38, 38))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void endPlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endPlayButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_endPlayButtonActionPerformed
 
     
     private void formWindowOpened(java.awt.event.WindowEvent evt) { 
@@ -692,7 +733,9 @@ public class GameBoardView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton endPlayButton;
     private javax.swing.JPanel gameBoardPanel;
+    private javax.swing.JButton giveUpButton;
     private javax.swing.JLabel hexagonLabe14;
     private javax.swing.JLabel hexagonLabel1;
     private javax.swing.JLabel hexagonLabel10;
@@ -754,6 +797,7 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JLabel hexagonLabel7;
     private javax.swing.JLabel hexagonLabel8;
     private javax.swing.JLabel hexagonLabel9;
+    private javax.swing.JButton homeButton;
     private javax.swing.JLabel timerLabel;
     // End of variables declaration//GEN-END:variables
 }
