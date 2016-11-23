@@ -12,7 +12,6 @@ import java.util.LinkedList;
 
 import javax.swing.JComboBox;
 
-import javafx.scene.Parent;
 import javafx.util.Pair;
 import model.*;
 import view.*;
@@ -440,7 +439,9 @@ public class Controller implements ActionListener, KeyListener {
 						
 			if ( playerNum != -1 ) {
 				this.game = new Game(playerHashMap, playerNum);
+				this.getGame().setCurrentPlayerIndex(0);
 				this.gameBoardView = new GameBoardView();
+				this.addGameBoardViewListener();
 				this.getGameBoardView().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
 				//System.out.print(playerNum + '\n');
@@ -451,8 +452,30 @@ public class Controller implements ActionListener, KeyListener {
 				}
 			}			
 		}
+		// end play button
+		else if ( e.getSource().equals( this.getGameBoardView().getEndPlayButton() ) ) {
+			this.getGame().runPlay();
+		}
+		// home button
+		else if ( e.getSource().equals( this.getGameBoardView().getHomeButton() ) ) {
+			System.out.println("home");
+			this.setGame(null);
+			this.getGameBoardView().setVisible(false);
+			this.setGameBoardView(null);
+			this.setSetGameModeView(null);
+			this.getGameStartView().setVisible(true);
+		}
 	}
 
+	/**
+	 * this method is to add the listeners for the game board view
+	 */
+	private void addGameBoardViewListener () {
+		this.getGameBoardView().getEndPlayButton().addActionListener(this);
+		this.getGameBoardView().getHomeButton().addActionListener(this);
+		this.getGameBoardView().getGiveUpButton().addActionListener(this);
+	}
+	
 	/**
 	 * this method is to help the confirm button action perform initialize players
 	 * @param comboBox

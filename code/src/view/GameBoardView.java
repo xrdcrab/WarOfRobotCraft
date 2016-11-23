@@ -6,13 +6,13 @@
 package view;
 
 import java.awt.Color;
+import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
 import model.Coordinate;
 
 /**
- *
- * @author chf354
+ * this class is to create the view the game board
  */
 public class GameBoardView extends javax.swing.JFrame {
 
@@ -621,7 +621,6 @@ public class GameBoardView extends javax.swing.JFrame {
         homeButton.setToolTipText("");
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
-        homeButton.setOpaque(false);
 
         endPlayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/endPlay.png"))); // NOI18N
         endPlayButton.setBorderPainted(false);
@@ -635,7 +634,6 @@ public class GameBoardView extends javax.swing.JFrame {
         giveUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/giveUp.png"))); // NOI18N
         giveUpButton.setBorderPainted(false);
         giveUpButton.setContentAreaFilled(false);
-        giveUpButton.setOpaque(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -800,4 +798,64 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JLabel z0p4n4;
     private javax.swing.JLabel z0z0z0;
     // End of variables declaration//GEN-END:variables
+	/**
+	 * @return the endPlayButton
+	 */
+	public javax.swing.JButton getEndPlayButton() {
+		return endPlayButton;
+	}
+
+	/**
+	 * @param endPlayButton the endPlayButton to set
+	 */
+	public void setEndPlayButton(javax.swing.JButton endPlayButton) {
+		this.endPlayButton = endPlayButton;
+	}
+
+	/**
+	 * @return the giveUpButton
+	 */
+	public javax.swing.JButton getGiveUpButton() {
+		return giveUpButton;
+	}
+
+	/**
+	 * @param giveUpButton the giveUpButton to set
+	 */
+	public void setGiveUpButton(javax.swing.JButton giveUpButton) {
+		this.giveUpButton = giveUpButton;
+	}
+
+	/**
+	 * @return the homeButton
+	 */
+	public javax.swing.JButton getHomeButton() {
+		return homeButton;
+	}
+
+	/**
+	 * @param homeButton the homeButton to set
+	 */
+	public void setHomeButton(javax.swing.JButton homeButton) {
+		this.homeButton = homeButton;
+	}
+
+	/**
+	 * @return the timerLabel
+	 */
+	public javax.swing.JLabel getTimerLabel() {
+		return timerLabel;
+	}
+
+	/**
+	 * @param timerLabel the timerLabel to set
+	 */
+	public void setTimerLabel(javax.swing.JLabel timerLabel) {
+		this.timerLabel = timerLabel;
+	}
+        
+        public Field getHexagonField(Coordinate coord) throws NoSuchFieldException{
+            Class<?> gameBoardViewClass = this.getClass();
+            return gameBoardViewClass.getField(coord.toString());
+        }
 }
