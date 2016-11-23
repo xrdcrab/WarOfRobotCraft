@@ -260,6 +260,44 @@ public class Coordinate {
 		return true;
 	};
 
+	/**
+	 * this method is to help the toString() 
+	 * to get the x, y or z coordinate to string
+	 * 
+	 * @param coord the x, y, or z
+	 * @return coordString the string of the x, y or z coordinate
+	 */
+	private String coordToString(int coord) {
+		String coordString = "";
+		if ( coord == 0 ) {
+			coordString += "z0";
+		}
+		else if ( coord <0 ) {
+			int abs = Math.abs( coord );
+			coordString += "n" + abs;
+		}
+		else if ( coord > 0 ) {
+			coordString += "p" + coord;
+		}
+		return coordString;
+	}
+	
+	/**
+	 * this method is to override the toString() method 
+	 * to get the string of a coordinate
+	 * 
+	 * @return coordString the string of a coordinate
+	 */
+	@Override
+	public String toString() {
+		String coordString = "";
+		coordString += this.coordToString(this.getX());
+		coordString += this.coordToString(this.getY());
+		coordString += this.coordToString(this.getZ());
+		return coordString;
+		
+	}
+	
 	public static void main(String[] args) {
 		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
 		rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
@@ -271,5 +309,8 @@ public class Coordinate {
                 LinkedList<Coordinate> list2 = new Coordinate(1, -1, 0).getRange(1, 5);
                 list1.removeAll(list2);
                 list1.addAll(list2);
+                
+        Coordinate coord = new Coordinate (-1, 0, 1);
+        System.out.println(coord.toString());
 	}
 }
