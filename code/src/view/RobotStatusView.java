@@ -34,6 +34,8 @@ public class RobotStatusView extends javax.swing.JPanel {
         healthPointLabel = new javax.swing.JLabel();
         movingPointLabel = new javax.swing.JLabel();
         movingPointProgressBar = new javax.swing.JProgressBar();
+        healthPointValueLabel = new javax.swing.JLabel();
+        movingPointValueLabel = new javax.swing.JLabel();
 
         setLayout(null);
 
@@ -60,14 +62,24 @@ public class RobotStatusView extends javax.swing.JPanel {
         movingPointLabel.setBounds(40, 50, 72, 18);
         add(movingPointProgressBar);
         movingPointProgressBar.setBounds(120, 50, 90, 20);
+
+        healthPointValueLabel.setText("0");
+        add(healthPointValueLabel);
+        healthPointValueLabel.setBounds(210, 30, 10, 18);
+
+        movingPointValueLabel.setText("0");
+        add(movingPointValueLabel);
+        movingPointValueLabel.setBounds(210, 50, 10, 18);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel healthPointLabel;
     private javax.swing.JProgressBar healthPointProgressBar;
+    private javax.swing.JLabel healthPointValueLabel;
     private javax.swing.JLabel movingPointLabel;
     private javax.swing.JProgressBar movingPointProgressBar;
+    private javax.swing.JLabel movingPointValueLabel;
     private javax.swing.JLabel robotIconLabel;
     private javax.swing.JLabel robotNameLabel;
     private javax.swing.JLabel robotTypeLabel;
@@ -87,6 +99,7 @@ public class RobotStatusView extends javax.swing.JPanel {
     
     public void updateHealthPoint(int healthPoint){
         healthPointProgressBar.setValue(healthPoint);
+        healthPointValueLabel.setText(healthPoint + "");
     }
     
     public void updateMovingPointLimit(int maxMovingPoint){
@@ -95,5 +108,6 @@ public class RobotStatusView extends javax.swing.JPanel {
     
     public void updateMovingPoint(int movingPoint){
         movingPointProgressBar.setValue(movingPoint);
+        movingPointValueLabel.setText(movingPoint + "");
     }
 }
