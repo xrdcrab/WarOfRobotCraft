@@ -10,7 +10,7 @@ import javafx.util.Pair;
 public class Robot {
 	
 	/** robot type **/
-	protected enum RobotType {
+	public enum RobotType {
 		scout, sniper, tank
 	};
 	
