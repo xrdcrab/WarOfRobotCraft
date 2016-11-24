@@ -437,6 +437,12 @@ public class Controller implements ActionListener, KeyListener {
                 this.game = new Game(playerHashMap, playerNum);
                 this.getGame().setCurrentPlayerIndex(0);
                 this.gameBoardView = new GameBoardView();
+                this.getGameBoardView().updateRobotLocation(
+                		0, "Tank", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		0, "Scout", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
