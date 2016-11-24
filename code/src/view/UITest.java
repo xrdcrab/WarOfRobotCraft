@@ -18,5 +18,7 @@ public class UITest {
         gbv.setVisible(true);
         RobotLabel rl = new RobotLabel(0, "Sniper");
         gbv.updateRobotLocation(0, "Sniper", "z0z0z0");
+        gbv.updateRobotLocation(3, "Tank", "z0p1n1");
+        gbv.updateRobotLocation(0, "Sniper", "z0n1p1");
     }
 }
