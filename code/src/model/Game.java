@@ -106,7 +106,7 @@ public class Game {
      * @precondition currentPlayerIndex>=5 or currentPlayerIndex<0
      */
     public void goNextPlayer() {
-        if (this.getCurrentPlayerIndex() < 0 || this.currentPlayerIndex >= this.playerNumber) {
+        if (this.getCurrentPlayerIndex() < 0 /*|| this.currentPlayerIndex >= this.playerNumber*/) {
             this.setCurrentPlayerIndex(0);
             this.setAlivePlayerNumber(0);
         } else {
@@ -114,7 +114,7 @@ public class Game {
                 case 2:
                     if(currentPlayerIndex == 0){
                         currentPlayerIndex = 3;
-                    } else {
+                    } else if(currentPlayerIndex == 3){
                         currentPlayerIndex = 0;
                     }
                     
@@ -169,15 +169,16 @@ public class Game {
 
         // enter the next play
         this.goNextPlayer();
-        getPlayerHashMap().get(this.getCurrentPlayerIndex()).goNextRobot();
-
         Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
+
+        currentPlayer.goNextRobot();
 
         // it is a new turn
         if (areAllRobotsPlayed(currentPlayer)) {
             currentPlayer.getScoutRobot().setHasMoved(false);
             currentPlayer.getSniperRobot().setHasMoved(false);
             currentPlayer.getTankRobot().setHasMoved(false);
+            currentPlayer.goNextRobot();
         }
 
         currentPlayer.getCurrentRobot().resetStatus();
