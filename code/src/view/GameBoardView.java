@@ -128,9 +128,6 @@ public class GameBoardView extends javax.swing.JFrame {
         p3p1n4 = new javax.swing.JLabel();
         p2p2n4 = new javax.swing.JLabel();
         p1p3n4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
         homeButton = new javax.swing.JButton();
         endPlayButton = new javax.swing.JButton();
@@ -392,30 +389,6 @@ public class GameBoardView extends javax.swing.JFrame {
         gameBoardPanel.add(p1p3n4);
         p1p3n4.setBounds(199, 3, 67, 66);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutR.png"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(67, 66));
-        jLabel1.setMinimumSize(new java.awt.Dimension(67, 66));
-        jLabel1.setPreferredSize(new java.awt.Dimension(67, 66));
-        gameBoardPanel.add(jLabel1);
-        jLabel1.setBounds(1, 207, 67, 66);
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperR.png"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(67, 66));
-        jLabel2.setMinimumSize(new java.awt.Dimension(67, 66));
-        jLabel2.setPreferredSize(new java.awt.Dimension(67, 66));
-        gameBoardPanel.add(jLabel2);
-        jLabel2.setBounds(1, 207, 67, 66);
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankR.png"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(67, 66));
-        jLabel3.setMinimumSize(new java.awt.Dimension(67, 66));
-        jLabel3.setPreferredSize(new java.awt.Dimension(67, 66));
-        gameBoardPanel.add(jLabel3);
-        jLabel3.setBounds(1, 207, 67, 66);
-
         timerLabel.setBackground(new java.awt.Color(255, 255, 255));
         timerLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(152, 180, 212));
@@ -595,9 +568,6 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JPanel gameBoardPanel;
     private javax.swing.JButton giveUpButton;
     private javax.swing.JButton homeButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel n1n1p2;
     private javax.swing.JLabel n1n2p3;
     private javax.swing.JLabel n1n3p4;
