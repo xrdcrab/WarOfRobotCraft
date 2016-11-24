@@ -22,29 +22,29 @@ public class GameBoardView extends javax.swing.JFrame {
      *
      */
     private static final long serialVersionUID = 1L;
-    
+
     private Class<?> gameBoardViewClass = GameBoardView.class;
-    
+
     private JLabel player0_scout;
     private JLabel player0_sniper;
     private JLabel player0_tank;
-    
+
     private JLabel player1_scout;
     private JLabel player1_sniper;
     private JLabel player1_tank;
-    
+
     private JLabel player2_scout;
     private JLabel player2_sniper;
     private JLabel player2_tank;
-    
+
     private JLabel player3_scout;
     private JLabel player3_sniper;
     private JLabel player3_tank;
-    
+
     private JLabel player4_scout;
     private JLabel player4_sniper;
     private JLabel player4_tank;
-    
+
     private JLabel player5_scout;
     private JLabel player5_sniper;
     private JLabel player5_tank;
@@ -482,51 +482,49 @@ public class GameBoardView extends javax.swing.JFrame {
     private void endPlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endPlayButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_endPlayButtonActionPerformed
-    
+
     public void updateTimerNumber(int number) {
         timerLabel.setText("" + number);
-        
+
     }
-    
+
     public void updateMist(HashMap<String, Boolean> hashMap) {
-        
+
     }
-    
+
     public void updateRobotDestruction(int playerPosition, String RobotType) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType);
         if (robotLabel != null) {
             gameBoardPanel.remove(robotLabel);
         }
     }
-    
+
     public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint) {
-        
+
     }
-    
+
     public void updatePlayerDeath(int playerPosition) {
-        
+
     }
-    
+
     public void updateCurrentPlayer(int playerPosition) {
-        
+
     }
-    
+
     public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         JLabel hexagonLabel = getHexagonLabel(coordString);
-        
-        if (gameBoardPanel.isAncestorOf(robotLabel)) {
-            gameBoardPanel.remove(robotLabel);
-        }
-        
+
         if (hexagonLabel != null) {
             setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
-            robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
-            gameBoardPanel.add(robotLabel);
+            if (robotLabel == null) {
+                robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+                gameBoardPanel.add(robotLabel);
+            }
             robotLabel.setBounds(hexagonLabel.getBounds());
         }
     }
-    
+
     private JLabel getRobotLabel(int playerPosition, String robotType) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
@@ -536,7 +534,7 @@ public class GameBoardView extends javax.swing.JFrame {
             return null;
         }
     }
-    
+
     private void setRobotLabel(int playerPosition, String robotType, JLabel value) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
@@ -546,7 +544,7 @@ public class GameBoardView extends javax.swing.JFrame {
             // do nothing
         }
     }
-    
+
     public JLabel getHexagonLabel(String coordString) {
         try {
             Field labelField = gameBoardViewClass.getDeclaredField(coordString);
