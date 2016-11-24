@@ -55,6 +55,7 @@ public class Controller implements ActionListener, KeyListener {
 
     /**
      * this method is to add listener for all buttons
+     * (m, s, t, 0, 1, 2, 3, 4, 5)
      */
     private void addListener() {
         this.getGameStartView().getExitButton().addActionListener(this);
