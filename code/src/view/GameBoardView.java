@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 
 /**
@@ -20,6 +22,33 @@ public class GameBoardView extends javax.swing.JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+        
+        private Class<?> gameBoardViewClass = GameBoardView.class;
+        
+        private JLabel player0_scout;
+        private JLabel player0_sniper;
+        private JLabel player0_tank;
+        
+        private JLabel player1_scout;
+        private JLabel player1_sniper;
+        private JLabel player1_tank;
+        
+        private JLabel player2_scout;
+        private JLabel player2_sniper;
+        private JLabel player2_tank;
+        
+        private JLabel player3_scout;
+        private JLabel player3_sniper;
+        private JLabel player3_tank;
+        
+        private JLabel player4_scout;
+        private JLabel player4_sniper;
+        private JLabel player4_tank;
+        
+        private JLabel player5_scout;
+        private JLabel player5_sniper;
+        private JLabel player5_tank;
+        
 	/**
      * Creates new form GameBoardView
      */
@@ -457,7 +486,7 @@ public class GameBoardView extends javax.swing.JFrame {
     
    
     
-    public void setTimerNumber(int number){
+    public void updateTimerNumber(int number){
         timerLabel.setText("" + number);
        
     }
@@ -467,10 +496,13 @@ public class GameBoardView extends javax.swing.JFrame {
     }
     
     public void updateRobotDestruction(int playerPosition, String RobotType){
-        
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType);
+        if(robotLabel != null){
+            gameBoardPanel.remove(robotLabel);
+        }
     }
     
-    public void updatePlayerDamaged(int playerPosition, int attackPoint){
+    public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint){
         
     }
     
@@ -482,16 +514,45 @@ public class GameBoardView extends javax.swing.JFrame {
         
     }
     
-    public void updateRobotLocation(int playerPosition, String RobotType, String destination){
+    public void updateRobotLocation(int playerPosition, String RobotType, String coordString){
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+        JLabel hexagonLabel = getHexagonLabel(coordString);
         
+        if(hexagonLabel != null){
+            setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
+            gameBoardPanel.add(robotLabel);
+            robotLabel.setLocation(hexagonLabel.getX(), hexagonLabel.getY());
+        }
     }
     
-        
-    public JLabel getHexagonLabel(String coordString) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException{
-        Class<?> gameBoardViewClass = GameBoardView.class;
-        Field labelField = gameBoardViewClass.getDeclaredField(coordString);
-        labelField.setAccessible(true);
-        return (JLabel)labelField.get(this);
+    private JLabel getRobotLabel(int playerPosition, String robotType){
+            try {
+                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+                robotField.setAccessible(true);
+                return (JLabel)robotField.get(this);
+            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+                return null;
+            }
+    }
+    
+    private void setRobotLabel(int playerPosition, String robotType, JLabel value){
+            try {
+                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+                robotField.setAccessible(true);
+                robotField.set(robotField, value);
+            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+                // do nothing
+            }
+    }
+    
+    public JLabel getHexagonLabel(String coordString){
+            try {
+                Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+                labelField.setAccessible(true);
+                return (JLabel)labelField.get(this);
+            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+                return  null;
+            }
     }
     
     /**
