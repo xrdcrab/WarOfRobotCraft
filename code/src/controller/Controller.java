@@ -450,7 +450,7 @@ public class Controller implements ActionListener, KeyListener {
                 this.gameBoardView = new GameBoardView();
                 // Sean added for testing
                 this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
-                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(-4, 4, 0), playerNum));
+                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(4, -4, 0), playerNum));
                 // Sean added for testing
                 this.getGameBoardView().updateRobotLocation(
                 		0, "Tank", (new Coordinate(-4, 4, 0).toString()));
@@ -459,7 +459,7 @@ public class Controller implements ActionListener, KeyListener {
                 this.getGameBoardView().updateRobotLocation(
                 		0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
                 this.getGameBoardView().updateRobotLocation(
-                		3, "Tank", (new Coordinate(44, -4, 0).toString()));
+                		3, "Tank", (new Coordinate(4, -4, 0).toString()));
                 this.getGameBoardView().updateRobotLocation(
                 		3, "Scout", (new Coordinate(4, -4, 0).toString()));
                 this.getGameBoardView().updateRobotLocation(
