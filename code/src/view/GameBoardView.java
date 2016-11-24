@@ -19,42 +19,42 @@ import javax.swing.JLabel;
 public class GameBoardView extends javax.swing.JFrame {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-        
-        private Class<?> gameBoardViewClass = GameBoardView.class;
-        
-        private JLabel player0_scout;
-        private JLabel player0_sniper;
-        private JLabel player0_tank;
-        
-        private JLabel player1_scout;
-        private JLabel player1_sniper;
-        private JLabel player1_tank;
-        
-        private JLabel player2_scout;
-        private JLabel player2_sniper;
-        private JLabel player2_tank;
-        
-        private JLabel player3_scout;
-        private JLabel player3_sniper;
-        private JLabel player3_tank;
-        
-        private JLabel player4_scout;
-        private JLabel player4_sniper;
-        private JLabel player4_tank;
-        
-        private JLabel player5_scout;
-        private JLabel player5_sniper;
-        private JLabel player5_tank;
-        
-	/**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+    
+    private Class<?> gameBoardViewClass = GameBoardView.class;
+    
+    private JLabel player0_scout;
+    private JLabel player0_sniper;
+    private JLabel player0_tank;
+    
+    private JLabel player1_scout;
+    private JLabel player1_sniper;
+    private JLabel player1_tank;
+    
+    private JLabel player2_scout;
+    private JLabel player2_sniper;
+    private JLabel player2_tank;
+    
+    private JLabel player3_scout;
+    private JLabel player3_sniper;
+    private JLabel player3_tank;
+    
+    private JLabel player4_scout;
+    private JLabel player4_sniper;
+    private JLabel player4_tank;
+    
+    private JLabel player5_scout;
+    private JLabel player5_sniper;
+    private JLabel player5_tank;
+
+    /**
      * Creates new form GameBoardView
      */
     public GameBoardView() {
         initComponents();
-        this.getContentPane().setBackground( Color.WHITE );
+        this.getContentPane().setBackground(Color.WHITE);
     }
 
     /**
@@ -482,43 +482,44 @@ public class GameBoardView extends javax.swing.JFrame {
     private void endPlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endPlayButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_endPlayButtonActionPerformed
-
     
-   
-    
-    public void updateTimerNumber(int number){
+    public void updateTimerNumber(int number) {
         timerLabel.setText("" + number);
-       
-    }
-    
-    public void updateMist(HashMap<String, Boolean> hashMap){
         
     }
     
-    public void updateRobotDestruction(int playerPosition, String RobotType){
+    public void updateMist(HashMap<String, Boolean> hashMap) {
+        
+    }
+    
+    public void updateRobotDestruction(int playerPosition, String RobotType) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType);
-        if(robotLabel != null){
+        if (robotLabel != null) {
             gameBoardPanel.remove(robotLabel);
         }
     }
     
-    public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint){
+    public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint) {
         
     }
     
-    public void updatePlayerDeath(int playerPosition){
+    public void updatePlayerDeath(int playerPosition) {
         
     }
     
-    public void updateCurrentPlayer(int playerPosition){
+    public void updateCurrentPlayer(int playerPosition) {
         
     }
     
-    public void updateRobotLocation(int playerPosition, String RobotType, String coordString){
-        JLabel robotLabel;
+    public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         JLabel hexagonLabel = getHexagonLabel(coordString);
         
-        if(hexagonLabel != null){
+        if (gameBoardPanel.isAncestorOf(robotLabel)) {
+            gameBoardPanel.remove(robotLabel);
+        }
+        
+        if (hexagonLabel != null) {
             setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
             robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
             gameBoardPanel.add(robotLabel);
@@ -526,36 +527,36 @@ public class GameBoardView extends javax.swing.JFrame {
         }
     }
     
-    private JLabel getRobotLabel(int playerPosition, String robotType){
-            try {
-                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
-                robotField.setAccessible(true);
-                return (JLabel)robotField.get(this);
-            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
-                return null;
-            }
+    private JLabel getRobotLabel(int playerPosition, String robotType) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+            robotField.setAccessible(true);
+            return (JLabel) robotField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
     }
     
-    private void setRobotLabel(int playerPosition, String robotType, JLabel value){
-            try {
-                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
-                robotField.setAccessible(true);
-                robotField.set(this, value);
-            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
-                // do nothing
-            }
+    private void setRobotLabel(int playerPosition, String robotType, JLabel value) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
+            robotField.setAccessible(true);
+            robotField.set(this, value);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            // do nothing
+        }
     }
     
-    public JLabel getHexagonLabel(String coordString){
-            try {
-                Field labelField = gameBoardViewClass.getDeclaredField(coordString);
-                labelField.setAccessible(true);
-                return (JLabel)labelField.get(this);
-            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
-                return  null;
-            }
+    public JLabel getHexagonLabel(String coordString) {
+        try {
+            Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+            labelField.setAccessible(true);
+            return (JLabel) labelField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -582,7 +583,7 @@ public class GameBoardView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -663,62 +664,63 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JLabel z0z0z0;
     // End of variables declaration//GEN-END:variables
 	/**
-	 * @return the endPlayButton
-	 */
-	public javax.swing.JButton getEndPlayButton() {
-		return endPlayButton;
-	}
+     * @return the endPlayButton
+     */
+    public javax.swing.JButton getEndPlayButton() {
+        return endPlayButton;
+    }
 
-	/**
-	 * @param endPlayButton the endPlayButton to set
-	 */
-	public void setEndPlayButton(javax.swing.JButton endPlayButton) {
-		this.endPlayButton = endPlayButton;
-	}
+    /**
+     * @param endPlayButton the endPlayButton to set
+     */
+    public void setEndPlayButton(javax.swing.JButton endPlayButton) {
+        this.endPlayButton = endPlayButton;
+    }
 
-	/**
-	 * @return the giveUpButton
-	 */
-	public javax.swing.JButton getGiveUpButton() {
-		return giveUpButton;
-	}
+    /**
+     * @return the giveUpButton
+     */
+    public javax.swing.JButton getGiveUpButton() {
+        return giveUpButton;
+    }
 
-	/**
-	 * @param giveUpButton the giveUpButton to set
-	 */
-	public void setGiveUpButton(javax.swing.JButton giveUpButton) {
-		this.giveUpButton = giveUpButton;
-	}
+    /**
+     * @param giveUpButton the giveUpButton to set
+     */
+    public void setGiveUpButton(javax.swing.JButton giveUpButton) {
+        this.giveUpButton = giveUpButton;
+    }
 
-	/**
-	 * @return the homeButton
-	 */
-	public javax.swing.JButton getHomeButton() {
-		return homeButton;
-	}
+    /**
+     * @return the homeButton
+     */
+    public javax.swing.JButton getHomeButton() {
+        return homeButton;
+    }
 
-	/**
-        
-        public static void main(String[] args) {
-            
-        }
-	 * @param homeButton the homeButton to set
-	 */
-	public void setHomeButton(javax.swing.JButton homeButton) {
-		this.homeButton = homeButton;
-	}
+    /**
+     *
+     * public static void main(String[] args) {
+     *
+     * }
+     *
+     * @param homeButton the homeButton to set
+     */
+    public void setHomeButton(javax.swing.JButton homeButton) {
+        this.homeButton = homeButton;
+    }
 
-	/**
-	 * @return the timerLabel
-	 */
-	public javax.swing.JLabel getTimerLabel() {
-		return timerLabel;
-	}
+    /**
+     * @return the timerLabel
+     */
+    public javax.swing.JLabel getTimerLabel() {
+        return timerLabel;
+    }
 
-	/**
-	 * @param timerLabel the timerLabel to set
-	 */
-	public void setTimerLabel(javax.swing.JLabel timerLabel) {
-		this.timerLabel = timerLabel;
-	}
+    /**
+     * @param timerLabel the timerLabel to set
+     */
+    public void setTimerLabel(javax.swing.JLabel timerLabel) {
+        this.timerLabel = timerLabel;
+    }
 }
