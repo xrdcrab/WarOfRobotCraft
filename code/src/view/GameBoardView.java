@@ -19,42 +19,42 @@ import javax.swing.JLabel;
 public class GameBoardView extends javax.swing.JFrame {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-        
-        private Class<?> gameBoardViewClass = GameBoardView.class;
-        
-        private JLabel player0_scout;
-        private JLabel player0_sniper;
-        private JLabel player0_tank;
-        
-        private JLabel player1_scout;
-        private JLabel player1_sniper;
-        private JLabel player1_tank;
-        
-        private JLabel player2_scout;
-        private JLabel player2_sniper;
-        private JLabel player2_tank;
-        
-        private JLabel player3_scout;
-        private JLabel player3_sniper;
-        private JLabel player3_tank;
-        
-        private JLabel player4_scout;
-        private JLabel player4_sniper;
-        private JLabel player4_tank;
-        
-        private JLabel player5_scout;
-        private JLabel player5_sniper;
-        private JLabel player5_tank;
-        
-	/**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    private Class<?> gameBoardViewClass = GameBoardView.class;
+
+    private JLabel player0_scout;
+    private JLabel player0_sniper;
+    private JLabel player0_tank;
+
+    private JLabel player1_scout;
+    private JLabel player1_sniper;
+    private JLabel player1_tank;
+
+    private JLabel player2_scout;
+    private JLabel player2_sniper;
+    private JLabel player2_tank;
+
+    private JLabel player3_scout;
+    private JLabel player3_sniper;
+    private JLabel player3_tank;
+
+    private JLabel player4_scout;
+    private JLabel player4_sniper;
+    private JLabel player4_tank;
+
+    private JLabel player5_scout;
+    private JLabel player5_sniper;
+    private JLabel player5_tank;
+
+    /**
      * Creates new form GameBoardView
      */
     public GameBoardView() {
         initComponents();
-        this.getContentPane().setBackground( Color.WHITE );
+        this.getContentPane().setBackground(Color.WHITE);
     }
 
     /**
@@ -128,13 +128,11 @@ public class GameBoardView extends javax.swing.JFrame {
         p3p1n4 = new javax.swing.JLabel();
         p2p2n4 = new javax.swing.JLabel();
         p1p3n4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
         homeButton = new javax.swing.JButton();
         endPlayButton = new javax.swing.JButton();
         giveUpButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -392,30 +390,6 @@ public class GameBoardView extends javax.swing.JFrame {
         gameBoardPanel.add(p1p3n4);
         p1p3n4.setBounds(199, 3, 67, 66);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutR.png"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(67, 66));
-        jLabel1.setMinimumSize(new java.awt.Dimension(67, 66));
-        jLabel1.setPreferredSize(new java.awt.Dimension(67, 66));
-        gameBoardPanel.add(jLabel1);
-        jLabel1.setBounds(1, 207, 67, 66);
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperR.png"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(67, 66));
-        jLabel2.setMinimumSize(new java.awt.Dimension(67, 66));
-        jLabel2.setPreferredSize(new java.awt.Dimension(67, 66));
-        gameBoardPanel.add(jLabel2);
-        jLabel2.setBounds(1, 207, 67, 66);
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankR.png"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(67, 66));
-        jLabel3.setMinimumSize(new java.awt.Dimension(67, 66));
-        jLabel3.setPreferredSize(new java.awt.Dimension(67, 66));
-        gameBoardPanel.add(jLabel3);
-        jLabel3.setBounds(1, 207, 67, 66);
-
         timerLabel.setBackground(new java.awt.Color(255, 255, 255));
         timerLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(152, 180, 212));
@@ -439,6 +413,8 @@ public class GameBoardView extends javax.swing.JFrame {
         giveUpButton.setBorderPainted(false);
         giveUpButton.setContentAreaFilled(false);
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -456,7 +432,9 @@ public class GameBoardView extends javax.swing.JFrame {
                         .addGap(151, 151, 151)
                         .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(199, 199, 199)
+                        .addGap(97, 97, 97)
+                        .addComponent(jLabel1)
+                        .addGap(61, 61, 61)
                         .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(204, 204, 204))
         );
@@ -467,8 +445,13 @@ public class GameBoardView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(jLabel1)))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -483,78 +466,82 @@ public class GameBoardView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_endPlayButtonActionPerformed
 
-    
-   
-    
-    public void updateTimerNumber(int number){
+    public void updateTimerNumber(int number) {
         timerLabel.setText("" + number);
-       
+
+    }
+
+    public void updateMist(HashMap<String, Boolean> hashMap) {
+
     }
     
-    public void updateMist(HashMap<String, Boolean> hashMap){
-        
+    public void updateOperationState(String state){
+        jLabel1.setText(state);
     }
-    
-    public void updateRobotDestruction(int playerPosition, String RobotType){
+
+    public void updateRobotDestruction(int playerPosition, String RobotType) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType);
-        if(robotLabel != null){
+        if (robotLabel != null) {
             gameBoardPanel.remove(robotLabel);
         }
     }
-    
-    public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint){
-        
+
+    public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint) {
+
     }
-    
-    public void updatePlayerDeath(int playerPosition){
-        
+
+    public void updatePlayerDeath(int playerPosition) {
+
     }
-    
-    public void updateCurrentPlayer(int playerPosition){
-        
+
+    public void updateCurrentPlayer(int playerPosition) {
+
     }
-    
-    public void updateRobotLocation(int playerPosition, String RobotType, String coordString){
+
+    public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         JLabel hexagonLabel = getHexagonLabel(coordString);
-        
-        if(hexagonLabel != null){
-            setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
-            gameBoardPanel.add(robotLabel);
-            robotLabel.setLocation(hexagonLabel.getX(), hexagonLabel.getY());
+
+        if (hexagonLabel != null) {
+            if (robotLabel == null) {
+                setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
+                robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+                gameBoardPanel.add(robotLabel);
+            }
+            robotLabel.setBounds(hexagonLabel.getBounds());
         }
     }
-    
-    private JLabel getRobotLabel(int playerPosition, String robotType){
-            try {
-                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
-                robotField.setAccessible(true);
-                return (JLabel)robotField.get(this);
-            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
-                return null;
-            }
+
+    private JLabel getRobotLabel(int playerPosition, String robotType) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+            robotField.setAccessible(true);
+            return (JLabel) robotField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
     }
-    
-    private void setRobotLabel(int playerPosition, String robotType, JLabel value){
-            try {
-                Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
-                robotField.setAccessible(true);
-                robotField.set(robotField, value);
-            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
-                // do nothing
-            }
+
+    private void setRobotLabel(int playerPosition, String robotType, JLabel value) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
+            robotField.setAccessible(true);
+            robotField.set(this, value);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            // do nothing
+        }
     }
-    
-    public JLabel getHexagonLabel(String coordString){
-            try {
-                Field labelField = gameBoardViewClass.getDeclaredField(coordString);
-                labelField.setAccessible(true);
-                return (JLabel)labelField.get(this);
-            } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
-                return  null;
-            }
+
+    public JLabel getHexagonLabel(String coordString) {
+        try {
+            Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+            labelField.setAccessible(true);
+            return (JLabel) labelField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -581,7 +568,7 @@ public class GameBoardView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -596,8 +583,6 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JButton giveUpButton;
     private javax.swing.JButton homeButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel n1n1p2;
     private javax.swing.JLabel n1n2p3;
     private javax.swing.JLabel n1n3p4;
@@ -662,62 +647,63 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JLabel z0z0z0;
     // End of variables declaration//GEN-END:variables
 	/**
-	 * @return the endPlayButton
-	 */
-	public javax.swing.JButton getEndPlayButton() {
-		return endPlayButton;
-	}
+     * @return the endPlayButton
+     */
+    public javax.swing.JButton getEndPlayButton() {
+        return endPlayButton;
+    }
 
-	/**
-	 * @param endPlayButton the endPlayButton to set
-	 */
-	public void setEndPlayButton(javax.swing.JButton endPlayButton) {
-		this.endPlayButton = endPlayButton;
-	}
+    /**
+     * @param endPlayButton the endPlayButton to set
+     */
+    public void setEndPlayButton(javax.swing.JButton endPlayButton) {
+        this.endPlayButton = endPlayButton;
+    }
 
-	/**
-	 * @return the giveUpButton
-	 */
-	public javax.swing.JButton getGiveUpButton() {
-		return giveUpButton;
-	}
+    /**
+     * @return the giveUpButton
+     */
+    public javax.swing.JButton getGiveUpButton() {
+        return giveUpButton;
+    }
 
-	/**
-	 * @param giveUpButton the giveUpButton to set
-	 */
-	public void setGiveUpButton(javax.swing.JButton giveUpButton) {
-		this.giveUpButton = giveUpButton;
-	}
+    /**
+     * @param giveUpButton the giveUpButton to set
+     */
+    public void setGiveUpButton(javax.swing.JButton giveUpButton) {
+        this.giveUpButton = giveUpButton;
+    }
 
-	/**
-	 * @return the homeButton
-	 */
-	public javax.swing.JButton getHomeButton() {
-		return homeButton;
-	}
+    /**
+     * @return the homeButton
+     */
+    public javax.swing.JButton getHomeButton() {
+        return homeButton;
+    }
 
-	/**
-        
-        public static void main(String[] args) {
-            
-        }
-	 * @param homeButton the homeButton to set
-	 */
-	public void setHomeButton(javax.swing.JButton homeButton) {
-		this.homeButton = homeButton;
-	}
+    /**
+     *
+     * public static void main(String[] args) {
+     *
+     * }
+     *
+     * @param homeButton the homeButton to set
+     */
+    public void setHomeButton(javax.swing.JButton homeButton) {
+        this.homeButton = homeButton;
+    }
 
-	/**
-	 * @return the timerLabel
-	 */
-	public javax.swing.JLabel getTimerLabel() {
-		return timerLabel;
-	}
+    /**
+     * @return the timerLabel
+     */
+    public javax.swing.JLabel getTimerLabel() {
+        return timerLabel;
+    }
 
-	/**
-	 * @param timerLabel the timerLabel to set
-	 */
-	public void setTimerLabel(javax.swing.JLabel timerLabel) {
-		this.timerLabel = timerLabel;
-	}
+    /**
+     * @param timerLabel the timerLabel to set
+     */
+    public void setTimerLabel(javax.swing.JLabel timerLabel) {
+        this.timerLabel = timerLabel;
+    }
 }

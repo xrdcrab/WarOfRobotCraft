@@ -53,6 +53,8 @@ public class Player {
 		this.tankRobot = new Robot(
 				RobotType.tank, "", 3, 3, 1, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
 		this.viewRangeList = initialCoord.getRange(3, mapSize);
+                
+                this.goNextRobot();
 	}
 	
 	/**
@@ -73,13 +75,13 @@ public class Player {
 	 * this method is to set current robot.
 	 */
 	public void goNextRobot(){
-		if(!(scoutRobot.isHasMoved()&&scoutRobot.isHasShot())){
+		if(!(scoutRobot.isHasMoved())){
 			currentRobot = scoutRobot;
 		}
-		else if(!(sniperRobot.isHasMoved()&&sniperRobot.isHasShot())){
+		else if(!(sniperRobot.isHasMoved())){
 			currentRobot = sniperRobot;
 		}
-		else if(!(tankRobot.isHasMoved()&&tankRobot.isHasShot())){
+		else if(!(tankRobot.isHasMoved())){
 			currentRobot = tankRobot;
 		}
 		else{

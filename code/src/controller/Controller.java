@@ -72,6 +72,7 @@ public class Controller implements ActionListener, KeyListener {
                             System.out.println("Pressed Space");
                             getGame().runPlay();
                             // update UI here
+                            gameBoardView.updateOperationState("End Play");
                             break;
                         case KeyEvent.VK_M:
                             // move robot
@@ -81,11 +82,13 @@ public class Controller implements ActionListener, KeyListener {
                         case KeyEvent.VK_S:
                             // set operation mode to shoot
                             operationMode = OperationMode.shoot;
+                            gameBoardView.updateOperationState("Shoot");
                             System.out.println("Pressed S");
                             break;
                         case KeyEvent.VK_T:
                             // set operation mode to turn
                             operationMode = OperationMode.turn;
+                            gameBoardView.updateOperationState("Turn");
                             System.out.println("Pressed T");
                             break;
                         case KeyEvent.VK_0:
@@ -194,6 +197,16 @@ public class Controller implements ActionListener, KeyListener {
                 // update the game after the move action
                 getGame().updateGameMove(
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+                
+                // update UI
+                gameBoardView.updateOperationState("Move");
+                Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+                Robot currentRobot = currentPlayer.getCurrentRobot();
+                gameBoardView.updateRobotLocation(
+                        getGame().getCurrentPlayerIndex(), 
+                        currentRobot.getType().toString(),
+                        currentRobot.getCoord().toString()
+                );
             }
         });
         //this.getSetGameModeView().getConfirmButton().addActionListener(this);
@@ -437,6 +450,22 @@ public class Controller implements ActionListener, KeyListener {
                 this.game = new Game(playerHashMap, playerNum);
                 this.getGame().setCurrentPlayerIndex(0);
                 this.gameBoardView = new GameBoardView();
+                // Sean added for testing
+                this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
+                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(4, -4, 0), playerNum));
+                // Sean added for testing
+                this.getGameBoardView().updateRobotLocation(
+                		0, "Tank", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		0, "Scout", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		3, "Tank", (new Coordinate(4, -4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		3, "Scout", (new Coordinate(4, -4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		3, "Sniper", (new Coordinate(4, -4, 0).toString()));
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
