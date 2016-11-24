@@ -9,6 +9,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.JComboBox;
 
@@ -443,6 +445,23 @@ public class Controller implements ActionListener, KeyListener {
                         System.out.println("player" + i);
                     }
                 }
+                
+                // testing timer
+                new Timer().schedule(new TimerTask() {
+
+                    int timerNumber = 10;
+                    
+                    @Override
+                    public void run() {
+                        if (timerNumber == 0) {
+                            timerNumber = 10;
+                        } else {
+                            timerNumber--;
+                        }
+
+                        gameBoardView.updateTimerNumber(timerNumber);
+                    }
+                }, 0, 1000);
             }
         } // end play button
         else if (e.getSource().equals(this.getGameBoardView().getEndPlayButton())) {
