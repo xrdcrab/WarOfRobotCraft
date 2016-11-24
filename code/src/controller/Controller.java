@@ -81,11 +81,13 @@ public class Controller implements ActionListener, KeyListener {
                         case KeyEvent.VK_S:
                             // set operation mode to shoot
                             operationMode = OperationMode.shoot;
+                            gameBoardView.updateOperationState("Shoot");
                             System.out.println("Pressed S");
                             break;
                         case KeyEvent.VK_T:
                             // set operation mode to turn
                             operationMode = OperationMode.turn;
+                            gameBoardView.updateOperationState("Turn");
                             System.out.println("Pressed T");
                             break;
                         case KeyEvent.VK_0:

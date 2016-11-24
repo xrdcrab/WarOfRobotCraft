@@ -132,6 +132,7 @@ public class GameBoardView extends javax.swing.JFrame {
         homeButton = new javax.swing.JButton();
         endPlayButton = new javax.swing.JButton();
         giveUpButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -412,6 +413,8 @@ public class GameBoardView extends javax.swing.JFrame {
         giveUpButton.setBorderPainted(false);
         giveUpButton.setContentAreaFilled(false);
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -429,7 +432,9 @@ public class GameBoardView extends javax.swing.JFrame {
                         .addGap(151, 151, 151)
                         .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(199, 199, 199)
+                        .addGap(97, 97, 97)
+                        .addComponent(jLabel1)
+                        .addGap(61, 61, 61)
                         .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(204, 204, 204))
         );
@@ -440,8 +445,13 @@ public class GameBoardView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(jLabel1)))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -463,6 +473,10 @@ public class GameBoardView extends javax.swing.JFrame {
 
     public void updateMist(HashMap<String, Boolean> hashMap) {
 
+    }
+    
+    public void updateOperationState(String state){
+        jLabel1.setText(state);
     }
 
     public void updateRobotDestruction(int playerPosition, String RobotType) {
@@ -568,6 +582,7 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JPanel gameBoardPanel;
     private javax.swing.JButton giveUpButton;
     private javax.swing.JButton homeButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel n1n1p2;
     private javax.swing.JLabel n1n2p3;
     private javax.swing.JLabel n1n3p4;
