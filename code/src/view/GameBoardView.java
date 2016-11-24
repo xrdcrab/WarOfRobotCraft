@@ -27,6 +27,7 @@ public class GameBoardView extends javax.swing.JFrame {
     private Timer currentRobotBlinkTimer = new Timer();
     private Class<?> gameBoardViewClass = GameBoardView.class;
 
+    private int previousPlayerPosition = -1;
     private int currentPlayerPosition = 0;
     private String currentRobotType = "Scout";
 
@@ -493,8 +494,10 @@ public class GameBoardView extends javax.swing.JFrame {
 
     public void updateCurrentRobot(String robotType) {
         // stop the previous timer
-        currentRobotBlinkTimer.cancel();
-        getRobotLabel(currentPlayerPosition, currentRobotType).setEnabled(true);
+        if(previousPlayerPosition != -1){
+            currentRobotBlinkTimer.cancel();
+            getRobotLabel(previousPlayerPosition, currentRobotType.toLowerCase()).setEnabled(true);
+        }
 
         // start a new task
         currentRobotType = robotType;
@@ -503,7 +506,7 @@ public class GameBoardView extends javax.swing.JFrame {
                 new TimerTask() {
             @Override
             public void run() {
-                JLabel robotLabel = getRobotLabel(currentPlayerPosition, currentRobotType);
+                JLabel robotLabel = getRobotLabel(currentPlayerPosition, currentRobotType.toLowerCase());
                 robotLabel.setEnabled(!robotLabel.isEnabled());
             }
         },
@@ -521,6 +524,7 @@ public class GameBoardView extends javax.swing.JFrame {
     }
 
     public void updateCurrentPlayer(int playerPosition) {
+        previousPlayerPosition = currentPlayerPosition;
         currentPlayerPosition = playerPosition;
     }
 
