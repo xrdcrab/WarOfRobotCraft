@@ -1,6 +1,12 @@
 
 package view;
 
+import java.awt.Image;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
@@ -22,8 +28,20 @@ public class RobotLabel extends JLabel {
     public RobotLabel ( int playerIndex, String robotType ) {
         super();
 //        ImageIcon robotIcon = new ImageIcon();
-        this.setIcon(new javax.swing.ImageIcon(
-                this.playerIndexToColor(playerIndex) + robotType + ".png"));
+//        this.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+//                this.playerIndexToColor(playerIndex) + robotType + ".png")));
+        try {
+			Image image = ImageIO.read(ClassLoader.getSystemResource(
+					"Resources/" + 
+							robotType + 
+								this.playerIndexToColor(playerIndex) + 
+									".png"));
+			ImageIcon imageIcon = new ImageIcon(image);
+			this.setIcon(imageIcon);
+    	} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     /**
@@ -59,8 +77,27 @@ public class RobotLabel extends JLabel {
     }  
     
     public static void main (String args[]) {
-    	RobotLabel robot = new RobotLabel(0, "Tank");
+//    	RobotLabel robot = new RobotLabel(0, "Tank");
 //    	robot.setIcon(new javax.swing.ImageIcon(getClass().getResource(
 //    			robot.playerIndexToColor(0) + "Tank" + ".png")));
+//    	Image image;
+//    	try {
+//			image = ImageIO.read(ClassLoader.getSystemResource("Resources/endPlay.png"));
+//			ImageIcon imageIcon = new ImageIcon(image);
+//			JLabel label = new JLabel(imageIcon);
+//			JFrame frame = new JFrame();
+//			frame.add(label);
+//			frame.setVisible(true);
+//			frame.setSize(400, 300);
+//    	} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+    	
+    	RobotLabel label = new RobotLabel(0, "Scout");
+		JFrame frame = new JFrame();
+		frame.add(label);
+		frame.setVisible(true);
+		frame.setSize(400, 300);
     }
 }
