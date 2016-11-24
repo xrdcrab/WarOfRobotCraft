@@ -54,8 +54,8 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
-     * this method is to add listener for all buttons
-     * (m, s, t, 0, 1, 2, 3, 4, 5)
+     * this method is to add listener for all buttons (m, s, t, 0, 1, 2, 3, 4,
+     * 5)
      */
     private void addListener() {
         this.getGameStartView().getExitButton().addActionListener(this);
@@ -73,6 +73,11 @@ public class Controller implements ActionListener, KeyListener {
                             getGame().runPlay();
                             // update UI here
                             gameBoardView.updateOperationState("End Play");
+                            gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
+                            gameBoardView.updateCurrentRobot(
+                                    game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                                            .getCurrentRobot().getType().toString()
+                            );
                             break;
                         case KeyEvent.VK_M:
                             // move robot
@@ -153,6 +158,7 @@ public class Controller implements ActionListener, KeyListener {
 
             /**
              * This method will implement robot turn and update UI
+             *
              * @param direction
              */
             private void turnOperation(int direction) {
@@ -163,6 +169,7 @@ public class Controller implements ActionListener, KeyListener {
 
             /**
              * This method will implement robot shoot and update UI
+             *
              * @param shootDistance
              */
             private void shootOperation(int shootDistance) {
@@ -197,13 +204,13 @@ public class Controller implements ActionListener, KeyListener {
                 // update the game after the move action
                 getGame().updateGameMove(
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
-                
+
                 // update UI
                 gameBoardView.updateOperationState("Move");
                 Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
                 Robot currentRobot = currentPlayer.getCurrentRobot();
                 gameBoardView.updateRobotLocation(
-                        getGame().getCurrentPlayerIndex(), 
+                        getGame().getCurrentPlayerIndex(),
                         currentRobot.getType().toString(),
                         currentRobot.getCoord().toString()
                 );
@@ -453,19 +460,21 @@ public class Controller implements ActionListener, KeyListener {
                 // Sean added for testing
                 this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
                 this.game.getPlayerHashMap().put(3, new Player(new Coordinate(4, -4, 0), playerNum));
+                this.getGameBoardView().updateRobotLocation(
+                        0, "Tank", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                        0, "Scout", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                        0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                        3, "Tank", (new Coordinate(4, -4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                        3, "Scout", (new Coordinate(4, -4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                        3, "Sniper", (new Coordinate(4, -4, 0).toString()));
+                this.gameBoardView.updateCurrentPlayer(0);
+                this.gameBoardView.updateCurrentRobot("Scout");
                 // Sean added for testing
-                this.getGameBoardView().updateRobotLocation(
-                		0, "Tank", (new Coordinate(-4, 4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                		0, "Scout", (new Coordinate(-4, 4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                		0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                		3, "Tank", (new Coordinate(4, -4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                		3, "Scout", (new Coordinate(4, -4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                		3, "Sniper", (new Coordinate(4, -4, 0).toString()));
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
@@ -475,12 +484,12 @@ public class Controller implements ActionListener, KeyListener {
                         System.out.println("player" + i);
                     }
                 }
-                
+
                 // testing timer
                 new Timer().schedule(new TimerTask() {
 
                     int timerNumber = 10;
-                    
+
                     @Override
                     public void run() {
                         if (timerNumber == 0) {
