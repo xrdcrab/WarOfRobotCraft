@@ -198,12 +198,12 @@ public class Controller implements ActionListener, KeyListener {
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
                 
                 // update UI
+                Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+                Robot currentRobot = currentPlayer.getCurrentRobot();
                 gameBoardView.updateRobotLocation(
                         getGame().getCurrentPlayerIndex(), 
-                        getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                        .getCurrentRobot().getType().toString(),
-                        getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                        .getCurrentRobot().getCoord().toString()
+                        currentRobot.getType().toString(),
+                        currentRobot.getCoord().toString()
                 );
             }
         });
@@ -448,6 +448,10 @@ public class Controller implements ActionListener, KeyListener {
                 this.game = new Game(playerHashMap, playerNum);
                 this.getGame().setCurrentPlayerIndex(0);
                 this.gameBoardView = new GameBoardView();
+                // Sean added for testing
+                this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
+                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(-4, 4, 0), playerNum));
+                // Sean added for testing
                 this.getGameBoardView().updateRobotLocation(
                 		0, "Tank", (new Coordinate(-4, 4, 0).toString()));
                 this.getGameBoardView().updateRobotLocation(
