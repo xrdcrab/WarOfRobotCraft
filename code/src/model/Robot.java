@@ -1,5 +1,6 @@
 package model;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import javafx.util.Pair;
 
@@ -364,6 +365,39 @@ public class Robot {
 		default:
 			break;
 		}
+	}
+	
+	/**
+	 * 
+	 * @param mapSize
+	 * @return
+	 */
+	public HashMap<Integer, Coordinate> relativeDirectionToCoordinate(int mapSize){
+		HashMap<Integer, Coordinate> ringMap = new HashMap<Integer, Coordinate>();
+		int difference = this.getDirection();
+		ringMap = this.getCoord().getRing(mapSize);
+		HashMap<Integer, Coordinate> ringMapAbsoluteDirection = 
+				this.getCoord().getRing(mapSize);
+		for ( int key: ringMapAbsoluteDirection.keySet() ) {
+			int relativeKey = key - difference;
+			if(relativeKey<0){
+				relativeKey+=6;
+			}
+			ringMap.put(relativeKey, ringMapAbsoluteDirection.get(key));
+		}
+		return ringMap;
+	}
+	
+	public static void main(String[] args) {
+		
+		Coordinate coor = new Coordinate(0, 0, 0);
+		
+		
+        Robot r = new Robot(RobotType.scout, "a", 1,1,1, coor, 3, false,false, null);
+        r.relativeDirectionToCoordinate(5);
+//        Test for getRing
+        System.out.println(coor.getRing(5));
+        System.out.println(r.relativeDirectionToCoordinate(5));
 	}
 	
 }
