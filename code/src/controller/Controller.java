@@ -443,6 +443,12 @@ public class Controller implements ActionListener, KeyListener {
                 		0, "Scout", (new Coordinate(-4, 4, 0).toString()));
                 this.getGameBoardView().updateRobotLocation(
                 		0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		3, "Tank", (new Coordinate(44, -4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		3, "Scout", (new Coordinate(4, -4, 0).toString()));
+                this.getGameBoardView().updateRobotLocation(
+                		3, "Sniper", (new Coordinate(4, -4, 0).toString()));
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
