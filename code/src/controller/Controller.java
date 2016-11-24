@@ -149,7 +149,7 @@ public class Controller implements ActionListener, KeyListener {
             }
 
             /**
-             *
+             * This method will implement robot turn and update UI
              * @param direction
              */
             private void turnOperation(int direction) {
@@ -159,7 +159,7 @@ public class Controller implements ActionListener, KeyListener {
             }
 
             /**
-             *
+             * This method will implement robot shoot and update UI
              * @param shootDistance
              */
             private void shootOperation(int shootDistance) {
