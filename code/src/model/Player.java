@@ -53,6 +53,8 @@ public class Player {
 		this.tankRobot = new Robot(
 				RobotType.tank, "", 3, 3, 1, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
 		this.viewRangeList = initialCoord.getRange(3, mapSize);
+                
+                this.goNextRobot();
 	}
 	
 	/**
