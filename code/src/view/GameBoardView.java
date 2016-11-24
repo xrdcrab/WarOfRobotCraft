@@ -515,10 +515,10 @@ public class GameBoardView extends javax.swing.JFrame {
     }
     
     public void updateRobotLocation(int playerPosition, String RobotType, String coordString){
-        JLabel robotLabel = getRobotLabel(playerPosition, RobotType);
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         JLabel hexagonLabel = getHexagonLabel(coordString);
         
-        if(robotLabel != null && hexagonLabel != null){
+        if(hexagonLabel != null){
             setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
             gameBoardPanel.add(robotLabel);
             robotLabel.setLocation(hexagonLabel.getX(), hexagonLabel.getY());
