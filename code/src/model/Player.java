@@ -75,13 +75,13 @@ public class Player {
 	 * this method is to set current robot.
 	 */
 	public void goNextRobot(){
-		if(!(scoutRobot.isHasMoved()&&scoutRobot.isHasShot())){
+		if(!(scoutRobot.isHasMoved())){
 			currentRobot = scoutRobot;
 		}
-		else if(!(sniperRobot.isHasMoved()&&sniperRobot.isHasShot())){
+		else if(!(sniperRobot.isHasMoved())){
 			currentRobot = sniperRobot;
 		}
-		else if(!(tankRobot.isHasMoved()&&tankRobot.isHasShot())){
+		else if(!(tankRobot.isHasMoved())){
 			currentRobot = tankRobot;
 		}
 		else{
