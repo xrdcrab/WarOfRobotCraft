@@ -169,6 +169,7 @@ public class Game {
 
         // enter the next play
         this.goNextPlayer();
+        getPlayerHashMap().get(this.getCurrentPlayerIndex()).goNextRobot();
 
         Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
 
