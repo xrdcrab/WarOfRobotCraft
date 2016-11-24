@@ -7,6 +7,7 @@ package view;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 
 /**
  *
@@ -38,5 +39,16 @@ public class UITest {
         } catch (InterruptedException ex) {
             Logger.getLogger(UITest.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        JFrame jf = new JFrame();
+        RobotStatusView rsv = new RobotStatusView();
+        rsv.updateRobotName("HAHAHA");
+        rsv.updateRobotType("Superman");
+        rsv.updateHealthPointLimit(10);
+        rsv.updateHealthPoint(5);
+        rsv.updateMovingPointLimit(5);
+        rsv.updateMovingPoint(3);
+        jf.add(rsv);
+        jf.setVisible(true);
     }
 }
