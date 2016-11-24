@@ -33,7 +33,7 @@ public class RobotStatusView extends javax.swing.JPanel {
         healthPointProgressBar = new javax.swing.JProgressBar();
         healthPointLabel = new javax.swing.JLabel();
         movingPointLabel = new javax.swing.JLabel();
-        jProgressBar2 = new javax.swing.JProgressBar();
+        movingPointProgressBar = new javax.swing.JProgressBar();
 
         setLayout(null);
 
@@ -58,18 +58,42 @@ public class RobotStatusView extends javax.swing.JPanel {
         movingPointLabel.setText("Moving Point");
         add(movingPointLabel);
         movingPointLabel.setBounds(40, 50, 72, 18);
-        add(jProgressBar2);
-        jProgressBar2.setBounds(120, 50, 90, 20);
+        add(movingPointProgressBar);
+        movingPointProgressBar.setBounds(120, 50, 90, 20);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel healthPointLabel;
     private javax.swing.JProgressBar healthPointProgressBar;
-    private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JLabel movingPointLabel;
+    private javax.swing.JProgressBar movingPointProgressBar;
     private javax.swing.JLabel robotIconLabel;
     private javax.swing.JLabel robotNameLabel;
     private javax.swing.JLabel robotTypeLabel;
     // End of variables declaration//GEN-END:variables
+
+    public void updateRobotName(String robotName){
+        robotNameLabel.setText(robotName);
+    }
+    
+    public void updateRobotType(String robotType){
+        robotTypeLabel.setText(robotType);
+    }
+    
+    public void updateHealthPointLimit(int maxHealthPoint){
+        healthPointProgressBar.setMaximum(maxHealthPoint);
+    }
+    
+    public void updateHealthPoint(int healthPoint){
+        healthPointProgressBar.setValue(healthPoint);
+    }
+    
+    public void updateMovingPointLimit(int maxMovingPoint){
+        movingPointProgressBar.setMaximum(maxMovingPoint);
+    }
+    
+    public void updateMovingPoint(int movingPoint){
+        movingPointProgressBar.setValue(movingPoint);
+    }
 }
