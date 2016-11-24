@@ -196,6 +196,15 @@ public class Controller implements ActionListener, KeyListener {
                 // update the game after the move action
                 getGame().updateGameMove(
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+                
+                // update UI
+                gameBoardView.updateRobotLocation(
+                        getGame().getCurrentPlayerIndex(), 
+                        getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                        .getCurrentRobot().getType().toString(),
+                        getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                        .getCurrentRobot().getCoord().toString()
+                );
             }
         });
         //this.getSetGameModeView().getConfirmButton().addActionListener(this);
