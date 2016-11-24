@@ -72,6 +72,7 @@ public class Controller implements ActionListener, KeyListener {
                             System.out.println("Pressed Space");
                             getGame().runPlay();
                             // update UI here
+                            gameBoardView.updateOperationState("End Play");
                             break;
                         case KeyEvent.VK_M:
                             // move robot
@@ -198,6 +199,7 @@ public class Controller implements ActionListener, KeyListener {
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
                 
                 // update UI
+                gameBoardView.updateOperationState("Move");
                 Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
                 Robot currentRobot = currentPlayer.getCurrentRobot();
                 gameBoardView.updateRobotLocation(
