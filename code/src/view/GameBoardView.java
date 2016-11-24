@@ -486,7 +486,7 @@ public class GameBoardView extends javax.swing.JFrame {
     
    
     
-    public void setTimerNumber(int number){
+    public void updateTimerNumber(int number){
         timerLabel.setText("" + number);
        
     }
