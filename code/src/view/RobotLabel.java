@@ -1,6 +1,12 @@
 
 package view;
 
+import java.awt.Image;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
@@ -21,8 +27,17 @@ public class RobotLabel extends JLabel {
      */
     public RobotLabel ( int playerIndex, String robotType ) {
         super();
-        this.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                this.playerIndexToColor(playerIndex) + robotType + ".png")));
+        try {
+			Image image = ImageIO.read(ClassLoader.getSystemResource(
+					"Resources/" + 
+							robotType + 
+								this.playerIndexToColor(playerIndex) + 
+									".png"));
+			ImageIcon imageIcon = new ImageIcon(image);
+			this.setIcon(imageIcon);
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
     
     /**
@@ -55,5 +70,13 @@ public class RobotLabel extends JLabel {
                 break;    
         }
         return color;
-    }    
+    }  
+    
+    public static void main (String args[]) {
+    	RobotLabel label = new RobotLabel(0, "Scout");
+		JFrame frame = new JFrame();
+		frame.add(label);
+		frame.setVisible(true);
+		frame.setSize(400, 300);
+    }
 }
