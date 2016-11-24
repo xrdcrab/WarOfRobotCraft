@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -23,7 +24,11 @@ public class GameBoardView extends javax.swing.JFrame {
      */
     private static final long serialVersionUID = 1L;
 
+    private Timer currentRobotBlinkTimer = new Timer();
     private Class<?> gameBoardViewClass = GameBoardView.class;
+
+    private int currentPlayerPosition = 0;
+    private String currentRobotType = "Scout";
 
     private JLabel player0_scout;
     private JLabel player0_sniper;
@@ -474,8 +479,8 @@ public class GameBoardView extends javax.swing.JFrame {
     public void updateMist(HashMap<String, Boolean> hashMap) {
 
     }
-    
-    public void updateOperationState(String state){
+
+    public void updateOperationState(String state) {
         jLabel1.setText(state);
     }
 
@@ -484,6 +489,27 @@ public class GameBoardView extends javax.swing.JFrame {
         if (robotLabel != null) {
             gameBoardPanel.remove(robotLabel);
         }
+    }
+
+    public void updateCurrentRobot(String robotType) {
+        // stop the previous timer
+        currentRobotBlinkTimer.cancel();
+        getRobotLabel(currentPlayerPosition, currentRobotType).setEnabled(true);
+        
+        // start a new task
+        currentRobotType = robotType;
+        currentRobotBlinkTimer = new Timer();
+        currentRobotBlinkTimer.schedule(
+            new TimerTask() {
+                @Override
+                public void run() {
+                    JLabel robotLabel = getRobotLabel(currentPlayerPosition, currentRobotType);
+                    robotLabel.setEnabled(!robotLabel.isEnabled());
+                }
+            },
+            0,
+            200
+        );
     }
 
     public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint) {
