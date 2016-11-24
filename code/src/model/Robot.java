@@ -68,7 +68,8 @@ public class Robot {
 				boolean hasShot,
 				LinkedList<Coordinate> viewRangeList) {
 		
-		this.name = name;
+		this.type = type;
+                this.name = name;
 		this.attackPoint = attackPoint;
 		this.healthPoint = healthPoint;
 		this.movementPoint = movementPoint;
