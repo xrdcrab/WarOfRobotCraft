@@ -368,9 +368,9 @@ public class Robot {
 	}
 	
 	/**
-	 * 
+	 * This method is to generate the HashMap of relative direction and coordinate. 
 	 * @param mapSize
-	 * @return
+	 * @return ringMap the relative direction and absolute coordinate key pair 
 	 */
 	public HashMap<Integer, Coordinate> relativeDirectionToCoordinate(int mapSize){
 		HashMap<Integer, Coordinate> ringMap = new HashMap<Integer, Coordinate>();
