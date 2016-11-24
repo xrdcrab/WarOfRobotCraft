@@ -516,8 +516,8 @@ public class GameBoardView extends javax.swing.JFrame {
         JLabel hexagonLabel = getHexagonLabel(coordString);
 
         if (hexagonLabel != null) {
-            setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
             if (robotLabel == null) {
+                setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
                 robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
                 gameBoardPanel.add(robotLabel);
             }
