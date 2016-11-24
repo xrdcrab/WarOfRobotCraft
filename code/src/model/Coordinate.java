@@ -298,6 +298,41 @@ public class Coordinate {
 		
 	}
 	
+	/**
+	 * 
+	 * @param mapSize
+	 * @return ringMap A hashMap of the key pair of direction and surrounding coordinates. 
+	 */
+	public HashMap<Integer, Coordinate> getRing(int mapSize){
+		HashMap<Integer, Coordinate> ringMap = new HashMap<Integer, Coordinate>();
+		
+		if((Math.abs(x+1)<=mapSize-1)&&(Math.abs(y-1)<=mapSize-1)){
+			ringMap.put(0, new Coordinate(x+1, y-1, z));
+		}
+		
+		if((Math.abs(z+1)<=mapSize-1)&&(Math.abs(y-1)<=mapSize-1)){
+			ringMap.put(1, new Coordinate(x, y-1, z+1));
+		}
+		
+		if((Math.abs(x-1)<=mapSize-1)&&(Math.abs(z+1)<=mapSize-1)){
+			ringMap.put(2, new Coordinate(x-1, y, z+1));
+		}
+		
+		if((Math.abs(x-1)<=mapSize-1)&&(Math.abs(y+1)<=mapSize-1)){
+			ringMap.put(3, new Coordinate(x-1, y+1, z));
+		}
+		
+		if((Math.abs(z-1)<=mapSize-1)&&(Math.abs(y+1)<=mapSize-1)){
+			ringMap.put(4, new Coordinate(x, y+1, z-1));
+		}
+			
+		if((Math.abs(z-1)<=mapSize-1)&&(Math.abs(x+1)<=mapSize-1)){
+			ringMap.put(5, new Coordinate(x+1, y, z-1));
+		}			
+
+		return ringMap;
+	}
+	
 	public static void main(String[] args) {
 		LinkedList<Coordinate> rangeList = new Coordinate(0, 0, 0).getRange(2, 5);
 		rangeList = new Coordinate(4, -4, 0).getRange(2, 5);
@@ -312,5 +347,11 @@ public class Coordinate {
                 
         Coordinate coord = new Coordinate (-1, 0, 1);
         System.out.println(coord.toString());
+        
+        
+//        Test for getRing 
+        Coordinate coordzzz = new Coordinate (-4, 0, 4);
+        System.out.println(coordzzz.getRing(5));
+        
 	}
 }
