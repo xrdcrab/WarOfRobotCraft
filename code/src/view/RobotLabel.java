@@ -21,8 +21,9 @@ public class RobotLabel extends JLabel {
      */
     public RobotLabel ( int playerIndex, String robotType ) {
         super();
-        this.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                this.playerIndexToColor(playerIndex) + robotType + ".png")));
+//        ImageIcon robotIcon = new ImageIcon();
+        this.setIcon(new javax.swing.ImageIcon(
+                this.playerIndexToColor(playerIndex) + robotType + ".png"));
     }
     
     /**
@@ -55,5 +56,11 @@ public class RobotLabel extends JLabel {
                 break;    
         }
         return color;
-    }    
+    }  
+    
+    public static void main (String args[]) {
+    	RobotLabel robot = new RobotLabel(0, "Tank");
+//    	robot.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+//    			robot.playerIndexToColor(0) + "Tank" + ".png")));
+    }
 }
