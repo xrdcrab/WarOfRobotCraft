@@ -483,7 +483,9 @@ public class GameBoardView extends javax.swing.JFrame {
     }
 
     public void updateMist(HashMap<String, Boolean> hashMap) {
-
+        hashMap.forEach((coordString, isVisible) -> {
+            getHexagonLabel(coordString).setEnabled(isVisible);
+        });
     }
 
     public void updateOperationState(String state) {

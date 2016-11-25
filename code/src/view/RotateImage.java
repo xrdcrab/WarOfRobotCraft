@@ -24,7 +24,7 @@ import javax.imageio.ImageIO;
 
 public class RotateImage extends Applet {
 
-    public Image image;
+    public BufferedImage image;
 //    float width = image.getWidth(null);
 //    float height = image.getHeight(null);
     
@@ -41,6 +41,7 @@ public class RotateImage extends Applet {
 //        }
 //        return url;
 //    }
+    
 
     @Override
     public void init() {
@@ -65,8 +66,10 @@ public class RotateImage extends Applet {
 //        trans.rotate(Math.toRadians(666), width, height);
 
 //System.out.println(image.getWidth(null));
-        trans.rotate(5.14);
-        g2d.drawImage(image, trans, null);
+        //trans.rotate(5.14);
+        g2d.rotate(1.8);
+        image = new BufferedImage(100, 100, BufferedImage.TYPE_INT_ARGB);
+        g2d.drawImage(image, null, 0, 0);
         g2d.dispose();
     }
 }
