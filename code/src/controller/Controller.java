@@ -151,17 +151,17 @@ public class Controller implements ActionListener, KeyListener {
                 return true;
             }
 
-            private void resetGameBoardViewTimer() {
+            private void resetGameBoardViewTimer(int countDwon) {
                 gameBoardViewTimer.cancel();
                 gameBoardViewTimer = new Timer();
                 gameBoardViewTimer.schedule(new TimerTask() {
 
-                    int timerNumber = 30;
+                    int timerNumber = countDwon;
 
                     @Override
                     public void run() {
                         if (timerNumber == 0) {
-                            timerNumber = 30;
+                            endPlayOperation();
                         } else {
                             timerNumber--;
                         }
@@ -181,7 +181,7 @@ public class Controller implements ActionListener, KeyListener {
                                 .getCurrentRobot().getType().toString()
                 );
                 
-                resetGameBoardViewTimer();
+                resetGameBoardViewTimer(15);
             }
 
             /**
