@@ -640,5 +640,29 @@ public class Controller implements ActionListener, KeyListener {
         }
 
     }
+    
+    /**
+     * This method is a helper function to update the mist of the game board.     
+     */
+    private void updateMist(){
+    	// Get the current view range list.
+    	HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
+    	Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
+    	
+    	// Call the method to update the coordinateMap class in Map class    	
+    	this.getGame().getGameMap().updateMist(currentPlayer);
+    	
+    	// Fetch the coordinateMap from map class. 
+    	rangeMap = this.getGame().getGameMap().getCoordinateMap();
+    	
+    	// convert rangeMap into a HashMap of <String, Boolean> pair.
+    	HashMap<String, Boolean> rangeStringBoolMap = new HashMap<String, Boolean>();
+    	rangeMap.forEach((coord, isVisible) ->{
+    		rangeStringBoolMap.put(coord.toString(), isVisible);
+    	});
+    	
+    	//Call updateMist method of GameBoardView class using new rangeStringBoolMap as parameter.     	
+    	this.getGameBoardView().updateMist(rangeStringBoolMap);    	    	
+    }
 
 }
