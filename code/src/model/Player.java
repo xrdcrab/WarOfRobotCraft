@@ -89,7 +89,10 @@ public class Player {
 		}
 	}
 
-	public void setViewRange() {
+	/**
+	 * This method is to update the view range of the robot.
+	 */
+	public void updateViewRange() {
 		
 		// dump all the elements for the previous view range
 		this.setViewRangeList( new LinkedList<Coordinate>() );
