@@ -36,6 +36,8 @@ public class UITest {
             gbv.updateRobotLocation(0, "Sniper", "z0n2p2");
             Thread.sleep(1000);
             gbv.updateRobotLocation(0, "Sniper", "n1n1p2");
+            Thread.sleep(1000);
+            gbv.updateRobotDestruction(0, "Sniper");
         } catch (InterruptedException ex) {
             Logger.getLogger(UITest.class.getName()).log(Level.SEVERE, null, ex);
         }
