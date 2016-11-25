@@ -32,6 +32,8 @@ public class Controller implements ActionListener, KeyListener {
     private SetGameModeView setGameModeView;
     private GameBoardView gameBoardView;
 
+    private Timer gameBoardViewTimer = new Timer();
+
     //private boolean isMoveMode;
     //private boolean isShootMode;
     //private boolean isTurnMode;
@@ -70,14 +72,7 @@ public class Controller implements ActionListener, KeyListener {
                     switch (e.getKeyCode()) {
                         case KeyEvent.VK_SPACE:
                             System.out.println("Pressed Space");
-                            getGame().runPlay();
-                            // update UI here
-                            gameBoardView.updateOperationState("End Play");
-                            gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
-                            gameBoardView.updateCurrentRobot(
-                                    game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                                            .getCurrentRobot().getType().toString()
-                            );
+                            this.endPlayOperation();
                             break;
                         case KeyEvent.VK_M:
                             // move robot
@@ -154,6 +149,39 @@ public class Controller implements ActionListener, KeyListener {
                 }
 
                 return true;
+            }
+
+            private void resetGameBoardViewTimer(int countDwon) {
+                gameBoardViewTimer.cancel();
+                gameBoardViewTimer = new Timer();
+                gameBoardViewTimer.schedule(new TimerTask() {
+
+                    int timerNumber = countDwon;
+
+                    @Override
+                    public void run() {
+                        if (timerNumber == 0) {
+                            endPlayOperation();
+                        } else {
+                            timerNumber--;
+                        }
+
+                        gameBoardView.updateTimerNumber(timerNumber);
+                    }
+                }, 0, 1000);
+            }
+
+            private void endPlayOperation() {
+                getGame().runPlay();
+                // update UI here
+                gameBoardView.updateOperationState("End Play");
+                gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
+                gameBoardView.updateCurrentRobot(
+                        game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                                .getCurrentRobot().getType().toString()
+                );
+                
+                resetGameBoardViewTimer(15);
             }
 
             /**
@@ -484,23 +512,6 @@ public class Controller implements ActionListener, KeyListener {
                         System.out.println("player" + i);
                     }
                 }
-
-                // testing timer
-                new Timer().schedule(new TimerTask() {
-
-                    int timerNumber = 10;
-
-                    @Override
-                    public void run() {
-                        if (timerNumber == 0) {
-                            timerNumber = 10;
-                        } else {
-                            timerNumber--;
-                        }
-
-                        gameBoardView.updateTimerNumber(timerNumber);
-                    }
-                }, 0, 1000);
             }
         } // end play button
         else if (e.getSource().equals(this.getGameBoardView().getEndPlayButton())) {
