@@ -45,9 +45,11 @@ public class Map {
 	public void updateMist(Player currentPlayer) {
 		getCoordinateMap().forEach((coord, isVisible) -> {
                     if(currentPlayer.getViewRangeList().contains(coord)){
+//                        isVisible = false; //Changed 
                         isVisible = false;
                     } else{
-                        isVisible = true;
+//                        isVisible = true; //Changed 
+                    	isVisible = true;
                     }
                 });
 	}
