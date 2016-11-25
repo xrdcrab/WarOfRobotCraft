@@ -650,7 +650,9 @@ public class Controller implements ActionListener, KeyListener {
     	HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
     	Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
     	
-    	// Call the method to update the coordinateMap class in Map class    	
+    	// Update the current player's mist range.     
+    	currentPlayer.updateViewRange();
+    	// Call the method to update the coordinateMap class in Map class
     	this.getGame().getGameMap().updateMist(currentPlayer);
     	
     	// Fetch the coordinateMap from map class. 
