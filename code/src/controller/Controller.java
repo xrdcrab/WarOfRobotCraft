@@ -190,9 +190,15 @@ public class Controller implements ActionListener, KeyListener {
              * @param direction
              */
             private void turnOperation(int direction) {
-                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                        .getCurrentRobot().turn(direction);
+                int currentPlayerPosition = getGame().getCurrentPlayerIndex();
+                Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+                currentPlayer.getCurrentRobot().turn(direction);
                 //update UI here
+                gameBoardView.updateRobotTurned(
+                        currentPlayerPosition, 
+                        currentPlayer.getCurrentRobot().getType().toString(), 
+                        currentPlayer.getCurrentRobot().getDirection()
+                );
             }
 
             /**
