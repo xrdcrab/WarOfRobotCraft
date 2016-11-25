@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -38,6 +39,12 @@ public class UITest {
             gbv.updateRobotLocation(0, "Sniper", "n1n1p2");
             Thread.sleep(1000);
             gbv.updateRobotDestruction(0, "Sniper");
+            Thread.sleep(1000);
+            HashMap<String,Boolean> hm = new HashMap<String,Boolean>();
+            hm.put("z0z0z0", false);
+            hm.put("z0n1p1", false);
+            hm.put("z0n2p2", true);
+            gbv.updateMist(hm);
         } catch (InterruptedException ex) {
             Logger.getLogger(UITest.class.getName()).log(Level.SEVERE, null, ex);
         }
