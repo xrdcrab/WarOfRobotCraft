@@ -6,12 +6,17 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.io.IOException;
 import java.lang.reflect.*;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
@@ -570,6 +575,58 @@ public class GameBoardView extends javax.swing.JFrame {
         } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
             return null;
         }
+    }
+
+    
+//   IN CONSTRUCTION
+    public JLabel getTestTurnRobot(){
+//        return this.testTurnRobot;
+        return null;
+    }
+    
+    
+    
+//    IN CONSTRUCTION    
+    public void rotateLabel2(){
+        RotateImage img = new RotateImage();
+        img.init();
+        img.paint(img.image.getGraphics());
+        ImageIcon imgIcon = new ImageIcon(img.image);
+//       this.testTurnRobot.setIcon(null);
+//        this.testTurnRobot.setIcon(imgIcon);
+    }
+    
+    
+    
+    
+//    IN CONSTRUCTION
+    public void rotateLabel(JLabel label){
+        
+        Image img = null;
+        try {
+                    img  = ImageIO.read((ClassLoader.getSystemResource(
+                    "Resources/"
+                    + "Scout"
+                    + "Y"
+                    + ".png")));
+            
+//            img = ImageIO.read(ClassLoader.getSystemResource(
+//                    "/Resources/ScoutY.png"));
+
+        } catch (IOException ex) {
+            Logger.getLogger(GameBoardView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+   Graphics2D g2d = (Graphics2D) img.getGraphics();
+   
+        g2d.rotate(1.14);
+        ImageIcon imgIcon = new ImageIcon(img);
+//        label.setLocation(55, 55);
+        label.setIcon(imgIcon);
+//        AffineTransform trans = new AffineTransform();
+//        
+//        Graphics2D g2d = (Graphics2D)img;
+//       AffineTransform affineTransform = new AffineTransform(); 
+//       affineTransform.rotate(Math.toRadians(45), x, y); 
     }
 
     /**
