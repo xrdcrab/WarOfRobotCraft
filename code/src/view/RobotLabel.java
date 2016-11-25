@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.io.IOException;
 
@@ -17,6 +19,8 @@ public class RobotLabel extends JLabel {
      * default serialVersionUID
      */
     private static final long serialVersionUID = 1L;
+
+    private int rotateAngle = 0;
 
     /**
      * this class is to create the robot label with icon
@@ -85,6 +89,41 @@ public class RobotLabel extends JLabel {
         this.setText( String.valueOf(direction));
     }
     
+
+    public void updateRotation(int direction) {
+        switch (direction) {
+            case 0:
+                rotateAngle = 0;
+                break;
+            case 1:
+                rotateAngle = 60;
+                break;
+            case 2:
+                rotateAngle = 120;
+                break;
+            case 3:
+                rotateAngle = 180;
+                break;
+            case 4:
+                rotateAngle = 240;
+                break;
+            case 5:
+                rotateAngle = 300;
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    protected void paintComponent(Graphics g
+    ) {
+        int w = getWidth(), h = getHeight();
+        double theta = Math.toRadians(rotateAngle);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.rotate(theta, w / 2, h / 2);
+        super.paintComponent(g);
+    }
 
     public static void main(String args[]) {
         RobotLabel label = new RobotLabel(0, "Scout");

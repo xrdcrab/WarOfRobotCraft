@@ -529,6 +529,10 @@ public class GameBoardView extends javax.swing.JFrame {
     public void updatePlayerDeath(int playerPosition) {
 
     }
+    
+    public void updateRobotTurned(int playerPosition, String robotType, int direction){
+        ((RobotLabel)getRobotLabel(playerPosition, robotType)).updateRotation(direction);
+    }
 
     public void updateCurrentPlayer(int playerPosition) {
         previousPlayerPosition = currentPlayerPosition;
