@@ -223,9 +223,14 @@ public class Controller implements ActionListener, KeyListener {
              */
             private void moveOperation() {
                 try {
+                	if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                            != null) {
+                   	System.out.println("current player is" + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).getCurrentRobot());
+                   }
                     getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
                             .getCurrentRobot().move(
                                     getGame().getGameMap().getMapSize());
+                    
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
@@ -428,7 +433,9 @@ public class Controller implements ActionListener, KeyListener {
 
             int playerNum = -1;
             HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
-
+            
+            this.gameBoardView = new GameBoardView();
+            
             if (this.getSetGameModeView().getTwoPlayersRadioButton().isSelected()) {
                 playerNum = 2;
                 // red player: index 0
@@ -482,26 +489,29 @@ public class Controller implements ActionListener, KeyListener {
             }
 
             if (playerNum != -1) {
+            	//TODO debug
                 this.game = new Game(playerHashMap, playerNum);
                 this.getGame().setCurrentPlayerIndex(0);
-                this.gameBoardView = new GameBoardView();
+//                if (this.getGame().getCurrentPlayerIndex() == 0)
+//                System.out.println("current player is" );
+//                this.gameBoardView = new GameBoardView();
                 // Sean added for testing
-                this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
-                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(4, -4, 0), playerNum));
-                this.getGameBoardView().updateRobotLocation(
-                        0, "Tank", (new Coordinate(-4, 4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                        0, "Scout", (new Coordinate(-4, 4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                        0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                        3, "Tank", (new Coordinate(4, -4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                        3, "Scout", (new Coordinate(4, -4, 0).toString()));
-                this.getGameBoardView().updateRobotLocation(
-                        3, "Sniper", (new Coordinate(4, -4, 0).toString()));
-                this.gameBoardView.updateCurrentPlayer(0);
-                this.gameBoardView.updateCurrentRobot("Scout");
+//                this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
+//                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(4, -4, 0), playerNum));
+//                this.getGameBoardView().updateRobotLocation(
+//                        0, "Tank", (new Coordinate(-4, 4, 0).toString()));
+//                this.getGameBoardView().updateRobotLocation(
+//                        0, "Scout", (new Coordinate(-4, 4, 0).toString()));
+//                this.getGameBoardView().updateRobotLocation(
+//                        0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
+//                this.getGameBoardView().updateRobotLocation(
+//                        3, "Tank", (new Coordinate(4, -4, 0).toString()));
+//                this.getGameBoardView().updateRobotLocation(
+//                        3, "Scout", (new Coordinate(4, -4, 0).toString()));
+//                this.getGameBoardView().updateRobotLocation(
+//                        3, "Sniper", (new Coordinate(4, -4, 0).toString()));
+//                this.gameBoardView.updateCurrentPlayer(0);
+//                this.gameBoardView.updateCurrentRobot("Scout");
                 // Sean added for testing
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
@@ -533,7 +543,7 @@ public class Controller implements ActionListener, KeyListener {
             this.getGameBoardView().updatePlayerDeath(this.getGame().getCurrentPlayerIndex());
         }
     }
-
+    
     /**
      * this method is to add the listeners for the game board view
      */
@@ -562,13 +572,19 @@ public class Controller implements ActionListener, KeyListener {
         // model part
         Player newPlayer;
         if (comboBox.getSelectedItem() instanceof AIPlayer) {
-            newPlayer = new AIPlayer(new Coordinate(-4, 4, 0), 5);
+            newPlayer = new AIPlayer(initialCoord, 5);
         } else {
-            newPlayer = new HumanPlayer(new Coordinate(4, -4, 0), 5);
+            newPlayer = new HumanPlayer(initialCoord, 5);
         }
         playerHashMap.put(playerIndex, newPlayer);
 
         // view part
+        this.getGameBoardView().updateRobotLocation(
+    			playerIndex, "Tank", (initialCoord.toString()));
+        this.getGameBoardView().updateRobotLocation(
+        		playerIndex, "Scout", (initialCoord.toString()));
+        this.getGameBoardView().updateRobotLocation(
+        		playerIndex, "Sniper", (initialCoord.toString()));
     }
 
     @Override
