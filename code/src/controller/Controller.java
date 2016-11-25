@@ -72,14 +72,7 @@ public class Controller implements ActionListener, KeyListener {
                     switch (e.getKeyCode()) {
                         case KeyEvent.VK_SPACE:
                             System.out.println("Pressed Space");
-                            getGame().runPlay();
-                            // update UI here
-                            gameBoardView.updateOperationState("End Play");
-                            gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
-                            gameBoardView.updateCurrentRobot(
-                                    game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                                            .getCurrentRobot().getType().toString()
-                            );
+                            this.endPlayOperation();
                             break;
                         case KeyEvent.VK_M:
                             // move robot
@@ -176,6 +169,19 @@ public class Controller implements ActionListener, KeyListener {
                         gameBoardView.updateTimerNumber(timerNumber);
                     }
                 }, 0, 1000);
+            }
+
+            private void endPlayOperation() {
+                getGame().runPlay();
+                // update UI here
+                gameBoardView.updateOperationState("End Play");
+                gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
+                gameBoardView.updateCurrentRobot(
+                        game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                                .getCurrentRobot().getType().toString()
+                );
+                
+                resetGameBoardViewTimer();
             }
 
             /**
