@@ -72,6 +72,19 @@ public class RobotLabel extends JLabel {
         }
         return color;
     }
+    
+    
+    /**
+     * This is a helper function to display the current absolute direction of a robot. 
+     * This is a preliminary function, but this is to be removed after the rotateImage
+     * function works. 
+     * @param robotLabel
+     * @param direction 
+     */
+    private void displayAbsDirection(int direction){
+        this.setText( String.valueOf(direction));
+    }
+    
 
     public static void main(String args[]) {
         RobotLabel label = new RobotLabel(0, "Scout");
