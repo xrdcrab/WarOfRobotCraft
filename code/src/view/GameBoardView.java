@@ -486,9 +486,9 @@ public class GameBoardView extends javax.swing.JFrame {
     }
 
     public void updateRobotDestruction(int playerPosition, String RobotType) {
-        JLabel robotLabel = getRobotLabel(playerPosition, RobotType);
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         if (robotLabel != null) {
-            gameBoardPanel.remove(robotLabel);
+            robotLabel.setVisible(false);
         }
     }
 
