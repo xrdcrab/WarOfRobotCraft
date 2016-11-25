@@ -221,7 +221,7 @@ public class Controller implements ActionListener, KeyListener {
                     getGameBoardView().updateRobotDestruction(
                             deadRobot.getKey(), deadRobot.getValue());
                 }
-
+                Controller.this.updateMist();
             }
 
             /**
@@ -243,6 +243,7 @@ public class Controller implements ActionListener, KeyListener {
                 // update the game after the move action
                 getGame().updateGameMove(
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+                Controller.this.updateMist();
 
                 // update UI
                 gameBoardView.updateOperationState("Move");
