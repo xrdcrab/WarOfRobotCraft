@@ -84,11 +84,11 @@ public class Player {
         this.scoutRobot.setViewRange(mapSize);
         this.sniperRobot.setViewRange(mapSize);
         this.tankRobot.setViewRange(mapSize);                
-        if (!(scoutRobot.isHasMoved())) {
+        if (!(scoutRobot.isHasMoved()) && !scoutRobot.isDead()) {
             currentRobot = scoutRobot;
-        } else if (!(sniperRobot.isHasMoved())) {
+        } else if (!(sniperRobot.isHasMoved()) && !sniperRobot.isDead()) {
             currentRobot = sniperRobot;
-        } else if (!(tankRobot.isHasMoved())) {
+        } else if (!(tankRobot.isHasMoved()) && !tankRobot.isDead()) {
             currentRobot = tankRobot;
         } else {
             currentRobot = null;
