@@ -38,7 +38,7 @@ public class GameBoardView extends javax.swing.JFrame {
     private int currentPlayerPosition = 0;
     private String currentRobotType = "Scout";
     
-    private Dictionary<RobotLabel, String> robotPositionDictionary = new Hashtable<>();
+    private HashMap<RobotLabel, String> robotPositionHashMap = new HashMap<RobotLabel, String>();
 
     private RobotLabel player0_scout;
     private RobotLabel player0_sniper;
