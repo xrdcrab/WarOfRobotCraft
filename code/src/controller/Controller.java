@@ -552,7 +552,7 @@ public class Controller implements ActionListener, KeyListener {
             HashMap<Integer, Player> playerHashMap,
             int playerIndex
     ) {
-        // model part
+        // initialize player in model
         Player newPlayer;
         if (comboBox.getSelectedItem() instanceof AIPlayer) {
             newPlayer = new AIPlayer(initialCoord, 5, playerIndex);
@@ -561,13 +561,21 @@ public class Controller implements ActionListener, KeyListener {
         }
         playerHashMap.put(playerIndex, newPlayer);
 
-        // view part
+        // add robot to view
         this.getGameBoardView().updateRobotLocation(
     			playerIndex, "Tank", (initialCoord.toString()));
         this.getGameBoardView().updateRobotLocation(
         		playerIndex, "Scout", (initialCoord.toString()));
         this.getGameBoardView().updateRobotLocation(
         		playerIndex, "Sniper", (initialCoord.toString()));
+        
+        // set robot's direction
+        this.getGameBoardView().updateRobotTurned(
+        		playerIndex, "Tank", playerIndex);
+        this.getGameBoardView().updateRobotTurned(
+        		playerIndex, "Scout", playerIndex);
+        this.getGameBoardView().updateRobotTurned(
+        		playerIndex, "Sniper", playerIndex);
     }
 
     @Override
