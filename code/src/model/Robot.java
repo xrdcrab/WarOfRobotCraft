@@ -340,17 +340,19 @@ public class Robot {
     public Pair<Coordinate, Integer> shoot(int distance, int mapSize) throws Exception {
         if (this.isDead()) {
             throw new Exception("Died robot cannot shoot.");
-        } else {
+        } 
+        else {
             if (this.hasShot) {
                 throw new Exception("Cannot shoot twice in one play.");
-            } else {
+            } 
+            else {
                 Pair<Coordinate, Integer> pair;
                 try {
                     pair = new Pair<Coordinate, Integer>(
                             this.coord.getNewCoordinate(this.direction, distance, mapSize),
                             this.attackPoint);
                 } catch (Exception e) {
-                    throw new Exception("The move is out of map range.");
+                    throw new Exception("The shoot range is out of map range.");
                 }
                 return pair;
             }

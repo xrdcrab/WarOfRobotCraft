@@ -353,6 +353,7 @@ public class Controller implements ActionListener, KeyListener {
 
             if (playerNum != -1) {
                 this.game = new Game(playerHashMap, playerNum);
+                this.updateMist();
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
@@ -364,7 +365,7 @@ public class Controller implements ActionListener, KeyListener {
             }
         } // end play button
         else if (e.getSource().equals(this.getGameBoardView().getEndPlayButton())) {
-            this.getGame().runPlay();
+            endPlayOperation();
         } // home button
         else if (e.getSource().equals(this.getGameBoardView().getHomeButton())) {
             System.out.println("home");
@@ -377,9 +378,12 @@ public class Controller implements ActionListener, KeyListener {
         else if (e.getSource().equals(this.getGameBoardView().getGiveUpButton())) {
             System.out.println("I Surrender!");
             // call surrender() method
-            this.getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                    .surrender();
-            this.getGameBoardView().updatePlayerDeath(this.getGame().getCurrentPlayerIndex());
+            this.getGame().getPlayerHashMap().
+            	get(getGame().getCurrentPlayerIndex()).surrender();
+            this.getGame().setAlivePlayerNumber(
+            		this.getGame().getAlivePlayerNumber() - 1);
+            this.getGameBoardView().updatePlayerDeath(
+            		this.getGame().getCurrentPlayerIndex());
         }
     }
 
