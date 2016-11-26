@@ -213,8 +213,8 @@ public class Robot {
     /**
      * @param direction the direction to set
      */
-    public void setDirection(int direction) {
-        this.direction = direction;
+    public void setDirection(int relativeDirection) {
+        this.direction = (direction+relativeDirection)%6;
     }
 
     /**

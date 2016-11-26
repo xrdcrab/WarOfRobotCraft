@@ -555,7 +555,7 @@ public class GameBoardView extends javax.swing.JFrame {
 
     private JLabel getRobotLabel(int playerPosition, String robotType) {
         try {
-            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType);
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
             robotField.setAccessible(true);
             return (JLabel) robotField.get(this);
         } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
