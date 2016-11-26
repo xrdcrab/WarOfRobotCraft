@@ -489,6 +489,11 @@ public class GameBoardView extends javax.swing.JFrame {
     public void updateMist(HashMap<String, Boolean> hashMap) {
         hashMap.forEach((coordString, isVisible) -> {
             getHexagonLabel(coordString).setEnabled(isVisible);
+            robotPositionHashMap.forEach((r, c)->{
+                if(c.equals(coordString)){
+                    r.setVisible(isVisible);
+                }
+            });
         });
     }
 
@@ -551,9 +556,11 @@ public class GameBoardView extends javax.swing.JFrame {
             if (robotLabel == null) {
                 setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
                 robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+                robotPositionHashMap.put(getRobotLabel(playerPosition, RobotType), coordString);
                 gameBoardPanel.add(robotLabel);
             }
             robotLabel.setBounds(hexagonLabel.getBounds());
+            robotPositionHashMap.replace(getRobotLabel(playerPosition, RobotType), coordString);
         }
     }
 
