@@ -477,14 +477,27 @@ public class Controller implements ActionListener, KeyListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        getGame().updateGameShootDamaged(pair);
+//        if (pair == null) System.out.println(pair + "is null");
+//        else {
+//        	System.out.println(pair.getKey().toString());
+//        }
+//        System.out.println("shoot");
+        LinkedList<Pair<Integer, String>> deadRobotList 
+        				= getGame().updateGameShootDamaged(pair);
+//        if ( getGame().updateGameShootDead(pair) != null )
+//        	System.out.println("robot dead");
+//        System.out.println(getGame().updateGameShootDead(pair).size());	
         //update UI here
-        for (Pair<Integer, String> deadRobot : getGame().updateGameShootDead(pair)) {
-            getGameBoardView().updateRobotDestruction(
-                    deadRobot.getKey(), deadRobot.getValue());
+        if ( deadRobotList != null ) {
+        	for (Pair<Integer, String> deadRobot : deadRobotList) {
+            	getGameBoardView().updateRobotDestruction(
+            			deadRobot.getKey(), deadRobot.getValue());
+
+            	System.out.println("the dead robot is:" +deadRobot.getKey() + deadRobot.getValue().toString());
+            }
         }
-        Controller.this.updateMist();
+        
+        this.updateMist();
     }
 
     /**

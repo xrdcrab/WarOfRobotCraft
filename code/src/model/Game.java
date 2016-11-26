@@ -218,8 +218,10 @@ public class Game {
      *
      * @param pair the the pair that
      */
-    public void updateGameShootDamaged(Pair<Coordinate, Integer> pair) {
-        // update robots
+    public LinkedList<Pair<Integer, String>> updateGameShootDamaged(Pair<Coordinate, Integer> pair) {
+    	LinkedList<Pair<Integer, String>> deadRobotList
+        					= new LinkedList<Pair<Integer, String>>();
+    	// update robots
         this.setAlivePlayerNumber(0);
         for (Integer key : playerHashMap.keySet()) {
             Player traversedPlayer = this.getPlayerHashMap().get(key);
@@ -228,19 +230,35 @@ public class Game {
                 if (!traversedPlayer.getScoutRobot().isDead()
                         && traversedPlayer.getScoutRobot().getCoord().equals(pair.getKey())) {
                     traversedPlayer.getScoutRobot().damaged(pair.getValue());
+                    if ( traversedPlayer.getScoutRobot().isDead() ) {
+                    	deadRobotList.add(new Pair<Integer, String>(key,"Scout"));
+                    }
                 }
                 // case 2: the sniper robot is get damaged
                 if (!traversedPlayer.getSniperRobot().isDead()
                         && traversedPlayer.getSniperRobot().getCoord().equals(pair.getKey())) {
                     traversedPlayer.getSniperRobot().damaged(pair.getValue());
+                    if ( traversedPlayer.getSniperRobot().isDead() ) {
+                    	deadRobotList.add(new Pair<Integer, String>(key,"Sniper"));
+                    }
                 }
                 // case 3: the tank robot is get damaged
                 if (!traversedPlayer.getTankRobot().isDead()
                         && traversedPlayer.getTankRobot().getCoord().equals(pair.getKey())) {
                     traversedPlayer.getTankRobot().damaged(pair.getValue());
+                    if ( traversedPlayer.getTankRobot().isDead() ) {
+                    	deadRobotList.add(new Pair<Integer, String>(key,"Tank"));
+                    }
                 }
                 this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
             }
+        }
+        
+        if ( !deadRobotList.isEmpty() ) {
+        	return deadRobotList;
+        }
+        else {
+        	return null;
         }
     }
 
@@ -253,9 +271,12 @@ public class Game {
     public LinkedList<Pair<Integer, String>> updateGameShootDead(Pair<Coordinate, Integer> pair) {
         LinkedList<Pair<Integer, String>> deadRobotList
                 = new LinkedList<Pair<Integer, String>>();
-
+        
+        HashMap<Integer, String> deadRobotMap 
+        		= new HashMap<Integer, String>();
+        
         this.setAlivePlayerNumber(0);
-        for (Integer key : playerHashMap.keySet()) {
+        for (int key : playerHashMap.keySet()) {
             Player traversedPlayer = this.getPlayerHashMap().get(key);
             if (!traversedPlayer.isDead()) {
                 // case 1: the scout robot is get damaged 
