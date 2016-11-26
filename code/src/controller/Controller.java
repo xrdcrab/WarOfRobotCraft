@@ -180,8 +180,8 @@ public class Controller implements ActionListener, KeyListener {
                         game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
                                 .getCurrentRobot().getType().toString()
                 );
-                
-                resetGameBoardViewTimer(15);
+                Controller.this.updateMist();                                
+                resetGameBoardViewTimer(20);
             }
 
             /**
