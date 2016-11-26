@@ -10,7 +10,9 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.io.IOException;
 import java.lang.reflect.*;
+import java.util.Dictionary;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -35,30 +37,32 @@ public class GameBoardView extends javax.swing.JFrame {
     private int previousPlayerPosition = -1;
     private int currentPlayerPosition = 0;
     private String currentRobotType = "Scout";
+    
+    private HashMap<RobotLabel, String> robotPositionHashMap = new HashMap<RobotLabel, String>();
 
-    private JLabel player0_scout;
-    private JLabel player0_sniper;
-    private JLabel player0_tank;
+    private RobotLabel player0_scout;
+    private RobotLabel player0_sniper;
+    private RobotLabel player0_tank;
 
-    private JLabel player1_scout;
-    private JLabel player1_sniper;
-    private JLabel player1_tank;
+    private RobotLabel player1_scout;
+    private RobotLabel player1_sniper;
+    private RobotLabel player1_tank;
 
-    private JLabel player2_scout;
-    private JLabel player2_sniper;
-    private JLabel player2_tank;
+    private RobotLabel player2_scout;
+    private RobotLabel player2_sniper;
+    private RobotLabel player2_tank;
 
-    private JLabel player3_scout;
-    private JLabel player3_sniper;
-    private JLabel player3_tank;
+    private RobotLabel player3_scout;
+    private RobotLabel player3_sniper;
+    private RobotLabel player3_tank;
 
-    private JLabel player4_scout;
-    private JLabel player4_sniper;
-    private JLabel player4_tank;
+    private RobotLabel player4_scout;
+    private RobotLabel player4_sniper;
+    private RobotLabel player4_tank;
 
-    private JLabel player5_scout;
-    private JLabel player5_sniper;
-    private JLabel player5_tank;
+    private RobotLabel player5_scout;
+    private RobotLabel player5_sniper;
+    private RobotLabel player5_tank;
 
     /**
      * Creates new form GameBoardView
@@ -485,6 +489,11 @@ public class GameBoardView extends javax.swing.JFrame {
     public void updateMist(HashMap<String, Boolean> hashMap) {
         hashMap.forEach((coordString, isVisible) -> {
             getHexagonLabel(coordString).setEnabled(isVisible);
+            robotPositionHashMap.forEach((r, c)->{
+                if(c.equals(coordString)){
+                    r.setVisible(isVisible);
+                }
+            });
         });
     }
 
@@ -547,17 +556,19 @@ public class GameBoardView extends javax.swing.JFrame {
             if (robotLabel == null) {
                 setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
                 robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+                robotPositionHashMap.put(getRobotLabel(playerPosition, RobotType), coordString);
                 gameBoardPanel.add(robotLabel);
             }
             robotLabel.setBounds(hexagonLabel.getBounds());
+            robotPositionHashMap.replace(getRobotLabel(playerPosition, RobotType), coordString);
         }
     }
 
-    private JLabel getRobotLabel(int playerPosition, String robotType) {
+    private RobotLabel getRobotLabel(int playerPosition, String robotType) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
             robotField.setAccessible(true);
-            return (JLabel) robotField.get(this);
+            return (RobotLabel) robotField.get(this);
         } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
             return null;
         }

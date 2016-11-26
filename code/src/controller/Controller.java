@@ -271,6 +271,20 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
+	 * @return the gameBoardViewTimer
+	 */
+	public Timer getGameBoardViewTimer() {
+		return gameBoardViewTimer;
+	}
+
+	/**
+	 * @param gameBoardViewTimer the gameBoardViewTimer to set
+	 */
+	public void setGameBoardViewTimer(Timer gameBoardViewTimer) {
+		this.gameBoardViewTimer = gameBoardViewTimer;
+	}
+
+	/**
      * this method is to define the action for each button when clicked
      */
     @Override
@@ -381,6 +395,10 @@ public class Controller implements ActionListener, KeyListener {
             		this.getGame().getAlivePlayerNumber() - 1);
             this.getGameBoardView().updatePlayerDeath(
             		this.getGame().getCurrentPlayerIndex());
+            // handle the situation that the game is over
+            if (this.getGame().getAlivePlayerNumber() == 1) {
+            	this.getGameBoardViewTimer().cancel();
+            }
         }
     }
 
@@ -546,6 +564,9 @@ public class Controller implements ActionListener, KeyListener {
         // update current player and robot
         this.getGameBoardView().updateCurrentPlayer(0);
         this.getGameBoardView().updateCurrentRobot("Scout");
+        
+        // set the timer
+        resetGameBoardViewTimer(20);
     }
 
     @Override
