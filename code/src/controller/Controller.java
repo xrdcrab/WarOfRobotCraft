@@ -231,7 +231,7 @@ public class Controller implements ActionListener, KeyListener {
                 try {
                 	if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
                             != null) {
-                   	System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString());
+                   	System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString() + " of player " + getGame().getCurrentPlayerIndex());
                    }
                     try {
 						getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
