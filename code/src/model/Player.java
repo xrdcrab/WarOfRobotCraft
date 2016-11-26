@@ -42,16 +42,16 @@ public class Player {
 	 * @param coord
 	 * @param viewRangeList
 	 */
-	public Player ( Coordinate initialCoord, int mapSize ) {
+	public Player ( Coordinate initialCoord, int mapSize, int playerIndex ) {
 		this.name = "";
 		this.score = 0;
 		this.currentRobot = null;
 		this.scoutRobot = new Robot(
-				RobotType.scout, "", 1, 1, 3, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
+				RobotType.scout, "", 1, 1, 3, initialCoord, playerIndex, false, false, initialCoord.getRange(3, mapSize));
 		this.sniperRobot = new Robot(
-				RobotType.sniper, "", 2, 2, 2, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
+				RobotType.sniper, "", 2, 2, 2, initialCoord, playerIndex, false, false, initialCoord.getRange(3, mapSize));
 		this.tankRobot = new Robot(
-				RobotType.tank, "", 3, 3, 1, initialCoord, 0, false, false, initialCoord.getRange(3, mapSize));
+				RobotType.tank, "", 3, 3, 1, initialCoord, playerIndex, false, false, initialCoord.getRange(3, mapSize));
 		this.viewRangeList = initialCoord.getRange(3, mapSize);
                 
                 this.goNextRobot();

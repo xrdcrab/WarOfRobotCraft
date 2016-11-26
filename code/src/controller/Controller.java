@@ -555,9 +555,9 @@ public class Controller implements ActionListener, KeyListener {
         // model part
         Player newPlayer;
         if (comboBox.getSelectedItem() instanceof AIPlayer) {
-            newPlayer = new AIPlayer(initialCoord, 5);
+            newPlayer = new AIPlayer(initialCoord, 5, playerIndex);
         } else {
-            newPlayer = new HumanPlayer(initialCoord, 5);
+            newPlayer = new HumanPlayer(initialCoord, 5, playerIndex);
         }
         playerHashMap.put(playerIndex, newPlayer);
 

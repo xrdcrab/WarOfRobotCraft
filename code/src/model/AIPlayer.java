@@ -37,8 +37,8 @@ public class AIPlayer extends Player {
 	 * @param initialCoord the initial coordinate for the player
 	 * @param mapSize the map size for the game
 	 */
-	public AIPlayer ( Coordinate initialCoord, int mapSize ) {
-		super ( initialCoord, mapSize );
+	public AIPlayer ( Coordinate initialCoord, int mapSize, int playerIndex ) {
+		super ( initialCoord, mapSize, playerIndex );
 		this.enemyMap = new HashMap<Coordinate, LinkedList<Robot>>();
 	}
 
