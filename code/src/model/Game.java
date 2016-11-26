@@ -115,23 +115,12 @@ public class Game {
         } else {
             switch ( playerNumber ) {
                 case 2:
-//                    if(currentPlayerIndex == 0){
-//                        currentPlayerIndex = 3;
-//                    } else if(currentPlayerIndex == 3){
-//                        currentPlayerIndex = 0;
-//                    }
                     this.goNextPlayerHelper(currentPlayerIndex, 3, 2);
                     break;
                 case 3:
-//                	if ( !this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead() )
-//                    this.setCurrentPlayerIndex(this.getCurrentPlayerIndex() + 2);
                 	this.goNextPlayerHelper(currentPlayerIndex, 2, 3);
                     break;
                 case 6:
-//                    this.setCurrentPlayerIndex(this.currentPlayerIndex + 1);
-//                    if (!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead()) {
-//                        this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
-//                    }
                     this.goNextPlayerHelper(currentPlayerIndex, 1, 6);
                     break;
                 default:
