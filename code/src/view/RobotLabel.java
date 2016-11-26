@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -19,8 +21,12 @@ public class RobotLabel extends JLabel {
      * default serialVersionUID
      */
     private static final long serialVersionUID = 1L;
+    
+    private Timer animationTimer = new Timer();
 
+    private int expectedRotateAngle = 0;
     private int rotateAngle = 0;
+    private int animationSplitAngle = 0;
 
     /**
      * this class is to create the robot label with icon
@@ -93,26 +99,41 @@ public class RobotLabel extends JLabel {
     public void updateRotation(int direction) {
         switch (direction) {
             case 0:
-                rotateAngle = 0;
+                expectedRotateAngle = 0;
                 break;
             case 1:
-                rotateAngle = 60;
+                expectedRotateAngle = 60;
                 break;
             case 2:
-                rotateAngle = 120;
+                expectedRotateAngle = 120;
                 break;
             case 3:
-                rotateAngle = 180;
+                expectedRotateAngle = 180;
                 break;
             case 4:
-                rotateAngle = 240;
+                expectedRotateAngle = 240;
                 break;
             case 5:
-                rotateAngle = 300;
+                expectedRotateAngle = 300;
                 break;
             default:
                 break;
         }
+        
+        animationSplitAngle = (expectedRotateAngle - rotateAngle) / 10;
+        animationTimer.cancel();
+        animationTimer = new Timer();
+        animationTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if(expectedRotateAngle == rotateAngle){
+                    animationTimer.cancel();
+                } else {
+                    rotateAngle += animationSplitAngle;
+                    repaint();
+                }
+            }
+        }, 0, 10);
     }
 
     @Override
