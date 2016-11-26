@@ -190,9 +190,15 @@ public class Controller implements ActionListener, KeyListener {
              * @param direction
              */
             private void turnOperation(int direction) {
-                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                        .getCurrentRobot().turn(direction);
+                int currentPlayerPosition = getGame().getCurrentPlayerIndex();
+                Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+                currentPlayer.getCurrentRobot().turn(direction);
                 //update UI here
+                gameBoardView.updateRobotTurned(
+                        currentPlayerPosition, 
+                        currentPlayer.getCurrentRobot().getType().toString(), 
+                        currentPlayer.getCurrentRobot().getDirection()
+                );
             }
 
             /**
@@ -215,7 +221,7 @@ public class Controller implements ActionListener, KeyListener {
                     getGameBoardView().updateRobotDestruction(
                             deadRobot.getKey(), deadRobot.getValue());
                 }
-
+                Controller.this.updateMist();
             }
 
             /**
@@ -237,6 +243,7 @@ public class Controller implements ActionListener, KeyListener {
                 // update the game after the move action
                 getGame().updateGameMove(
                         getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+                Controller.this.updateMist();
 
                 // update UI
                 gameBoardView.updateOperationState("Move");
@@ -637,6 +644,32 @@ public class Controller implements ActionListener, KeyListener {
             this.getGame().updateGameShootDamaged(this.getShootTarget());
         }
 
+    }
+    
+    /**
+     * This method is a helper function to update the mist of the game board.     
+     */
+    private void updateMist(){
+    	// Get the current view range list.
+    	HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
+    	Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
+    	
+    	// Update the current player's mist range.     
+    	currentPlayer.updateViewRange();
+    	// Call the method to update the coordinateMap class in Map class
+    	this.getGame().getGameMap().updateMist(currentPlayer);
+    	
+    	// Fetch the coordinateMap from map class. 
+    	rangeMap = this.getGame().getGameMap().getCoordinateMap();
+    	
+    	// convert rangeMap into a HashMap of <String, Boolean> pair.
+    	HashMap<String, Boolean> rangeStringBoolMap = new HashMap<String, Boolean>();
+    	rangeMap.forEach((coord, isVisible) ->{
+    		rangeStringBoolMap.put(coord.toString(), isVisible);
+    	});
+    	
+    	//Call updateMist method of GameBoardView class using new rangeStringBoolMap as parameter.     	
+    	this.getGameBoardView().updateMist(rangeStringBoolMap);    	    	
     }
 
 }
