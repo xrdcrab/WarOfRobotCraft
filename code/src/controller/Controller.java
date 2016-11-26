@@ -518,7 +518,7 @@ public class Controller implements ActionListener, KeyListener {
             newPlayer = new HumanPlayer(initialCoord, 5, playerIndex);
         }
         playerHashMap.put(playerIndex, newPlayer);
-
+        
         // add robot to view
         this.getGameBoardView().updateRobotLocation(
     			playerIndex, "Tank", (initialCoord.toString()));
@@ -534,6 +534,10 @@ public class Controller implements ActionListener, KeyListener {
         		playerIndex, "Scout", playerIndex);
         this.getGameBoardView().updateRobotTurned(
         		playerIndex, "Sniper", playerIndex);
+        
+        // update current player and robot
+        this.getGameBoardView().updateCurrentPlayer(0);
+        this.getGameBoardView().updateCurrentRobot("Scout");
     }
 
     @Override
