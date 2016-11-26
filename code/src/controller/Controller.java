@@ -489,8 +489,12 @@ public class Controller implements ActionListener, KeyListener {
             }
 
             if (playerNum != -1) {
-            	//TODO debug
                 this.game = new Game(playerHashMap, playerNum);
+                // put all player information into the game player hash map
+                for ( int i = 0; i < playerNum; i++ ) {
+                	this.getGame().getPlayerHashMap().put(i, playerHashMap.get(i));
+                }
+                
                 this.getGame().setCurrentPlayerIndex(0);
 //                if (this.getGame().getCurrentPlayerIndex() == 0)
 //                System.out.println("current player is" );
@@ -518,7 +522,7 @@ public class Controller implements ActionListener, KeyListener {
                 this.getSetGameModeView().setVisible(false);
                 //System.out.print(playerNum + '\n');
                 for (int i = 0; i < 6; i++) {
-                    if (playerHashMap.get(i) != null) {
+                    if (this.getGame().getPlayerHashMap().get(i) != null) {
                         System.out.println("player" + i);
                     }
                 }
