@@ -68,8 +68,11 @@ public class Game {
 
         this.playerNumber = playerNumber;
         this.playerHashMap = new HashMap<Integer, Player>();
+        for ( int key: playerHashMap.keySet() ) {
+        	this.getPlayerHashMap().put(key, playerHashMap.get(key));
+        }
         this.gameMap = new Map(this.playerNumToMapSize(playerNumber));
-        this.currentPlayerIndex = -1;
+        this.currentPlayerIndex = 0;
         this.alivePlayerNumber = this.playerNumber;
     }
 
@@ -170,7 +173,9 @@ public class Game {
         // enter the next play
         this.goNextPlayer();
         Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
-
+        System.out.println(this.getCurrentPlayerIndex());
+        if (getPlayerHashMap() == null) System.out.println("player map is null");
+        if (currentPlayer == null) System.out.println("currentPlayer is null");
         currentPlayer.goNextRobot();
 
         // it is a new turn
@@ -288,7 +293,7 @@ public class Game {
      * @return the playerHashMap
      */
     public HashMap<Integer, Player> getPlayerHashMap() {
-        return playerHashMap;
+        return this.playerHashMap;
     }
 
     /**
