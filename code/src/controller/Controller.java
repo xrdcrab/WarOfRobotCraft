@@ -320,30 +320,6 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
-     * @return the isMoveMode
-     */
-//	public boolean isMoveMode() {
-//		return this.isMoveMode;
-//	}
-    /**
-     * @return true if the operation mode is move mode, false otherwise
-     */
-//	public boolean isMoveMode() {
-//		return this.operationMode == OperationMode.move;
-//	}
-    /**
-     * @param isMoveMode the isMoveMode to set
-     */
-//	public void setMoveMode(boolean isMoveMode) {
-//		this.isMoveMode = isMoveMode;
-//	}
-    /**
-     * @return the isShootMode
-     */
-//	public boolean isShootMode() {
-//		return this.isShootMode;
-//	}
-    /**
      * @return the gameBoardView
      */
     public GameBoardView getGameBoardView() {
