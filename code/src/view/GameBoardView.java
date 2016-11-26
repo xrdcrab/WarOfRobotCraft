@@ -8,6 +8,7 @@ package view;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.io.IOException;
 import java.lang.reflect.*;
 import java.util.Dictionary;
@@ -17,6 +18,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.geometry.Bounds;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -33,6 +35,13 @@ public class GameBoardView extends javax.swing.JFrame {
 
     private Timer currentRobotBlinkTimer = new Timer();
     private Class<?> gameBoardViewClass = GameBoardView.class;
+    
+    private Timer animationTimer = new Timer();
+    private RobotLabel currentRobotLabel = null;
+    private Rectangle originalBounds = null;
+    private Rectangle expectedBounds = null;
+    private int animationSplitX = 0;
+    private int animationSplitY = 0;
 
     private int previousPlayerPosition = -1;
     private int currentPlayerPosition = 0;
@@ -550,19 +559,53 @@ public class GameBoardView extends javax.swing.JFrame {
     }
 
     public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
-        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+        RobotLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         JLabel hexagonLabel = getHexagonLabel(coordString);
 
+        animationTimer.cancel();
+        
         if (hexagonLabel != null) {
             if (robotLabel == null) {
                 setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
                 robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
                 robotPositionHashMap.put(getRobotLabel(playerPosition, RobotType), coordString);
                 gameBoardPanel.add(robotLabel);
+                robotLabel.setBounds(hexagonLabel.getBounds());
+            } else {
+                animationTimer = new Timer();
+                currentRobotLabel = robotLabel;
+                originalBounds = robotLabel.getBounds();
+                expectedBounds = hexagonLabel.getBounds();
+                updateAnimationSplitXY();
+                animationTimer.schedule(new TimerTask() {
+                    int timeCount = 0;
+                    
+                    @Override
+                    public void run() {
+                        if(timeCount > 10){
+                            currentRobotLabel.setBounds(expectedBounds);
+                            animationTimer.cancel();
+                        } else {
+                            currentRobotLabel.setBounds(new Rectangle(
+                                    currentRobotLabel.getBounds().x + animationSplitX,
+                                    currentRobotLabel.getBounds().y + animationSplitY,
+                                    currentRobotLabel.getBounds().width,
+                                    currentRobotLabel.getBounds().height
+                                )
+                            );
+                            timeCount++;
+                        }
+                    }
+                }, 0, 10);
             }
-            robotLabel.setBounds(hexagonLabel.getBounds());
+            
             robotPositionHashMap.replace(getRobotLabel(playerPosition, RobotType), coordString);
         }
+    }
+    
+    private void updateAnimationSplitXY(){
+        animationSplitX = (expectedBounds.x - originalBounds.x) / 10;
+        animationSplitY = (expectedBounds.y - originalBounds.y) / 10;
     }
 
     private RobotLabel getRobotLabel(int playerPosition, String robotType) {
