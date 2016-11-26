@@ -341,30 +341,12 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
-     * @param isShootMode the isShootMode to set
-     */
-//	public void setShootMode(boolean isShootMode) {
-//		this.isShootMode = isShootMode;
-//	}
-    /**
-     * @return the isTurnMode
-     */
-//	public boolean isTurnMode() {
-//		return this.isTurnMode;
-//	}
-    /**
      * @return the true if the Operation Mode is turn mode
      */
     public boolean isTurnMode() {
         return this.operationMode == OperationMode.turn;
     }
 
-    /**
-     * @param isTurnMode the isTurnMode to set
-     */
-//	public void setTurnMode(boolean isTurnMode) {
-//		this.isTurnMode = isTurnMode;
-//	}
     /**
      * @return the shootDistance
      */
