@@ -231,11 +231,15 @@ public class Controller implements ActionListener, KeyListener {
                 try {
                 	if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
                             != null) {
-                   	System.out.println("current player is" + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).getCurrentRobot());
+                   	System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString());
                    }
-                    getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                            .getCurrentRobot().move(
-                                    getGame().getGameMap().getMapSize());
+                    try {
+						getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+						        .getCurrentRobot().move(
+						                getGame().getGameMap().getMapSize());
+					} catch (Exception e) { //move out of range exception.
+						// Do Nothing
+					}
                     
                 } catch (Exception e1) {
                     e1.printStackTrace();

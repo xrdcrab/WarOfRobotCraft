@@ -2,6 +2,8 @@ package model;
 
 import java.util.LinkedList;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 import model.Robot.RobotType;
 
 /**
@@ -230,6 +232,20 @@ public class Player {
 		if ( this.getTankRobot().getHealthPoint() > 0 ) {
 			this.getTankRobot().setHealthPoint(0);
 		}
+	}
+	
+	@Override
+	public String toString() {
+		if (this.getCurrentRobot().equals(scoutRobot)) {
+			return "scout";
+		}
+		else if (this.getCurrentRobot().equals(sniperRobot)) {
+			return "sniper";
+		}
+		else if (this.getCurrentRobot().equals(tankRobot)) {
+			return "tank";
+		}
+		return "something wrong";
 	}
 
 }
