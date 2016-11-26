@@ -109,27 +109,30 @@ public class Game {
      * @precondition currentPlayerIndex>=5 or currentPlayerIndex<0
      */
     public void goNextPlayer() {
-        if (this.getCurrentPlayerIndex() < 0 /*|| this.currentPlayerIndex >= this.playerNumber*/) {
+        if ( this.getCurrentPlayerIndex() < 0 ) {
             this.setCurrentPlayerIndex(0);
             this.setAlivePlayerNumber(0);
         } else {
-            switch (playerNumber) {
+            switch ( playerNumber ) {
                 case 2:
-                    if(currentPlayerIndex == 0){
-                        currentPlayerIndex = 3;
-                    } else if(currentPlayerIndex == 3){
-                        currentPlayerIndex = 0;
-                    }
-                    
+//                    if(currentPlayerIndex == 0){
+//                        currentPlayerIndex = 3;
+//                    } else if(currentPlayerIndex == 3){
+//                        currentPlayerIndex = 0;
+//                    }
+                    this.goNextPlayerHelper(currentPlayerIndex, 3, 2);
                     break;
                 case 3:
-                    // ...
+//                	if ( !this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead() )
+//                    this.setCurrentPlayerIndex(this.getCurrentPlayerIndex() + 2);
+                	this.goNextPlayerHelper(currentPlayerIndex, 2, 3);
                     break;
                 case 6:
-                    this.setCurrentPlayerIndex(this.currentPlayerIndex + 1);
-                    if (!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead()) {
-                        this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
-                    }
+//                    this.setCurrentPlayerIndex(this.currentPlayerIndex + 1);
+//                    if (!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead()) {
+//                        this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
+//                    }
+                    this.goNextPlayerHelper(currentPlayerIndex, 1, 6);
                     break;
                 default:
                     break;
@@ -137,6 +140,24 @@ public class Game {
         }
     }
 
+    /**
+     * this method is to help the goNextPlayer() method in each case
+     * @param currentPlayerIndex the current player index
+     * @param step 1 for 6 players, 2 for 3 player and 3 for 2 players
+     * @param playerNum the number of players in the game
+     */
+    private void goNextPlayerHelper(int currentPlayerIndex, int step, int playerNum) {
+    	do {
+    		if ( this.getCurrentPlayerIndex() < step * ( playerNum - 1 ) ) {
+    			this.setCurrentPlayerIndex(this.getCurrentPlayerIndex() + step);
+    		} 
+    		else {
+    			this.setCurrentPlayerIndex(0);
+    		}
+    	}
+    	while (this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead());
+    }
+    
     /**
      * this method is to run a play
      */
