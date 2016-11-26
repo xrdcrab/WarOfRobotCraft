@@ -60,7 +60,7 @@ public class Player {
                 RobotType.tank, "", 3, 3, 1, initialCoord, playerIndex, false, false, initialCoord.getRange(3, mapSize));
         this.viewRangeList = initialCoord.getRange(3, mapSize);
 
-        this.goNextRobot();
+        this.goNextRobot(mapSize);
     }
 
     /**
@@ -80,8 +80,10 @@ public class Player {
     /**
      * this method is to set current robot.
      */
-    public void goNextRobot() {
-        this.updateViewRange();
+    public void goNextRobot(int mapSize) {
+        this.scoutRobot.setViewRange(mapSize);
+        this.sniperRobot.setViewRange(mapSize);
+        this.tankRobot.setViewRange(mapSize);                
         if (!(scoutRobot.isHasMoved())) {
             currentRobot = scoutRobot;
         } else if (!(sniperRobot.isHasMoved())) {
@@ -91,6 +93,7 @@ public class Player {
         } else {
             currentRobot = null;
         }
+        this.updateViewRange();
     }
 
     /**
@@ -100,16 +103,19 @@ public class Player {
 
         // dump all the elements for the previous view range
         this.setViewRangeList(new LinkedList<Coordinate>());
-
+        
         /**
          * get new range from a robot
          */
         LinkedList<Coordinate> newList = new LinkedList<Coordinate>();
-
+        this.setViewRangeList(newList);
         // add the scout robot view range
-        if (!this.getScoutRobot().isDead()
-                && newList.addAll(this.getScoutRobot().getViewRangeList())) {
-            this.setViewRangeList(newList);
+        if (!this.getScoutRobot().isDead()){
+            for (Coordinate coord : this.getScoutRobot().getViewRangeList()){
+               if (!this.getViewRangeList().contains(coord)) {
+                    this.getViewRangeList().add(coord);
+                } 
+            }   
         }
 
         // add the scout robot view range		
@@ -129,6 +135,7 @@ public class Player {
                 }
             }
         }
+        
     }
 
     /**

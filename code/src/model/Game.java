@@ -186,14 +186,14 @@ public class Game {
         System.out.println(this.getCurrentPlayerIndex());
         if (getPlayerHashMap() == null) System.out.println("player map is null");
         if (currentPlayer == null) System.out.println("currentPlayer is null");
-        currentPlayer.goNextRobot();
+        currentPlayer.goNextRobot(this.getGameMap().getMapSize());
 
         // it is a new turn
         if (areAllRobotsPlayed(currentPlayer)) {
             currentPlayer.getScoutRobot().setHasMoved(false);
             currentPlayer.getSniperRobot().setHasMoved(false);
             currentPlayer.getTankRobot().setHasMoved(false);
-            currentPlayer.goNextRobot();
+            currentPlayer.goNextRobot(this.getGameMap().getMapSize());
         }
 
         currentPlayer.getCurrentRobot().resetStatus();
