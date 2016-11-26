@@ -365,7 +365,7 @@ public class Controller implements ActionListener, KeyListener {
             }
         } // end play button
         else if (e.getSource().equals(this.getGameBoardView().getEndPlayButton())) {
-            this.getGame().runPlay();
+            endPlayOperation();
         } // home button
         else if (e.getSource().equals(this.getGameBoardView().getHomeButton())) {
             System.out.println("home");
