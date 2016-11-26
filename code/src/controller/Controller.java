@@ -567,6 +567,9 @@ public class Controller implements ActionListener, KeyListener {
         // update current player and robot
         this.getGameBoardView().updateCurrentPlayer(0);
         this.getGameBoardView().updateCurrentRobot("Scout");
+        
+        // set the timer
+        resetGameBoardViewTimer(20);
     }
 
     @Override
