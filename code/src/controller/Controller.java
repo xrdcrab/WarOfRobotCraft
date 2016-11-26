@@ -23,6 +23,95 @@ import view.*;
  */
 public class Controller implements ActionListener, KeyListener {
 
+    private KeyEventDispatcher keyEventDispatcher = new KeyEventDispatcher() {
+
+        @Override
+        public boolean dispatchKeyEvent(KeyEvent e) {
+            if (e.getID() == KeyEvent.KEY_PRESSED) {
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_SPACE:
+                        System.out.println("Pressed Space");
+                        endPlayOperation();
+                        break;
+                    case KeyEvent.VK_M:
+                        // move robot
+                        moveOperation();
+                        System.out.println("Pressed M");
+                        break;
+                    case KeyEvent.VK_S:
+                        // set operation mode to shoot
+                        operationMode = OperationMode.shoot;
+                        gameBoardView.updateOperationState("Shoot");
+                        System.out.println("Pressed S");
+                        break;
+                    case KeyEvent.VK_T:
+                        // set operation mode to turn
+                        operationMode = OperationMode.turn;
+                        gameBoardView.updateOperationState("Turn");
+                        System.out.println("Pressed T");
+                        break;
+                    case KeyEvent.VK_0:
+                        System.out.println("Pressed 0");
+                        // if the operation mode is turn
+                        if (operationMode == OperationMode.turn) {
+                            turnOperation(0);
+                        } // if the operation mode is shoot
+                        else if (operationMode == OperationMode.shoot) {
+                            shootOperation(0);
+                        }
+                        break;
+                    case KeyEvent.VK_1:
+                        System.out.println("Pressed 1");
+                        // if the operation mode is turn
+                        if (operationMode == OperationMode.turn) {
+                            turnOperation(1);
+                        } // if the operation mode is shoot
+                        else if (operationMode == OperationMode.shoot) {
+                            shootOperation(1);
+                        }
+                        break;
+                    case KeyEvent.VK_2:
+                        System.out.println("Pressed 2");
+                        // if the operation mode is turn
+                        if (operationMode == OperationMode.turn) {
+                            turnOperation(2);
+                        } // if the operation mode is shoot
+                        else if (operationMode == OperationMode.shoot) {
+                            shootOperation(2);
+                        }
+                        break;
+                    case KeyEvent.VK_3:
+                        System.out.println("Pressed 3");
+                        // if the operation mode is turn
+                        if (operationMode == OperationMode.turn) {
+                            turnOperation(3);
+                        } // if the operation mode is shoot
+                        else if (operationMode == OperationMode.shoot) {
+                            shootOperation(3);
+                        }
+                        break;
+                    case KeyEvent.VK_4:
+                        System.out.println("Pressed 4");
+                        // if the operation mode is turn
+                        if (operationMode == OperationMode.turn) {
+                            turnOperation(4);
+                        }
+                        break;
+                    case KeyEvent.VK_5:
+                        System.out.println("Pressed 5");
+                        // if the operation mode is turn
+                        if (operationMode == OperationMode.turn) {
+                            turnOperation(5);
+                        }
+                        break;
+                }
+            }
+
+            return true;
+        }
+
+    };
+
     private enum OperationMode {
         shoot, turn
     }
@@ -64,202 +153,7 @@ public class Controller implements ActionListener, KeyListener {
         this.getGameStartView().getStartButton().addActionListener(this);
         this.getGameStartView().getGarageButton().addActionListener(this);
 
-        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher() {
-
-            @Override
-            public boolean dispatchKeyEvent(KeyEvent e) {
-                if (e.getID() == KeyEvent.KEY_PRESSED) {
-                    switch (e.getKeyCode()) {
-                        case KeyEvent.VK_SPACE:
-                            System.out.println("Pressed Space");
-                            this.endPlayOperation();
-                            break;
-                        case KeyEvent.VK_M:
-                            // move robot
-                            this.moveOperation();
-                            System.out.println("Pressed M");
-                            break;
-                        case KeyEvent.VK_S:
-                            // set operation mode to shoot
-                            operationMode = OperationMode.shoot;
-                            gameBoardView.updateOperationState("Shoot");
-                            System.out.println("Pressed S");
-                            break;
-                        case KeyEvent.VK_T:
-                            // set operation mode to turn
-                            operationMode = OperationMode.turn;
-                            gameBoardView.updateOperationState("Turn");
-                            System.out.println("Pressed T");
-                            break;
-                        case KeyEvent.VK_0:
-                            System.out.println("Pressed 0");
-                            // if the operation mode is turn
-                            if (operationMode == OperationMode.turn) {
-                                this.turnOperation(0);
-                            } // if the operation mode is shoot
-                            else if (operationMode == OperationMode.shoot) {
-                                this.shootOperation(0);
-                            }
-                            break;
-                        case KeyEvent.VK_1:
-                            System.out.println("Pressed 1");
-                            // if the operation mode is turn
-                            if (operationMode == OperationMode.turn) {
-                                this.turnOperation(1);
-                            } // if the operation mode is shoot
-                            else if (operationMode == OperationMode.shoot) {
-                                this.shootOperation(1);
-                            }
-                            break;
-                        case KeyEvent.VK_2:
-                            System.out.println("Pressed 2");
-                            // if the operation mode is turn
-                            if (operationMode == OperationMode.turn) {
-                                this.turnOperation(2);
-                            } // if the operation mode is shoot
-                            else if (operationMode == OperationMode.shoot) {
-                                this.shootOperation(2);
-                            }
-                            break;
-                        case KeyEvent.VK_3:
-                            System.out.println("Pressed 3");
-                            // if the operation mode is turn
-                            if (operationMode == OperationMode.turn) {
-                                this.turnOperation(3);
-                            } // if the operation mode is shoot
-                            else if (operationMode == OperationMode.shoot) {
-                                this.shootOperation(3);
-                            }
-                            break;
-                        case KeyEvent.VK_4:
-                            System.out.println("Pressed 4");
-                            // if the operation mode is turn
-                            if (operationMode == OperationMode.turn) {
-                                this.turnOperation(4);
-                            }
-                            break;
-                        case KeyEvent.VK_5:
-                            System.out.println("Pressed 5");
-                            // if the operation mode is turn
-                            if (operationMode == OperationMode.turn) {
-                                this.turnOperation(5);
-                            }
-                            break;
-                    }
-                }
-
-                return true;
-            }
-
-            private void resetGameBoardViewTimer(int countDwon) {
-                gameBoardViewTimer.cancel();
-                gameBoardViewTimer = new Timer();
-                gameBoardViewTimer.schedule(new TimerTask() {
-
-                    int timerNumber = countDwon;
-
-                    @Override
-                    public void run() {
-                        if (timerNumber == 0) {
-                            endPlayOperation();
-                        } else {
-                            timerNumber--;
-                        }
-
-                        gameBoardView.updateTimerNumber(timerNumber);
-                    }
-                }, 0, 1000);
-            }
-
-            private void endPlayOperation() {
-                getGame().runPlay();
-                // update UI here
-                gameBoardView.updateOperationState("End Play");
-                gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
-                gameBoardView.updateCurrentRobot(
-                        game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                                .getCurrentRobot().getType().toString()
-                );
-                Controller.this.updateMist();                                
-                resetGameBoardViewTimer(20);
-            }
-
-            /**
-             * This method will implement robot turn and update UI
-             *
-             * @param direction
-             */
-            private void turnOperation(int direction) {
-                int currentPlayerPosition = getGame().getCurrentPlayerIndex();
-                Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
-                currentPlayer.getCurrentRobot().turn(direction);
-                //update UI here
-                gameBoardView.updateRobotTurned(
-                        currentPlayerPosition, 
-                        currentPlayer.getCurrentRobot().getType().toString(), 
-                        currentPlayer.getCurrentRobot().getDirection()
-                );
-            }
-
-            /**
-             * This method will implement robot shoot and update UI
-             *
-             * @param shootDistance
-             */
-            private void shootOperation(int shootDistance) {
-                Pair<Coordinate, Integer> pair = null;
-                try {
-                    pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                            .getCurrentRobot().shoot(shootDistance, getGame().getGameMap().getMapSize());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                getGame().updateGameShootDamaged(pair);
-                //update UI here
-                for (Pair<Integer, String> deadRobot : getGame().updateGameShootDead(pair)) {
-                    getGameBoardView().updateRobotDestruction(
-                            deadRobot.getKey(), deadRobot.getValue());
-                }
-                Controller.this.updateMist();
-            }
-
-            /**
-             * this method is a helper function for robot move
-             */
-            private void moveOperation() {
-                try {
-                	if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                            != null) {
-                   	System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString() + " of player " + getGame().getCurrentPlayerIndex());
-                   }
-                    try {
-						getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-						        .getCurrentRobot().move(
-						                getGame().getGameMap().getMapSize());
-					} catch (Exception e) { //move out of range exception.
-						// Do Nothing
-					}
-                    
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-                // update the game after the move action
-                getGame().updateGameMove(
-                        getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
-                Controller.this.updateMist();
-
-                // update UI
-                gameBoardView.updateOperationState("Move");
-                Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
-                Robot currentRobot = currentPlayer.getCurrentRobot();
-                gameBoardView.updateRobotLocation(
-                        getGame().getCurrentPlayerIndex(),
-                        currentRobot.getType().toString(),
-                        currentRobot.getCoord().toString()
-                );
-            }
-        });
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(keyEventDispatcher);
         //this.getSetGameModeView().getConfirmButton().addActionListener(this);
     }
 
@@ -402,9 +296,9 @@ public class Controller implements ActionListener, KeyListener {
 
             int playerNum = -1;
             HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
-            
+
             this.gameBoardView = new GameBoardView();
-            
+
             if (this.getSetGameModeView().getTwoPlayersRadioButton().isSelected()) {
                 playerNum = 2;
                 // red player: index 0
@@ -488,7 +382,7 @@ public class Controller implements ActionListener, KeyListener {
             this.getGameBoardView().updatePlayerDeath(this.getGame().getCurrentPlayerIndex());
         }
     }
-    
+
     /**
      * this method is to add the listeners for the game board view
      */
@@ -496,6 +390,115 @@ public class Controller implements ActionListener, KeyListener {
         this.getGameBoardView().getEndPlayButton().addActionListener(this);
         this.getGameBoardView().getHomeButton().addActionListener(this);
         this.getGameBoardView().getGiveUpButton().addActionListener(this);
+    }
+
+    private void resetGameBoardViewTimer(int countDwon) {
+        gameBoardViewTimer.cancel();
+        gameBoardViewTimer = new Timer();
+        gameBoardViewTimer.schedule(new TimerTask() {
+
+            int timerNumber = countDwon;
+
+            @Override
+            public void run() {
+                if (timerNumber == 0) {
+                    endPlayOperation();
+                } else {
+                    timerNumber--;
+                }
+
+                gameBoardView.updateTimerNumber(timerNumber);
+            }
+        }, 0, 1000);
+    }
+
+    private void endPlayOperation() {
+        getGame().runPlay();
+        // update UI here
+        gameBoardView.updateOperationState("End Play");
+        gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
+        gameBoardView.updateCurrentRobot(
+                game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                        .getCurrentRobot().getType().toString()
+        );
+        Controller.this.updateMist();
+        resetGameBoardViewTimer(20);
+    }
+
+    /**
+     * This method will implement robot turn and update UI
+     *
+     * @param direction
+     */
+    private void turnOperation(int direction) {
+        int currentPlayerPosition = getGame().getCurrentPlayerIndex();
+        Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+        currentPlayer.getCurrentRobot().turn(direction);
+        //update UI here
+        gameBoardView.updateRobotTurned(
+                currentPlayerPosition,
+                currentPlayer.getCurrentRobot().getType().toString(),
+                currentPlayer.getCurrentRobot().getDirection()
+        );
+    }
+
+    /**
+     * This method will implement robot shoot and update UI
+     *
+     * @param shootDistance
+     */
+    private void shootOperation(int shootDistance) {
+        Pair<Coordinate, Integer> pair = null;
+        try {
+            pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                    .getCurrentRobot().shoot(shootDistance, getGame().getGameMap().getMapSize());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        getGame().updateGameShootDamaged(pair);
+        //update UI here
+        for (Pair<Integer, String> deadRobot : getGame().updateGameShootDead(pair)) {
+            getGameBoardView().updateRobotDestruction(
+                    deadRobot.getKey(), deadRobot.getValue());
+        }
+        Controller.this.updateMist();
+    }
+
+    /**
+     * this method is a helper function for robot move
+     */
+    private void moveOperation() {
+        try {
+            if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                    != null) {
+                System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString() + " of player " + getGame().getCurrentPlayerIndex());
+            }
+            try {
+                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                        .getCurrentRobot().move(
+                                getGame().getGameMap().getMapSize());
+            } catch (Exception e) { //move out of range exception.
+                // Do Nothing
+            }
+
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        // update the game after the move action
+        getGame().updateGameMove(
+                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+        Controller.this.updateMist();
+
+        // update UI
+        gameBoardView.updateOperationState("Move");
+        Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+        Robot currentRobot = currentPlayer.getCurrentRobot();
+        gameBoardView.updateRobotLocation(
+                getGame().getCurrentPlayerIndex(),
+                currentRobot.getType().toString(),
+                currentRobot.getCoord().toString()
+        );
     }
 
     /**
@@ -522,23 +525,23 @@ public class Controller implements ActionListener, KeyListener {
             newPlayer = new HumanPlayer(initialCoord, 5, playerIndex);
         }
         playerHashMap.put(playerIndex, newPlayer);
-        
+
         // add robot to view
         this.getGameBoardView().updateRobotLocation(
-    			playerIndex, "Tank", (initialCoord.toString()));
+                playerIndex, "Tank", (initialCoord.toString()));
         this.getGameBoardView().updateRobotLocation(
-        		playerIndex, "Scout", (initialCoord.toString()));
+                playerIndex, "Scout", (initialCoord.toString()));
         this.getGameBoardView().updateRobotLocation(
-        		playerIndex, "Sniper", (initialCoord.toString()));
-        
+                playerIndex, "Sniper", (initialCoord.toString()));
+
         // set robot's direction
         this.getGameBoardView().updateRobotTurned(
-        		playerIndex, "Tank", playerIndex);
+                playerIndex, "Tank", playerIndex);
         this.getGameBoardView().updateRobotTurned(
-        		playerIndex, "Scout", playerIndex);
+                playerIndex, "Scout", playerIndex);
         this.getGameBoardView().updateRobotTurned(
-        		playerIndex, "Sniper", playerIndex);
-        
+                playerIndex, "Sniper", playerIndex);
+
         // update current player and robot
         this.getGameBoardView().updateCurrentPlayer(0);
         this.getGameBoardView().updateCurrentRobot("Scout");
@@ -591,31 +594,31 @@ public class Controller implements ActionListener, KeyListener {
         }
 
     }
-    
+
     /**
-     * This method is a helper function to update the mist of the game board.     
+     * This method is a helper function to update the mist of the game board.
      */
-    private void updateMist(){
-    	// Get the current view range list.
-    	HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
-    	Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
-    	
-    	// Update the current player's mist range.     
-    	currentPlayer.updateViewRange();
-    	// Call the method to update the coordinateMap class in Map class
-    	this.getGame().getGameMap().updateMist(currentPlayer);
-    	
-    	// Fetch the coordinateMap from map class. 
-    	rangeMap = this.getGame().getGameMap().getCoordinateMap();
-    	
-    	// convert rangeMap into a HashMap of <String, Boolean> pair.
-    	HashMap<String, Boolean> rangeStringBoolMap = new HashMap<String, Boolean>();
-    	rangeMap.forEach((coord, isVisible) ->{
-    		rangeStringBoolMap.put(coord.toString(), isVisible);
-    	});
-    	
-    	//Call updateMist method of GameBoardView class using new rangeStringBoolMap as parameter.     	
-    	this.getGameBoardView().updateMist(rangeStringBoolMap);    	    	
+    private void updateMist() {
+        // Get the current view range list.
+        HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
+        Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
+
+        // Update the current player's mist range.     
+        currentPlayer.updateViewRange();
+        // Call the method to update the coordinateMap class in Map class
+        this.getGame().getGameMap().updateMist(currentPlayer);
+
+        // Fetch the coordinateMap from map class. 
+        rangeMap = this.getGame().getGameMap().getCoordinateMap();
+
+        // convert rangeMap into a HashMap of <String, Boolean> pair.
+        HashMap<String, Boolean> rangeStringBoolMap = new HashMap<String, Boolean>();
+        rangeMap.forEach((coord, isVisible) -> {
+            rangeStringBoolMap.put(coord.toString(), isVisible);
+        });
+
+        //Call updateMist method of GameBoardView class using new rangeStringBoolMap as parameter.     	
+        this.getGameBoardView().updateMist(rangeStringBoolMap);
     }
 
 }
