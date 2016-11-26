@@ -123,9 +123,6 @@ public class Controller implements ActionListener, KeyListener {
 
     private Timer gameBoardViewTimer = new Timer();
 
-    //private boolean isMoveMode;
-    //private boolean isShootMode;
-    //private boolean isTurnMode;
     private OperationMode operationMode;
 
     private int shootDistance;
