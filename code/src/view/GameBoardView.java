@@ -10,6 +10,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.io.IOException;
 import java.lang.reflect.*;
+import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,29 +37,29 @@ public class GameBoardView extends javax.swing.JFrame {
     private int currentPlayerPosition = 0;
     private String currentRobotType = "Scout";
 
-    private JLabel player0_scout;
-    private JLabel player0_sniper;
-    private JLabel player0_tank;
+    private RobotLabel player0_scout;
+    private RobotLabel player0_sniper;
+    private RobotLabel player0_tank;
 
-    private JLabel player1_scout;
-    private JLabel player1_sniper;
-    private JLabel player1_tank;
+    private RobotLabel player1_scout;
+    private RobotLabel player1_sniper;
+    private RobotLabel player1_tank;
 
-    private JLabel player2_scout;
-    private JLabel player2_sniper;
-    private JLabel player2_tank;
+    private RobotLabel player2_scout;
+    private RobotLabel player2_sniper;
+    private RobotLabel player2_tank;
 
-    private JLabel player3_scout;
-    private JLabel player3_sniper;
-    private JLabel player3_tank;
+    private RobotLabel player3_scout;
+    private RobotLabel player3_sniper;
+    private RobotLabel player3_tank;
 
-    private JLabel player4_scout;
-    private JLabel player4_sniper;
-    private JLabel player4_tank;
+    private RobotLabel player4_scout;
+    private RobotLabel player4_sniper;
+    private RobotLabel player4_tank;
 
-    private JLabel player5_scout;
-    private JLabel player5_sniper;
-    private JLabel player5_tank;
+    private RobotLabel player5_scout;
+    private RobotLabel player5_sniper;
+    private RobotLabel player5_tank;
 
     /**
      * Creates new form GameBoardView
