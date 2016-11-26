@@ -320,30 +320,6 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
-     * @return the isMoveMode
-     */
-//	public boolean isMoveMode() {
-//		return this.isMoveMode;
-//	}
-    /**
-     * @return true if the operation mode is move mode, false otherwise
-     */
-//	public boolean isMoveMode() {
-//		return this.operationMode == OperationMode.move;
-//	}
-    /**
-     * @param isMoveMode the isMoveMode to set
-     */
-//	public void setMoveMode(boolean isMoveMode) {
-//		this.isMoveMode = isMoveMode;
-//	}
-    /**
-     * @return the isShootMode
-     */
-//	public boolean isShootMode() {
-//		return this.isShootMode;
-//	}
-    /**
      * @return the gameBoardView
      */
     public GameBoardView getGameBoardView() {
@@ -365,30 +341,12 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
-     * @param isShootMode the isShootMode to set
-     */
-//	public void setShootMode(boolean isShootMode) {
-//		this.isShootMode = isShootMode;
-//	}
-    /**
-     * @return the isTurnMode
-     */
-//	public boolean isTurnMode() {
-//		return this.isTurnMode;
-//	}
-    /**
      * @return the true if the Operation Mode is turn mode
      */
     public boolean isTurnMode() {
         return this.operationMode == OperationMode.turn;
     }
 
-    /**
-     * @param isTurnMode the isTurnMode to set
-     */
-//	public void setTurnMode(boolean isTurnMode) {
-//		this.isTurnMode = isTurnMode;
-//	}
     /**
      * @return the shootDistance
      */
@@ -497,37 +455,9 @@ public class Controller implements ActionListener, KeyListener {
 
             if (playerNum != -1) {
                 this.game = new Game(playerHashMap, playerNum);
-                // put all player information into the game player hash map
-                for ( int i = 0; i < playerNum; i++ ) {
-                	this.getGame().getPlayerHashMap().put(i, playerHashMap.get(i));
-                }
-                
-                this.getGame().setCurrentPlayerIndex(0);
-//                if (this.getGame().getCurrentPlayerIndex() == 0)
-//                System.out.println("current player is" );
-//                this.gameBoardView = new GameBoardView();
-                // Sean added for testing
-//                this.game.getPlayerHashMap().put(0, new Player(new Coordinate(-4, 4, 0), playerNum));
-//                this.game.getPlayerHashMap().put(3, new Player(new Coordinate(4, -4, 0), playerNum));
-//                this.getGameBoardView().updateRobotLocation(
-//                        0, "Tank", (new Coordinate(-4, 4, 0).toString()));
-//                this.getGameBoardView().updateRobotLocation(
-//                        0, "Scout", (new Coordinate(-4, 4, 0).toString()));
-//                this.getGameBoardView().updateRobotLocation(
-//                        0, "Sniper", (new Coordinate(-4, 4, 0).toString()));
-//                this.getGameBoardView().updateRobotLocation(
-//                        3, "Tank", (new Coordinate(4, -4, 0).toString()));
-//                this.getGameBoardView().updateRobotLocation(
-//                        3, "Scout", (new Coordinate(4, -4, 0).toString()));
-//                this.getGameBoardView().updateRobotLocation(
-//                        3, "Sniper", (new Coordinate(4, -4, 0).toString()));
-//                this.gameBoardView.updateCurrentPlayer(0);
-//                this.gameBoardView.updateCurrentRobot("Scout");
-                // Sean added for testing
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
-                //System.out.print(playerNum + '\n');
                 for (int i = 0; i < 6; i++) {
                     if (this.getGame().getPlayerHashMap().get(i) != null) {
                         System.out.println("player" + i);
@@ -580,22 +510,30 @@ public class Controller implements ActionListener, KeyListener {
             HashMap<Integer, Player> playerHashMap,
             int playerIndex
     ) {
-        // model part
+        // initialize player in model
         Player newPlayer;
         if (comboBox.getSelectedItem() instanceof AIPlayer) {
-            newPlayer = new AIPlayer(initialCoord, 5);
+            newPlayer = new AIPlayer(initialCoord, 5, playerIndex);
         } else {
-            newPlayer = new HumanPlayer(initialCoord, 5);
+            newPlayer = new HumanPlayer(initialCoord, 5, playerIndex);
         }
         playerHashMap.put(playerIndex, newPlayer);
 
-        // view part
+        // add robot to view
         this.getGameBoardView().updateRobotLocation(
     			playerIndex, "Tank", (initialCoord.toString()));
         this.getGameBoardView().updateRobotLocation(
         		playerIndex, "Scout", (initialCoord.toString()));
         this.getGameBoardView().updateRobotLocation(
         		playerIndex, "Sniper", (initialCoord.toString()));
+        
+        // set robot's direction
+        this.getGameBoardView().updateRobotTurned(
+        		playerIndex, "Tank", playerIndex);
+        this.getGameBoardView().updateRobotTurned(
+        		playerIndex, "Scout", playerIndex);
+        this.getGameBoardView().updateRobotTurned(
+        		playerIndex, "Sniper", playerIndex);
     }
 
     @Override
