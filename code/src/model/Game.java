@@ -136,15 +136,17 @@ public class Game {
      * @param playerNum the number of players in the game
      */
     private void goNextPlayerHelper(int currentPlayerIndex, int step, int playerNum) {
-    	do {
-    		if ( this.getCurrentPlayerIndex() < step * ( playerNum - 1 ) ) {
-    			this.setCurrentPlayerIndex(this.getCurrentPlayerIndex() + step);
-    		} 
-    		else {
-    			this.setCurrentPlayerIndex(0);
-    		}
-    	}
-    	while (this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead());
+    	if ( this.getAlivePlayerNumber() > 1 ) {
+    		do {
+        		if ( this.getCurrentPlayerIndex() < step * ( playerNum - 1 ) ) {
+        			this.setCurrentPlayerIndex(this.getCurrentPlayerIndex() + step);
+        		} 
+        		else {
+        			this.setCurrentPlayerIndex(0);
+        		}
+        	}
+        	while (this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead());
+    	}   	
     }
     
     /**
