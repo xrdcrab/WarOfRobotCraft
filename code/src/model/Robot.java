@@ -365,7 +365,7 @@ public class Robot {
      * @param mapSize the size of the map
      */
     public void setViewRange(int mapSize) {
-        this.setViewRangeList(this.getCoord().getRange(this.getRange(), mapSize));
+        this.setViewRangeList(this.getCoord().getRange(this.getRange(), mapSize));        
     }
 
     /**
