@@ -46,10 +46,10 @@ public class Map {
 		getCoordinateMap().forEach((coord, isVisible) -> {
                     if(currentPlayer.getViewRangeList().contains(coord)){
 //                        isVisible = false; //Changed 
-                        isVisible = false;
+                        getCoordinateMap().replace(coord, true);
                     } else{
 //                        isVisible = true; //Changed 
-                    	isVisible = true;
+                    	getCoordinateMap().replace(coord, false);
                     }
                 });
 	}
