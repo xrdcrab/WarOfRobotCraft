@@ -353,6 +353,7 @@ public class Controller implements ActionListener, KeyListener {
 
             if (playerNum != -1) {
                 this.game = new Game(playerHashMap, playerNum);
+                this.updateMist();
                 this.addGameBoardViewListener();
                 this.getGameBoardView().setVisible(true);
                 this.getSetGameModeView().setVisible(false);
