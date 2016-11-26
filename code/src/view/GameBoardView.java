@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.lang.reflect.*;
 import java.util.Dictionary;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -36,6 +37,8 @@ public class GameBoardView extends javax.swing.JFrame {
     private int previousPlayerPosition = -1;
     private int currentPlayerPosition = 0;
     private String currentRobotType = "Scout";
+    
+    private Dictionary<RobotLabel, String> robotPositionDictionary = new Hashtable<>();
 
     private RobotLabel player0_scout;
     private RobotLabel player0_sniper;
@@ -554,11 +557,11 @@ public class GameBoardView extends javax.swing.JFrame {
         }
     }
 
-    private JLabel getRobotLabel(int playerPosition, String robotType) {
+    private RobotLabel getRobotLabel(int playerPosition, String robotType) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
             robotField.setAccessible(true);
-            return (JLabel) robotField.get(this);
+            return (RobotLabel) robotField.get(this);
         } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
             return null;
         }
