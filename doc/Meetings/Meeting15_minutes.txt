@@ -1,0 +1,14 @@
+Meeting 15
+Date: Nov 4, 2016 14:30 - 17:00
+
+Location: Health Science Library study room. 
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Topic: Decision making
+Moderator: Shisong Wang
+Secretary:Ruida Xie
+Caller: Chen Fu
+
+1 Discuss testing plan document.
+2 Decide the structure and components of test plan.
+3 assign everyone's task.
+4 Decide the time of next meeting which to go through the each components.

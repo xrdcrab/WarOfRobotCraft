@@ -1,0 +1,13 @@
+Meeting 13
+Date: Nov 1, 2016 16:35 - 16:48 with TA
+
+Location: Spinks S342
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Topic: Decision making
+Moderator: Jiahuan He
+Secretary: Chen Yang
+
+
+1. Get the comment of design document from TA.
+2. Made the decision to choose Google coding style.
+3. Arrange our next group meeting
