@@ -168,9 +168,9 @@ public class Game {
 //		}
 //	}
     private boolean areAllRobotsPlayed(Player currentPlayer) {
-        boolean scoutPlayed = currentPlayer.getScoutRobot().isHasMoved() || currentPlayer.getScoutRobot().isDead();
-        boolean sniperPlayed = currentPlayer.getSniperRobot().isHasMoved() || currentPlayer.getSniperRobot().isDead();
-        boolean tankPlayed = currentPlayer.getTankRobot().isHasMoved() || currentPlayer.getTankRobot().isDead();
+        boolean scoutPlayed = currentPlayer.getScoutRobot().hasMoved() || currentPlayer.getScoutRobot().isDead();
+        boolean sniperPlayed = currentPlayer.getSniperRobot().hasMoved() || currentPlayer.getSniperRobot().isDead();
+        boolean tankPlayed = currentPlayer.getTankRobot().hasMoved() || currentPlayer.getTankRobot().isDead();
 
         return scoutPlayed && sniperPlayed && tankPlayed;
     }
