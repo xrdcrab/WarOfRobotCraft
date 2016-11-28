@@ -185,9 +185,6 @@ public class Game {
         // enter the next play
         this.goNextPlayer();
         Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
-        System.out.println(this.getCurrentPlayerIndex());
-        if (getPlayerHashMap() == null) System.out.println("player map is null");
-        if (currentPlayer == null) System.out.println("currentPlayer is null");
         currentPlayer.goNextRobot(this.getGameMap().getMapSize());
 
         // it is a new turn
@@ -197,8 +194,11 @@ public class Game {
             currentPlayer.getTankRobot().sethasPlayed(false);
             currentPlayer.goNextRobot(this.getGameMap().getMapSize());
         }
-
-        currentPlayer.getCurrentRobot().resetStatus();
+        
+        if ( currentPlayer != null && currentPlayer.getCurrentRobot() != null ) {
+        	currentPlayer.getCurrentRobot().resetStatus();
+        }
+        
 
 //            //if the current player's current robot has not moved
 //		if(!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().ishasPlayed()){

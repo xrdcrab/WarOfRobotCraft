@@ -389,12 +389,15 @@ public class Controller implements ActionListener, KeyListener {
         else if (e.getSource().equals(this.getGameBoardView().getGiveUpButton())) {
             System.out.println("I Surrender!");
             // call surrender() method
-            this.getGame().getPlayerHashMap().
+            if (!this.getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).isDead()) {
+            	this.getGame().getPlayerHashMap().
             	get(getGame().getCurrentPlayerIndex()).surrender();
-            this.getGame().setAlivePlayerNumber(
-            		this.getGame().getAlivePlayerNumber() - 1);
-            this.getGameBoardView().updatePlayerDeath(
-            		this.getGame().getCurrentPlayerIndex());
+            	this.getGame().setAlivePlayerNumber(
+                		this.getGame().getAlivePlayerNumber() - 1);
+                this.getGameBoardView().updatePlayerDeath(
+                		this.getGame().getCurrentPlayerIndex());
+            }
+                    
             // handle the situation that the game is over
             if (this.getGame().getAlivePlayerNumber() == 1) {
             	this.getGameBoardViewTimer().cancel();
