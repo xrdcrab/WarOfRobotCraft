@@ -168,9 +168,9 @@ public class Game {
 //		}
 //	}
     private boolean areAllRobotsPlayed(Player currentPlayer) {
-        boolean scoutPlayed = currentPlayer.getScoutRobot().hasMoved() || currentPlayer.getScoutRobot().isDead();
-        boolean sniperPlayed = currentPlayer.getSniperRobot().hasMoved() || currentPlayer.getSniperRobot().isDead();
-        boolean tankPlayed = currentPlayer.getTankRobot().hasMoved() || currentPlayer.getTankRobot().isDead();
+        boolean scoutPlayed = currentPlayer.getScoutRobot().hasPlayed() || currentPlayer.getScoutRobot().isDead();
+        boolean sniperPlayed = currentPlayer.getSniperRobot().hasPlayed() || currentPlayer.getSniperRobot().isDead();
+        boolean tankPlayed = currentPlayer.getTankRobot().hasPlayed() || currentPlayer.getTankRobot().isDead();
 
         return scoutPlayed && sniperPlayed && tankPlayed;
     }
@@ -180,7 +180,7 @@ public class Game {
      */
     public void runPlay() {
         // end the current play
-        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 
         // enter the next play
         this.goNextPlayer();
@@ -192,17 +192,17 @@ public class Game {
 
         // it is a new turn
         if (areAllRobotsPlayed(currentPlayer)) {
-            currentPlayer.getScoutRobot().setHasMoved(false);
-            currentPlayer.getSniperRobot().setHasMoved(false);
-            currentPlayer.getTankRobot().setHasMoved(false);
+            currentPlayer.getScoutRobot().sethasPlayed(false);
+            currentPlayer.getSniperRobot().sethasPlayed(false);
+            currentPlayer.getTankRobot().sethasPlayed(false);
             currentPlayer.goNextRobot(this.getGameMap().getMapSize());
         }
 
         currentPlayer.getCurrentRobot().resetStatus();
 
 //            //if the current player's current robot has not moved
-//		if(!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().isHasMoved()){
-//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().setHasMoved(true);
+//		if(!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().ishasPlayed()){
+//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 //			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
 //			this.goNextPlayer();
 //		}

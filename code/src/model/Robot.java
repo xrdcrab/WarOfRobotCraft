@@ -59,7 +59,7 @@ public class Robot {
     /**
      * robot has moved in a play *
      */
-    private boolean hasMoved;
+    private boolean hasPlayed;
 
     /**
      * robot has shot in a play *
@@ -89,7 +89,7 @@ public class Robot {
             int movementPoint,
             Coordinate coord,
             int direction,
-            boolean hasMoved,
+            boolean hasPlayed,
             boolean hasShot,
             LinkedList<Coordinate> viewRangeList) {
 
@@ -100,7 +100,7 @@ public class Robot {
         this.movementPoint = movementPoint;
         this.coord = coord;
         this.direction = direction;
-        this.hasMoved = hasMoved;
+        this.hasPlayed = hasPlayed;
         this.hasShot = hasShot;
         this.viewRangeList = viewRangeList;
 
@@ -218,17 +218,17 @@ public class Robot {
     }
 
     /**
-     * @return the hasMoved boolean value
+     * @return the hasPlayed boolean value
      */
-    public boolean hasMoved() {
-        return hasMoved;
+    public boolean hasPlayed() {
+        return hasPlayed;
     }
 
     /**
-     * @param hasMoved the hasMoved to set
+     * @param hasPlayed the hasPlayed to set
      */
-    public void setHasMoved(boolean hasMoved) {
-        this.hasMoved = hasMoved;
+    public void sethasPlayed(boolean hasPlayed) {
+        this.hasPlayed = hasPlayed;
     }
 
     /**
