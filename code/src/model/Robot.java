@@ -220,7 +220,7 @@ public class Robot {
     /**
      * @return the hasPlayed boolean value
      */
-    public boolean hasPlayed() {
+    public boolean getHasPlayed() {
         return hasPlayed;
     }
 
@@ -234,7 +234,7 @@ public class Robot {
     /**
      * @return the hasShot boolean value
      */
-    public boolean hasShot() {
+    public boolean getHasShot() {
         return hasShot;
     }
 
