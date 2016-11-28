@@ -11,7 +11,7 @@ public class Map {
 	/** the size of any side of the map */
 	private int mapSize;
 
-	/** the coordinate list for the map */
+	/** the coordinate HashMap for the map */
 	//private LinkedList<Pair<Coordinate, Boolean>> coordinateList;
 	private HashMap<Coordinate, Boolean> coordinateMap;
 	
