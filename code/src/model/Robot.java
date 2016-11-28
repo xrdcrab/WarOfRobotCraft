@@ -220,7 +220,7 @@ public class Robot {
     /**
      * @return the hasMoved boolean value
      */
-    public boolean isHasMoved() {
+    public boolean hasMoved() {
         return hasMoved;
     }
 
@@ -234,7 +234,7 @@ public class Robot {
     /**
      * @return the hasShot boolean value
      */
-    public boolean isHasShot() {
+    public boolean hasShot() {
         return hasShot;
     }
 
