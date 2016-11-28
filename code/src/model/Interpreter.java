@@ -21,13 +21,25 @@ public class Interpreter {
 	 * @return stringList the linked list of words in that string
 	 */
 	private LinkedList<String> stringToList(String forthString) {
-		LinkedList<String> stringList 
-			= new LinkedList<String>();
+		LinkedList<String> stringList = new LinkedList<String>();
 
-		for ( String retriveString: forthString.split(" ") ) {
-			stringList.add( retriveString );
+		for ( String retriveString: forthString.split("\\s+") ) {
+				stringList.add( retriveString );		
 		}
 		
 		return stringList;
+	}
+	
+	/**
+	 * this main method is to test methods in the interpreter class
+	 * @param args should be not used
+	 */
+	public static void main(String args[]) {
+		
+		Interpreter interpreter = new Interpreter();
+		LinkedList<String> stringList = new LinkedList<String>();
+		for ( String str: interpreter.stringToList("hello        dutchyn	!  ")) {
+			System.out.println(str + '/');
+		}
 	}
 }
