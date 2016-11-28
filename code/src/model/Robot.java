@@ -351,6 +351,7 @@ public class Robot {
                     pair = new Pair<Coordinate, Integer>(
                             this.coord.getNewCoordinate(this.direction, distance, mapSize),
                             this.attackPoint);
+                    this.hasShot = true;
                 } catch (Exception e) {
                     throw new Exception("The shoot range is out of map range.");
                 }
