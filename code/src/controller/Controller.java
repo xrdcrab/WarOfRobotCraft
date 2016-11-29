@@ -435,22 +435,22 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     private void endPlayOperation() {
-        getGame().runPlay();
-        // update UI here
-        gameBoardView.updateOperationState("End Play");
-        gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
-        if (this.getGame().getAlivePlayerNumber() > 1){
-        	gameBoardView.updateCurrentRobot(
+    	// if the game is not over
+        if ( this.getGame().getAlivePlayerNumber() > 1 ) {
+        	// update the game model
+            getGame().runPlay();
+            
+            // update UI here
+        	gameBoardView.updateOperationState("End Play");
+            gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
+            gameBoardView.updateCurrentRobot(
                     game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
                             .getCurrentRobot().getType().toString()
             );
-        }
-//        gameBoardView.updateCurrentRobot(
-//                game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-//                        .getCurrentRobot().getType().toString()
-//        );
-        Controller.this.updateMist();
-        resetGameBoardViewTimer(20);
+            
+            Controller.this.updateMist();
+            resetGameBoardViewTimer(20);
+        } 
     }
 
     /**
