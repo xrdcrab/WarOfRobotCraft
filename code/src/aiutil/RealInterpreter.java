@@ -1,7 +1,5 @@
 package aiutil;
 
-
-
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -23,10 +21,9 @@ public class RealInterpreter {
     Dictionary<String, String> declarations = new Hashtable<String, String>();
     Stack<String> stack = new Stack<String>();
 
-
     private int define(String[] statement, int i) {
-    	i++;
-        String key = statement[i];        
+        i++;
+        String key = statement[i];
         String newStatement = "";
         for (i++; i < statement.length; i++) {
             newStatement += statement[i] + " ";
@@ -48,7 +45,7 @@ public class RealInterpreter {
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b - a) + "");
     }
-    
+
     private void multiply() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
@@ -64,48 +61,53 @@ public class RealInterpreter {
     private void duplicate() {
         stack.push(stack.peek());
     }
-    
-    private void drop(){
+
+    private void drop() {
         stack.pop();
     }
-    
-//  Basic operations <<<<< 
-    
-    private int omitComments(String[] statement, int i){
-    	if(statement[i].equals("")||statement[i].equals("\t")){
-    		i++;
-    	}
-    	Stack<String> parenthesesStack = new Stack<String>();    	
-//    	Push the first parentheses onto the stack 
-    	parenthesesStack.push(statement[i]);
-    	for(i++; i<statement.length; i++){
-    		if(statement[i].equals("(")){
-    			parenthesesStack.push("(");
-    		}
-    		else if(statement[i].equals(")")){
-    			parenthesesStack.pop();    			
-    		}
-    		if(parenthesesStack.isEmpty()){
-    			//i++;
-    			break;
-    		}
-    	}
-    	return i;
+
+    private void swap() {
+        String a = stack.pop();
+        String b = stack.pop();
+        stack.push(a);
+        stack.push(b);
     }
-    
+
+//  Basic operations <<<<< 
+    private int omitComments(String[] statement, int i) {
+        if (statement[i].equals("") || statement[i].equals("\t")) {
+            i++;
+        }
+        Stack<String> parenthesesStack = new Stack<String>();
+//    	Push the first parentheses onto the stack 
+        parenthesesStack.push(statement[i]);
+        for (i++; i < statement.length; i++) {
+            if (statement[i].equals("(")) {
+                parenthesesStack.push("(");
+            } else if (statement[i].equals(")")) {
+                parenthesesStack.pop();
+            }
+            if (parenthesesStack.isEmpty()) {
+                //i++;
+                break;
+            }
+        }
+        return i;
+    }
+
     private void runStatement(String[] statement) {
         for (int i = 0; i < statement.length; i++) {
-        	if(statement[i].equals("")||statement[i].equals("\t")){
-        		continue;
-        	};
+            if (statement[i].equals("") || statement[i].equals("\t")) {
+                continue;
+            };
             String s = statement[i];
             switch (s) {
 //            () means comments 
-            	case "(":
-            		i = omitComments(statement, i);
-            		break;
-            	case ")":
-            		break;            		
+                case "(":
+                    i = omitComments(statement, i);
+                    break;
+                case ")":
+                    break;
                 case ":":
                     i = define(statement, i);
                     break;
@@ -129,6 +131,9 @@ public class RealInterpreter {
                 case "drop":
                     drop();
                     break;
+                case "swap":
+                    swap();
+                    break;
                 default:
 //                	If no declaration in the dictionary, push onto stack without any action.
                     if (declarations.get(s) == null) {
@@ -150,7 +155,6 @@ public class RealInterpreter {
             System.out.println("");
         }
     }
-    
 
     private void setStrings() {
         lines.add("1 2 + ;"); // 3
@@ -171,6 +175,7 @@ public class RealInterpreter {
         lines.add(" : square dup * ;"); // 3 12 20 4
         lines.add(" square ; "); // 3 12 20 16
         lines.add(" drop ; "); // 3 12 20
+        lines.add(" swap ; "); // 3 20 12
     }
 
     public static void main(String[] args) {
