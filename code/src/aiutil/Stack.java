@@ -14,15 +14,21 @@ public class Stack {
 		this.elementNum = 0;
 	}
 
+	 
 	/**
 	 * this method is to do the pop action in the stack
+	 * @return popUpString the string that pop up
 	 */
-	public void pop () {
-		if ( !this.isEmpty() ) {
-			this.getStack().removeFirst();
+	public String pop () {
+		String popUpString = "";
+		
+		if ( !this.isEmpty() ) {			
+			popUpString = this.getStack().removeFirst();
 			this.setTopElement(this.getStack().getFirst());
 			this.setElementNum(this.getElementNum() - 1);
 		}
+		
+		return popUpString;
 	}
 	
 	/**
