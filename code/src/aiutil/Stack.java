@@ -2,21 +2,41 @@ package aiutil;
 
 import java.util.LinkedList;
 
+/**
+ * this class is to create a stack for the interpreter
+ * analyzing the semantics
+ */
 public class Stack {
 
 	private LinkedList<String> stack;
 	private String topElement;
 	private int elementNum;
 	
+	/**
+	 * this constructor is to construct a stack
+	 */
 	public Stack () {
 		this.stack = new LinkedList<String>();
 		this.topElement = "";
 		this.elementNum = 0;
 	}
 
-	 
+	/**
+	 * this method is to do the push action in the stack
+	 * 
+	 * @param pushedString the string that to be pushed
+	 */
+	public void push ( String pushedString ) {
+		if ( pushedString != null ) {
+			this.getStack().addFirst( pushedString );
+			this.setTopElement( this.getStack().getFirst() );
+			this.setElementNum( this.getElementNum() + 1 );
+		}
+	}
+	
 	/**
 	 * this method is to do the pop action in the stack
+	 * 
 	 * @return popUpString the string that pop up
 	 */
 	public String pop () {
@@ -24,8 +44,8 @@ public class Stack {
 		
 		if ( !this.isEmpty() ) {			
 			popUpString = this.getStack().removeFirst();
-			this.setTopElement(this.getStack().getFirst());
-			this.setElementNum(this.getElementNum() - 1);
+			this.setTopElement( this.getStack().getFirst() );
+			this.setElementNum( this.getElementNum() - 1 );
 		}
 		
 		return popUpString;
