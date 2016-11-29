@@ -439,10 +439,16 @@ public class Controller implements ActionListener, KeyListener {
         // update UI here
         gameBoardView.updateOperationState("End Play");
         gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
-        gameBoardView.updateCurrentRobot(
-                game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                        .getCurrentRobot().getType().toString()
-        );
+        if (this.getGame().getAlivePlayerNumber() > 1){
+        	gameBoardView.updateCurrentRobot(
+                    game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                            .getCurrentRobot().getType().toString()
+            );
+        }
+//        gameBoardView.updateCurrentRobot(
+//                game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+//                        .getCurrentRobot().getType().toString()
+//        );
         Controller.this.updateMist();
         resetGameBoardViewTimer(20);
     }
