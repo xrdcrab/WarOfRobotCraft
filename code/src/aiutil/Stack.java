@@ -21,6 +21,15 @@ public class Stack {
 	}
 	
 	/**
+	 * this method is to determine if the stack is null
+	 * 
+	 * @return true if the stack is null, otherwise false
+	 */
+	public boolean isEmpty() {
+		return ( this.stack == null );
+	}
+	
+	/**
 	 * @return the stack
 	 */
 	public LinkedList<String> getStack() {
