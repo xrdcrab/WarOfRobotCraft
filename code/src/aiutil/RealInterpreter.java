@@ -57,47 +57,64 @@ public class RealInterpreter {
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b / a) + "");
     }
-    
-    private void mod(){
+
+    private void mod() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b % a) + "");
     }
-    
-    private void lessThan(){
+
+    private void lessThan() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b < a) + "");
     }
-    
-    private void lessThanOrEqual(){
+
+    private void lessThanOrEqual() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b <= a) + "");
     }
-    
-    private void equal(){
+
+    private void equal() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b == a) + "");
     }
-    
-    private void notEqual(){
+
+    private void notEqual() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b != a) + "");
     }
-    
-    private void largerThanOrEqual(){
+
+    private void largerThanOrEqual() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b >= a) + "");
     }
-    
-    private void largerThan(){
+
+    private void largerThan() {
         Integer a = Integer.parseInt(stack.pop());
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b > a) + "");
+    }
+
+    private void and() {
+        Boolean a = Boolean.parseBoolean(stack.pop());
+        Boolean b = Boolean.parseBoolean(stack.pop());
+        stack.push((b && a) + "");
+    }
+
+    private void or() {
+        Boolean a = Boolean.parseBoolean(stack.pop());
+        Boolean b = Boolean.parseBoolean(stack.pop());
+        stack.push((b || a) + "");
+    }
+
+    private void invert() {
+        Boolean a = Boolean.parseBoolean(stack.pop());
+        stack.push(!a + "");
     }
 
     private void duplicate() {
@@ -188,6 +205,15 @@ public class RealInterpreter {
                 case ">":
                     largerThan();
                     break;
+                case "and":
+                    and();
+                    break;
+                case "or":
+                    or();
+                    break;
+                case "invert":
+                    invert();
+                    break;
                 case "dup":
                     duplicate();
                     break;
@@ -241,7 +267,9 @@ public class RealInterpreter {
         lines.add(" swap ; "); // 3 20 12
         lines.add(" % ; "); // 3 20 12
         lines.add(" 5 6 > 7 8 = 9 10 < 1 1 <> 2 2 <= 3 3 >= ; "); // 3 20 12
-        lines.add("drop drop drop drop drop drop");
+        lines.add("and ;");
+        lines.add("or ;");
+        lines.add("invert ;");
     }
 
     public static void main(String[] args) {
