@@ -64,6 +64,11 @@ public class RealInterpreter {
     private void duplicate() {
         stack.push(stack.peek());
     }
+    
+    private void drop(){
+        stack.pop();
+    }
+    
 //  Basic operations <<<<< 
     
     private int omitComments(String[] statement, int i){
@@ -121,6 +126,9 @@ public class RealInterpreter {
                 case "dup":
                     duplicate();
                     break;
+                case "drop":
+                    drop();
+                    break;
                 default:
 //                	If no declaration in the dictionary, push onto stack without any action.
                     if (declarations.get(s) == null) {
@@ -162,7 +170,7 @@ public class RealInterpreter {
         lines.add("t double ;"); // 3 12 20 4
         lines.add(" : square dup * ;"); // 3 12 20 4
         lines.add(" square ; "); // 3 12 20 16
-        
+        lines.add(" drop ; "); // 3 12 20
     }
 
     public static void main(String[] args) {
