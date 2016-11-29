@@ -63,6 +63,42 @@ public class RealInterpreter {
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b % a) + "");
     }
+    
+    private void lessThan(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b < a) + "");
+    }
+    
+    private void lessThanOrEqual(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b <= a) + "");
+    }
+    
+    private void equal(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b == a) + "");
+    }
+    
+    private void notEqual(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b != a) + "");
+    }
+    
+    private void largerThanOrEqual(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b >= a) + "");
+    }
+    
+    private void largerThan(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b > a) + "");
+    }
 
     private void duplicate() {
         stack.push(stack.peek());
@@ -134,6 +170,24 @@ public class RealInterpreter {
                 case "%":
                     mod();
                     break;
+                case "<":
+                    lessThan();
+                    break;
+                case "<=":
+                    lessThanOrEqual();
+                    break;
+                case "=":
+                    equal();
+                    break;
+                case "<>":
+                    notEqual();
+                    break;
+                case ">=":
+                    largerThanOrEqual();
+                    break;
+                case ">":
+                    largerThan();
+                    break;
                 case "dup":
                     duplicate();
                     break;
@@ -186,6 +240,8 @@ public class RealInterpreter {
         lines.add(" drop ; "); // 3 12 20
         lines.add(" swap ; "); // 3 20 12
         lines.add(" % ; "); // 3 20 12
+        lines.add(" 5 6 > 7 8 = 9 10 < 1 1 <> 2 2 <= 3 3 >= ; "); // 3 20 12
+        lines.add("drop drop drop drop drop drop");
     }
 
     public static void main(String[] args) {
