@@ -32,6 +32,25 @@ public class RealInterpreter {
 
         return i;
     }
+    
+    private int ifStatement(String[] statement, int i){
+        i++;
+        String trueStatement = "";
+        String falseStatement = "";
+        for(i++; i < statement.length && !statement[i].equals("else") && !statement[i].equals("then"); i++){
+            trueStatement += statement[i] + " ";
+        }
+        for(i++; i < statement.length && !statement[i].equals("then"); i++){
+            falseStatement += statement[i] + " ";
+        }
+        if(Boolean.parseBoolean(stack.pop())){
+            runStatement(trueStatement.split(" "));
+        } else {
+            runStatement(falseStatement.split(" "));
+        }
+        
+        return i;
+    }
 
 //    Basic operations >>>>>>
     private void add() {
@@ -116,7 +135,7 @@ public class RealInterpreter {
         Boolean a = Boolean.parseBoolean(stack.pop());
         stack.push(!a + "");
     }
-
+    
     private void duplicate() {
         stack.push(stack.peek());
     }
@@ -169,6 +188,9 @@ public class RealInterpreter {
                     break;
                 case ":":
                     i = define(statement, i);
+                    break;
+                case "if":
+                    i = ifStatement(statement, i);
                     break;
                 case ";":
                     return;
@@ -265,11 +287,12 @@ public class RealInterpreter {
         lines.add(" square ; "); // 3 12 20 16
         lines.add(" drop ; "); // 3 12 20
         lines.add(" swap ; "); // 3 20 12
-        lines.add(" % ; "); // 3 20 12
-        lines.add(" 5 6 > 7 8 = 9 10 < 1 1 <> 2 2 <= 3 3 >= ; "); // 3 20 12
-        lines.add("and ;");
-        lines.add("or ;");
-        lines.add("invert ;");
+        lines.add(" % ; "); // 3 8
+        lines.add(" 5 6 > 7 8 = 9 10 < 1 1 <> 2 2 <= 3 3 >= ; "); // 3 8 false false true false true true
+        lines.add("and ;"); // 3 8 false false true false true 
+        lines.add("or ;"); // 3 8 false false true true 
+        lines.add("invert ;"); // 3 8 false false true false
+        lines.add("if drop else drop drop then 0 ;");
     }
 
     public static void main(String[] args) {
