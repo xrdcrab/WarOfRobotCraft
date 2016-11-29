@@ -34,7 +34,6 @@ public class RealInterpreter {
     }
     
     private int ifStatement(String[] statement, int i){
-        i++;
         String trueStatement = "";
         String falseStatement = "";
         for(i++; i < statement.length && !statement[i].equals("else") && !statement[i].equals("then"); i++){
@@ -268,31 +267,36 @@ public class RealInterpreter {
     }
 
     private void setStrings() {
-        lines.add("1 2 + ;"); // 3
-        lines.add(": double dup + ;"); // 3
-        lines.add("2 ;"); // 3 2
-        lines.add("double ;"); // 3 4
-        lines.add("double ;"); // 3 8
-        lines.add(": triple dup double + ;"); // 3 8
-        lines.add("triple ;"); // 3 24
-        lines.add("12 ( this is a number ) - ;"); // 3 12
-        lines.add("5 ;"); // 3 12 5
-        lines.add(": quadruple double double ; "); // 3 12 5
-        lines.add(" ( This is a comment ) quadruple ( This is a comment ) ;"); // 3 12 20
-        lines.add(": *8 double quadruple ;"); // 3 12 20
-        lines.add(" ( : *8 double quadruple ) ;"); // 3 12 20
-        lines.add(": t 2 ;"); // 3 12 20
-        lines.add("t double ;"); // 3 12 20 4
-        lines.add(" : square dup * ;"); // 3 12 20 4
-        lines.add(" square ; "); // 3 12 20 16
-        lines.add(" drop ; "); // 3 12 20
-        lines.add(" swap ; "); // 3 20 12
-        lines.add(" % ; "); // 3 8
-        lines.add(" 5 6 > 7 8 = 9 10 < 1 1 <> 2 2 <= 3 3 >= ; "); // 3 8 false false true false true true
-        lines.add("and ;"); // 3 8 false false true false true 
-        lines.add("or ;"); // 3 8 false false true true 
-        lines.add("invert ;"); // 3 8 false false true false
-        lines.add("if drop else drop drop then 0 ;");
+        lines.add(": determineAdult 18 < if no else yes then ; ");
+        lines.add("20 determineAdult ; ");
+        lines.add("drop ;");
+        lines.add("12 determineAdult ; ");
+        
+//        lines.add("1 2 + ;"); // 3
+//        lines.add(": double dup + ;"); // 3
+//        lines.add("2 ;"); // 3 2
+//        lines.add("double ;"); // 3 4
+//        lines.add("double ;"); // 3 8
+//        lines.add(": triple dup double + ;"); // 3 8
+//        lines.add("triple ;"); // 3 24
+//        lines.add("12 ( this is a number ) - ;"); // 3 12
+//        lines.add("5 ;"); // 3 12 5
+//        lines.add(": quadruple double double ; "); // 3 12 5
+//        lines.add(" ( This is a comment ) quadruple ( This is a comment ) ;"); // 3 12 20
+//        lines.add(": *8 double quadruple ;"); // 3 12 20
+//        lines.add(" ( : *8 double quadruple ) ;"); // 3 12 20
+//        lines.add(": t 2 ;"); // 3 12 20
+//        lines.add("t double ;"); // 3 12 20 4
+//        lines.add(" : square dup * ;"); // 3 12 20 4
+//        lines.add(" square ; "); // 3 12 20 16
+//        lines.add(" drop ; "); // 3 12 20
+//        lines.add(" swap ; "); // 3 20 12
+//        lines.add(" % ; "); // 3 8
+//        lines.add(" 5 6 > 7 8 = 9 10 < 1 1 <> 2 2 <= 3 3 >= ; "); // 3 8 false false true false true true
+//        lines.add("and ;"); // 3 8 false false true false true 
+//        lines.add("or ;"); // 3 8 false false true true 
+//        lines.add("invert ;"); // 3 8 false false true false
+//        lines.add("if drop else drop drop then 0 ;");
     }
 
     public static void main(String[] args) {
