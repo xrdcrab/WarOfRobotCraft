@@ -57,6 +57,12 @@ public class RealInterpreter {
         Integer b = Integer.parseInt(stack.pop());
         stack.push((b / a) + "");
     }
+    
+    private void mod(){
+        Integer a = Integer.parseInt(stack.pop());
+        Integer b = Integer.parseInt(stack.pop());
+        stack.push((b % a) + "");
+    }
 
     private void duplicate() {
         stack.push(stack.peek());
@@ -125,6 +131,9 @@ public class RealInterpreter {
                 case "/":
                     divide();
                     break;
+                case "%":
+                    mod();
+                    break;
                 case "dup":
                     duplicate();
                     break;
@@ -176,6 +185,7 @@ public class RealInterpreter {
         lines.add(" square ; "); // 3 12 20 16
         lines.add(" drop ; "); // 3 12 20
         lines.add(" swap ; "); // 3 20 12
+        lines.add(" % ; "); // 3 20 12
     }
 
     public static void main(String[] args) {
