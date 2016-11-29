@@ -180,24 +180,44 @@ public class Game {
      */
     public void runPlay() {
         // end the current play
-        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
+    	if (this.getAlivePlayerNumber() > 1){
+    		this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 
-        // enter the next play
-        this.goNextPlayer();
-        Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
-        currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-
-        // it is a new turn
-        if (areAllRobotsPlayed(currentPlayer)) {
-            currentPlayer.getScoutRobot().sethasPlayed(false);
-            currentPlayer.getSniperRobot().sethasPlayed(false);
-            currentPlayer.getTankRobot().sethasPlayed(false);
+            // enter the next play
+            this.goNextPlayer();
+            Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
             currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-        }
-        
-        if ( currentPlayer != null && currentPlayer.getCurrentRobot() != null ) {
-        	currentPlayer.getCurrentRobot().resetStatus();
-        }
+
+            // it is a new turn
+            if (areAllRobotsPlayed(currentPlayer)) {
+                currentPlayer.getScoutRobot().sethasPlayed(false);
+                currentPlayer.getSniperRobot().sethasPlayed(false);
+                currentPlayer.getTankRobot().sethasPlayed(false);
+                currentPlayer.goNextRobot(this.getGameMap().getMapSize());
+            }
+            
+            if ( currentPlayer != null && currentPlayer.getCurrentRobot() != null ) {
+            	currentPlayer.getCurrentRobot().resetStatus();
+            }
+    	}
+//        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
+//
+//        // enter the next play
+//        this.goNextPlayer();
+//        Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
+//        currentPlayer.goNextRobot(this.getGameMap().getMapSize());
+//
+//        // it is a new turn
+//        if (areAllRobotsPlayed(currentPlayer)) {
+//            currentPlayer.getScoutRobot().sethasPlayed(false);
+//            currentPlayer.getSniperRobot().sethasPlayed(false);
+//            currentPlayer.getTankRobot().sethasPlayed(false);
+//            currentPlayer.goNextRobot(this.getGameMap().getMapSize());
+//        }
+//        
+//        if ( currentPlayer != null && currentPlayer.getCurrentRobot() != null ) {
+//        	currentPlayer.getCurrentRobot().resetStatus();
+//        }
         
 
 //            //if the current player's current robot has not moved
