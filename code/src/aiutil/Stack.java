@@ -5,18 +5,23 @@ import java.util.LinkedList;
 public class Stack {
 
 	private LinkedList<String> stack;
-	private String firtElement;
+	private String topElement;
 	private int elementNum;
 	
 	public Stack () {
 		this.stack = new LinkedList<String>();
-		this.firtElement = "";
+		this.topElement = "";
 		this.elementNum = 0;
 	}
 
+	/**
+	 * this method is to do the pop action in the stack
+	 */
 	public void pop () {
-		if ( this.getStack() != null ) {
-			
+		if ( !this.isEmpty() ) {
+			this.getStack().removeFirst();
+			this.setTopElement(this.getStack().getFirst());
+			this.setElementNum(this.getElementNum() - 1);
 		}
 	}
 	
@@ -44,17 +49,17 @@ public class Stack {
 	}
 
 	/**
-	 * @return the firtElement
+	 * @return the topElement
 	 */
-	public String getFirtElement() {
-		return firtElement;
+	public String getTopElement() {
+		return topElement;
 	}
 
 	/**
-	 * @param firtElement the firtElement to set
+	 * @param topElement the topElement to set
 	 */
-	public void setFirtElement(String firtElement) {
-		this.firtElement = firtElement;
+	public void setTopElement(String topElement) {
+		this.topElement = topElement;
 	}
 
 	/**
