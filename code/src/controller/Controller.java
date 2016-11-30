@@ -451,6 +451,19 @@ public class Controller implements ActionListener, KeyListener {
             Controller.this.updateMist();
             resetGameBoardViewTimer(20);
         } 
+        else if ( this.getGame().getAlivePlayerNumber() == 1 ) {
+        	// update the game model
+            getGame().runPlay();
+        	// show the winner, update UI here
+            gameBoardView.updateCurrentPlayer(game.winnerPlayerIndex);
+            gameBoardView.updateOperationState(game.winnerPlayerIndex + "You Win!");
+            gameBoardView.updateCurrentRobot(
+                    game.getPlayerHashMap().get(getGame().winnerPlayerIndex)
+                            .getCurrentRobot().getType().toString()
+            );
+            
+            Controller.this.updateWinnerMist();
+		}
     }
 
     /**
@@ -651,6 +664,32 @@ public class Controller implements ActionListener, KeyListener {
         currentPlayer.updateViewRange();
         // Call the method to update the coordinateMap class in Map class
         this.getGame().getGameMap().updateMist(currentPlayer);
+
+        // Fetch the coordinateMap from map class. 
+        rangeMap = this.getGame().getGameMap().getCoordinateMap();
+
+        // convert rangeMap into a HashMap of <String, Boolean> pair.
+        HashMap<String, Boolean> rangeStringBoolMap = new HashMap<String, Boolean>();
+        rangeMap.forEach((coord, isVisible) -> {
+            rangeStringBoolMap.put(coord.toString(), isVisible);
+        });
+
+        //Call updateMist method of GameBoardView class using new rangeStringBoolMap as parameter.     	
+        this.getGameBoardView().updateMist(rangeStringBoolMap);
+    }
+    
+    /**
+     * This method is a helper function to update the mist of the game board.
+     */
+    private void updateWinnerMist() {
+        // Get the winner view range list.
+        HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
+        Player winnerPlayer = this.getGame().getPlayerHashMap().get(this.getGame().winnerPlayerIndex);
+
+        // Update the current player's mist range.     
+        winnerPlayer.updateViewRange();
+        // Call the method to update the coordinateMap class in Map class
+        this.getGame().getGameMap().updateMist(winnerPlayer);
 
         // Fetch the coordinateMap from map class. 
         rangeMap = this.getGame().getGameMap().getCoordinateMap();
