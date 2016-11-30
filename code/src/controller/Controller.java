@@ -472,15 +472,29 @@ public class Controller implements ActionListener, KeyListener {
      * @param direction
      */
     private void turnOperation(int direction) {
-        int currentPlayerPosition = getGame().getCurrentPlayerIndex();
-        Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
-        currentPlayer.getCurrentRobot().turn(direction);
-        //update UI here
-        gameBoardView.updateRobotTurned(
-                currentPlayerPosition,
-                currentPlayer.getCurrentRobot().getType().toString(),
-                currentPlayer.getCurrentRobot().getDirection()
-        );
+    	if (this.getGame().getAlivePlayerNumber() == 1) {
+			// do nothing
+		}
+    	else {
+    		int currentPlayerPosition = getGame().getCurrentPlayerIndex();
+            Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+            currentPlayer.getCurrentRobot().turn(direction);
+            //update UI here
+            gameBoardView.updateRobotTurned(
+                    currentPlayerPosition,
+                    currentPlayer.getCurrentRobot().getType().toString(),
+                    currentPlayer.getCurrentRobot().getDirection()
+            );
+		}
+//        int currentPlayerPosition = getGame().getCurrentPlayerIndex();
+//        Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+//        currentPlayer.getCurrentRobot().turn(direction);
+//        //update UI here
+//        gameBoardView.updateRobotTurned(
+//                currentPlayerPosition,
+//                currentPlayer.getCurrentRobot().getType().toString(),
+//                currentPlayer.getCurrentRobot().getDirection()
+//        );
     }
 
     /**
@@ -489,70 +503,138 @@ public class Controller implements ActionListener, KeyListener {
      * @param shootDistance
      */
     private void shootOperation(int shootDistance) {
-        Pair<Coordinate, Integer> pair = null;
-        try {
-            pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                    .getCurrentRobot().shoot(shootDistance, getGame().getGameMap().getMapSize());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-//        if (pair == null) System.out.println(pair + "is null");
-//        else {
-//        	System.out.println(pair.getKey().toString());
-//        }
-//        System.out.println("shoot");
-        LinkedList<Pair<Integer, String>> deadRobotList 
-        				= getGame().updateGameShootDamaged(pair);
-//        if ( getGame().updateGameShootDead(pair) != null )
-//        	System.out.println("robot dead");
-//        System.out.println(getGame().updateGameShootDead(pair).size());	
-        //update UI here
-        if ( deadRobotList != null ) {
-        	for (Pair<Integer, String> deadRobot : deadRobotList) {
-            	getGameBoardView().updateRobotDestruction(
-            			deadRobot.getKey(), deadRobot.getValue());
-
-            	System.out.println("the dead robot is:" +deadRobot.getKey() + deadRobot.getValue().toString());
+    	if (this.getGame().getAlivePlayerNumber() == 1) {
+			// do nothing
+		}
+    	else {
+    		Pair<Coordinate, Integer> pair = null;
+            try {
+                pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                        .getCurrentRobot().shoot(shootDistance, getGame().getGameMap().getMapSize());
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        }
-        
-        this.updateMist();
+//            if (pair == null) System.out.println(pair + "is null");
+//            else {
+//            	System.out.println(pair.getKey().toString());
+//            }
+//            System.out.println("shoot");
+            LinkedList<Pair<Integer, String>> deadRobotList 
+            				= getGame().updateGameShootDamaged(pair);
+//            if ( getGame().updateGameShootDead(pair) != null )
+//            	System.out.println("robot dead");
+//            System.out.println(getGame().updateGameShootDead(pair).size());	
+            //update UI here
+            if ( deadRobotList != null ) {
+            	for (Pair<Integer, String> deadRobot : deadRobotList) {
+                	getGameBoardView().updateRobotDestruction(
+                			deadRobot.getKey(), deadRobot.getValue());
+
+                	System.out.println("the dead robot is:" +deadRobot.getKey() + deadRobot.getValue().toString());
+                }
+            }
+            
+            this.updateMist();
+		}
+//        Pair<Coordinate, Integer> pair = null;
+//        try {
+//            pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+//                    .getCurrentRobot().shoot(shootDistance, getGame().getGameMap().getMapSize());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+////        if (pair == null) System.out.println(pair + "is null");
+////        else {
+////        	System.out.println(pair.getKey().toString());
+////        }
+////        System.out.println("shoot");
+//        LinkedList<Pair<Integer, String>> deadRobotList 
+//        				= getGame().updateGameShootDamaged(pair);
+////        if ( getGame().updateGameShootDead(pair) != null )
+////        	System.out.println("robot dead");
+////        System.out.println(getGame().updateGameShootDead(pair).size());	
+//        //update UI here
+//        if ( deadRobotList != null ) {
+//        	for (Pair<Integer, String> deadRobot : deadRobotList) {
+//            	getGameBoardView().updateRobotDestruction(
+//            			deadRobot.getKey(), deadRobot.getValue());
+//
+//            	System.out.println("the dead robot is:" +deadRobot.getKey() + deadRobot.getValue().toString());
+//            }
+//        }
+//        
+//        this.updateMist();
     }
 
     /**
      * this method is a helper function for robot move
      */
     private void moveOperation() {
-        try {
-            if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                    != null) {
-                System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString() + " of player " + getGame().getCurrentPlayerIndex());
-            }
-            try {
-                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-                        .getCurrentRobot().move(
-                                getGame().getGameMap().getMapSize());
-            } catch (Exception e) { //move out of range exception.
-                // Do Nothing
-            }
+    	if (this.getGame().getAlivePlayerNumber() == 1) {
+			// do nothing
+		}
+    	else {
+    		try {
+                if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                        != null) {
+                    System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString() + " of player " + getGame().getCurrentPlayerIndex());
+                }
+                try {
+                    getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+                            .getCurrentRobot().move(
+                                    getGame().getGameMap().getMapSize());
+                } catch (Exception e) { //move out of range exception.
+                    // Do Nothing
+                }
 
-        } catch (Exception e1) {
-            e1.printStackTrace();
-        }
-        // update the game after the move action
-        getGame().updateGameMove(
-                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
-        Controller.this.updateMist();
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+            // update the game after the move action
+            getGame().updateGameMove(
+                    getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+            Controller.this.updateMist();
 
-        // update UI
-        gameBoardView.updateOperationState("Move");
-        Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
-        Robot currentRobot = currentPlayer.getCurrentRobot();
-        gameBoardView.updateRobotLocation(
-                getGame().getCurrentPlayerIndex(),
-                currentRobot.getType().toString(),
-                currentRobot.getCoord().toString()
-        );
+            // update UI
+            gameBoardView.updateOperationState("Move");
+            Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+            Robot currentRobot = currentPlayer.getCurrentRobot();
+            gameBoardView.updateRobotLocation(
+                    getGame().getCurrentPlayerIndex(),
+                    currentRobot.getType().toString(),
+                    currentRobot.getCoord().toString()
+            );
+		}
+//        try {
+//            if (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+//                    != null) {
+//                System.out.println("current robot is " + getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString() + " of player " + getGame().getCurrentPlayerIndex());
+//            }
+//            try {
+//                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+//                        .getCurrentRobot().move(
+//                                getGame().getGameMap().getMapSize());
+//            } catch (Exception e) { //move out of range exception.
+//                // Do Nothing
+//            }
+//
+//        } catch (Exception e1) {
+//            e1.printStackTrace();
+//        }
+//        // update the game after the move action
+//        getGame().updateGameMove(
+//                getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
+//        Controller.this.updateMist();
+//
+//        // update UI
+//        gameBoardView.updateOperationState("Move");
+//        Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+//        Robot currentRobot = currentPlayer.getCurrentRobot();
+//        gameBoardView.updateRobotLocation(
+//                getGame().getCurrentPlayerIndex(),
+//                currentRobot.getType().toString(),
+//                currentRobot.getCoord().toString()
+//        );
     }
 
     /**
