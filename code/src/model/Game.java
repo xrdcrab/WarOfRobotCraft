@@ -80,7 +80,7 @@ public class Game {
         this.gameMap = new Map(this.playerNumToMapSize(playerNumber));
         this.currentPlayerIndex = 0;
         this.alivePlayerNumber = this.playerNumber;
-        this.winnerPlayerIndex = -1;
+        this.winnerPlayerIndex = 99;
     }
 
     /**
