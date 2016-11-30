@@ -183,7 +183,8 @@ public class Game {
     }
 
     /**
-     *
+     * this method will run the game in the data level,
+     * update current robot, current plater and determine the winner.
      */
     public void runPlay() {
         // end the current play if more than one player alive
@@ -210,6 +211,7 @@ public class Game {
     	// end the game if only one player alive
     	else if (this.getAlivePlayerNumber() == 1){
 			// find the winner
+    		// case 1: 2 players in the game
     		if (this.getPlayerNumber() == 2) {
 				if ( !this.getPlayerHashMap().get(0).isDead() ) {
 					this.winnerPlayerIndex = 0;
@@ -218,6 +220,7 @@ public class Game {
 					this.winnerPlayerIndex = 3;
 				}
 			}
+    		// case 2: 3 players in the game
     		else if (this.getPlayerNumber() == 3) {
     			if ( !this.getPlayerHashMap().get(0).isDead() ) {
 					this.winnerPlayerIndex = 0;
@@ -229,6 +232,7 @@ public class Game {
 					this.winnerPlayerIndex = 4;
 				}
 			}
+    		// case 3: 6 players in the game
     		else if (this.getPlayerNumber() == 6) {
     			if ( !this.getPlayerHashMap().get(0).isDead() ) {
 					this.winnerPlayerIndex = 0;
@@ -251,36 +255,6 @@ public class Game {
 			}
             System.out.println("the winner is: player " + this.winnerPlayerIndex);
 		}
-//        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
-//
-//        // enter the next play
-//        this.goNextPlayer();
-//        Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
-//        currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-//
-//        // it is a new turn
-//        if (areAllRobotsPlayed(currentPlayer)) {
-//            currentPlayer.getScoutRobot().sethasPlayed(false);
-//            currentPlayer.getSniperRobot().sethasPlayed(false);
-//            currentPlayer.getTankRobot().sethasPlayed(false);
-//            currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-//        }
-//        
-//        if ( currentPlayer != null && currentPlayer.getCurrentRobot() != null ) {
-//        	currentPlayer.getCurrentRobot().resetStatus();
-//        }
-        
-
-//            //if the current player's current robot has not moved
-//		if(!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().ishasPlayed()){
-//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
-//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
-//			this.goNextPlayer();
-//		}
-//		//else if the current player's current robot has moved, end this turn. 
-//		else{
-//			
-//		}
     }
 
     /**
