@@ -38,6 +38,11 @@ public class Game {
      * the number of alive player
      */
     private int alivePlayerNumber;
+    
+    /**
+     * the winner player index
+     */
+    public int winnerPlayerIndex;
 
     /**
      * @param playerHashMap
@@ -47,7 +52,7 @@ public class Game {
      */
     public Game(HashMap<Integer, Player> playerHashMap,
             int playerNumber, int currentPlayer,
-            Map map, int alivePlayerNumber) {
+            Map map, int alivePlayerNumber, int winnerPlayerIndex) {
         super();
 
         this.playerNumber = playerNumber;
@@ -55,6 +60,7 @@ public class Game {
         this.currentPlayerIndex = currentPlayer;
         this.gameMap = map;
         this.alivePlayerNumber = alivePlayerNumber;
+        this.winnerPlayerIndex = winnerPlayerIndex;
     }
 
     /**
@@ -74,6 +80,7 @@ public class Game {
         this.gameMap = new Map(this.playerNumToMapSize(playerNumber));
         this.currentPlayerIndex = 0;
         this.alivePlayerNumber = this.playerNumber;
+        this.winnerPlayerIndex = -1;
     }
 
     /**
@@ -146,7 +153,7 @@ public class Game {
         		}
         	}
         	while (this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead());
-    	}   	
+    	}
     }
     
     /**
@@ -179,7 +186,7 @@ public class Game {
      *
      */
     public void runPlay() {
-        // end the current play
+        // end the current play if more than one player alive
     	if (this.getAlivePlayerNumber() > 1){
     		this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 
@@ -200,6 +207,50 @@ public class Game {
             	currentPlayer.getCurrentRobot().resetStatus();
             }
     	}
+    	// end the game if only one player alive
+    	else if (this.getAlivePlayerNumber() == 1){
+			// find the winner
+    		if (this.getPlayerNumber() == 2) {
+				if ( !this.getPlayerHashMap().get(0).isDead() ) {
+					this.winnerPlayerIndex = 0;
+				}
+				else {
+					this.winnerPlayerIndex = 3;
+				}
+			}
+    		else if (this.getPlayerNumber() == 3) {
+    			if ( !this.getPlayerHashMap().get(0).isDead() ) {
+					this.winnerPlayerIndex = 0;
+				}
+				else if ( !this.getPlayerHashMap().get(2).isDead() ){
+					this.winnerPlayerIndex = 2;
+				}
+				else {
+					this.winnerPlayerIndex = 4;
+				}
+			}
+    		else if (this.getPlayerNumber() == 6) {
+    			if ( !this.getPlayerHashMap().get(0).isDead() ) {
+					this.winnerPlayerIndex = 0;
+				}
+				else if ( !this.getPlayerHashMap().get(1).isDead() ){
+					this.winnerPlayerIndex = 1;
+				}
+				else if ( !this.getPlayerHashMap().get(2).isDead() ){
+					this.winnerPlayerIndex = 2;
+				}
+				else if ( !this.getPlayerHashMap().get(3).isDead() ){
+					this.winnerPlayerIndex = 3;
+				}
+				else if ( !this.getPlayerHashMap().get(4).isDead() ){
+					this.winnerPlayerIndex = 4;
+				}
+				else {
+					this.winnerPlayerIndex = 5;
+				}
+			}
+            System.out.println("the winner is: player " + this.winnerPlayerIndex);
+		}
 //        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 //
 //        // enter the next play
