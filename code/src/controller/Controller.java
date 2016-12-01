@@ -142,8 +142,7 @@ public class Controller implements ActionListener, KeyListener {
     }
 
     /**
-     * this method is to add listener for all buttons (m, s, t, 0, 1, 2, 3, 4,
-     * 5)
+     * this method is to add listener for all buttons (m, s, t, 0, 1, 2, 3, 4, 5)
      */
     private void addListener() {
         this.getGameStartView().getExitButton().addActionListener(this);
@@ -396,8 +395,7 @@ public class Controller implements ActionListener, KeyListener {
                 		this.getGame().getAlivePlayerNumber() - 1);
                 this.getGameBoardView().updatePlayerDeath(
                 		this.getGame().getCurrentPlayerIndex());
-            }
-                    
+            }      
             // handle the situation that the game is over
             if (this.getGame().getAlivePlayerNumber() == 1) {
             	this.getGameBoardViewTimer().cancel();
@@ -413,7 +411,11 @@ public class Controller implements ActionListener, KeyListener {
         this.getGameBoardView().getHomeButton().addActionListener(this);
         this.getGameBoardView().getGiveUpButton().addActionListener(this);
     }
-
+    
+    /**
+     * this method will reset the internal timer
+     * @param countDwon, the time limit
+     */
     private void resetGameBoardViewTimer(int countDwon) {
         gameBoardViewTimer.cancel();
         gameBoardViewTimer = new Timer();
@@ -434,6 +436,10 @@ public class Controller implements ActionListener, KeyListener {
         }, 0, 1000);
     }
 
+    /**
+     * this method define the action of end play.
+     * It also show the winner name if the game is over.
+     */
     private void endPlayOperation() {
     	// if the game is not over
         if ( this.getGame().getAlivePlayerNumber() > 1 ) {
