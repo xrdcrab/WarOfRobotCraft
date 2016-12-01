@@ -157,24 +157,6 @@ public class Game {
     	}
     }
     
-    /**
-     * this method is to run a play
-     */
-//	public void runPlay() {
-//
-//		while ( this.getAlivePlayerNum() > 1 ) {
-//			if ( !this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead() ) {
-//				try {
-//					this.wait();
-//				} catch (InterruptedException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//			}
-//			
-//			this.goNextPlayer();
-//		}
-//	}
     
     /**
      * this method is a helper function to determine
