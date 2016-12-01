@@ -1,0 +1,11 @@
+Date: Nov 29, 2016 16:35 - 16:50 
+Location: Spinks S342
+Names of attendants: Chen Fu, Jiahuan He, Ruida Xie, Shisong Wang, Chen Yang
+Topic: information transfer
+Caller: TA
+Moderator: Jiahuan He
+Secretary: Ruida Xie
+	
+1. TA suggests that we'd better have a place in our board showing all robots status.
+2. Shisong and Jiahuan will write interpreter, Chen Fu will take responsibility for the last GUI.
+3. Ruida and Chen Yang will write the last part.
