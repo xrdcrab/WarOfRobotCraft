@@ -219,49 +219,39 @@ public class Game {
 				}
 				else {
 					this.setWinnerPlayerIndex(3);
-					//this.winnerPlayerIndex = 3;
 				}
 			}
     		// case 2: 3 players in the game
     		else if (this.getPlayerNumber() == 3) {
     			if ( !this.getPlayerHashMap().get(0).isDead() ) {
     				this.setWinnerPlayerIndex(0);
-					//this.winnerPlayerIndex = 0;
 				}
 				else if ( !this.getPlayerHashMap().get(2).isDead() ){
 					this.setWinnerPlayerIndex(2);
-					//this.winnerPlayerIndex = 2;
 				}
 				else {
 					this.setWinnerPlayerIndex(4);
-					//this.winnerPlayerIndex = 4;
 				}
 			}
     		// case 3: 6 players in the game
     		else if (this.getPlayerNumber() == 6) {
     			if ( !this.getPlayerHashMap().get(0).isDead() ) {
     				this.setWinnerPlayerIndex(0);
-					//this.winnerPlayerIndex = 0;
 				}
 				else if ( !this.getPlayerHashMap().get(1).isDead() ){
 					this.setWinnerPlayerIndex(1);
-					//this.winnerPlayerIndex = 1;
 				}
 				else if ( !this.getPlayerHashMap().get(2).isDead() ){
 					this.setWinnerPlayerIndex(2);
-					//this.winnerPlayerIndex = 2;
 				}
 				else if ( !this.getPlayerHashMap().get(3).isDead() ){
 					this.setWinnerPlayerIndex(3);
-					//this.winnerPlayerIndex = 3;
 				}
 				else if ( !this.getPlayerHashMap().get(4).isDead() ){
 					this.setWinnerPlayerIndex(4);
-					//this.winnerPlayerIndex = 4;
 				}
 				else {
 					this.setWinnerPlayerIndex(5);
-					//this.winnerPlayerIndex = 5;
 				}
 			}
             System.out.println("the winner is: player " + this.getWinnerPlayerIndex());
