@@ -175,6 +175,13 @@ public class Game {
 //			this.goNextPlayer();
 //		}
 //	}
+    
+    /**
+     * this method is a helper function to determine
+     * whether all robots of one player are played.
+     * @param currentPlayer
+     * @return true if all robots are played.
+     */
     private boolean areAllRobotsPlayed(Player currentPlayer) {
         boolean scoutPlayed = currentPlayer.getScoutRobot().getHasPlayed() || currentPlayer.getScoutRobot().isDead();
         boolean sniperPlayed = currentPlayer.getSniperRobot().getHasPlayed() || currentPlayer.getSniperRobot().isDead();
@@ -259,10 +266,10 @@ public class Game {
     }
 
     /**
-     * this method is to update the game when player perform actions: move or
-     * shoot
-     *
-     * @param pair the the pair that
+     * this method is to update the game when player perform actions: 
+     * move or shoot
+     * @param pair the the pair that contains dead robot information
+     * @return LinkedList<Pair<Integer, String>> a linked list of pair
      */
     public LinkedList<Pair<Integer, String>> updateGameShootDamaged(Pair<Coordinate, Integer> pair) {
     	LinkedList<Pair<Integer, String>> deadRobotList
