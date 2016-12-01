@@ -455,10 +455,10 @@ public class Controller implements ActionListener, KeyListener {
         	// update the game model
             getGame().runPlay();
         	// show the winner, update UI here
-            gameBoardView.updateCurrentPlayer(game.winnerPlayerIndex);
-            gameBoardView.updateOperationState("Player " + game.winnerPlayerIndex + "is the winner!");
+            gameBoardView.updateCurrentPlayer(game.getWinnerPlayerIndex());
+            gameBoardView.updateOperationState("Player " + game.getWinnerPlayerIndex() + "is the winner!");
             gameBoardView.updateCurrentRobot(
-                    game.getPlayerHashMap().get(getGame().winnerPlayerIndex)
+                    game.getPlayerHashMap().get(getGame().getWinnerPlayerIndex())
                             .getCurrentRobot().getType().toString()
             );
             
