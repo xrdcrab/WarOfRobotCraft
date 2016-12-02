@@ -2,10 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/Users/chen/Downloads/java-json.jar"/>
-	<classpathentry kind="lib" path="/Users/chen/Downloads/httpcomponents-client-4.5-3.2/lib/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/chen/Downloads/httpcomponents-client-4.5-3.2/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="/Users/chen/Downloads/json-simple.jar"/>
-	<classpathentry kind="lib" path="/Users/chen/Downloads/commons-io-2.5/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/chen/git/370-16A3/code/src/externalLibrary/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/chen/git/370-16A3/code/src/externalLibrary/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/chen/git/370-16A3/code/src/externalLibrary/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="/Users/chen/git/370-16A3/code/src/externalLibrary/java-json.jar"/>
+	<classpathentry kind="lib" path="/Users/chen/git/370-16A3/code/src/externalLibrary/json-simple.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
