@@ -32,404 +32,435 @@ public class GameBoardView7 extends javax.swing.JFrame {
 
         homeButton = new javax.swing.JButton();
         gameBoardPanel7 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel73 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
-        jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
-        jLabel83 = new javax.swing.JLabel();
-        jLabel84 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel105 = new javax.swing.JLabel();
-        jLabel106 = new javax.swing.JLabel();
-        jLabel107 = new javax.swing.JLabel();
-        jLabel108 = new javax.swing.JLabel();
-        jLabel109 = new javax.swing.JLabel();
-        jLabel110 = new javax.swing.JLabel();
-        jLabel111 = new javax.swing.JLabel();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel113 = new javax.swing.JLabel();
-        jLabel114 = new javax.swing.JLabel();
-        jLabel115 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel117 = new javax.swing.JLabel();
-        jLabel118 = new javax.swing.JLabel();
-        jLabel119 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
+        z0z0z0 = new javax.swing.JLabel();
+        n1p1z0 = new javax.swing.JLabel();
+        n2p2z0 = new javax.swing.JLabel();
+        n3p3z0 = new javax.swing.JLabel();
+        n4p4z0 = new javax.swing.JLabel();
+        n5p5z0 = new javax.swing.JLabel();
+        n6p6z0 = new javax.swing.JLabel();
+        p1n1z0 = new javax.swing.JLabel();
+        p2n2z0 = new javax.swing.JLabel();
+        p3n3z0 = new javax.swing.JLabel();
+        p4n4z0 = new javax.swing.JLabel();
+        p5n5z0 = new javax.swing.JLabel();
+        p6n6z0 = new javax.swing.JLabel();
+        p6n4n1 = new javax.swing.JLabel();
+        p5n4n1 = new javax.swing.JLabel();
+        p4n3n1 = new javax.swing.JLabel();
+        p3n2n1 = new javax.swing.JLabel();
+        p2n1n1 = new javax.swing.JLabel();
+        p1z0n1 = new javax.swing.JLabel();
+        z0p1n1 = new javax.swing.JLabel();
+        n1p2n1 = new javax.swing.JLabel();
+        n2p3n1 = new javax.swing.JLabel();
+        n3p4n1 = new javax.swing.JLabel();
+        n4p5n1 = new javax.swing.JLabel();
+        n5p6n1 = new javax.swing.JLabel();
+        n4p6n2 = new javax.swing.JLabel();
+        n3p5n2 = new javax.swing.JLabel();
+        n2p4n2 = new javax.swing.JLabel();
+        n1p3n2 = new javax.swing.JLabel();
+        z0p2n2 = new javax.swing.JLabel();
+        p1p1n2 = new javax.swing.JLabel();
+        p2z0n2 = new javax.swing.JLabel();
+        p3n1n2 = new javax.swing.JLabel();
+        p4n2n2 = new javax.swing.JLabel();
+        p5n3n2 = new javax.swing.JLabel();
+        p6n4n2 = new javax.swing.JLabel();
+        p6n3n3 = new javax.swing.JLabel();
+        p5n2n3 = new javax.swing.JLabel();
+        p4n1n3 = new javax.swing.JLabel();
+        p3z0n3 = new javax.swing.JLabel();
+        p2p1n3 = new javax.swing.JLabel();
+        p1p2n3 = new javax.swing.JLabel();
+        z0p3n3 = new javax.swing.JLabel();
+        n1p4n3 = new javax.swing.JLabel();
+        n2p5n3 = new javax.swing.JLabel();
+        n3p6n3 = new javax.swing.JLabel();
+        n2p6n4 = new javax.swing.JLabel();
+        n1p5n4 = new javax.swing.JLabel();
+        z0p4n4 = new javax.swing.JLabel();
+        p1p3n4 = new javax.swing.JLabel();
+        p2p2n4 = new javax.swing.JLabel();
+        p3p1n4 = new javax.swing.JLabel();
+        p4z0n4 = new javax.swing.JLabel();
+        p5n1n4 = new javax.swing.JLabel();
+        p6n2n4 = new javax.swing.JLabel();
+        p6n1n5 = new javax.swing.JLabel();
+        p5z0n5 = new javax.swing.JLabel();
+        p4p1n5 = new javax.swing.JLabel();
+        p3p2n5 = new javax.swing.JLabel();
+        p2p3n5 = new javax.swing.JLabel();
+        p1p4n5 = new javax.swing.JLabel();
+        z0p5n5 = new javax.swing.JLabel();
+        n1p6n5 = new javax.swing.JLabel();
+        z0p6n6 = new javax.swing.JLabel();
+        p1p5n6 = new javax.swing.JLabel();
+        p2p4n6 = new javax.swing.JLabel();
+        p3p3n6 = new javax.swing.JLabel();
+        p4p2n6 = new javax.swing.JLabel();
+        p5p1n6 = new javax.swing.JLabel();
+        p6z0n6 = new javax.swing.JLabel();
+        p5n6p1 = new javax.swing.JLabel();
+        p4n5p1 = new javax.swing.JLabel();
+        p3n4p1 = new javax.swing.JLabel();
+        p2n3p1 = new javax.swing.JLabel();
+        p1n2p1 = new javax.swing.JLabel();
+        z0n1p1 = new javax.swing.JLabel();
+        n1z0p1 = new javax.swing.JLabel();
+        n2p1p1 = new javax.swing.JLabel();
+        n3p2p1 = new javax.swing.JLabel();
+        n4p3p1 = new javax.swing.JLabel();
+        n5p4p1 = new javax.swing.JLabel();
+        n6p5p1 = new javax.swing.JLabel();
+        n6p4p2 = new javax.swing.JLabel();
+        n5p3p2 = new javax.swing.JLabel();
+        n4p2p2 = new javax.swing.JLabel();
+        n3p1p2 = new javax.swing.JLabel();
+        n2z0p2 = new javax.swing.JLabel();
+        n1n1p2 = new javax.swing.JLabel();
+        z0n2p2 = new javax.swing.JLabel();
+        p1n3p2 = new javax.swing.JLabel();
+        p2n4p2 = new javax.swing.JLabel();
+        p3n5p2 = new javax.swing.JLabel();
+        p4n6p2 = new javax.swing.JLabel();
+        p3n5p3 = new javax.swing.JLabel();
+        p2n4p3 = new javax.swing.JLabel();
+        p1n4p3 = new javax.swing.JLabel();
+        z0n3p3 = new javax.swing.JLabel();
+        n1n2p3 = new javax.swing.JLabel();
+        n2n1p3 = new javax.swing.JLabel();
+        n3z0p3 = new javax.swing.JLabel();
+        n4p1p3 = new javax.swing.JLabel();
+        n5p2p3 = new javax.swing.JLabel();
+        n6p3p3 = new javax.swing.JLabel();
+        n6p2p4 = new javax.swing.JLabel();
+        n5p1p4 = new javax.swing.JLabel();
+        n4z0p4 = new javax.swing.JLabel();
+        n3n1p4 = new javax.swing.JLabel();
+        n2n2p4 = new javax.swing.JLabel();
+        n1n3p4 = new javax.swing.JLabel();
+        z0n4p4 = new javax.swing.JLabel();
+        p1n5p4 = new javax.swing.JLabel();
+        p2n6p4 = new javax.swing.JLabel();
+        p1n6p5 = new javax.swing.JLabel();
+        z0n5p5 = new javax.swing.JLabel();
+        n1n4p5 = new javax.swing.JLabel();
+        n2n3p5 = new javax.swing.JLabel();
+        n3n2p5 = new javax.swing.JLabel();
+        n4n1p5 = new javax.swing.JLabel();
+        n5z0p5 = new javax.swing.JLabel();
+        n6p1p5 = new javax.swing.JLabel();
+        n6z0p6 = new javax.swing.JLabel();
+        n5n1p6 = new javax.swing.JLabel();
+        n4n2p6 = new javax.swing.JLabel();
+        n3n3p6 = new javax.swing.JLabel();
+        n2n4p6 = new javax.swing.JLabel();
+        n1n5p6 = new javax.swing.JLabel();
+        z0n6p6 = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
         endPlayButton = new javax.swing.JButton();
         giveUpButton = new javax.swing.JButton();
+        RobotPanel = new javax.swing.JPanel();
+        scoutViolet = new javax.swing.JLabel();
+        sniperViolet = new javax.swing.JLabel();
+        tankViolet = new javax.swing.JLabel();
+        scoutRed = new javax.swing.JLabel();
+        sniperRed = new javax.swing.JLabel();
+        tankRed = new javax.swing.JLabel();
+        scoutOrange = new javax.swing.JLabel();
+        sniperOrange = new javax.swing.JLabel();
+        tankOrange = new javax.swing.JLabel();
+        scoutYellow = new javax.swing.JLabel();
+        sniperYellow = new javax.swing.JLabel();
+        tankYellow = new javax.swing.JLabel();
+        scoutGreen = new javax.swing.JLabel();
+        sniperGreen = new javax.swing.JLabel();
+        tankGreen = new javax.swing.JLabel();
+        scoutBlue = new javax.swing.JLabel();
+        sniperBlue = new javax.swing.JLabel();
+        tankBlue = new javax.swing.JLabel();
+        redTeam = new javax.swing.JLabel();
+        violetTeam = new javax.swing.JLabel();
+        blueTeam = new javax.swing.JLabel();
+        greenTeam = new javax.swing.JLabel();
+        orangeTeam = new javax.swing.JLabel();
+        yellowTeam = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1003, 748));
         setPreferredSize(new java.awt.Dimension(1003, 748));
+        getContentPane().setLayout(null);
 
         homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Home.png"))); // NOI18N
         homeButton.setToolTipText("");
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
+        getContentPane().add(homeButton);
+        homeButton.setBounds(20, 10, 76, 62);
 
         gameBoardPanel7.setBackground(new java.awt.Color(255, 255, 255));
         gameBoardPanel7.setMaximumSize(new java.awt.Dimension(680, 560));
         gameBoardPanel7.setPreferredSize(new java.awt.Dimension(680, 560));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0z0z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1p1z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2p2z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3p3z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4p4z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5p5z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p6z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p6z0.setMaximumSize(new java.awt.Dimension(52, 53));
+        n6p6z0.setMinimumSize(new java.awt.Dimension(52, 53));
+        n6p6z0.setPreferredSize(new java.awt.Dimension(52, 53));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1n1z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n2z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n3z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4n4z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5n5z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n6z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n4n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5n4n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4n3n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n2n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n1n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1z0n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0p1n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1p2n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2p3n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3p4n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4p5n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5p6n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4p6n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3p5n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2p4n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1p3n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0p2n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1p1n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2z0n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n1n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4n2n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5n3n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n4n2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n3n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5n2n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4n1n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3z0n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2p1n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1p2n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0p3n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1p4n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2p5n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3p6n3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2p6n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1p5n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0p4n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1p3n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2p2n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3p1n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4z0n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5n1n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n2n4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n1n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5z0n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4p1n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3p2n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2p3n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1p4n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0p5n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1p6n5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0p6n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1p5n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2p4n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3p3n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4p2n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5p1n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6z0n6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p5n6p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4n5p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n4p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n3p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1n2p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0n1p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1z0p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2p1p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3p2p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4p3p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5p4p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p5p1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p4p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5p3p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4p2p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3p1p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2z0p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1n1p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0n2p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1n3p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n4p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n5p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p4n6p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n5p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n4p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1n4p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0n3p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1n2p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2n1p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3z0p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4p1p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5p2p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p3p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p2p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5p1p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4z0p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel108.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3n1p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2n2p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1n3p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0n4p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1n5p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n6p4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p1n6p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0n5p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1n4p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2n3p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3n2p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4n1p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel120.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5z0p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel121.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6p1p5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel122.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n6z0p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel123.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n5n1p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n4n2p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n3n3p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n2n4p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        n1n5p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        jLabel128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        z0n6p6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
         javax.swing.GroupLayout gameBoardPanel7Layout = new javax.swing.GroupLayout(gameBoardPanel7);
         gameBoardPanel7.setLayout(gameBoardPanel7Layout);
@@ -440,91 +471,91 @@ public class GameBoardView7 extends javax.swing.JFrame {
                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(182, 182, 182)
-                        .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p1p5n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(n6p5p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(26, 26, 26)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(n4p4z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(n3p6n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(26, 26, 26)
-                                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(n3p5n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(52, 52, 52)
-                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(n3p4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(n1p4n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(n3p2p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(26, 26, 26)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(n2p2z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(n6p3p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(104, 104, 104)
-                                .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(n3z0p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
-                                .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(n4p2p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(182, 182, 182)
-                        .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n3p1p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n5p4p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n6p4p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(104, 104, 104)
-                        .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(n6p1p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(n5z0p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(n5n1p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
-                                .addComponent(jLabel120, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(n4n1p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(p1p1n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p4p1n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(p3p1n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p2z0n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(p6z0n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(p5z0n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
-                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p5n2n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p4n4z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p4n3n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p3n3z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(p3n2n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p6n4n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p6n4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
-                                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(p6n6z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
@@ -532,328 +563,328 @@ public class GameBoardView7 extends javax.swing.JFrame {
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(26, 26, 26)
-                                        .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(n1n2p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(n1n1p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(n3n2p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(z0n4p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(p2n4p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p3n5p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(286, 286, 286)
-                        .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(p4n6p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(z0p1n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n1z0p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(286, 286, 286)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p5n5z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(156, 156, 156)
-                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p4n1n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(z0z0z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(234, 234, 234)
-                        .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(p2n6p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(n2n1p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n3n3p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(312, 312, 312)
-                        .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p5n6p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(n1n3p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
-                .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1n5p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
-                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3n1n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(339, 339, 339)
-                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3p2n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
-                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p3n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(183, 183, 183)
-                .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p1p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(313, 313, 313)
-                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3p3n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p4n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
-                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1p4n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p5n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(209, 209, 209)
-                .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4z0p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p2p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(183, 183, 183)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p3n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(391, 391, 391)
-                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3z0n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(521, 521, 521)
-                .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3n5p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n3p3z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
-                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4p2n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n3n1p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(495, 495, 495)
-                .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n4p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
-                .addComponent(jLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2n4p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(547, 547, 547)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5n4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p2n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n6p2p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(391, 391, 391)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n1n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(495, 495, 495)
-                .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n6p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(469, 469, 469)
-                .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n5p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p6n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
-                .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p5n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(495, 495, 495)
-                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p6n1n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
-                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n3p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
-                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5p1n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
-                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p1p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(443, 443, 443)
-                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n5p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2z0p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p1z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(209, 209, 209)
-                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p3n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(313, 313, 313)
-                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p2n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(521, 521, 521)
-                .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p6n2n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p6n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(287, 287, 287)
-                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p3n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(391, 391, 391)
-                .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n3p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(339, 339, 339)
-                .addComponent(jLabel118, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2n3p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p5z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(339, 339, 339)
-                .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n1p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(391, 391, 391)
-                .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1n4p5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(521, 521, 521)
-                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5n3n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4n2p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(313, 313, 313)
-                .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2n2p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(339, 339, 339)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p1n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(469, 469, 469)
-                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4n2n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n1z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p6n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(443, 443, 443)
-                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n3p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
-                .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n6z0p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(443, 443, 443)
-                .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n4p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
-                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p1p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p3p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p4n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(547, 547, 547)
-                .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p6n3n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(469, 469, 469)
-                .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n6p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(339, 339, 339)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1z0n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4z0n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n2z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(391, 391, 391)
-                .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n2p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(495, 495, 495)
-                .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3n4p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1p3n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
-                .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p6n6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
-                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p2n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(209, 209, 209)
-                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p4n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(287, 287, 287)
-                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1p2n3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p5n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(183, 183, 183)
-                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p5n5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(469, 469, 469)
-                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5n1n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p3p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
-                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n2p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(1, 1, 1)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n6p6z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p6n4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(547, 547, 547)
-                .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4n5p1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         gameBoardPanel7Layout.setVerticalGroup(
             gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p1p5n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(164, 164, 164)
-                        .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n6p5p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(123, 123, 123)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(n4p4z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(n3p6n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
-                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(n3p5n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(82, 82, 82)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(n3p4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(n1p4n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(70, 70, 70)
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
-                                        .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(n3p2p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(n2p2z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(29, 29, 29)
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(n6p3p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(n3z0p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(205, 205, 205)
-                        .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n4p2p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(205, 205, 205)
-                        .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n3p1p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(164, 164, 164)
-                        .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n5p4p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(205, 205, 205)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(n6p4p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n6p1p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n5z0p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel120, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(n5n1p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(n4n1p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -861,330 +892,335 @@ public class GameBoardView7 extends javax.swing.JFrame {
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(164, 164, 164)
-                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p1p1n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p4p1n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
-                                        .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(p3p1n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(29, 29, 29)
-                                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p2z0n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p6z0n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
-                                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(p5z0n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(29, 29, 29)
-                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(p5n2n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p4n3n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p3n2n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
                                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(p4n4z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(p3n3z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(164, 164, 164)
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p6n4n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
-                                        .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(p6n4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(82, 82, 82)
-                                        .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(p6n6z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(29, 29, 29)
                         .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGroup(gameBoardPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
-                                        .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(n1n2p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(n1n1p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(29, 29, 29)
-                                .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(n3n2p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(82, 82, 82)
-                                .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(z0n4p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(p2n4p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
-                                .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(p3n5p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(328, 328, 328)
-                        .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p4n6p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(205, 205, 205)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(z0p1n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(287, 287, 287)
-                        .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n1z0p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(246, 246, 246)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p5n5z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p4n1n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(246, 246, 246)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(z0z0z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(410, 410, 410)
-                        .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p2n6p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(369, 369, 369)
-                        .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n2n1p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(492, 492, 492)
-                        .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(n3n3p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(287, 287, 287)
-                        .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p5n6p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(410, 410, 410)
-                        .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(n1n3p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
-                .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1n5p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3n1n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3p2n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p3n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p1p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3p3n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p4n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1p4n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p5n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(418, 418, 418)
-                .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4z0p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p2p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p3n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3z0n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(336, 336, 336)
-                .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3n5p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n3p3z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4p2n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(418, 418, 418)
-                .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n3n1p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n4p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
-                .addComponent(jLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2n4p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5n4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p2n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(418, 418, 418)
-                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n6p2p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n1n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(459, 459, 459)
-                .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n6p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(418, 418, 418)
-                .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n5p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p6n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p5n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p6n1n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(336, 336, 336)
-                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n3p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5p1n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(418, 418, 418)
-                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p1p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(459, 459, 459)
-                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n5p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(336, 336, 336)
-                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2z0p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p1z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p3n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p2n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p6n2n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1p6n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p3n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n3p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(459, 459, 459)
-                .addComponent(jLabel118, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2n3p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p5z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n1p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(459, 459, 459)
-                .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n1n4p5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5n3n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
-                .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4n2p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(418, 418, 418)
-                .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2n2p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2p1n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4n2n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n1z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p6n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n3p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
-                .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n6z0p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n4p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p1p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(336, 336, 336)
-                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n5p3p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p4n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p6n3n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
-                .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n6p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1z0n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4z0n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n2z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1n2p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p3n4p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1p3n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p6n6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p2n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p4n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p1p2n3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(213, 213, 213)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p5n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0p5n5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p5n1n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n4p3p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(336, 336, 336)
-                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(z0n2p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(254, 254, 254)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n6p6z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(n2p6n4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
-                .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p4n5p1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        getContentPane().add(gameBoardPanel7);
+        gameBoardPanel7.setBounds(120, 80, 680, 560);
 
         timerLabel.setBackground(new java.awt.Color(255, 255, 255));
         timerLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(152, 180, 212));
         timerLabel.setText("10");
+        getContentPane().add(timerLabel);
+        timerLabel.setBounds(420, 0, 74, 85);
 
         endPlayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/endPlay.png"))); // NOI18N
         endPlayButton.setBorderPainted(false);
@@ -1194,50 +1230,153 @@ public class GameBoardView7 extends javax.swing.JFrame {
                 endPlayButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(endPlayButton);
+        endPlayButton.setBounds(300, 650, 67, 66);
 
         giveUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/giveUp.png"))); // NOI18N
         giveUpButton.setBorderPainted(false);
         giveUpButton.setContentAreaFilled(false);
+        getContentPane().add(giveUpButton);
+        giveUpButton.setBounds(550, 650, 68, 68);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(homeButton)
-                        .addGap(349, 349, 349)
-                        .addComponent(timerLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(gameBoardPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(337, 337, 337)
-                        .addComponent(endPlayButton)
-                        .addGap(175, 175, 175)
-                        .addComponent(giveUpButton)))
-                .addContainerGap(168, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(timerLabel)
-                        .addGap(553, 553, 553))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(homeButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(gameBoardPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(endPlayButton)
-                    .addComponent(giveUpButton))
-                .addContainerGap())
-        );
+        RobotPanel.setBackground(new java.awt.Color(255, 255, 255));
+        RobotPanel.setMaximumSize(new java.awt.Dimension(143, 230));
+        RobotPanel.setMinimumSize(new java.awt.Dimension(143, 230));
+        RobotPanel.setLayout(null);
+
+        scoutViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutL.png"))); // NOI18N
+        scoutViolet.setBounds(new java.awt.Rectangle(0, 208, 32, 32));
+        scoutViolet.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutViolet.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutViolet);
+        scoutViolet.setBounds(0, 208, 32, 32);
+
+        sniperViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperL.png"))); // NOI18N
+        sniperViolet.setBounds(new java.awt.Rectangle(49, 208, 38, 30));
+        RobotPanel.add(sniperViolet);
+        sniperViolet.setBounds(49, 208, 38, 30);
+
+        tankViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankL.png"))); // NOI18N
+        tankViolet.setBounds(new java.awt.Rectangle(105, 208, 39, 32));
+        RobotPanel.add(tankViolet);
+        tankViolet.setBounds(105, 208, 39, 32);
+
+        scoutRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutR.png"))); // NOI18N
+        scoutRed.setBounds(new java.awt.Rectangle(0, 0, 31, 30));
+        RobotPanel.add(scoutRed);
+        scoutRed.setBounds(0, 0, 31, 30);
+
+        sniperRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperR.png"))); // NOI18N
+        sniperRed.setBounds(new java.awt.Rectangle(49, 0, 38, 30));
+        RobotPanel.add(sniperRed);
+        sniperRed.setBounds(49, 0, 38, 30);
+
+        tankRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankR.png"))); // NOI18N
+        tankRed.setBounds(new java.awt.Rectangle(105, 0, 38, 30));
+        RobotPanel.add(tankRed);
+        tankRed.setBounds(105, 0, 38, 30);
+
+        scoutOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutO.png"))); // NOI18N
+        scoutOrange.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutOrange.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutOrange);
+        scoutOrange.setBounds(0, 42, 32, 32);
+
+        sniperOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperO.png"))); // NOI18N
+        sniperOrange.setMaximumSize(new java.awt.Dimension(38, 30));
+        sniperOrange.setMinimumSize(new java.awt.Dimension(38, 30));
+        RobotPanel.add(sniperOrange);
+        sniperOrange.setBounds(49, 42, 39, 30);
+
+        tankOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankO.png"))); // NOI18N
+        RobotPanel.add(tankOrange);
+        tankOrange.setBounds(105, 42, 39, 30);
+
+        scoutYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutY.png"))); // NOI18N
+        scoutYellow.setBounds(new java.awt.Rectangle(0, 84, 31, 30));
+        RobotPanel.add(scoutYellow);
+        scoutYellow.setBounds(0, 84, 31, 30);
+
+        sniperYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperY.png"))); // NOI18N
+        sniperYellow.setBounds(new java.awt.Rectangle(49, 84, 38, 30));
+        RobotPanel.add(sniperYellow);
+        sniperYellow.setBounds(49, 84, 38, 30);
+
+        tankYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankY.png"))); // NOI18N
+        tankYellow.setBounds(new java.awt.Rectangle(105, 84, 38, 30));
+        RobotPanel.add(tankYellow);
+        tankYellow.setBounds(105, 84, 38, 30);
+
+        scoutGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutG.png"))); // NOI18N
+        scoutGreen.setBounds(new java.awt.Rectangle(0, 126, 32, 30));
+        scoutGreen.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutGreen.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutGreen);
+        scoutGreen.setBounds(0, 126, 32, 30);
+
+        sniperGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperG.png"))); // NOI18N
+        sniperGreen.setBounds(new java.awt.Rectangle(49, 126, 39, 30));
+        sniperGreen.setMaximumSize(new java.awt.Dimension(38, 30));
+        sniperGreen.setMinimumSize(new java.awt.Dimension(38, 30));
+        RobotPanel.add(sniperGreen);
+        sniperGreen.setBounds(49, 126, 39, 30);
+
+        tankGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankG.png"))); // NOI18N
+        tankGreen.setBounds(new java.awt.Rectangle(105, 126, 39, 30));
+        RobotPanel.add(tankGreen);
+        tankGreen.setBounds(105, 126, 39, 30);
+
+        scoutBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutB.png"))); // NOI18N
+        scoutBlue.setBounds(new java.awt.Rectangle(0, 168, 32, 30));
+        scoutBlue.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutBlue.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutBlue);
+        scoutBlue.setBounds(0, 168, 32, 30);
+
+        sniperBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperB.png"))); // NOI18N
+        sniperBlue.setBounds(new java.awt.Rectangle(49, 168, 39, 30));
+        sniperBlue.setMaximumSize(new java.awt.Dimension(38, 30));
+        sniperBlue.setMinimumSize(new java.awt.Dimension(38, 30));
+        RobotPanel.add(sniperBlue);
+        sniperBlue.setBounds(49, 168, 39, 30);
+
+        tankBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankB.png"))); // NOI18N
+        tankBlue.setBounds(new java.awt.Rectangle(105, 168, 39, 30));
+        RobotPanel.add(tankBlue);
+        tankBlue.setBounds(105, 168, 39, 30);
+
+        getContentPane().add(RobotPanel);
+        RobotPanel.setBounds(830, 20, 150, 240);
+
+        redTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/redTeam.png"))); // NOI18N
+        redTeam.setLocation(new java.awt.Point(60, 346));
+        getContentPane().add(redTeam);
+        redTeam.setBounds(60, 346, 60, 30);
+
+        violetTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/violetTeam.png"))); // NOI18N
+        violetTeam.setBounds(new java.awt.Rectangle(230, 636, 60, 30));
+        getContentPane().add(violetTeam);
+        violetTeam.setBounds(230, 636, 60, 30);
+
+        blueTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/blueTeam.png"))); // NOI18N
+        blueTeam.setBounds(new java.awt.Rectangle(630, 636, 60, 30));
+        getContentPane().add(blueTeam);
+        blueTeam.setBounds(630, 636, 60, 30);
+
+        greenTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/greenTeam.png"))); // NOI18N
+        greenTeam.setLocation(new java.awt.Point(800, 346));
+        getContentPane().add(greenTeam);
+        greenTeam.setBounds(800, 346, 60, 30);
+
+        orangeTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/orangeTeam.png"))); // NOI18N
+        orangeTeam.setBounds(new java.awt.Rectangle(230, 54, 60, 30));
+        getContentPane().add(orangeTeam);
+        orangeTeam.setBounds(230, 54, 60, 30);
+
+        yellowTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/yellowTeam.png"))); // NOI18N
+        yellowTeam.setBounds(new java.awt.Rectangle(620, 54, 60, 30));
+        getContentPane().add(yellowTeam);
+        yellowTeam.setBounds(626, 54, 60, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1282,137 +1421,162 @@ public class GameBoardView7 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel RobotPanel;
+    private javax.swing.JLabel blueTeam;
     private javax.swing.JButton endPlayButton;
     private javax.swing.JPanel gameBoardPanel7;
     private javax.swing.JButton giveUpButton;
+    private javax.swing.JLabel greenTeam;
     private javax.swing.JButton homeButton;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel110;
-    private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
-    private javax.swing.JLabel jLabel114;
-    private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel n1n1p2;
+    private javax.swing.JLabel n1n2p3;
+    private javax.swing.JLabel n1n3p4;
+    private javax.swing.JLabel n1n4p5;
+    private javax.swing.JLabel n1n5p6;
+    private javax.swing.JLabel n1p1z0;
+    private javax.swing.JLabel n1p2n1;
+    private javax.swing.JLabel n1p3n2;
+    private javax.swing.JLabel n1p4n3;
+    private javax.swing.JLabel n1p5n4;
+    private javax.swing.JLabel n1p6n5;
+    private javax.swing.JLabel n1z0p1;
+    private javax.swing.JLabel n2n1p3;
+    private javax.swing.JLabel n2n2p4;
+    private javax.swing.JLabel n2n3p5;
+    private javax.swing.JLabel n2n4p6;
+    private javax.swing.JLabel n2p1p1;
+    private javax.swing.JLabel n2p2z0;
+    private javax.swing.JLabel n2p3n1;
+    private javax.swing.JLabel n2p4n2;
+    private javax.swing.JLabel n2p5n3;
+    private javax.swing.JLabel n2p6n4;
+    private javax.swing.JLabel n2z0p2;
+    private javax.swing.JLabel n3n1p4;
+    private javax.swing.JLabel n3n2p5;
+    private javax.swing.JLabel n3n3p6;
+    private javax.swing.JLabel n3p1p2;
+    private javax.swing.JLabel n3p2p1;
+    private javax.swing.JLabel n3p3z0;
+    private javax.swing.JLabel n3p4n1;
+    private javax.swing.JLabel n3p5n2;
+    private javax.swing.JLabel n3p6n3;
+    private javax.swing.JLabel n3z0p3;
+    private javax.swing.JLabel n4n1p5;
+    private javax.swing.JLabel n4n2p6;
+    private javax.swing.JLabel n4p1p3;
+    private javax.swing.JLabel n4p2p2;
+    private javax.swing.JLabel n4p3p1;
+    private javax.swing.JLabel n4p4z0;
+    private javax.swing.JLabel n4p5n1;
+    private javax.swing.JLabel n4p6n2;
+    private javax.swing.JLabel n4z0p4;
+    private javax.swing.JLabel n5n1p6;
+    private javax.swing.JLabel n5p1p4;
+    private javax.swing.JLabel n5p2p3;
+    private javax.swing.JLabel n5p3p2;
+    private javax.swing.JLabel n5p4p1;
+    private javax.swing.JLabel n5p5z0;
+    private javax.swing.JLabel n5p6n1;
+    private javax.swing.JLabel n5z0p5;
+    private javax.swing.JLabel n6p1p5;
+    private javax.swing.JLabel n6p2p4;
+    private javax.swing.JLabel n6p3p3;
+    private javax.swing.JLabel n6p4p2;
+    private javax.swing.JLabel n6p5p1;
+    private javax.swing.JLabel n6p6z0;
+    private javax.swing.JLabel n6z0p6;
+    private javax.swing.JLabel orangeTeam;
+    private javax.swing.JLabel p1n1z0;
+    private javax.swing.JLabel p1n2p1;
+    private javax.swing.JLabel p1n3p2;
+    private javax.swing.JLabel p1n4p3;
+    private javax.swing.JLabel p1n5p4;
+    private javax.swing.JLabel p1n6p5;
+    private javax.swing.JLabel p1p1n2;
+    private javax.swing.JLabel p1p2n3;
+    private javax.swing.JLabel p1p3n4;
+    private javax.swing.JLabel p1p4n5;
+    private javax.swing.JLabel p1p5n6;
+    private javax.swing.JLabel p1z0n1;
+    private javax.swing.JLabel p2n1n1;
+    private javax.swing.JLabel p2n2z0;
+    private javax.swing.JLabel p2n3p1;
+    private javax.swing.JLabel p2n4p2;
+    private javax.swing.JLabel p2n4p3;
+    private javax.swing.JLabel p2n6p4;
+    private javax.swing.JLabel p2p1n3;
+    private javax.swing.JLabel p2p2n4;
+    private javax.swing.JLabel p2p3n5;
+    private javax.swing.JLabel p2p4n6;
+    private javax.swing.JLabel p2z0n2;
+    private javax.swing.JLabel p3n1n2;
+    private javax.swing.JLabel p3n2n1;
+    private javax.swing.JLabel p3n3z0;
+    private javax.swing.JLabel p3n4p1;
+    private javax.swing.JLabel p3n5p2;
+    private javax.swing.JLabel p3n5p3;
+    private javax.swing.JLabel p3p1n4;
+    private javax.swing.JLabel p3p2n5;
+    private javax.swing.JLabel p3p3n6;
+    private javax.swing.JLabel p3z0n3;
+    private javax.swing.JLabel p4n1n3;
+    private javax.swing.JLabel p4n2n2;
+    private javax.swing.JLabel p4n3n1;
+    private javax.swing.JLabel p4n4z0;
+    private javax.swing.JLabel p4n5p1;
+    private javax.swing.JLabel p4n6p2;
+    private javax.swing.JLabel p4p1n5;
+    private javax.swing.JLabel p4p2n6;
+    private javax.swing.JLabel p4z0n4;
+    private javax.swing.JLabel p5n1n4;
+    private javax.swing.JLabel p5n2n3;
+    private javax.swing.JLabel p5n3n2;
+    private javax.swing.JLabel p5n4n1;
+    private javax.swing.JLabel p5n5z0;
+    private javax.swing.JLabel p5n6p1;
+    private javax.swing.JLabel p5p1n6;
+    private javax.swing.JLabel p5z0n5;
+    private javax.swing.JLabel p6n1n5;
+    private javax.swing.JLabel p6n2n4;
+    private javax.swing.JLabel p6n3n3;
+    private javax.swing.JLabel p6n4n1;
+    private javax.swing.JLabel p6n4n2;
+    private javax.swing.JLabel p6n6z0;
+    private javax.swing.JLabel p6z0n6;
+    private javax.swing.JLabel redTeam;
+    private javax.swing.JLabel scoutBlue;
+    private javax.swing.JLabel scoutGreen;
+    private javax.swing.JLabel scoutOrange;
+    private javax.swing.JLabel scoutRed;
+    private javax.swing.JLabel scoutViolet;
+    private javax.swing.JLabel scoutYellow;
+    private javax.swing.JLabel sniperBlue;
+    private javax.swing.JLabel sniperGreen;
+    private javax.swing.JLabel sniperOrange;
+    private javax.swing.JLabel sniperRed;
+    private javax.swing.JLabel sniperViolet;
+    private javax.swing.JLabel sniperYellow;
+    private javax.swing.JLabel tankBlue;
+    private javax.swing.JLabel tankGreen;
+    private javax.swing.JLabel tankOrange;
+    private javax.swing.JLabel tankRed;
+    private javax.swing.JLabel tankViolet;
+    private javax.swing.JLabel tankYellow;
     private javax.swing.JLabel timerLabel;
+    private javax.swing.JLabel violetTeam;
+    private javax.swing.JLabel yellowTeam;
+    private javax.swing.JLabel z0n1p1;
+    private javax.swing.JLabel z0n2p2;
+    private javax.swing.JLabel z0n3p3;
+    private javax.swing.JLabel z0n4p4;
+    private javax.swing.JLabel z0n5p5;
+    private javax.swing.JLabel z0n6p6;
+    private javax.swing.JLabel z0p1n1;
+    private javax.swing.JLabel z0p2n2;
+    private javax.swing.JLabel z0p3n3;
+    private javax.swing.JLabel z0p4n4;
+    private javax.swing.JLabel z0p5n5;
+    private javax.swing.JLabel z0p6n6;
+    private javax.swing.JLabel z0z0z0;
     // End of variables declaration//GEN-END:variables
 }
