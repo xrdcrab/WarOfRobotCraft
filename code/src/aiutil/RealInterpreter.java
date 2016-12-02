@@ -50,6 +50,14 @@ public class RealInterpreter {
     	return i;
     }
     
+    private int queryVariable(String[] statement, int i){
+    	String key = this.stack.pop();
+    	String value = this.variableDeclarations.get(key);
+    	this.stack.push(value);
+    	i++;
+    	return i;
+    }
+    
     private int ifStatement(String[] statement, int i){
         String trueStatement = "";
         String falseStatement = "";
@@ -218,6 +226,9 @@ public class RealInterpreter {
                 case "!":
                 	i = setVar(statement, i);
                 	break;
+                case "?":
+                	i = queryVariable(statement, i);
+                	break;
                 case "if":
                     i = ifStatement(statement, i);
                     break;
@@ -313,9 +324,9 @@ public class RealInterpreter {
 //        lines.add(": maxRange 3 ;");
 //        lines.add("maxRange ;");
     	
-//        lines.add("variable max ;");
-//        lines.add("3 max ! ;");
-//        lines.add(" max ;");
+        lines.add("variable max ;");
+        lines.add("3 max ! ;");
+        lines.add(" max ? ;");
         
 //        lines.add("1 2 + ;"); // 3
 //        lines.add(": double dup + ;"); // 3
