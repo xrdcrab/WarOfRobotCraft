@@ -74,6 +74,45 @@ public class RealInterpreter {
     	i++;
     	return i;
     }
+    
+    private int defineVar(String[] statement, int i) {
+        i++;
+        String key = statement[i];     
+        this.variableDeclarations.put(key, "");
+        i++;
+        return i;
+    }
+    
+    private int setVar(String[] statement, int i){
+    	String key = this.stack.pop();
+    	String value = this.stack.pop();
+    	variableDeclarations.put(key, value);
+    	i++;
+    	return i;
+    }
+    
+    private int queryVariable(String[] statement, int i){
+    	String key = this.stack.pop();
+    	String value = this.variableDeclarations.get(key);
+    	this.stack.push(value);
+    	i++;
+    	return i;
+    }
+    
+    private int popStack(String[] statement, int i){
+    	System.out.println(this.stack.pop());
+    	i++;
+    	return i;
+    }
+    
+    private int random(String[] statement, int i){
+    	Random rand = new Random();
+    	int value = Integer.parseInt(this.stack.pop());
+    	int num = rand.nextInt(value+1);
+    	this.stack.push(String.valueOf(num));
+    	i++;
+    	return i;
+    }
 
     private int ifStatement(String[] statement, int i) {
         String trueStatement = "";
@@ -91,6 +130,13 @@ public class RealInterpreter {
         }
 
         return i;
+    }
+    
+    private int forLoop(String[] statement, int i){
+    	int start; 
+    	int end;
+    	
+    	return i;
     }
     
     private int forLoop(String[] statement, int i){
