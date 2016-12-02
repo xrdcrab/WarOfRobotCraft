@@ -20,8 +20,7 @@ public class RealInterpreter {
 //    Only stores the new define operations 
     Dictionary<String, String> declarations = new Hashtable<String, String>();
     Stack<String> stack = new Stack<String>();
-    LinkedList<String> varNameList = new LinkedList<String>();
-    Dictionary<String, Object> varDeclarations = new Hashtable<String, Object>(); 
+    Dictionary<String, String> variableDeclarations = new Hashtable<String, String>(); 
 
     private int define(String[] statement, int i) {
         i++;
@@ -38,15 +37,15 @@ public class RealInterpreter {
     private int defineVar(String[] statement, int i) {
         i++;
         String key = statement[i];     
-        this.varNameList.add(key);
+        this.variableDeclarations.put(key, "");
         i++;
         return i;
     }
     
     private int setVar(String[] statement, int i){
     	String key = this.stack.pop();
-    	Object value = this.stack.pop();
-    	varDeclarations.put(key, value);
+    	String value = this.stack.pop();
+    	variableDeclarations.put(key, value);
     	i++;
     	return i;
     }
@@ -78,68 +77,68 @@ public class RealInterpreter {
 
 //    Basic operations >>>>>>
     private void add() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((a + b) + "");
     }
 
     private void minus() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b - a) + "");
     }
 
     private void multiply() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((a * b) + "");
     }
 
     private void divide() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b / a) + "");
     }
 
     private void mod() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b % a) + "");
     }
 
     private void lessThan() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b < a) + "");
     }
 
     private void lessThanOrEqual() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b <= a) + "");
     }
 
     private void equal() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b == a) + "");
     }
 
     private void notEqual() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b != a) + "");
     }
 
     private void largerThanOrEqual() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b >= a) + "");
     }
 
     private void largerThan() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b > a) + "");
     }
 
@@ -313,9 +312,10 @@ public class RealInterpreter {
 //        
 //        lines.add(": maxRange 3 ;");
 //        lines.add("maxRange ;");
-        lines.add("variable max ;");
-        lines.add("3 max ! ;");
-        lines.add(" max ;");
+    	
+//        lines.add("variable max ;");
+//        lines.add("3 max ! ;");
+//        lines.add(" max ;");
         
 //        lines.add("1 2 + ;"); // 3
 //        lines.add(": double dup + ;"); // 3
