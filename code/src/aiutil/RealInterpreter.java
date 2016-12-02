@@ -58,6 +58,12 @@ public class RealInterpreter {
     	return i;
     }
     
+    private int popStack(String[] statement, int i){
+    	System.out.println(this.stack.pop());
+    	i++;
+    	return i;
+    }
+    
     private int ifStatement(String[] statement, int i){
         String trueStatement = "";
         String falseStatement = "";
@@ -229,6 +235,9 @@ public class RealInterpreter {
                 case "?":
                 	i = queryVariable(statement, i);
                 	break;
+                case ".":
+                	i = popStack(statement, i);
+                	break;
                 case "if":
                     i = ifStatement(statement, i);
                     break;
@@ -324,9 +333,16 @@ public class RealInterpreter {
 //        lines.add(": maxRange 3 ;");
 //        lines.add("maxRange ;");
     	
+////////////  Test cases for ? ! and . //////////// 
         lines.add("variable max ;");
         lines.add("3 max ! ;");
         lines.add(" max ? ;");
+        lines.add(" 4 max ! ;");
+        lines.add("  max ? ;");
+        lines.add("  . ;");
+        lines.add(" 3 4 5 6");
+        lines.add("  . ;");
+////////////////////////////////////////////////
         
 //        lines.add("1 2 + ;"); // 3
 //        lines.add(": double dup + ;"); // 3
