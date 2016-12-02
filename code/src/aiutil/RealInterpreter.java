@@ -3,6 +3,7 @@ package aiutil;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Stack;
 
 /*
@@ -60,6 +61,15 @@ public class RealInterpreter {
     
     private int popStack(String[] statement, int i){
     	System.out.println(this.stack.pop());
+    	i++;
+    	return i;
+    }
+    
+    private int random(String[] statement, int i){
+    	Random rand = new Random();
+    	int value = Integer.parseInt(this.stack.pop());
+    	int num = rand.nextInt(value+1);
+    	this.stack.push(String.valueOf(num));
     	i++;
     	return i;
     }
@@ -238,6 +248,10 @@ public class RealInterpreter {
                 case ".":
                 	i = popStack(statement, i);
                 	break;
+                case "random":
+                	i = random(statement, i);
+                	break;
+                
                 case "if":
                     i = ifStatement(statement, i);
                     break;
@@ -333,15 +347,19 @@ public class RealInterpreter {
 //        lines.add(": maxRange 3 ;");
 //        lines.add("maxRange ;");
     	
-////////////  Test cases for ? ! and . //////////// 
-        lines.add("variable max ;");
-        lines.add("3 max ! ;");
-        lines.add(" max ? ;");
-        lines.add(" 4 max ! ;");
-        lines.add("  max ? ;");
-        lines.add("  . ;");
-        lines.add(" 3 4 5 6");
-        lines.add("  . ;");
+////////////  Test cases for ? ! and . random //////////// 
+//        lines.add("variable max ;");
+//        lines.add("3 max ! ;");
+//        lines.add(" max ? ;");
+//        lines.add(" 4 max ! ;");
+//        lines.add("  max ? ;");
+//        lines.add("  . ;");
+//        lines.add(" 3 4 5 6");
+//        lines.add("  . ;");
+        lines.add(" 1 ");
+        lines.add(" random ");
+        
+        
 ////////////////////////////////////////////////
         
 //        lines.add("1 2 + ;"); // 3
