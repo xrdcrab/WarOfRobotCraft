@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Stack;
 
 /*
@@ -21,6 +22,7 @@ public class RealInterpreter {
 //    Only stores the new define operations 
     Dictionary<String, String> declarations = new Hashtable<String, String>();
     Stack<String> stack = new Stack<String>();
+    Dictionary<String, String> variableDeclarations = new Hashtable<String, String>(); 
 
     private int define(String[] statement, int i) {
         i++;
@@ -32,6 +34,45 @@ public class RealInterpreter {
         declarations.put(key, newStatement);
 
         return i;
+    }
+    
+    private int defineVar(String[] statement, int i) {
+        i++;
+        String key = statement[i];     
+        this.variableDeclarations.put(key, "");
+        i++;
+        return i;
+    }
+    
+    private int setVar(String[] statement, int i){
+    	String key = this.stack.pop();
+    	String value = this.stack.pop();
+    	variableDeclarations.put(key, value);
+    	i++;
+    	return i;
+    }
+    
+    private int queryVariable(String[] statement, int i){
+    	String key = this.stack.pop();
+    	String value = this.variableDeclarations.get(key);
+    	this.stack.push(value);
+    	i++;
+    	return i;
+    }
+    
+    private int popStack(String[] statement, int i){
+    	System.out.println(this.stack.pop());
+    	i++;
+    	return i;
+    }
+    
+    private int random(String[] statement, int i){
+    	Random rand = new Random();
+    	int value = Integer.parseInt(this.stack.pop());
+    	int num = rand.nextInt(value+1);
+    	this.stack.push(String.valueOf(num));
+    	i++;
+    	return i;
     }
 
     private int ifStatement(String[] statement, int i) {
@@ -51,71 +92,78 @@ public class RealInterpreter {
 
         return i;
     }
+    
+    private int forLoop(String[] statement, int i){
+    	int start; 
+    	int end;
+    	
+    	return i;
+    }
 
 //    Basic operations >>>>>>
     private void add() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((a + b) + "");
     }
 
     private void minus() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b - a) + "");
     }
 
     private void multiply() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((a * b) + "");
     }
 
     private void divide() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b / a) + "");
     }
 
     private void mod() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b % a) + "");
     }
 
     private void lessThan() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b < a) + "");
     }
 
     private void lessThanOrEqual() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b <= a) + "");
     }
 
     private void equal() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b == a) + "");
     }
 
     private void notEqual() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b != a) + "");
     }
 
     private void largerThanOrEqual() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b >= a) + "");
     }
 
     private void largerThan() {
-        Integer a = Integer.parseInt(stack.pop());
-        Integer b = Integer.parseInt(stack.pop());
+        Double a = Double.parseDouble(stack.pop());
+        Double b = Double.parseDouble(stack.pop());
         stack.push((b > a) + "");
     }
 
@@ -189,9 +237,32 @@ public class RealInterpreter {
                 case ":":
                     i = define(statement, i);
                     break;
+                case "variable":
+                	i = defineVar(statement, i);
+                	break;
+                case "!":
+                	i = setVar(statement, i);
+                	break;
+                case "?":
+                	i = queryVariable(statement, i);
+                	break;
+                case ".":
+                	i = popStack(statement, i);
+                	break;
+                case "random":
+                	i = random(statement, i);
+                	break;
+                
                 case "if":
                     i = ifStatement(statement, i);
                     break;
+//              First: the counted loop
+                case "do":
+                	i = forLoop(statement, i);
+                	break;
+//				Second: the guarded loop (DO WHILE loop)
+//                TODO
+                                
                 case ";":
                     return;
                 case "+":
@@ -249,9 +320,10 @@ public class RealInterpreter {
 //                	If no declaration in the dictionary, push onto stack without any action.
                     if (declarations.get(s) == null) {
                         stack.push(s);
-                    } else {
-                        runStatement(declarations.get(s).split(" "));
                     }
+                    else {
+                        runStatement(declarations.get(s).split(" "));
+                    }                    
                     break;
             }
         }

@@ -39,7 +39,9 @@ public class Interpreter {
 		Interpreter interpreter = new Interpreter();
 		LinkedList<String> stringList = new LinkedList<String>();
 		for ( String str: interpreter.stringToList("hello        dutchyn	!  ")) {
+			stringList.add(str);
 			System.out.println(str + '/');
 		}
+		System.out.println(stringList);
 	}
 }
