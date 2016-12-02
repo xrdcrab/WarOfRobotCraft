@@ -20,6 +20,8 @@ public class RealInterpreter {
 //    Only stores the new define operations 
     Dictionary<String, String> declarations = new Hashtable<String, String>();
     Stack<String> stack = new Stack<String>();
+    LinkedList<String> varNameList = new LinkedList<String>();
+    Dictionary<String, Object> varDeclarations = new Hashtable<String, Object>(); 
 
     private int define(String[] statement, int i) {
         i++;
@@ -31,6 +33,22 @@ public class RealInterpreter {
         declarations.put(key, newStatement);
 
         return i;
+    }
+    
+    private int defineVar(String[] statement, int i) {
+        i++;
+        String key = statement[i];     
+        this.varNameList.add(key);
+        i++;
+        return i;
+    }
+    
+    private int setVar(String[] statement, int i){
+    	String key = this.stack.pop();
+    	Object value = this.stack.pop();
+    	varDeclarations.put(key, value);
+    	i++;
+    	return i;
     }
     
     private int ifStatement(String[] statement, int i){
@@ -49,6 +67,13 @@ public class RealInterpreter {
         }
         
         return i;
+    }
+    
+    private int forLoop(String[] statement, int i){
+    	int start; 
+    	int end;
+    	
+    	return i;
     }
 
 //    Basic operations >>>>>>
@@ -188,9 +213,22 @@ public class RealInterpreter {
                 case ":":
                     i = define(statement, i);
                     break;
+                case "variable":
+                	i = defineVar(statement, i);
+                	break;
+                case "!":
+                	i = setVar(statement, i);
+                	break;
                 case "if":
                     i = ifStatement(statement, i);
                     break;
+//              First: the counted loop
+                case "do":
+                	i = forLoop(statement, i);
+                	break;
+//				Second: the guarded loop (DO WHILE loop)
+//                TODO
+                                
                 case ";":
                     return;
                 case "+":
@@ -248,9 +286,10 @@ public class RealInterpreter {
 //                	If no declaration in the dictionary, push onto stack without any action.
                     if (declarations.get(s) == null) {
                         stack.push(s);
-                    } else {
-                        runStatement(declarations.get(s).split(" "));
                     }
+                    else {
+                        runStatement(declarations.get(s).split(" "));
+                    }                    
                     break;
             }
         }
@@ -267,10 +306,16 @@ public class RealInterpreter {
     }
 
     private void setStrings() {
-        lines.add(": determineAdult 18 < if no else yes then ; ");
-        lines.add("20 determineAdult ; ");
-        lines.add("drop ;");
-        lines.add("12 determineAdult ; ");
+//        lines.add(": determineAdult 18 < if no else yes then ; ");
+//        lines.add("20 determineAdult ; ");
+//        lines.add("drop ;");
+//        lines.add("12 determineAdult ; ");
+//        
+//        lines.add(": maxRange 3 ;");
+//        lines.add("maxRange ;");
+        lines.add("variable max ;");
+        lines.add("3 max ! ;");
+        lines.add(" max ;");
         
 //        lines.add("1 2 + ;"); // 3
 //        lines.add(": double dup + ;"); // 3
