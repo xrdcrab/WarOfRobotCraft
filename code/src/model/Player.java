@@ -65,6 +65,7 @@ public class Player {
 
     /**
      * this method is to determine whether all the robot are dead.
+     * @return true if all robots are dead, false otherwise.
      */
     public boolean isDead() {
         return scoutRobot.isDead() && sniperRobot.isDead() && tankRobot.isDead();
@@ -72,6 +73,7 @@ public class Player {
 
     /**
      * this method is to get current robot.
+     * @return current robot
      */
     public Robot getCurrentRobot() {
         return currentRobot;
@@ -139,7 +141,7 @@ public class Player {
     }
 
     /**
-     * @return the name
+     * @return the name of player
      */
     public String getName() {
         return name;

@@ -38,8 +38,14 @@ public class Game {
      * the number of alive player
      */
     private int alivePlayerNumber;
-
+    
     /**
+     * the winner player index
+     */
+    public int winnerPlayerIndex;
+    
+
+	/**
      * @param playerHashMap
      * @param playerNumber
      * @param currentPlayer
@@ -47,7 +53,7 @@ public class Game {
      */
     public Game(HashMap<Integer, Player> playerHashMap,
             int playerNumber, int currentPlayer,
-            Map map, int alivePlayerNumber) {
+            Map map, int alivePlayerNumber, int winnerPlayerIndex) {
         super();
 
         this.playerNumber = playerNumber;
@@ -55,6 +61,7 @@ public class Game {
         this.currentPlayerIndex = currentPlayer;
         this.gameMap = map;
         this.alivePlayerNumber = alivePlayerNumber;
+        this.winnerPlayerIndex = winnerPlayerIndex;
     }
 
     /**
@@ -74,6 +81,7 @@ public class Game {
         this.gameMap = new Map(this.playerNumToMapSize(playerNumber));
         this.currentPlayerIndex = 0;
         this.alivePlayerNumber = this.playerNumber;
+        this.winnerPlayerIndex = 99;
     }
 
     /**
@@ -146,27 +154,16 @@ public class Game {
         		}
         	}
         	while (this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead());
-    	}   	
+    	}
     }
     
+    
     /**
-     * this method is to run a play
+     * this method is a helper function to determine
+     * whether all robots of one player are played.
+     * @param currentPlayer
+     * @return true if all robots are played.
      */
-//	public void runPlay() {
-//
-//		while ( this.getAlivePlayerNum() > 1 ) {
-//			if ( !this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).isDead() ) {
-//				try {
-//					this.wait();
-//				} catch (InterruptedException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//			}
-//			
-//			this.goNextPlayer();
-//		}
-//	}
     private boolean areAllRobotsPlayed(Player currentPlayer) {
         boolean scoutPlayed = currentPlayer.getScoutRobot().getHasPlayed() || currentPlayer.getScoutRobot().isDead();
         boolean sniperPlayed = currentPlayer.getSniperRobot().getHasPlayed() || currentPlayer.getSniperRobot().isDead();
@@ -176,10 +173,11 @@ public class Game {
     }
 
     /**
-     *
+     * this method will run the game in the data level,
+     * update current robot, current plater and determine the winner.
      */
     public void runPlay() {
-        // end the current play
+        // end the current play if more than one player alive
     	if (this.getAlivePlayerNumber() > 1){
     		this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 
@@ -200,43 +198,60 @@ public class Game {
             	currentPlayer.getCurrentRobot().resetStatus();
             }
     	}
-//        this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
-//
-//        // enter the next play
-//        this.goNextPlayer();
-//        Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
-//        currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-//
-//        // it is a new turn
-//        if (areAllRobotsPlayed(currentPlayer)) {
-//            currentPlayer.getScoutRobot().sethasPlayed(false);
-//            currentPlayer.getSniperRobot().sethasPlayed(false);
-//            currentPlayer.getTankRobot().sethasPlayed(false);
-//            currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-//        }
-//        
-//        if ( currentPlayer != null && currentPlayer.getCurrentRobot() != null ) {
-//        	currentPlayer.getCurrentRobot().resetStatus();
-//        }
-        
-
-//            //if the current player's current robot has not moved
-//		if(!this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().ishasPlayed()){
-//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
-//			this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().resetStatus();
-//			this.goNextPlayer();
-//		}
-//		//else if the current player's current robot has moved, end this turn. 
-//		else{
-//			
-//		}
+    	// end the game if only one player alive
+    	else if (this.getAlivePlayerNumber() == 1){
+			// find the winner
+    		// case 1: 2 players in the game
+    		if (this.getPlayerNumber() == 2) {
+				if ( !this.getPlayerHashMap().get(0).isDead() ) {
+					this.setWinnerPlayerIndex(0);
+				}
+				else {
+					this.setWinnerPlayerIndex(3);
+				}
+			}
+    		// case 2: 3 players in the game
+    		else if (this.getPlayerNumber() == 3) {
+    			if ( !this.getPlayerHashMap().get(0).isDead() ) {
+    				this.setWinnerPlayerIndex(0);
+				}
+				else if ( !this.getPlayerHashMap().get(2).isDead() ){
+					this.setWinnerPlayerIndex(2);
+				}
+				else {
+					this.setWinnerPlayerIndex(4);
+				}
+			}
+    		// case 3: 6 players in the game
+    		else if (this.getPlayerNumber() == 6) {
+    			if ( !this.getPlayerHashMap().get(0).isDead() ) {
+    				this.setWinnerPlayerIndex(0);
+				}
+				else if ( !this.getPlayerHashMap().get(1).isDead() ){
+					this.setWinnerPlayerIndex(1);
+				}
+				else if ( !this.getPlayerHashMap().get(2).isDead() ){
+					this.setWinnerPlayerIndex(2);
+				}
+				else if ( !this.getPlayerHashMap().get(3).isDead() ){
+					this.setWinnerPlayerIndex(3);
+				}
+				else if ( !this.getPlayerHashMap().get(4).isDead() ){
+					this.setWinnerPlayerIndex(4);
+				}
+				else {
+					this.setWinnerPlayerIndex(5);
+				}
+			}
+            System.out.println("the winner is: player " + this.getWinnerPlayerIndex());
+		}
     }
 
     /**
-     * this method is to update the game when player perform actions: move or
-     * shoot
-     *
-     * @param pair the the pair that
+     * this method is to update the game when player perform actions: 
+     * move or shoot
+     * @param pair the the pair that contains dead robot information
+     * @return LinkedList<Pair<Integer, String>> a linked list of pair
      */
     public LinkedList<Pair<Integer, String>> updateGameShootDamaged(Pair<Coordinate, Integer> pair) {
     	LinkedList<Pair<Integer, String>> deadRobotList
@@ -411,5 +426,19 @@ public class Game {
     public void setAlivePlayerNumber(int alivePlayerNumber) {
         this.alivePlayerNumber = alivePlayerNumber;
     }
+    
+    /**
+	 * @return the winnerPlayerIndex
+	 */
+	public int getWinnerPlayerIndex() {
+		return winnerPlayerIndex;
+	}
+
+	/**
+	 * @param winnerPlayerIndex the winnerPlayerIndex to set
+	 */
+	public void setWinnerPlayerIndex(int winnerPlayerIndex) {
+		this.winnerPlayerIndex = winnerPlayerIndex;
+	}
 
 }
