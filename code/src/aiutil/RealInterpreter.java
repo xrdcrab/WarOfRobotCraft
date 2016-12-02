@@ -1,5 +1,6 @@
 package aiutil;
 
+import java.util.Arrays;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -32,22 +33,22 @@ public class RealInterpreter {
 
         return i;
     }
-    
-    private int ifStatement(String[] statement, int i){
+
+    private int ifStatement(String[] statement, int i) {
         String trueStatement = "";
         String falseStatement = "";
-        for(i++; i < statement.length && !statement[i].equals("else") && !statement[i].equals("then"); i++){
+        for (i++; i < statement.length && !statement[i].equals("else") && !statement[i].equals("then"); i++) {
             trueStatement += statement[i] + " ";
         }
-        for(i++; i < statement.length && !statement[i].equals("then"); i++){
+        for (i++; i < statement.length && !statement[i].equals("then"); i++) {
             falseStatement += statement[i] + " ";
         }
-        if(Boolean.parseBoolean(stack.pop())){
+        if (Boolean.parseBoolean(stack.pop())) {
             runStatement(trueStatement.split(" "));
         } else {
             runStatement(falseStatement.split(" "));
         }
-        
+
         return i;
     }
 
@@ -134,7 +135,7 @@ public class RealInterpreter {
         Boolean a = Boolean.parseBoolean(stack.pop());
         stack.push(!a + "");
     }
-    
+
     private void duplicate() {
         stack.push(stack.peek());
     }
@@ -257,21 +258,42 @@ public class RealInterpreter {
     }
 
     private void run() {
-        for (String s : lines) {
-            runStatement(s.split(" "));
-            for (String str : stack) {
+        LinkedList<String> statements = new LinkedList<String>();
+        for (String line : lines) {
+            statements.addAll(Arrays.asList(line.split(" ")));
+            Boolean canRun = false;
+            for (int i = statements.size() - 1; i > 0; i--) {
+                switch (statements.get(i)) {
+                    case "":
+                    case "\t":
+                    case "\n":
+                        continue;
+                    case ";":
+                        canRun = true;
+                    default:
+                        break;
+                }
+                break;
+            }
+            if (canRun) {
+                runStatement(statements.toArray(new String[statements.size()]));
+                statements = new LinkedList<String>();
+                for (String str : stack) {
                 System.out.print(str + " ");
+            }
             }
             System.out.println("");
         }
     }
 
     private void setStrings() {
-        lines.add(": determineAdult 18 < if no else yes then ; ");
+        lines.add(": determineAdult 18 < if no");
+        lines.add("else yes");
+        lines.add("then ; ");
         lines.add("20 determineAdult ; ");
         lines.add("drop ;");
         lines.add("12 determineAdult ; ");
-        
+
 //        lines.add("1 2 + ;"); // 3
 //        lines.add(": double dup + ;"); // 3
 //        lines.add("2 ;"); // 3 2
