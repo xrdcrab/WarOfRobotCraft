@@ -1214,9 +1214,9 @@ public class GameBoardView7 extends javax.swing.JFrame {
                         .addGap(155, 155, 155)
                         .addComponent(gameBoardPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(358, 358, 358)
+                        .addGap(337, 337, 337)
                         .addComponent(endPlayButton)
-                        .addGap(132, 132, 132)
+                        .addGap(175, 175, 175)
                         .addComponent(giveUpButton)))
                 .addContainerGap(168, Short.MAX_VALUE))
         );

@@ -152,11 +152,36 @@ public class GameBoardView extends javax.swing.JFrame {
         p3p1n4 = new javax.swing.JLabel();
         p2p2n4 = new javax.swing.JLabel();
         p1p3n4 = new javax.swing.JLabel();
+        yellowTeam = new javax.swing.JLabel();
+        orangeTeam = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
+        RobotPanel = new javax.swing.JPanel();
+        scoutViolet = new javax.swing.JLabel();
+        sniperViolet = new javax.swing.JLabel();
+        tankViolet = new javax.swing.JLabel();
+        scoutRed = new javax.swing.JLabel();
+        sniperRed = new javax.swing.JLabel();
+        tankRed = new javax.swing.JLabel();
+        scoutOrange = new javax.swing.JLabel();
+        sniperOrange = new javax.swing.JLabel();
+        tankOrange = new javax.swing.JLabel();
+        scoutYellow = new javax.swing.JLabel();
+        sniperYellow = new javax.swing.JLabel();
+        tankYellow = new javax.swing.JLabel();
+        scoutGreen = new javax.swing.JLabel();
+        sniperGreen = new javax.swing.JLabel();
+        tankGreen = new javax.swing.JLabel();
+        scoutBlue = new javax.swing.JLabel();
+        sniperBlue = new javax.swing.JLabel();
+        tankBlue = new javax.swing.JLabel();
         homeButton = new javax.swing.JButton();
         endPlayButton = new javax.swing.JButton();
         giveUpButton = new javax.swing.JButton();
+        redTeam = new javax.swing.JLabel();
+        greenTeam = new javax.swing.JLabel();
+        blueTeam = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        violetTeam = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -164,6 +189,7 @@ public class GameBoardView extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1003, 748));
         setPreferredSize(new java.awt.Dimension(1003, 748));
+        getContentPane().setLayout(null);
 
         gameBoardPanel.setBackground(new java.awt.Color(255, 255, 255));
         gameBoardPanel.setMaximumSize(new java.awt.Dimension(600, 480));
@@ -414,15 +440,144 @@ public class GameBoardView extends javax.swing.JFrame {
         gameBoardPanel.add(p1p3n4);
         p1p3n4.setBounds(199, 3, 67, 66);
 
+        yellowTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/yellowTeam.png"))); // NOI18N
+        gameBoardPanel.add(yellowTeam);
+        yellowTeam.setBounds(470, 0, 60, 30);
+
+        orangeTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/orangeTeam.png"))); // NOI18N
+        gameBoardPanel.add(orangeTeam);
+        orangeTeam.setBounds(70, 0, 60, 30);
+
+        getContentPane().add(gameBoardPanel);
+        gameBoardPanel.setBounds(150, 100, 600, 480);
+
         timerLabel.setBackground(new java.awt.Color(255, 255, 255));
         timerLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(152, 180, 212));
+        timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         timerLabel.setText("10");
+        getContentPane().add(timerLabel);
+        timerLabel.setBounds(410, 20, 76, 66);
+
+        RobotPanel.setBackground(new java.awt.Color(255, 255, 255));
+        RobotPanel.setMaximumSize(new java.awt.Dimension(143, 230));
+        RobotPanel.setMinimumSize(new java.awt.Dimension(143, 230));
+        RobotPanel.setPreferredSize(new java.awt.Dimension(143, 230));
+        RobotPanel.setLayout(null);
+
+        scoutViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutL.png"))); // NOI18N
+        scoutViolet.setBounds(new java.awt.Rectangle(0, 208, 32, 32));
+        scoutViolet.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutViolet.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutViolet);
+        scoutViolet.setBounds(0, 208, 32, 32);
+
+        sniperViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperL.png"))); // NOI18N
+        sniperViolet.setBounds(new java.awt.Rectangle(49, 208, 38, 30));
+        RobotPanel.add(sniperViolet);
+        sniperViolet.setBounds(49, 208, 38, 30);
+
+        tankViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankL.png"))); // NOI18N
+        tankViolet.setBounds(new java.awt.Rectangle(105, 208, 39, 32));
+        RobotPanel.add(tankViolet);
+        tankViolet.setBounds(105, 208, 39, 32);
+
+        scoutRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutR.png"))); // NOI18N
+        scoutRed.setBounds(new java.awt.Rectangle(0, 0, 31, 30));
+        RobotPanel.add(scoutRed);
+        scoutRed.setBounds(0, 0, 31, 30);
+
+        sniperRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperR.png"))); // NOI18N
+        sniperRed.setBounds(new java.awt.Rectangle(49, 0, 38, 30));
+        RobotPanel.add(sniperRed);
+        sniperRed.setBounds(49, 0, 38, 30);
+
+        tankRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankR.png"))); // NOI18N
+        tankRed.setBounds(new java.awt.Rectangle(105, 0, 38, 30));
+        RobotPanel.add(tankRed);
+        tankRed.setBounds(105, 0, 38, 30);
+
+        scoutOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutO.png"))); // NOI18N
+        scoutOrange.setBounds(new java.awt.Rectangle(0, 42, 31, 30));
+        scoutOrange.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutOrange.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutOrange);
+        scoutOrange.setBounds(0, 42, 32, 32);
+
+        sniperOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperO.png"))); // NOI18N
+        sniperOrange.setBounds(new java.awt.Rectangle(49, 42, 38, 30));
+        sniperOrange.setMaximumSize(new java.awt.Dimension(38, 30));
+        sniperOrange.setMinimumSize(new java.awt.Dimension(38, 30));
+        RobotPanel.add(sniperOrange);
+        sniperOrange.setBounds(49, 42, 39, 30);
+
+        tankOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankO.png"))); // NOI18N
+        tankOrange.setBounds(new java.awt.Rectangle(105, 42, 38, 30));
+        RobotPanel.add(tankOrange);
+        tankOrange.setBounds(105, 42, 39, 30);
+
+        scoutYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutY.png"))); // NOI18N
+        scoutYellow.setBounds(new java.awt.Rectangle(0, 84, 31, 30));
+        RobotPanel.add(scoutYellow);
+        scoutYellow.setBounds(0, 84, 31, 30);
+
+        sniperYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperY.png"))); // NOI18N
+        sniperYellow.setBounds(new java.awt.Rectangle(49, 84, 38, 30));
+        RobotPanel.add(sniperYellow);
+        sniperYellow.setBounds(49, 84, 38, 30);
+
+        tankYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankY.png"))); // NOI18N
+        tankYellow.setBounds(new java.awt.Rectangle(105, 84, 38, 30));
+        RobotPanel.add(tankYellow);
+        tankYellow.setBounds(105, 84, 38, 30);
+
+        scoutGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutG.png"))); // NOI18N
+        scoutGreen.setBounds(new java.awt.Rectangle(0, 126, 32, 30));
+        scoutGreen.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutGreen.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutGreen);
+        scoutGreen.setBounds(0, 126, 32, 30);
+
+        sniperGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperG.png"))); // NOI18N
+        sniperGreen.setBounds(new java.awt.Rectangle(49, 126, 39, 30));
+        sniperGreen.setMaximumSize(new java.awt.Dimension(38, 30));
+        sniperGreen.setMinimumSize(new java.awt.Dimension(38, 30));
+        RobotPanel.add(sniperGreen);
+        sniperGreen.setBounds(49, 126, 39, 30);
+
+        tankGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankG.png"))); // NOI18N
+        tankGreen.setBounds(new java.awt.Rectangle(105, 126, 39, 30));
+        RobotPanel.add(tankGreen);
+        tankGreen.setBounds(105, 126, 39, 30);
+
+        scoutBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ScoutB.png"))); // NOI18N
+        scoutBlue.setBounds(new java.awt.Rectangle(0, 168, 32, 30));
+        scoutBlue.setMaximumSize(new java.awt.Dimension(31, 30));
+        scoutBlue.setMinimumSize(new java.awt.Dimension(31, 30));
+        RobotPanel.add(scoutBlue);
+        scoutBlue.setBounds(0, 168, 32, 30);
+
+        sniperBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/SniperB.png"))); // NOI18N
+        sniperBlue.setBounds(new java.awt.Rectangle(49, 168, 39, 30));
+        sniperBlue.setMaximumSize(new java.awt.Dimension(38, 30));
+        sniperBlue.setMinimumSize(new java.awt.Dimension(38, 30));
+        RobotPanel.add(sniperBlue);
+        sniperBlue.setBounds(49, 168, 39, 30);
+
+        tankBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/TankB.png"))); // NOI18N
+        tankBlue.setBounds(new java.awt.Rectangle(105, 168, 39, 30));
+        RobotPanel.add(tankBlue);
+        tankBlue.setBounds(105, 168, 39, 30);
+
+        getContentPane().add(RobotPanel);
+        RobotPanel.setBounds(810, 30, 150, 240);
 
         homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Home.png"))); // NOI18N
         homeButton.setToolTipText("");
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
+        getContentPane().add(homeButton);
+        homeButton.setBounds(29, 21, 60, 47);
 
         endPlayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/endPlay.png"))); // NOI18N
         endPlayButton.setBorderPainted(false);
@@ -432,56 +587,36 @@ public class GameBoardView extends javax.swing.JFrame {
                 endPlayButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(endPlayButton);
+        endPlayButton.setBounds(320, 630, 55, 66);
 
         giveUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/giveUp.png"))); // NOI18N
         giveUpButton.setBorderPainted(false);
         giveUpButton.setContentAreaFilled(false);
+        getContentPane().add(giveUpButton);
+        giveUpButton.setBounds(520, 630, 55, 63);
+
+        redTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/redTeam.png"))); // NOI18N
+        redTeam.setBounds(new java.awt.Rectangle(90, 324, 60, 30));
+        getContentPane().add(redTeam);
+        redTeam.setBounds(90, 324, 60, 30);
+
+        greenTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/greenTeam.png"))); // NOI18N
+        greenTeam.setBounds(new java.awt.Rectangle(750, 324, 60, 30));
+        getContentPane().add(greenTeam);
+        greenTeam.setBounds(750, 324, 60, 30);
+
+        blueTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/blueTeam.png"))); // NOI18N
+        getContentPane().add(blueTeam);
+        blueTeam.setBounds(600, 580, 60, 30);
 
         jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(95, 350, 50, 20);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(371, 371, 371)
-                        .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(370, 370, 370)
-                        .addComponent(endPlayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(151, 151, 151)
-                        .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabel1)
-                        .addGap(61, 61, 61)
-                        .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(204, 204, 204))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(gameBoardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabel1)))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(giveUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(endPlayButton))
-                .addContainerGap())
-        );
+        violetTeam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/violetTeam.png"))); // NOI18N
+        getContentPane().add(violetTeam);
+        violetTeam.setBounds(240, 580, 60, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -726,9 +861,12 @@ public class GameBoardView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel RobotPanel;
+    private javax.swing.JLabel blueTeam;
     private javax.swing.JButton endPlayButton;
     private javax.swing.JPanel gameBoardPanel;
     private javax.swing.JButton giveUpButton;
+    private javax.swing.JLabel greenTeam;
     private javax.swing.JButton homeButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel n1n1p2;
@@ -757,6 +895,7 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JLabel n4p3p1;
     private javax.swing.JLabel n4p4z0;
     private javax.swing.JLabel n4z0p4;
+    private javax.swing.JLabel orangeTeam;
     private javax.swing.JLabel p1n1z0;
     private javax.swing.JLabel p1n2p1;
     private javax.swing.JLabel p1n3p2;
@@ -783,7 +922,28 @@ public class GameBoardView extends javax.swing.JFrame {
     private javax.swing.JLabel p4n3n1;
     private javax.swing.JLabel p4n4z0;
     private javax.swing.JLabel p4z0n4;
+    private javax.swing.JLabel redTeam;
+    private javax.swing.JLabel scoutBlue;
+    private javax.swing.JLabel scoutGreen;
+    private javax.swing.JLabel scoutOrange;
+    private javax.swing.JLabel scoutRed;
+    private javax.swing.JLabel scoutViolet;
+    private javax.swing.JLabel scoutYellow;
+    private javax.swing.JLabel sniperBlue;
+    private javax.swing.JLabel sniperGreen;
+    private javax.swing.JLabel sniperOrange;
+    private javax.swing.JLabel sniperRed;
+    private javax.swing.JLabel sniperViolet;
+    private javax.swing.JLabel sniperYellow;
+    private javax.swing.JLabel tankBlue;
+    private javax.swing.JLabel tankGreen;
+    private javax.swing.JLabel tankOrange;
+    private javax.swing.JLabel tankRed;
+    private javax.swing.JLabel tankViolet;
+    private javax.swing.JLabel tankYellow;
     private javax.swing.JLabel timerLabel;
+    private javax.swing.JLabel violetTeam;
+    private javax.swing.JLabel yellowTeam;
     private javax.swing.JLabel z0n1p1;
     private javax.swing.JLabel z0n2p2;
     private javax.swing.JLabel z0n3p3;
