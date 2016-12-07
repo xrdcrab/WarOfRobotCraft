@@ -58,7 +58,6 @@ public class GameStartView extends javax.swing.JFrame {
         startButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/start.png"))); // NOI18N
         startButton.setBorderPainted(false);
         startButton.setContentAreaFilled(false);
-        startButton.setOpaque(false);
         startButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/startL.png"))); // NOI18N
         startButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/startL1.png"))); // NOI18N
         startButton.addActionListener(new java.awt.event.ActionListener() {

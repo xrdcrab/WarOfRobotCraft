@@ -76,9 +76,8 @@ public class SetGameModeView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(twoPlayersRadioButton);
-        twoPlayersRadioButton.setBounds(660, 50, 200, 50);
+        twoPlayersRadioButton.setBounds(570, 40, 200, 50);
 
-        threePlayersRadioButton.setBackground(new java.awt.Color(212, 82, 80));
         buttonGroup2.add(threePlayersRadioButton);
         threePlayersRadioButton.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         threePlayersRadioButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -93,7 +92,7 @@ public class SetGameModeView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(threePlayersRadioButton);
-        threePlayersRadioButton.setBounds(660, 100, 200, 50);
+        threePlayersRadioButton.setBounds(570, 84, 230, 40);
 
         buttonGroup2.add(sixPlayersRadioButton);
         sixPlayersRadioButton.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
@@ -109,110 +108,129 @@ public class SetGameModeView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sixPlayersRadioButton);
-        sixPlayersRadioButton.setBounds(660, 150, 200, 50);
+        sixPlayersRadioButton.setBounds(570, 118, 200, 50);
 
+        playerTypeComboBox1.setBackground(new java.awt.Color(152, 180, 212));
         playerTypeComboBox1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        playerTypeComboBox1.setForeground(new java.awt.Color(152, 180, 212));
         playerTypeComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "AI" }));
         playerTypeComboBox1.setAlignmentX(0.0F);
         playerTypeComboBox1.setAlignmentY(0.0F);
         playerTypeComboBox1.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox1.setMinimumSize(new java.awt.Dimension(200, 50));
+        playerTypeComboBox1.setOpaque(true);
         playerTypeComboBox1.setPreferredSize(new java.awt.Dimension(200, 50));
         getContentPane().add(playerTypeComboBox1);
-        playerTypeComboBox1.setBounds(660, 230, 200, 50);
+        playerTypeComboBox1.setBounds(560, 230, 330, 40);
 
+        playerTypeComboBox2.setBackground(new java.awt.Color(214, 80, 118));
         playerTypeComboBox2.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        playerTypeComboBox2.setForeground(new java.awt.Color(214, 80, 118));
         playerTypeComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "AI" }));
         playerTypeComboBox2.setAlignmentX(0.0F);
         playerTypeComboBox2.setAlignmentY(0.0F);
-        playerTypeComboBox2.setMaximumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox2.setMinimumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox2.setPreferredSize(new java.awt.Dimension(200, 50));
+        playerTypeComboBox2.setMaximumSize(new java.awt.Dimension(200, 40));
+        playerTypeComboBox2.setMinimumSize(new java.awt.Dimension(200, 40));
+        playerTypeComboBox2.setOpaque(true);
+        playerTypeComboBox2.setPreferredSize(new java.awt.Dimension(330, 40));
+        playerTypeComboBox2.setSize(new java.awt.Dimension(330, 40));
         playerTypeComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playerTypeComboBox2ActionPerformed(evt);
             }
         });
         getContentPane().add(playerTypeComboBox2);
-        playerTypeComboBox2.setBounds(660, 280, 200, 50);
+        playerTypeComboBox2.setBounds(560, 280, 330, 40);
 
+        playerTypeComboBox3.setBackground(new java.awt.Color(145, 181, 77));
         playerTypeComboBox3.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        playerTypeComboBox3.setForeground(new java.awt.Color(145, 181, 77));
         playerTypeComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "AI" }));
         playerTypeComboBox3.setAlignmentX(0.0F);
         playerTypeComboBox3.setAlignmentY(0.0F);
-        playerTypeComboBox3.setMaximumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox3.setMinimumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox3.setPreferredSize(new java.awt.Dimension(200, 50));
+        playerTypeComboBox3.setMaximumSize(new java.awt.Dimension(330, 40));
+        playerTypeComboBox3.setMinimumSize(new java.awt.Dimension(330, 40));
+        playerTypeComboBox3.setOpaque(true);
+        playerTypeComboBox3.setPreferredSize(new java.awt.Dimension(330, 40));
+        playerTypeComboBox3.setSize(new java.awt.Dimension(330, 40));
         getContentPane().add(playerTypeComboBox3);
-        playerTypeComboBox3.setBounds(660, 330, 200, 50);
+        playerTypeComboBox3.setBounds(560, 330, 330, 40);
 
         confirmButton.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        confirmButton.setText("Confirm");
+        confirmButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/confirm.png"))); // NOI18N
         confirmButton.setToolTipText("");
+        confirmButton.setMaximumSize(new java.awt.Dimension(330, 60));
+        confirmButton.setMinimumSize(new java.awt.Dimension(330, 60));
+        confirmButton.setPreferredSize(new java.awt.Dimension(332, 60));
+        confirmButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/confirmL.png"))); // NOI18N
+        confirmButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/confirmL1.png"))); // NOI18N
         confirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmButtonActionPerformed(evt);
             }
         });
         getContentPane().add(confirmButton);
-        confirmButton.setBounds(660, 568, 200, 50);
+        confirmButton.setBounds(560, 568, 332, 60);
 
+        playerTypeComboBox4.setBackground(new java.awt.Color(152, 180, 212));
         playerTypeComboBox4.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        playerTypeComboBox4.setForeground(new java.awt.Color(152, 180, 212));
         playerTypeComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
         playerTypeComboBox4.setAlignmentX(0.0F);
         playerTypeComboBox4.setAlignmentY(0.0F);
         playerTypeComboBox4.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox4.setMinimumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox4.setPreferredSize(new java.awt.Dimension(200, 50));
+        playerTypeComboBox4.setOpaque(true);
+        playerTypeComboBox4.setPreferredSize(new java.awt.Dimension(300, 40));
+        playerTypeComboBox4.setSize(new java.awt.Dimension(330, 40));
         getContentPane().add(playerTypeComboBox4);
-        playerTypeComboBox4.setBounds(660, 380, 200, 50);
+        playerTypeComboBox4.setBounds(560, 380, 330, 40);
 
+        playerTypeComboBox5.setBackground(new java.awt.Color(214, 80, 118));
         playerTypeComboBox5.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        playerTypeComboBox5.setForeground(new java.awt.Color(214, 80, 118));
         playerTypeComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
         playerTypeComboBox5.setAlignmentX(0.0F);
         playerTypeComboBox5.setAlignmentY(0.0F);
-        playerTypeComboBox5.setMaximumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox5.setMinimumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox5.setPreferredSize(new java.awt.Dimension(200, 50));
+        playerTypeComboBox5.setMaximumSize(new java.awt.Dimension(300, 40));
+        playerTypeComboBox5.setMinimumSize(new java.awt.Dimension(300, 40));
+        playerTypeComboBox5.setOpaque(true);
+        playerTypeComboBox5.setPreferredSize(new java.awt.Dimension(300, 50));
+        playerTypeComboBox5.setSize(new java.awt.Dimension(330, 40));
         getContentPane().add(playerTypeComboBox5);
-        playerTypeComboBox5.setBounds(660, 430, 200, 50);
+        playerTypeComboBox5.setBounds(560, 430, 330, 40);
 
+        playerTypeComboBox6.setBackground(new java.awt.Color(145, 181, 77));
         playerTypeComboBox6.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        playerTypeComboBox6.setForeground(new java.awt.Color(145, 181, 77));
         playerTypeComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Human", "AI" }));
         playerTypeComboBox6.setAlignmentX(0.0F);
         playerTypeComboBox6.setAlignmentY(0.0F);
         playerTypeComboBox6.setMaximumSize(new java.awt.Dimension(200, 50));
         playerTypeComboBox6.setMinimumSize(new java.awt.Dimension(200, 50));
-        playerTypeComboBox6.setPreferredSize(new java.awt.Dimension(200, 50));
+        playerTypeComboBox6.setOpaque(true);
+        playerTypeComboBox6.setPreferredSize(new java.awt.Dimension(330, 40));
+        playerTypeComboBox6.setSize(new java.awt.Dimension(330, 40));
         getContentPane().add(playerTypeComboBox6);
-        playerTypeComboBox6.setBounds(660, 480, 200, 50);
+        playerTypeComboBox6.setBounds(560, 480, 330, 40);
 
-        greenLabel.setBackground(new java.awt.Color(145, 181, 77));
+        greenLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/greenLabel.png"))); // NOI18N
         greenLabel.setAlignmentY(0.0F);
-        greenLabel.setMaximumSize(new java.awt.Dimension(200, 50));
-        greenLabel.setMinimumSize(new java.awt.Dimension(200, 50));
         greenLabel.setOpaque(true);
-        greenLabel.setPreferredSize(new java.awt.Dimension(200, 50));
         getContentPane().add(greenLabel);
-        greenLabel.setBounds(660, 150, 200, 50);
+        greenLabel.setBounds(560, 126, 332, 40);
 
-        redLabel.setBackground(new java.awt.Color(214, 83, 85));
+        redLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/redLabel.png"))); // NOI18N
         redLabel.setAlignmentY(0.0F);
-        redLabel.setMaximumSize(new java.awt.Dimension(200, 50));
-        redLabel.setMinimumSize(new java.awt.Dimension(200, 50));
         redLabel.setOpaque(true);
-        redLabel.setPreferredSize(new java.awt.Dimension(200, 50));
         getContentPane().add(redLabel);
-        redLabel.setBounds(660, 100, 200, 60);
+        redLabel.setBounds(560, 86, 332, 40);
 
-        blueLabel.setBackground(new java.awt.Color(152, 180, 212));
+        blueLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/blueLabel.png"))); // NOI18N
         blueLabel.setAlignmentY(0.0F);
-        blueLabel.setMaximumSize(new java.awt.Dimension(200, 50));
-        blueLabel.setMinimumSize(new java.awt.Dimension(200, 50));
         blueLabel.setOpaque(true);
-        blueLabel.setPreferredSize(new java.awt.Dimension(200, 50));
         getContentPane().add(blueLabel);
-        blueLabel.setBounds(660, 50, 200, 56);
+        blueLabel.setBounds(560, 46, 332, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
