@@ -1513,6 +1513,12 @@ public class GameBoardView7 extends javax.swing.JFrame {
      public void updateRobotTurned(int playerPosition, String robotType, int direction){
         ((RobotLabel)getRobotLabel(playerPosition, robotType)).updateRotation(direction);
     }
+     
+     public void updateCurrentPlayer(int playerPosition) {
+        previousPlayerPosition = currentPlayerPosition;
+        currentPlayerPosition = playerPosition;
+    }
+
          
         
     
