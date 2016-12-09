@@ -553,6 +553,31 @@ public class Controller implements ActionListener, KeyListener {
 			}
 		}, 0, 1000);
 	}
+/**
+	 * this method will reset the internal timer
+	 * 
+	 * @param countDwon,
+	 *            the time limit
+	 */
+	private void resetGameBoardView7Timer(int countDwon) {
+		gameBoardView7Timer.cancel();
+		gameBoardView7Timer = new Timer();
+		gameBoardView7Timer.schedule(new TimerTask() {
+
+			int timerNumber = countDwon;
+
+			@Override
+			public void run() {
+				if (timerNumber == 0) {
+					endPlayOperation();
+				} else {
+					timerNumber--;
+				}
+
+				gameBoardView7.updateTimerNumber(timerNumber);
+			}
+		}, 0, 1000);
+	}
 
 	/**
 	 * this method define the action of end play. It also show the winner name
@@ -884,7 +909,7 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameBoardView7().updateCurrentRobot("Scout");
 
 		// set the timer
-		resetGameBoardView7Timer(20);
+		resetGameBoardViewTimer(20);
             }
 
 	}
