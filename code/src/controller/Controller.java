@@ -249,18 +249,33 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @return the gameBoardView
+	 * @return the gameBoardView5
 	 */
-	public GameBoardView5 getGameBoardView() {
-		return gameBoardView;
+	public GameBoardView5 getGameBoardView5() {
+		return gameBoardView5;
+	}
+        
+        /**
+	 * @return the gameBoardView7
+	 */
+        public GameBoardView7 getGameBoardView7() {
+		return gameBoardView7;
 	}
 
 	/**
-	 * @param gameBoardView
-	 *            the gameBoardView to set
+	 * @param gameBoardView5
+	 *            the gameBoardView5 to set
 	 */
-	public void setGameBoardView(GameBoardView5 gameBoardView) {
-		this.gameBoardView = gameBoardView;
+	public void setGameBoardView5(GameBoardView5 gameBoardView5) {
+		this.gameBoardView5 = gameBoardView5;
+	}
+        
+        /**
+	 * @param gameBoardView7
+	 *            the gameBoardView7 to set
+	 */
+	public void setGameBoardView7(GameBoardView7 gameBoardView7) {
+		this.gameBoardView7 = gameBoardView7;
 	}
 
 	/**
