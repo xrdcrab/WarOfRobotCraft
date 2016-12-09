@@ -619,6 +619,7 @@ public class Controller implements ActionListener, KeyListener {
 	 * @param direction
 	 */
 	private void turnOperation(int direction) {
+            if(!isGameBoardView7){
 		if (this.getGame().getAlivePlayerNumber() == 1) {
 			// do nothing
 		} else {
@@ -626,19 +627,23 @@ public class Controller implements ActionListener, KeyListener {
 			Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
 			currentPlayer.getCurrentRobot().turn(direction);
 			// update UI here
-			gameBoardView.updateRobotTurned(currentPlayerPosition, currentPlayer.getCurrentRobot().getType().toString(),
+			gameBoardView5.updateRobotTurned(currentPlayerPosition, currentPlayer.getCurrentRobot().getType().toString(),
 					currentPlayer.getCurrentRobot().getDirection());
 		}
-		// int currentPlayerPosition = getGame().getCurrentPlayerIndex();
-		// Player currentPlayer =
-		// getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
-		// currentPlayer.getCurrentRobot().turn(direction);
-		// //update UI here
-		// gameBoardView.updateRobotTurned(
-		// currentPlayerPosition,
-		// currentPlayer.getCurrentRobot().getType().toString(),
-		// currentPlayer.getCurrentRobot().getDirection()
-		// );
+            }
+            else{
+		if (this.getGame().getAlivePlayerNumber() == 1) {
+			// do nothing
+		} else {
+			int currentPlayerPosition = getGame().getCurrentPlayerIndex();
+			Player currentPlayer = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
+			currentPlayer.getCurrentRobot().turn(direction);
+			// update UI here
+			gameBoardView7.updateRobotTurned(currentPlayerPosition, currentPlayer.getCurrentRobot().getType().toString(),
+					currentPlayer.getCurrentRobot().getDirection());
+		}
+            }
+		
 	}
 
 	/**
