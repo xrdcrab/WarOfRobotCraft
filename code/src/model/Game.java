@@ -1,13 +1,7 @@
 package model;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Set;
-import java.util.Timer;
-
-import com.sun.javafx.tk.Toolkit.Task;
-
 import javafx.util.Pair;
 
 /**
@@ -177,7 +171,6 @@ public class Game {
     /**
      * this method will run the game in the data level,
      * update current robot, current plater and determine the winner.
-     * @throws InterruptedException 
      */
     public void runPlay() {
     	

@@ -6,12 +6,59 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Rectangle;
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
+import javax.swing.JLabel;
 
 /**
  *
  * @author sophiafu
  */
 public class GameBoardView7 extends javax.swing.JFrame {
+    
+    private Timer currentRobotBlinkTimer = new Timer();
+    private Class<?> gameBoardViewClass = GameBoardView7.class;
+    
+    private Timer animationTimer = new Timer();
+    private RobotLabel currentRobotLabel = null;
+    private Rectangle originalBounds = null;
+    private Rectangle expectedBounds = null;
+    private int animationSplitX = 0;
+    private int animationSplitY = 0;
+
+    private int previousPlayerPosition = -1;
+    private int currentPlayerPosition = 0;
+    private String currentRobotType = "Scout";
+    
+    private HashMap<RobotLabel, String> robotPositionHashMap = new HashMap<RobotLabel, String>();
+
+    private RobotLabel player0_scout;
+    private RobotLabel player0_sniper;
+    private RobotLabel player0_tank;
+
+    private RobotLabel player1_scout;
+    private RobotLabel player1_sniper;
+    private RobotLabel player1_tank;
+
+    private RobotLabel player2_scout;
+    private RobotLabel player2_sniper;
+    private RobotLabel player2_tank;
+
+    private RobotLabel player3_scout;
+    private RobotLabel player3_sniper;
+    private RobotLabel player3_tank;
+
+    private RobotLabel player4_scout;
+    private RobotLabel player4_sniper;
+    private RobotLabel player4_tank;
+
+    private RobotLabel player5_scout;
+    private RobotLabel player5_sniper;
+    private RobotLabel player5_tank;
+
 
     /**
      * Creates new form GameBoardView7
@@ -198,6 +245,11 @@ public class GameBoardView7 extends javax.swing.JFrame {
         homeButton.setToolTipText("");
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(homeButton);
         homeButton.setBounds(20, 10, 76, 62);
 
@@ -1385,6 +1437,150 @@ public class GameBoardView7 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_endPlayButtonActionPerformed
 
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtonActionPerformed
+
+    
+    public void updateTimerNumber(int number) {
+        timerLabel.setText("" + number);
+
+    }
+    
+    
+    public JLabel getHexagonLabel(String coordString) {
+        try {
+            Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+            labelField.setAccessible(true);
+            return (JLabel) labelField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
+    }
+    
+    public void updateMist(HashMap<String, Boolean> hashMap) {
+        hashMap.forEach((coordString, isVisible) -> {
+            getHexagonLabel(coordString).setEnabled(isVisible);
+            robotPositionHashMap.forEach((r, c)->{
+                if(c.equals(coordString)){
+                    r.setVisible(isVisible);
+                }
+            });
+        });
+    }
+        
+    private RobotLabel getRobotLabel(int playerPosition, String robotType) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
+            robotField.setAccessible(true);
+            return (RobotLabel) robotField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
+    }
+    
+    private void setRobotLabel(int playerPosition, String robotType, JLabel value) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
+            robotField.setAccessible(true);
+            robotField.set(this, value);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            // do nothing
+        }
+    }
+    
+    public void updateRobotDestruction(int playerPosition, String RobotType) {
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+        if (robotLabel != null) {
+            gameBoardPanel7.remove(robotLabel);
+            gameBoardPanel7.repaint();
+        }
+    }
+    
+    public void updateCurrentRobot(String robotType) {
+        // stop the previous timer
+        if(previousPlayerPosition != -1){
+            currentRobotBlinkTimer.cancel();
+            getRobotLabel(previousPlayerPosition, currentRobotType.toLowerCase()).setEnabled(true);
+        }
+
+        // start a new task
+        currentRobotType = robotType;
+        currentRobotBlinkTimer = new Timer();
+        currentRobotBlinkTimer.schedule(
+                new TimerTask() {
+            @Override
+            public void run() {
+                JLabel robotLabel = getRobotLabel(currentPlayerPosition, currentRobotType.toLowerCase());
+                robotLabel.setEnabled(!robotLabel.isEnabled());
+            }
+        },
+                0,
+                200
+        );
+    }
+
+    public void updateRobotTurned(int playerPosition, String robotType, int direction){
+        ((RobotLabel)getRobotLabel(playerPosition, robotType)).updateRotation(direction);
+    }
+     
+    public void updateCurrentPlayer(int playerPosition) {
+        previousPlayerPosition = currentPlayerPosition;
+        currentPlayerPosition = playerPosition;
+    }
+
+    private void updateAnimationSplitXY(){
+        animationSplitX = (expectedBounds.x - originalBounds.x) / 10;
+        animationSplitY = (expectedBounds.y - originalBounds.y) / 10;
+    }
+    
+    public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
+        RobotLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+        JLabel hexagonLabel = getHexagonLabel(coordString);
+
+        animationTimer.cancel();
+        
+        if (hexagonLabel != null) {
+            if (robotLabel == null) {
+                setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
+                robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+                robotPositionHashMap.put(getRobotLabel(playerPosition, RobotType), coordString);
+                gameBoardPanel7.add(robotLabel);
+                robotLabel.setBounds(hexagonLabel.getBounds());
+            } else {
+                animationTimer = new Timer();
+                currentRobotLabel = robotLabel;
+                originalBounds = robotLabel.getBounds();
+                expectedBounds = hexagonLabel.getBounds();
+                updateAnimationSplitXY();
+                animationTimer.schedule(new TimerTask() {
+                    int timeCount = 0;
+                    
+                    @Override
+                    public void run() {
+                        if(timeCount > 10){
+                            currentRobotLabel.setBounds(expectedBounds);
+                            animationTimer.cancel();
+                        } else {
+                            currentRobotLabel.setBounds(new Rectangle(
+                                    currentRobotLabel.getBounds().x + animationSplitX,
+                                    currentRobotLabel.getBounds().y + animationSplitY,
+                                    currentRobotLabel.getBounds().width,
+                                    currentRobotLabel.getBounds().height
+                                )
+                            );
+                            timeCount++;
+                        }
+                    }
+                }, 0, 10);
+            }
+            
+            robotPositionHashMap.replace(getRobotLabel(playerPosition, RobotType), coordString);
+        }
+    }
+         
+        
+    
     /**
      * @param args the command line arguments
      */

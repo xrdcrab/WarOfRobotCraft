@@ -26,7 +26,7 @@ import javax.swing.JLabel;
 /**
  * this class is to create the view the game board
  */
-public class GameBoardView extends javax.swing.JFrame {
+public class GameBoardView5 extends javax.swing.JFrame {
 
     /**
      *
@@ -34,7 +34,7 @@ public class GameBoardView extends javax.swing.JFrame {
     private static final long serialVersionUID = 1L;
 
     private Timer currentRobotBlinkTimer = new Timer();
-    private Class<?> gameBoardViewClass = GameBoardView.class;
+    private Class<?> gameBoardViewClass = GameBoardView5.class;
     
     private Timer animationTimer = new Timer();
     private RobotLabel currentRobotLabel = null;
@@ -76,7 +76,7 @@ public class GameBoardView extends javax.swing.JFrame {
     /**
      * Creates new form GameBoardView
      */
-    public GameBoardView() {
+    public GameBoardView5() {
         initComponents();
         this.getContentPane().setBackground(Color.WHITE);
     }
@@ -773,67 +773,11 @@ public class GameBoardView extends javax.swing.JFrame {
         }
     }
 
-    
-//   IN CONSTRUCTION
-    public JLabel getTestTurnRobot(){
-//        return this.testTurnRobot;
-        return null;
-    }
-    
-    
-    
-//    IN CONSTRUCTION    
-    public void rotateLabel2(){
-        RotateImage img = new RotateImage();
-        img.init();
-        img.paint(img.image.getGraphics());
-        ImageIcon imgIcon = new ImageIcon(img.image);
-//       this.testTurnRobot.setIcon(null);
-//        this.testTurnRobot.setIcon(imgIcon);
-    }
-    
-    
-    
-    
-//    IN CONSTRUCTION
-    public void rotateLabel(JLabel label){
-        
-        Image img = null;
-        try {
-                    img  = ImageIO.read((ClassLoader.getSystemResource(
-                    "Resources/"
-                    + "Scout"
-                    + "Y"
-                    + ".png")));
-            
-//            img = ImageIO.read(ClassLoader.getSystemResource(
-//                    "/Resources/ScoutY.png"));
-
-        } catch (IOException ex) {
-            Logger.getLogger(GameBoardView.class.getName()).log(Level.SEVERE, null, ex);
-        }
-   Graphics2D g2d = (Graphics2D) img.getGraphics();
-   
-        g2d.rotate(1.14);
-        ImageIcon imgIcon = new ImageIcon(img);
-//        label.setLocation(55, 55);
-        label.setIcon(imgIcon);
-//        AffineTransform trans = new AffineTransform();
-//        
-//        Graphics2D g2d = (Graphics2D)img;
-//       AffineTransform affineTransform = new AffineTransform(); 
-//       affineTransform.rotate(Math.toRadians(45), x, y); 
-    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -842,20 +786,21 @@ public class GameBoardView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameBoardView5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameBoardView5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameBoardView5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GameBoardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameBoardView5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GameBoardView().setVisible(true);
+                new GameBoardView5().setVisible(true);
             }
         });
     }

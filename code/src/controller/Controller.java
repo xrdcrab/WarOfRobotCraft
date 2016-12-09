@@ -148,7 +148,7 @@ public class Controller implements ActionListener, KeyListener {
 	private Game game;
 	private GameStartView gameStartView;
 	private SetGameModeView setGameModeView;
-	private GameBoardView gameBoardView;
+	private GameBoardView5 gameBoardView;
 
 	private Timer gameBoardViewTimer = new Timer();
 
@@ -250,7 +250,7 @@ public class Controller implements ActionListener, KeyListener {
 	/**
 	 * @return the gameBoardView
 	 */
-	public GameBoardView getGameBoardView() {
+	public GameBoardView5 getGameBoardView() {
 		return gameBoardView;
 	}
 
@@ -258,7 +258,7 @@ public class Controller implements ActionListener, KeyListener {
 	 * @param gameBoardView
 	 *            the gameBoardView to set
 	 */
-	public void setGameBoardView(GameBoardView gameBoardView) {
+	public void setGameBoardView(GameBoardView5 gameBoardView) {
 		this.gameBoardView = gameBoardView;
 	}
 
@@ -345,7 +345,7 @@ public class Controller implements ActionListener, KeyListener {
 			int playerNum = -1;
 			HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
 
-			this.gameBoardView = new GameBoardView();
+			this.gameBoardView = new GameBoardView5();
 
 			if (this.getSetGameModeView().getTwoPlayersRadioButton().isSelected()) {
 				playerNum = 2;
@@ -775,7 +775,7 @@ public class Controller implements ActionListener, KeyListener {
 			rangeStringBoolMap.put(coord.toString(), isVisible);
 		});
 
-		// Call updateMist method of GameBoardView class using new
+		// Call updateMist method of GameBoardView5 class using new
 		// rangeStringBoolMap as parameter.
 		this.getGameBoardView().updateMist(rangeStringBoolMap);
 	}
@@ -802,7 +802,7 @@ public class Controller implements ActionListener, KeyListener {
 			rangeStringBoolMap.put(coord.toString(), isVisible);
 		});
 
-		// Call updateMist method of GameBoardView class using new
+		// Call updateMist method of GameBoardView5 class using new
 		// rangeStringBoolMap as parameter.
 		this.getGameBoardView().updateMist(rangeStringBoolMap);
 	}
