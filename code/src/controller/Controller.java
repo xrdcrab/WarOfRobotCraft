@@ -652,6 +652,7 @@ public class Controller implements ActionListener, KeyListener {
 	 * @param shootDistance
 	 */
 	private void shootOperation(int shootDistance) {
+            if(!isGameBoardView7){
 		if (this.getGame().getAlivePlayerNumber() == 1) {
 			// do nothing
 		} else {
@@ -674,7 +675,7 @@ public class Controller implements ActionListener, KeyListener {
 			// update UI here
 			if (deadRobotList != null) {
 				for (Pair<Integer, String> deadRobot : deadRobotList) {
-					getGameBoardView().updateRobotDestruction(deadRobot.getKey(), deadRobot.getValue());
+					getGameBoardView5().updateRobotDestruction(deadRobot.getKey(), deadRobot.getValue());
 
 					System.out.println("the dead robot is:" + deadRobot.getKey() + deadRobot.getValue().toString());
 				}
@@ -682,6 +683,39 @@ public class Controller implements ActionListener, KeyListener {
 
 			this.updateMist();
 		}
+            }
+            else {
+		if (this.getGame().getAlivePlayerNumber() == 1) {
+			// do nothing
+		} else {
+			Pair<Coordinate, Integer> pair = null;
+			try {
+				pair = getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).getCurrentRobot()
+						.shoot(shootDistance, getGame().getGameMap().getMapSize());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			// if (pair == null) System.out.println(pair + "is null");
+			// else {
+			// System.out.println(pair.getKey().toString());
+			// }
+			// System.out.println("shoot");
+			LinkedList<Pair<Integer, String>> deadRobotList = getGame().updateGameShootDamaged(pair);
+			// if ( getGame().updateGameShootDead(pair) != null )
+			// System.out.println("robot dead");
+			// System.out.println(getGame().updateGameShootDead(pair).size());
+			// update UI here
+			if (deadRobotList != null) {
+				for (Pair<Integer, String> deadRobot : deadRobotList) {
+					getGameBoardView7().updateRobotDestruction(deadRobot.getKey(), deadRobot.getValue());
+
+					System.out.println("the dead robot is:" + deadRobot.getKey() + deadRobot.getValue().toString());
+				}
+			}
+
+			this.updateMist();
+		}
+            }
 		// Pair<Coordinate, Integer> pair = null;
 		// try {
 		// pair =
