@@ -10,6 +10,7 @@ import java.awt.Rectangle;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JLabel;
 
 /**
@@ -1457,7 +1458,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
         }
     }
     
-        public void updateMist(HashMap<String, Boolean> hashMap) {
+    public void updateMist(HashMap<String, Boolean> hashMap) {
         hashMap.forEach((coordString, isVisible) -> {
             getHexagonLabel(coordString).setEnabled(isVisible);
             robotPositionHashMap.forEach((r, c)->{
@@ -1468,7 +1469,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
         });
     }
         
-        private RobotLabel getRobotLabel(int playerPosition, String robotType) {
+    private RobotLabel getRobotLabel(int playerPosition, String robotType) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
             robotField.setAccessible(true);
@@ -1477,13 +1478,39 @@ public class GameBoardView7 extends javax.swing.JFrame {
             return null;
         }
     }
-         public void updateRobotDestruction(int playerPosition, String RobotType) {
+    
+    public void updateRobotDestruction(int playerPosition, String RobotType) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         if (robotLabel != null) {
             gameBoardPanel7.remove(robotLabel);
             gameBoardPanel7.repaint();
         }
     }
+    
+    public void updateCurrentRobot(String robotType) {
+        // stop the previous timer
+        if(previousPlayerPosition != -1){
+            currentRobotBlinkTimer.cancel();
+            getRobotLabel(previousPlayerPosition, currentRobotType.toLowerCase()).setEnabled(true);
+        }
+
+        // start a new task
+        currentRobotType = robotType;
+        currentRobotBlinkTimer = new Timer();
+        currentRobotBlinkTimer.schedule(
+                new TimerTask() {
+            @Override
+            public void run() {
+                JLabel robotLabel = getRobotLabel(currentPlayerPosition, currentRobotType.toLowerCase());
+                robotLabel.setEnabled(!robotLabel.isEnabled());
+            }
+        },
+                0,
+                200
+        );
+    }
+
+         
         
     
     /**
