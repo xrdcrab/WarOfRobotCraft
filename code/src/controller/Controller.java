@@ -151,7 +151,8 @@ public class Controller implements ActionListener, KeyListener {
 	private GameBoardView5 gameBoardView5;
         private GameBoardView7 gameBoardView7;
 
-	private Timer gameBoardViewTimer = new Timer();
+	private Timer gameBoardView5Timer = new Timer();
+        private Timer gameBoardView7Timer = new Timer();
 
 	private OperationMode operationMode;
 
@@ -323,18 +324,33 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @return the gameBoardViewTimer
+	 * @return the gameBoardView5Timer
 	 */
-	public Timer getGameBoardViewTimer() {
-		return gameBoardViewTimer;
+	public Timer getGameBoardView5Timer() {
+		return gameBoardView5Timer;
+	}
+        
+        /**
+	 * @return the gameBoardView7Timer
+	 */
+	public Timer getGameBoardView7Timer() {
+		return gameBoardView7Timer;
 	}
 
 	/**
-	 * @param gameBoardViewTimer
-	 *            the gameBoardViewTimer to set
+	 * @param gameBoardView5Timer
+	 *            the gameBoardView5Timer to set
 	 */
-	public void setGameBoardViewTimer(Timer gameBoardViewTimer) {
-		this.gameBoardViewTimer = gameBoardViewTimer;
+	public void setGameBoardView5Timer(Timer gameBoardView5Timer) {
+		this.gameBoardView5Timer = gameBoardView5Timer;
+	}
+        
+        /**
+	 * @param gameBoardView7Timer
+	 *            the gameBoardView7Timer to set
+	 */
+	public void setGameBoardView7Timer(Timer gameBoardView7Timer) {
+		this.gameBoardView7Timer = gameBoardView7Timer;
 	}
 
 	/**
