@@ -1775,4 +1775,10 @@ public class GameBoardView7 extends javax.swing.JFrame {
     private javax.swing.JLabel z0p6n6;
     private javax.swing.JLabel z0z0z0;
     // End of variables declaration//GEN-END:variables
+/**
+     * @return the endPlayButton
+     */
+    public javax.swing.JButton getEndPlayButton() {
+        return endPlayButton;
+    }
 }
