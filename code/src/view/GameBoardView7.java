@@ -198,6 +198,11 @@ public class GameBoardView7 extends javax.swing.JFrame {
         homeButton.setToolTipText("");
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(homeButton);
         homeButton.setBounds(20, 10, 76, 62);
 
@@ -1384,6 +1389,10 @@ public class GameBoardView7 extends javax.swing.JFrame {
     private void endPlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endPlayButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_endPlayButtonActionPerformed
+
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtonActionPerformed
 
     /**
      * @param args the command line arguments
