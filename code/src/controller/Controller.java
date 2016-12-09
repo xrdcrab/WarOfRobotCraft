@@ -427,7 +427,7 @@ public class Controller implements ActionListener, KeyListener {
 				}
 			});
 
-			if (playerNum != -1) {
+			if (playerNum != -1 && playerNum != 6) {
 				this.game = new Game(playerHashMap, playerNum);
 				this.mapSizeGlobal = game.getGameMap().getMapSize();
 				this.updateMist();
@@ -477,7 +477,32 @@ public class Controller implements ActionListener, KeyListener {
 			if (this.getGame().getAlivePlayerNumber() == 1) {
 				this.getGameBoardView5Timer().cancel();
 			}
+		}// end play button in gameboardView7
+		else if (e.getSource().equals(this.getGameBoardView7().getEndPlayButton())) {
+			endPlayOperation();
+		} // home button
+		else if (e.getSource().equals(this.getGameBoardView7().getHomeButton())) {
+			System.out.println("home");
+			this.setGame(null);
+			this.getGameBoardView7().setVisible(false);
+			this.setGameBoardView7(null);
+			this.setSetGameModeView(null);
+			this.getGameStartView().setVisible(true);
+		} // give up button
+		else if (e.getSource().equals(this.getGameBoardView7().getGiveUpButton())) {
+			System.out.println("I Surrender!");
+			// call surrender() method
+			if (!this.getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).isDead()) {
+				this.getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).surrender();
+				this.getGame().setAlivePlayerNumber(this.getGame().getAlivePlayerNumber() - 1);
+				this.getGameBoardView7().updatePlayerDeath(this.getGame().getCurrentPlayerIndex());
+			}
+			// handle the situation that the game is over
+			if (this.getGame().getAlivePlayerNumber() == 1) {
+				this.getGameBoardView7Timer().cancel();
+			}
 		}
+                
 	}
 
 	/**
