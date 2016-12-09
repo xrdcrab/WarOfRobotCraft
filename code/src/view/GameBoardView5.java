@@ -787,8 +787,6 @@ public class GameBoardView5 extends javax.swing.JFrame {
         img.init();
         img.paint(img.image.getGraphics());
         ImageIcon imgIcon = new ImageIcon(img.image);
-//       this.testTurnRobot.setIcon(null);
-//        this.testTurnRobot.setIcon(imgIcon);
     }
     
     
