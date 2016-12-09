@@ -234,6 +234,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
         greenTeam = new javax.swing.JLabel();
         orangeTeam = new javax.swing.JLabel();
         yellowTeam = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1430,6 +1431,10 @@ public class GameBoardView7 extends javax.swing.JFrame {
         getContentPane().add(yellowTeam);
         yellowTeam.setBounds(626, 54, 60, 30);
 
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(60, 380, 50, 20);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1445,6 +1450,9 @@ public class GameBoardView7 extends javax.swing.JFrame {
     public void updateTimerNumber(int number) {
         timerLabel.setText("" + number);
 
+    }
+     public void updateOperationState(String state) {
+        jLabel1.setText(state);
     }
     
     
@@ -1627,6 +1635,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
     private javax.swing.JButton giveUpButton;
     private javax.swing.JLabel greenTeam;
     private javax.swing.JButton homeButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel n1n1p2;
     private javax.swing.JLabel n1n2p3;
     private javax.swing.JLabel n1n3p4;
