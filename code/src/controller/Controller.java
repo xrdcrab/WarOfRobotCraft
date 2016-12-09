@@ -506,12 +506,21 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * this method is to add the listeners for the game board view
+	 * this method is to add the listeners for the game board view 5
 	 */
 	private void addGameBoardView5Listener() {
 		this.getGameBoardView5().getEndPlayButton().addActionListener(this);
 		this.getGameBoardView5().getHomeButton().addActionListener(this);
 		this.getGameBoardView5().getGiveUpButton().addActionListener(this);
+	}
+        
+        /**
+	 * this method is to add the listeners for the game board view 7
+	 */
+	private void addGameBoardView7Listener() {
+		this.getGameBoardView7().getEndPlayButton().addActionListener(this);
+		this.getGameBoardView7().getHomeButton().addActionListener(this);
+		this.getGameBoardView7().getGiveUpButton().addActionListener(this);
 	}
 
 	/**
