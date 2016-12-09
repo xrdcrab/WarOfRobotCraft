@@ -1457,6 +1457,17 @@ public class GameBoardView7 extends javax.swing.JFrame {
         }
     }
     
+        public void updateMist(HashMap<String, Boolean> hashMap) {
+        hashMap.forEach((coordString, isVisible) -> {
+            getHexagonLabel(coordString).setEnabled(isVisible);
+            robotPositionHashMap.forEach((r, c)->{
+                if(c.equals(coordString)){
+                    r.setVisible(isVisible);
+                }
+            });
+        });
+    }
+    
     /**
      * @param args the command line arguments
      */
