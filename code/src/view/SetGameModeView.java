@@ -159,6 +159,8 @@ public class SetGameModeView extends javax.swing.JFrame {
         confirmButton.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         confirmButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/confirm.png"))); // NOI18N
         confirmButton.setToolTipText("");
+        confirmButton.setBorderPainted(false);
+        confirmButton.setContentAreaFilled(false);
         confirmButton.setMaximumSize(new java.awt.Dimension(330, 60));
         confirmButton.setMinimumSize(new java.awt.Dimension(330, 60));
         confirmButton.setPreferredSize(new java.awt.Dimension(332, 60));
