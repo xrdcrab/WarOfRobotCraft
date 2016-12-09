@@ -802,10 +802,7 @@ public class GameBoardView5 extends javax.swing.JFrame {
                     + "Scout"
                     + "Y"
                     + ".png")));
-            
-//            img = ImageIO.read(ClassLoader.getSystemResource(
-//                    "/Resources/ScoutY.png"));
-
+    
         } catch (IOException ex) {
             Logger.getLogger(GameBoardView5.class.getName()).log(Level.SEVERE, null, ex);
         }
