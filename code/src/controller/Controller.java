@@ -631,40 +631,7 @@ public class Controller implements ActionListener, KeyListener {
 			gameBoardView.updateRobotLocation(getGame().getCurrentPlayerIndex(), currentRobot.getType().toString(),
 					currentRobot.getCoord().toString());
 		}
-		// try {
-		// if
-		// (getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-		// != null) {
-		// System.out.println("current robot is " +
-		// getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).toString()
-		// + " of player " + getGame().getCurrentPlayerIndex());
-		// }
-		// try {
-		// getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
-		// .getCurrentRobot().move(
-		// getGame().getGameMap().getMapSize());
-		// } catch (Exception e) { //move out of range exception.
-		// // Do Nothing
-		// }
-		//
-		// } catch (Exception e1) {
-		// e1.printStackTrace();
-		// }
-		// // update the game after the move action
-		// getGame().updateGameMove(
-		// getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()));
-		// Controller.this.updateMist();
-		//
-		// // update UI
-		// gameBoardView.updateOperationState("Move");
-		// Player currentPlayer =
-		// getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex());
-		// Robot currentRobot = currentPlayer.getCurrentRobot();
-		// gameBoardView.updateRobotLocation(
-		// getGame().getCurrentPlayerIndex(),
-		// currentRobot.getType().toString(),
-		// currentRobot.getCoord().toString()
-		// );
+		
 	}
 
 	/**
