@@ -405,6 +405,7 @@ public class Controller implements ActionListener, KeyListener {
 						playerHashMap, 4);
 			} else if (this.getSetGameModeView().getSixPlayersRadioButton().isSelected()) {
 				playerNum = 6;
+                                isGameBoardView7 = true;
 				// red player: index 0
 				this.initializePlayer(this.getSetGameModeView().getPlayerTypeComboBox1(), new Coordinate(-6, 6, 0), 7,
 						playerHashMap, 0);
@@ -833,6 +834,7 @@ public class Controller implements ActionListener, KeyListener {
 	private void initializePlayer(JComboBox comboBox, Coordinate initialCoord, int mapSize,
 			HashMap<Integer, Player> playerHashMap, int playerIndex) {
 		// initialize player in model
+            if(!isGameBoardView7){
 		Player newPlayer;
 		if (comboBox.getSelectedItem().equals("AI")) {
 			newPlayer = new AIPlayer(initialCoord, 5, playerIndex);
@@ -842,21 +844,48 @@ public class Controller implements ActionListener, KeyListener {
 		playerHashMap.put(playerIndex, newPlayer);
 
 		// add robot to view
-		this.getGameBoardView().updateRobotLocation(playerIndex, "Tank", (initialCoord.toString()));
-		this.getGameBoardView().updateRobotLocation(playerIndex, "Scout", (initialCoord.toString()));
-		this.getGameBoardView().updateRobotLocation(playerIndex, "Sniper", (initialCoord.toString()));
+		this.getGameBoardView5().updateRobotLocation(playerIndex, "Tank", (initialCoord.toString()));
+		this.getGameBoardView5().updateRobotLocation(playerIndex, "Scout", (initialCoord.toString()));
+		this.getGameBoardView5().updateRobotLocation(playerIndex, "Sniper", (initialCoord.toString()));
 
 		// set robot's direction
-		this.getGameBoardView().updateRobotTurned(playerIndex, "Tank", playerIndex);
-		this.getGameBoardView().updateRobotTurned(playerIndex, "Scout", playerIndex);
-		this.getGameBoardView().updateRobotTurned(playerIndex, "Sniper", playerIndex);
+		this.getGameBoardView5().updateRobotTurned(playerIndex, "Tank", playerIndex);
+		this.getGameBoardView5().updateRobotTurned(playerIndex, "Scout", playerIndex);
+		this.getGameBoardView5().updateRobotTurned(playerIndex, "Sniper", playerIndex);
 
 		// update current player and robot
-		this.getGameBoardView().updateCurrentPlayer(0);
-		this.getGameBoardView().updateCurrentRobot("Scout");
+		this.getGameBoardView5().updateCurrentPlayer(0);
+		this.getGameBoardView5().updateCurrentRobot("Scout");
 
 		// set the timer
-		resetGameBoardViewTimer(20);
+		resetGameBoardView5Timer(20);
+            }
+            else{
+		Player newPlayer;
+		if (comboBox.getSelectedItem().equals("AI")) {
+			newPlayer = new AIPlayer(initialCoord, 7, playerIndex);
+		} else {
+			newPlayer = new HumanPlayer(initialCoord, 7, playerIndex);
+		}
+		playerHashMap.put(playerIndex, newPlayer);
+
+		// add robot to view
+		this.getGameBoardView7().updateRobotLocation(playerIndex, "Tank", (initialCoord.toString()));
+		this.getGameBoardView7().updateRobotLocation(playerIndex, "Scout", (initialCoord.toString()));
+		this.getGameBoardView7().updateRobotLocation(playerIndex, "Sniper", (initialCoord.toString()));
+
+		// set robot's direction
+		this.getGameBoardView7().updateRobotTurned(playerIndex, "Tank", playerIndex);
+		this.getGameBoardView7().updateRobotTurned(playerIndex, "Scout", playerIndex);
+		this.getGameBoardView7().updateRobotTurned(playerIndex, "Sniper", playerIndex);
+
+		// update current player and robot
+		this.getGameBoardView7().updateCurrentPlayer(0);
+		this.getGameBoardView7().updateCurrentRobot("Scout");
+
+		// set the timer
+		resetGameBoardView7Timer(20);
+            }
 
 	}
 
