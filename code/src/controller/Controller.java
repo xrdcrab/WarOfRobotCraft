@@ -44,13 +44,15 @@ public class Controller implements ActionListener, KeyListener {
 				case KeyEvent.VK_S:
 					// set operation mode to shoot
 					operationMode = OperationMode.shoot;
-					gameBoardView.updateOperationState("Shoot");
+					gameBoardView5.updateOperationState("Shoot");
+                                        gameBoardView7.updateOperationState("Shoot");
 					System.out.println("Pressed S");
 					break;
 				case KeyEvent.VK_T:
 					// set operation mode to turn
 					operationMode = OperationMode.turn;
-					gameBoardView.updateOperationState("Turn");
+					gameBoardView5.updateOperationState("Turn");
+                                        gameBoardView7.updateOperationState("Turn");
 					System.out.println("Pressed T");
 					break;
 				case KeyEvent.VK_0:
@@ -158,6 +160,7 @@ public class Controller implements ActionListener, KeyListener {
 
 	private int shootDistance;
 	private Pair<Coordinate, Integer> shootTarget;
+        private boolean isGameBoardView7; 
 
 	/**
 	 * this constructor is for the game entry point
@@ -171,6 +174,7 @@ public class Controller implements ActionListener, KeyListener {
 		this.gameStartView = new GameStartView();
 		this.getGameStartView().setVisible(true);
 		this.addListener();
+                isGameBoardView7 = false;
 	}
 
 	/**
@@ -431,7 +435,7 @@ public class Controller implements ActionListener, KeyListener {
 				this.game = new Game(playerHashMap, playerNum);
 				this.mapSizeGlobal = game.getGameMap().getMapSize();
 				this.updateMist();
-				this.addGameBoardViewListener();
+				this.addGameBoardView5Listener();
 				this.getGameBoardView5().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
 				for (int i = 0; i < 6; i++) {
@@ -444,7 +448,7 @@ public class Controller implements ActionListener, KeyListener {
                                 this.game = new Game(playerHashMap, playerNum);
 				this.mapSizeGlobal = game.getGameMap().getMapSize();
 				this.updateMist();
-				this.addGameBoardViewListener();
+				this.addGameBoardView7Listener();
 				this.getGameBoardView7().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
 				for (int i = 0; i < 6; i++) {
@@ -555,29 +559,58 @@ public class Controller implements ActionListener, KeyListener {
 	 */
 	private void endPlayOperation() {
 		// if the game is not over
+            if(!isGameBoardView7){
 		if (this.getGame().getAlivePlayerNumber() > 1) {
 			// update the game model
 			getGame().runPlay();
 
 			// update UI here
-			gameBoardView.updateOperationState("End Play");
-			gameBoardView.updateCurrentPlayer(game.getCurrentPlayerIndex());
-			gameBoardView.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+			gameBoardView5.updateOperationState("End Play");
+			gameBoardView5.updateCurrentPlayer(game.getCurrentPlayerIndex());
+			gameBoardView5.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
 					.getCurrentRobot().getType().toString());
 
 			Controller.this.updateMist();
-			resetGameBoardViewTimer(20);
+			resetGameBoardView5Timer(20);
 		} else if (this.getGame().getAlivePlayerNumber() == 1) {
 			// update the game model
 			getGame().runPlay();
 			// show the winner, update UI here
-			gameBoardView.updateCurrentPlayer(game.getWinnerPlayerIndex());
-			gameBoardView.updateOperationState("Player " + game.getWinnerPlayerIndex() + "is the winner!");
-			gameBoardView.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getWinnerPlayerIndex())
+			gameBoardView5.updateCurrentPlayer(game.getWinnerPlayerIndex());
+			gameBoardView5.updateOperationState("Player " + game.getWinnerPlayerIndex() + "is the winner!");
+			gameBoardView5.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getWinnerPlayerIndex())
 					.getCurrentRobot().getType().toString());
 
 			Controller.this.updateWinnerMist();
 		}
+            }
+            else {
+                if (this.getGame().getAlivePlayerNumber() > 1) {
+			// update the game model
+			getGame().runPlay();
+
+			// update UI here
+			gameBoardView7.updateOperationState("End Play");
+			gameBoardView7.updateCurrentPlayer(game.getCurrentPlayerIndex());
+			gameBoardView7.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getCurrentPlayerIndex())
+					.getCurrentRobot().getType().toString());
+
+			Controller.this.updateMist();
+			resetGameBoardView5Timer(20);
+		} else if (this.getGame().getAlivePlayerNumber() == 1) {
+			// update the game model
+			getGame().runPlay();
+			// show the winner, update UI here
+			gameBoardView7.updateCurrentPlayer(game.getWinnerPlayerIndex());
+			gameBoardView7.updateOperationState("Player " + game.getWinnerPlayerIndex() + "is the winner!");
+			gameBoardView7.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getWinnerPlayerIndex())
+					.getCurrentRobot().getType().toString());
+
+			Controller.this.updateWinnerMist();
+		}
+                
+            }
+               
 	}
 
 	/**
