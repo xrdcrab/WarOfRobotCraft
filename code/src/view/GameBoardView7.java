@@ -1467,6 +1467,17 @@ public class GameBoardView7 extends javax.swing.JFrame {
             });
         });
     }
+        
+        private RobotLabel getRobotLabel(int playerPosition, String robotType) {
+        try {
+            Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
+            robotField.setAccessible(true);
+            return (RobotLabel) robotField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
+    }
+        
     
     /**
      * @param args the command line arguments
