@@ -1533,6 +1533,51 @@ public class GameBoardView7 extends javax.swing.JFrame {
         animationSplitX = (expectedBounds.x - originalBounds.x) / 10;
         animationSplitY = (expectedBounds.y - originalBounds.y) / 10;
     }
+    
+    public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
+        RobotLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+        JLabel hexagonLabel = getHexagonLabel(coordString);
+
+        animationTimer.cancel();
+        
+        if (hexagonLabel != null) {
+            if (robotLabel == null) {
+                setRobotLabel(playerPosition, RobotType, new RobotLabel(playerPosition, RobotType));
+                robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+                robotPositionHashMap.put(getRobotLabel(playerPosition, RobotType), coordString);
+                gameBoardPanel7.add(robotLabel);
+                robotLabel.setBounds(hexagonLabel.getBounds());
+            } else {
+                animationTimer = new Timer();
+                currentRobotLabel = robotLabel;
+                originalBounds = robotLabel.getBounds();
+                expectedBounds = hexagonLabel.getBounds();
+                updateAnimationSplitXY();
+                animationTimer.schedule(new TimerTask() {
+                    int timeCount = 0;
+                    
+                    @Override
+                    public void run() {
+                        if(timeCount > 10){
+                            currentRobotLabel.setBounds(expectedBounds);
+                            animationTimer.cancel();
+                        } else {
+                            currentRobotLabel.setBounds(new Rectangle(
+                                    currentRobotLabel.getBounds().x + animationSplitX,
+                                    currentRobotLabel.getBounds().y + animationSplitY,
+                                    currentRobotLabel.getBounds().width,
+                                    currentRobotLabel.getBounds().height
+                                )
+                            );
+                            timeCount++;
+                        }
+                    }
+                }, 0, 10);
+            }
+            
+            robotPositionHashMap.replace(getRobotLabel(playerPosition, RobotType), coordString);
+        }
+    }
          
         
     
