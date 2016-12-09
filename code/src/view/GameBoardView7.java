@@ -1477,6 +1477,13 @@ public class GameBoardView7 extends javax.swing.JFrame {
             return null;
         }
     }
+         public void updateRobotDestruction(int playerPosition, String RobotType) {
+        JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
+        if (robotLabel != null) {
+            gameBoardPanel7.remove(robotLabel);
+            gameBoardPanel7.repaint();
+        }
+    }
         
     
     /**
