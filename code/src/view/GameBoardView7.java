@@ -1438,6 +1438,12 @@ public class GameBoardView7 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonActionPerformed
 
+    
+    public void updateTimerNumber(int number) {
+        timerLabel.setText("" + number);
+
+    }
+    
     /**
      * @param args the command line arguments
      */
