@@ -6,12 +6,56 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Rectangle;
+import java.util.HashMap;
+import java.util.Timer;
 
 /**
  *
  * @author sophiafu
  */
 public class GameBoardView7 extends javax.swing.JFrame {
+    
+    private Timer currentRobotBlinkTimer = new Timer();
+    private Class<?> gameBoardViewClass = GameBoardView7.class;
+    
+    private Timer animationTimer = new Timer();
+    private RobotLabel currentRobotLabel = null;
+    private Rectangle originalBounds = null;
+    private Rectangle expectedBounds = null;
+    private int animationSplitX = 0;
+    private int animationSplitY = 0;
+
+    private int previousPlayerPosition = -1;
+    private int currentPlayerPosition = 0;
+    private String currentRobotType = "Scout";
+    
+    private HashMap<RobotLabel, String> robotPositionHashMap = new HashMap<RobotLabel, String>();
+
+    private RobotLabel player0_scout;
+    private RobotLabel player0_sniper;
+    private RobotLabel player0_tank;
+
+    private RobotLabel player1_scout;
+    private RobotLabel player1_sniper;
+    private RobotLabel player1_tank;
+
+    private RobotLabel player2_scout;
+    private RobotLabel player2_sniper;
+    private RobotLabel player2_tank;
+
+    private RobotLabel player3_scout;
+    private RobotLabel player3_sniper;
+    private RobotLabel player3_tank;
+
+    private RobotLabel player4_scout;
+    private RobotLabel player4_sniper;
+    private RobotLabel player4_tank;
+
+    private RobotLabel player5_scout;
+    private RobotLabel player5_sniper;
+    private RobotLabel player5_tank;
+
 
     /**
      * Creates new form GameBoardView7
