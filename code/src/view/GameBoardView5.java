@@ -773,19 +773,6 @@ public class GameBoardView5 extends javax.swing.JFrame {
         }
     }
 
-    
-    
-//    IN CONSTRUCTION    
-    public void rotateLabel2(){
-        RotateImage img = new RotateImage();
-        img.init();
-        img.paint(img.image.getGraphics());
-        ImageIcon imgIcon = new ImageIcon(img.image);
-    }
-    
-    
-    
-
 
     /**
      * @param args the command line arguments
