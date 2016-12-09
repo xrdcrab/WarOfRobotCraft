@@ -810,13 +810,7 @@ public class GameBoardView5 extends javax.swing.JFrame {
    
         g2d.rotate(1.14);
         ImageIcon imgIcon = new ImageIcon(img);
-//        label.setLocation(55, 55);
         label.setIcon(imgIcon);
-//        AffineTransform trans = new AffineTransform();
-//        
-//        Graphics2D g2d = (Graphics2D)img;
-//       AffineTransform affineTransform = new AffineTransform(); 
-//       affineTransform.rotate(Math.toRadians(45), x, y); 
     }
 
     /**
