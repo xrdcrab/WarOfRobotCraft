@@ -1781,4 +1781,11 @@ public class GameBoardView7 extends javax.swing.JFrame {
     public javax.swing.JButton getEndPlayButton() {
         return endPlayButton;
     }
+    
+    /**
+     * @param endPlayButton the endPlayButton to set
+     */
+    public void setEndPlayButton(javax.swing.JButton endPlayButton) {
+        this.endPlayButton = endPlayButton;
+    }
 }
