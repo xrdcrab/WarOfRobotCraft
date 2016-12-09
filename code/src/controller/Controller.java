@@ -909,7 +909,7 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameBoardView7().updateCurrentRobot("Scout");
 
 		// set the timer
-		resetGameBoardViewTimer(20);
+		resetGameBoardView7Timer(20);
             }
 
 	}
@@ -984,7 +984,12 @@ public class Controller implements ActionListener, KeyListener {
 
 		// Call updateMist method of GameBoardView5 class using new
 		// rangeStringBoolMap as parameter.
-		this.getGameBoardView().updateMist(rangeStringBoolMap);
+                if (!isGameBoardView7){
+                    this.getGameBoardView5().updateMist(rangeStringBoolMap);
+                }
+                else{
+                    this.getGameBoardView7().updateMist(rangeStringBoolMap);
+                }
 	}
 
 	/**
@@ -1011,7 +1016,12 @@ public class Controller implements ActionListener, KeyListener {
 
 		// Call updateMist method of GameBoardView5 class using new
 		// rangeStringBoolMap as parameter.
-		this.getGameBoardView().updateMist(rangeStringBoolMap);
+                if(!isGameBoardView7){
+                        this.getGameBoardView5().updateMist(rangeStringBoolMap);
+                }
+                else{
+                        this.getGameBoardView7().updateMist(rangeStringBoolMap);
+                }
 	}
 
 }
