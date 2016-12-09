@@ -7,8 +7,10 @@ package view;
 
 import java.awt.Color;
 import java.awt.Rectangle;
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Timer;
+import javax.swing.JLabel;
 
 /**
  *
@@ -1442,6 +1444,17 @@ public class GameBoardView7 extends javax.swing.JFrame {
     public void updateTimerNumber(int number) {
         timerLabel.setText("" + number);
 
+    }
+    
+    
+    public JLabel getHexagonLabel(String coordString) {
+        try {
+            Field labelField = gameBoardViewClass.getDeclaredField(coordString);
+            labelField.setAccessible(true);
+            return (JLabel) labelField.get(this);
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException ex) {
+            return null;
+        }
     }
     
     /**
