@@ -785,27 +785,7 @@ public class GameBoardView5 extends javax.swing.JFrame {
     
     
     
-    
-//    IN CONSTRUCTION
-    public void rotateLabel(JLabel label){
-        
-        Image img = null;
-        try {
-                    img  = ImageIO.read((ClassLoader.getSystemResource(
-                    "Resources/"
-                    + "Scout"
-                    + "Y"
-                    + ".png")));
-    
-        } catch (IOException ex) {
-            Logger.getLogger(GameBoardView5.class.getName()).log(Level.SEVERE, null, ex);
-        }
-   Graphics2D g2d = (Graphics2D) img.getGraphics();
-   
-        g2d.rotate(1.14);
-        ImageIcon imgIcon = new ImageIcon(img);
-        label.setIcon(imgIcon);
-    }
+
 
     /**
      * @param args the command line arguments
