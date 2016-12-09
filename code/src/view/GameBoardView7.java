@@ -1510,15 +1510,19 @@ public class GameBoardView7 extends javax.swing.JFrame {
         );
     }
 
-     public void updateRobotTurned(int playerPosition, String robotType, int direction){
+    public void updateRobotTurned(int playerPosition, String robotType, int direction){
         ((RobotLabel)getRobotLabel(playerPosition, robotType)).updateRotation(direction);
     }
      
-     public void updateCurrentPlayer(int playerPosition) {
+    public void updateCurrentPlayer(int playerPosition) {
         previousPlayerPosition = currentPlayerPosition;
         currentPlayerPosition = playerPosition;
     }
 
+    private void updateAnimationSplitXY(){
+        animationSplitX = (expectedBounds.x - originalBounds.x) / 10;
+        animationSplitY = (expectedBounds.y - originalBounds.y) / 10;
+    }
          
         
     
