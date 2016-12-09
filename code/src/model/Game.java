@@ -1,13 +1,7 @@
 package model;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Set;
-import java.util.Timer;
-
-import com.sun.javafx.tk.Toolkit.Task;
-
 import javafx.util.Pair;
 
 /**
