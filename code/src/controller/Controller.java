@@ -377,7 +377,8 @@ public class Controller implements ActionListener, KeyListener {
 			int playerNum = -1;
 			HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
 
-			this.gameBoardView = new GameBoardView5();
+			this.gameBoardView5 = new GameBoardView5();
+                        this.gameBoardView7 = new GameBoardView7();
 
 			if (this.getSetGameModeView().getTwoPlayersRadioButton().isSelected()) {
 				playerNum = 2;
@@ -431,7 +432,7 @@ public class Controller implements ActionListener, KeyListener {
 				this.mapSizeGlobal = game.getGameMap().getMapSize();
 				this.updateMist();
 				this.addGameBoardViewListener();
-				this.getGameBoardView().setVisible(true);
+				this.getGameBoardView5().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
 				for (int i = 0; i < 6; i++) {
 					if (this.getGame().getPlayerHashMap().get(i) != null) {
@@ -439,29 +440,42 @@ public class Controller implements ActionListener, KeyListener {
 					}
 				}
 			}
+                        else if (playerNum == 6){
+                                this.game = new Game(playerHashMap, playerNum);
+				this.mapSizeGlobal = game.getGameMap().getMapSize();
+				this.updateMist();
+				this.addGameBoardViewListener();
+				this.getGameBoardView7().setVisible(true);
+				this.getSetGameModeView().setVisible(false);
+				for (int i = 0; i < 6; i++) {
+					if (this.getGame().getPlayerHashMap().get(i) != null) {
+						System.out.println("player" + i);
+					}
+				}
+                        }
 		} // end play button
-		else if (e.getSource().equals(this.getGameBoardView().getEndPlayButton())) {
+		else if (e.getSource().equals(this.getGameBoardView5().getEndPlayButton())) {
 			endPlayOperation();
 		} // home button
-		else if (e.getSource().equals(this.getGameBoardView().getHomeButton())) {
+		else if (e.getSource().equals(this.getGameBoardView5().getHomeButton())) {
 			System.out.println("home");
 			this.setGame(null);
-			this.getGameBoardView().setVisible(false);
-			this.setGameBoardView(null);
+			this.getGameBoardView5().setVisible(false);
+			this.setGameBoardView5(null);
 			this.setSetGameModeView(null);
 			this.getGameStartView().setVisible(true);
 		} // give up button
-		else if (e.getSource().equals(this.getGameBoardView().getGiveUpButton())) {
+		else if (e.getSource().equals(this.getGameBoardView5().getGiveUpButton())) {
 			System.out.println("I Surrender!");
 			// call surrender() method
 			if (!this.getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).isDead()) {
 				this.getGame().getPlayerHashMap().get(getGame().getCurrentPlayerIndex()).surrender();
 				this.getGame().setAlivePlayerNumber(this.getGame().getAlivePlayerNumber() - 1);
-				this.getGameBoardView().updatePlayerDeath(this.getGame().getCurrentPlayerIndex());
+				this.getGameBoardView5().updatePlayerDeath(this.getGame().getCurrentPlayerIndex());
 			}
 			// handle the situation that the game is over
 			if (this.getGame().getAlivePlayerNumber() == 1) {
-				this.getGameBoardViewTimer().cancel();
+				this.getGameBoardView5Timer().cancel();
 			}
 		}
 	}
