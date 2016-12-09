@@ -148,7 +148,8 @@ public class Controller implements ActionListener, KeyListener {
 	private Game game;
 	private GameStartView gameStartView;
 	private SetGameModeView setGameModeView;
-	private GameBoardView5 gameBoardView;
+	private GameBoardView5 gameBoardView5;
+        private GameBoardView7 gameBoardView7;
 
 	private Timer gameBoardViewTimer = new Timer();
 
@@ -181,7 +182,7 @@ public class Controller implements ActionListener, KeyListener {
 		this.getGameStartView().getGarageButton().addActionListener(this);
 
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(keyEventDispatcher);
-		// this.getSetGameModeView().getConfirmButton().addActionListener(this);
+		
 	}
 
 	/**
