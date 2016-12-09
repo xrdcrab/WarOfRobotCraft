@@ -171,7 +171,6 @@ public class Game {
     /**
      * this method will run the game in the data level,
      * update current robot, current plater and determine the winner.
-     * @throws InterruptedException 
      */
     public void runPlay() {
     	
