@@ -77,7 +77,7 @@ public class RobotLabel extends JLabel {
                 color = "B";
                 break;
             case 5:
-                color = "V";
+                color = "L";
                 break;
         }
         return color;
