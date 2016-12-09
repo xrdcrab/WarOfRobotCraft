@@ -1802,4 +1802,23 @@ public class GameBoardView7 extends javax.swing.JFrame {
     public void setGiveUpButton(javax.swing.JButton giveUpButton) {
         this.giveUpButton = giveUpButton;
     }
+    
+    /**
+     * @return the homeButton
+     */
+    public javax.swing.JButton getHomeButton() {
+        return homeButton;
+    }
+
+    /**
+     *
+     * public static void main(String[] args) {
+     *
+     * }
+     *
+     * @param homeButton the homeButton to set
+     */
+    public void setHomeButton(javax.swing.JButton homeButton) {
+        this.homeButton = homeButton;
+    }
 }
