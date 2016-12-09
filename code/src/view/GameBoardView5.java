@@ -774,12 +774,6 @@ public class GameBoardView5 extends javax.swing.JFrame {
     }
 
     
-//   IN CONSTRUCTION
-    public JLabel getTestTurnRobot(){
-        return null;
-    }
-    
-    
     
 //    IN CONSTRUCTION    
     public void rotateLabel2(){
