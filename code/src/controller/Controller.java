@@ -529,10 +529,10 @@ public class Controller implements ActionListener, KeyListener {
 	 * @param countDwon,
 	 *            the time limit
 	 */
-	private void resetGameBoardViewTimer(int countDwon) {
-		gameBoardViewTimer.cancel();
-		gameBoardViewTimer = new Timer();
-		gameBoardViewTimer.schedule(new TimerTask() {
+	private void resetGameBoardView5Timer(int countDwon) {
+		gameBoardView5Timer.cancel();
+		gameBoardView5Timer = new Timer();
+		gameBoardView5Timer.schedule(new TimerTask() {
 
 			int timerNumber = countDwon;
 
@@ -544,7 +544,7 @@ public class Controller implements ActionListener, KeyListener {
 					timerNumber--;
 				}
 
-				gameBoardView.updateTimerNumber(timerNumber);
+				gameBoardView5.updateTimerNumber(timerNumber);
 			}
 		}, 0, 1000);
 	}
