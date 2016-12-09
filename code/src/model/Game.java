@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.Set;
 import java.util.Timer;
 
+import com.sun.javafx.tk.Toolkit.Task;
+
 import javafx.util.Pair;
 
 /**
@@ -175,17 +177,27 @@ public class Game {
     /**
      * this method will run the game in the data level,
      * update current robot, current plater and determine the winner.
+     * @throws InterruptedException 
      */
     public void runPlay() {
+    	
         // end the current play if more than one player alive
     	if (this.getAlivePlayerNumber() > 1){
     		this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);
 
             // enter the next play
             this.goNextPlayer();
-            Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());
+            Player currentPlayer = getPlayerHashMap().get(this.getCurrentPlayerIndex());            
             currentPlayer.goNextRobot(this.getGameMap().getMapSize());
-
+            
+            if(currentPlayer instanceof AIPlayer){
+            	new Runnable() {
+					public void run() {
+						((AIPlayer)currentPlayer).startPlay();
+					}
+				}.run();      	
+            }
+            
             // it is a new turn
             if (areAllRobotsPlayed(currentPlayer)) {
                 currentPlayer.getScoutRobot().sethasPlayed(false);

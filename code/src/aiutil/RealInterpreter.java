@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Stack;
 
+import controller.Controller;
+import model.AIPlayer;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -22,9 +25,22 @@ public class RealInterpreter {
 //    Only stores the new define operations 
     Dictionary<String, String> declarations = new Hashtable<String, String>();
     Stack<String> stack = new Stack<String>();
-    Dictionary<String, String> variableDeclarations = new Hashtable<String, String>(); 
+    Dictionary<String, String> variableDeclarations = new Hashtable<String, String>();
+    AIPlayer aiPlayer;
+    
+/**
+ * Constructor
+ * @param aiPlayer
+ */
+//    public RealInterpreter(AIPlayer aiPlayer) {
+//		super();
+//		this.aiPlayer = aiPlayer;
+//	}
 
-    private int define(String[] statement, int i) {
+//    public RealInterpreter() {
+//		super();
+//	}
+	private int define(String[] statement, int i) {
         i++;
         String key = statement[i];
         String newStatement = "";
@@ -219,6 +235,20 @@ public class RealInterpreter {
         return i;
     }
 
+//////////////// Robot operations ////////////////
+	private void move() {
+		this.aiPlayer.move(Controller.mapSizeGlobal);		
+	}
+
+	private void shoot() {
+		this.aiPlayer.shoot(Integer.parseInt(this.stack.pop()), Controller.mapSizeGlobal);
+		this.stack.pop();
+	}
+
+	private void turn() {
+		this.aiPlayer.turn(Integer.parseInt(this.stack.pop()));
+	}
+////////////////////////////////////////////////
     private void runStatement(String[] statement) {
         for (int i = 0; i < statement.length; i++) {
             if (statement[i].equals("") || statement[i].equals("\t")) {
@@ -314,6 +344,16 @@ public class RealInterpreter {
                 case "swap":
                     swap();
                     break;
+                case "move":
+                	move();
+                	break;
+                case "turn":
+                	turn();
+                	break;
+                case "shoot":
+                	shoot();
+                	break;
+                    
                 default:
 //                	If no declaration in the dictionary, push onto stack without any action.
                     if (declarations.get(s) == null) {
@@ -327,7 +367,7 @@ public class RealInterpreter {
         }
     }
 
-    private void run() {
+    public void run() {
         LinkedList<String> statements = new LinkedList<String>();
         for (String line : lines) {
             statements.addAll(Arrays.asList(line.split(" ")));
@@ -356,6 +396,36 @@ public class RealInterpreter {
         }
     }
 
+    public void run(AIPlayer aiPlayer) {
+    	this.aiPlayer = aiPlayer;
+        LinkedList<String> statements = new LinkedList<String>();
+        for (String line : aiPlayer.getCurrentRobot().getCode()) {
+            statements.addAll(Arrays.asList(line.split(" ")));
+            Boolean canRun = false;
+            for (int i = statements.size() - 1; i > 0; i--) {
+                switch (statements.get(i)) {
+                    case "":
+                    case "\t":
+                    case "\n":
+                        continue;
+                    case ";":
+                        canRun = true;
+                    default:
+                        break;
+                }
+                break;
+            }
+            if (canRun) {
+                runStatement(statements.toArray(new String[statements.size()]));
+                statements = new LinkedList<String>();
+                for (String str : stack) {
+                System.out.print(str + " ");
+            }
+            }
+            System.out.println("");
+        }
+    }
+    
     private void setStrings() {
 //        lines.add(": determineAdult 18 < if no");
 //        lines.add("else yes");

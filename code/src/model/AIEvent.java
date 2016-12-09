@@ -12,12 +12,27 @@ package model;
 public class AIEvent extends java.util.EventObject {
 
     String action = "";
+    int value; 
 
     public String getActionString() {
         return this.action;
     }
 
-    public void setActionString(String actionString) {
+    /**
+	 * @return the value
+	 */
+	public int getValue() {
+		return value;
+	}
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	public void setActionString(String actionString) {
         this.action = actionString;
     }
 

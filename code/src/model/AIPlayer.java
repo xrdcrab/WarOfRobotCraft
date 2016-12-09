@@ -5,13 +5,18 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Vector;
 
+import aiutil.RealInterpreter;
+import javafx.util.Pair;
+
 public class AIPlayer extends Player {
 
     /**
      * all the enemy robots with coordinate
      */
     private HashMap<Coordinate, LinkedList<Robot>> enemyMap;
-
+    
+    private int mapSize; 	
+	
     /**
      * this constructor is to construct the AI player with all parameters
      *
@@ -85,11 +90,12 @@ public class AIPlayer extends Player {
         vectorListeners.removeElement(ml);
     }
 
-    protected void activateAIEvent(String actionString) {
+    protected void activateAIEvent(String actionString, int value) {
         Vector tempVector = null;
 
         AIEvent e = new AIEvent(this);
         e.setActionString(actionString);
+        e.setValue(value);
 
         synchronized (this) {
             tempVector = (Vector) vectorListeners.clone();
@@ -102,7 +108,49 @@ public class AIPlayer extends Player {
 
     }
 
-    public void activateEvent(){
-        activateAIEvent("");
+    public void activateEvent(String actionString, int value){
+        activateAIEvent(actionString, value);
     }
+    
+    @Override
+    public void move(int mapSize){
+    	super.move(mapSize);
+    	activateEvent("move", -1);  
+    	try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    @Override
+    public void turn(int direction){
+    	super.turn(direction);
+    	activateEvent("turn", direction);    
+    	try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    @Override
+    public Pair<Coordinate, Integer> shoot(int distance, int mapSize){
+		Pair<Coordinate, Integer> pair = super.shoot(distance, mapSize);
+		activateEvent("shoot", distance);
+		return pair;
+	}
+
+    
+    public void startPlay(){
+    	 this.getCurrentRobot().getCode();
+    	 new RealInterpreter().run(this);
+    	
+    	activateEvent("end play", -1);
+    }
+    
+    
+    
 }

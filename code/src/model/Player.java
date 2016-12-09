@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import com.sun.org.apache.bcel.internal.generic.RETURN;
 
+import javafx.util.Pair;
 import model.Robot.RobotType;
 
 /**
@@ -260,4 +261,42 @@ public class Player {
         return "something wrong";
     }
 
+
+	/**
+	 * this method moves a robot of the player one cell forward
+	 * @throws Exception 
+	 */
+	public void move(int mapSize){
+		try{
+			this.getCurrentRobot().move(mapSize);
+		}
+		catch (Exception e){
+			
+		}
+	}
+	
+	/**
+	 * this method makes a robot of the player face a different direction.
+	 * @param direction, the direction to which the robot will face
+	 */
+	public void turn(int direction){
+		this.getCurrentRobot().turn(direction);
+	}
+	
+	/**
+	 * a robot of the player fires to the direction it facing.
+	 * @param Coordinate, the coordinate of the target.
+	 * @return Pair<Coordinate, Integer> contain the shoot target coordinate and the attack point.
+	 */
+	public Pair<Coordinate, Integer> shoot(int distance, int mapSize){
+		Pair<Coordinate, Integer> pair = null;
+		try {
+			pair = this.getCurrentRobot().shoot(distance, mapSize);
+		} 
+		catch (Exception e) {
+			
+		}
+		return pair;
+	}
+    
 }
