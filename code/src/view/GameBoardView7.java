@@ -1821,4 +1821,18 @@ public class GameBoardView7 extends javax.swing.JFrame {
     public void setHomeButton(javax.swing.JButton homeButton) {
         this.homeButton = homeButton;
     }
+    
+    /**
+     * @return the timerLabel
+     */
+    public javax.swing.JLabel getTimerLabel() {
+        return timerLabel;
+    }
+
+    /**
+     * @param timerLabel the timerLabel to set
+     */
+    public void setTimerLabel(javax.swing.JLabel timerLabel) {
+        this.timerLabel = timerLabel;
+    }
 }
