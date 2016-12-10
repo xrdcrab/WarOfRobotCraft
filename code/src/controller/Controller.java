@@ -149,6 +149,7 @@ public class Controller implements ActionListener, KeyListener {
 	private GameStartView gameStartView;
 	private SetGameModeView setGameModeView;
 	private GameBoardView gameBoardView;
+	private GameOverView gameOverView;
 
 	private Timer gameBoardViewTimer = new Timer();
 
@@ -231,6 +232,20 @@ public class Controller implements ActionListener, KeyListener {
 	 */
 	public void setSetGameModeView(SetGameModeView setGameModeView) {
 		this.setGameModeView = setGameModeView;
+	}
+
+	/**
+	 * @return the gameOverView
+	 */
+	public GameOverView getGameOverView() {
+		return gameOverView;
+	}
+
+	/**
+	 * @param gameOverView the gameOverView to set
+	 */
+	public void setGameOverView(GameOverView gameOverView) {
+		this.gameOverView = gameOverView;
 	}
 
 	/**
@@ -500,6 +515,17 @@ public class Controller implements ActionListener, KeyListener {
 				this.getGameBoardViewTimer().cancel();
 			}
 		}
+		// quit game button
+		else if (e.getSource().equals(this.getGameOverView().getQuitButton())) {
+			this.stopGameBoardViewTimer();
+			this.setGame(null);
+			this.getGameBoardView().setVisible(false);
+			this.setGameBoardView(null);
+			this.setSetGameModeView(null);
+			this.getGameStartView().setVisible(true);
+			this.getGameOverView().setVisible(false);
+
+		}
 
 	}
 
@@ -567,8 +593,11 @@ public class Controller implements ActionListener, KeyListener {
 			// update the game model
 			getGame().runPlay();
 			// show the winner, update UI here
+			this.gameOverView = new GameOverView();
+			this.getGameOverView().setVisible(true);
 			gameBoardView.updateCurrentPlayer(game.getWinnerPlayerIndex());
-			gameBoardView.updateOperationState("Player " + game.getWinnerPlayerIndex() + "is the winner!");
+			gameOverView.updateDisplayedInfo("Player " + game.getWinnerPlayerIndex() + "is the winner!");
+			this.getGameOverView().getQuitButton().addActionListener(this);
 			gameBoardView.updateCurrentRobot(game.getPlayerHashMap().get(getGame().getWinnerPlayerIndex())
 					.getCurrentRobot().getType().toString());
 

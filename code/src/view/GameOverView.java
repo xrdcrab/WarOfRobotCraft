@@ -125,4 +125,8 @@ public class GameOverView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton quitButton;
     // End of variables declaration//GEN-END:variables
+	public javax.swing.JButton getQuitButton() {
+		// TODO Auto-generated method stub
+		return quitButton;
+	}
 }
