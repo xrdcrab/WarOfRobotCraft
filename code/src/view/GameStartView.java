@@ -37,6 +37,7 @@ public class GameStartView extends javax.swing.JFrame {
         gameNameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1003, 748));
         setMinimumSize(new java.awt.Dimension(1003, 748));
         setSize(new java.awt.Dimension(1003, 748));
@@ -53,12 +54,11 @@ public class GameStartView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(exitButton);
-        exitButton.setBounds(360, 550, 260, 80);
+        exitButton.setBounds(370, 550, 250, 80);
 
         startButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/start.png"))); // NOI18N
         startButton.setBorderPainted(false);
         startButton.setContentAreaFilled(false);
-        startButton.setOpaque(false);
         startButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/startL.png"))); // NOI18N
         startButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/startL1.png"))); // NOI18N
         startButton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class GameStartView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(garageButton);
-        garageButton.setBounds(370, 450, 250, 70);
+        garageButton.setBounds(370, 450, 250, 80);
 
         gameNameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/gameStartBG.png"))); // NOI18N
         getContentPane().add(gameNameLabel);

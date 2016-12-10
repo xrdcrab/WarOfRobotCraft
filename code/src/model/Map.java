@@ -87,7 +87,7 @@ public class Map {
 	public static void main(String[] args) {
 		Map map = new Map(5);
 		map.initializeMap();
-		System.out.println(map.getCoordinateMap().size());
+		//System.out.println(map.getCoordinateMap().size());
 		//map.updateMist(null);
 	}
 }

@@ -70,8 +70,27 @@ public class Robot {
      * robot view range
      */
     private LinkedList<Coordinate> viewRangeList;
+    
+    /**
+     * 
+     */
+    private String[] code;
 
     /**
+	 * @return the code
+	 */
+	public String[] getCode() {
+		return code;
+	}
+
+	/**
+	 * @param code the code to set
+	 */
+	public void setCode(String[] code) {
+		this.code = code;
+	}
+
+	/**
      * getRange() method this constructor is to create a robot with parameters
      *
      * @param type
@@ -117,6 +136,11 @@ public class Robot {
             default:
                 break;
         }
+        
+        code = new String[2];
+        code[0] = ": play move move ;";
+        code[1] = " play ;";
+//        code[1] = "move ;";
     }
 
     /**
@@ -422,8 +446,8 @@ public class Robot {
         Robot r = new Robot(RobotType.scout, "a", 1, 1, 1, coor, 3, false, false, null);
         r.relativeDirectionToCoordinate(5);
 //        Test for getRing
-        System.out.println(coor.getRing(5));
-        System.out.println(r.relativeDirectionToCoordinate(5));
+//        System.out.println(coor.getRing(5));
+//        System.out.println(r.relativeDirectionToCoordinate(5));
     }
 
 }
