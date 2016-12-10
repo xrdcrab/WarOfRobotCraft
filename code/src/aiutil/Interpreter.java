@@ -252,6 +252,12 @@ public class Interpreter {
 	}
 
 	// Basic operations <<<<<
+	/**
+	 * This is a helper function to help the interpreter to omit the comments of the Forth script. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int omitComments(String[] statement, int i) {
 		if (statement[i].equals("") || statement[i].equals("\t")) {
 			i++;
@@ -266,7 +272,6 @@ public class Interpreter {
 				parenthesesStack.pop();
 			}
 			if (parenthesesStack.isEmpty()) {
-				// i++;
 				break;
 			}
 		}
@@ -288,6 +293,12 @@ public class Interpreter {
 	}
 
 	////////////////////////////////////////////////
+	/**
+	 * This is an important method of the interpreter. It take an array of string, and switch case 
+	 * for each element of the array. If the case is a keyword of the Forth, it execute an operation.  
+	 * If the string is neither defined word nor keyword, it is pushed into the stack. 
+	 * @param statement
+	 */
 	private void runStatement(String[] statement) {
 		for (int i = 0; i < statement.length; i++) {
 			if (statement[i].equals("") || statement[i].equals("\t")) {
