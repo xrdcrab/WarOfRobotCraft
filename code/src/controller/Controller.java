@@ -436,10 +436,7 @@ public class Controller implements ActionListener, KeyListener {
 				this.getGameBoardView().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
 
-				// this.updateMist();
-				for (int i = 0; i < game.getPlayerNumber() * 3; i++) {
-					this.endPlayOperation();
-				}
+				this.updateMist();
 
 				// for ( Coordinate coord:
 				// this.game.getGameMap().getCoordinateMap().keySet() ) {
