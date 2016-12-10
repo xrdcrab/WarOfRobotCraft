@@ -1824,10 +1824,6 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
 
     /**
      *
-     * public static void main(String[] args) {
-     *
-     * }
-     *
      * @param homeButton the homeButton to set
      */
     public void setHomeButton(javax.swing.JButton homeButton) {

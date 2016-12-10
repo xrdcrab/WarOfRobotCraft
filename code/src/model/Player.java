@@ -120,7 +120,6 @@ public class Player {
                 } 
             }   
         }
-
         // add the scout robot view range		
         if (!this.getSniperRobot().isDead()) {
             for (Coordinate coord : this.getSniperRobot().getViewRangeList()) {
