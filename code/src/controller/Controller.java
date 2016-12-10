@@ -444,11 +444,11 @@ public class Controller implements ActionListener, KeyListener {
 					this.endPlayOperation();
 				}
 				
-				for ( Coordinate coord: this.game.getGameMap().getCoordinateMap().keySet() ) {
-					if ( this.game.getGameMap().getCoordinateMap().get(coord) == true ) {
-						System.out.print(coord.toString());
-					}
-				}
+//				for ( Coordinate coord: this.game.getGameMap().getCoordinateMap().keySet() ) {
+//					if ( this.game.getGameMap().getCoordinateMap().get(coord) == true ) {
+//						System.out.print(coord.toString());
+//					}
+//				}
 //				for (int i = 0; i < 6; i++) {
 //					if (this.getGame().getPlayerHashMap().get(i) != null) {
 //						System.out.println("player" + i);
@@ -749,7 +749,7 @@ public class Controller implements ActionListener, KeyListener {
 	private void updateMist() {
 		// Get the current view range list.
 		HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
-		System.out.println(this.getGame().getCurrentPlayerIndex());
+		//System.out.println(this.getGame().getCurrentPlayerIndex());
 		Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
 		
 		// Update the current player's mist range.
@@ -769,8 +769,8 @@ public class Controller implements ActionListener, KeyListener {
 		
 		for ( Coordinate coord: rangeMap.keySet() ) {
 			rangeStringBoolMap.put(coord.toString(), rangeMap.get(coord));
-			if (rangeMap.get(coord) == true )
-			System.out.println(coord.toString());
+//			if (rangeMap.get(coord) == true )
+//			System.out.println(coord.toString());
 		}
 			
 		// Call updateMist method of GameBoardView5 class using new
