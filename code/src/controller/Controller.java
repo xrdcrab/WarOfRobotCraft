@@ -14,6 +14,8 @@ import java.util.TimerTask;
 
 import javax.swing.JComboBox;
 
+import aiutil.AIEvent;
+import aiutil.AIEventListener;
 import javafx.util.Pair;
 import model.*;
 import view.*;
