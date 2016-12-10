@@ -341,13 +341,11 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * 
+	 * this is a help function to determine which game board to use
 	 */
 	private void initialGameWithMode() {
 		if (this.getSetGameModeView().getSixPlayersRadioButton().isSelected()) {
 			this.playerNum = 6;
-			// this.isGameBoardView7 = true;
-			// this.getGame().setPlayerNumber(6);
 			this.gameBoardView = new GameBoardView7();
 		} else {
 			if (this.getSetGameModeView().getThreePlayersRadioButton().isSelected()) {
@@ -383,26 +381,21 @@ public class Controller implements ActionListener, KeyListener {
 		} // confirm button
 		else if (e.getSource().equals(this.getSetGameModeView().getConfirmButton())) {
 
-			// int playerNum = -1;
 			HashMap<Integer, Player> playerHashMap = new HashMap<Integer, Player>();
 
 			// initialize the game with the type of mode input
 			this.initialGameWithMode();
 
-			if (
-			// this.getSetGameModeView().getTwoPlayersRadioButton().isSelected()
-			this.playerNum == 2) {
-				// playerNum = 2;
+			if (this.playerNum == 2) {
+
 				// red player: index 0
 				this.initializePlayer(this.getSetGameModeView().getPlayerTypeComboBox1(), new Coordinate(-4, 4, 0), 5,
 						playerHashMap, 0);
 				// green player: index 3
 				this.initializePlayer(this.getSetGameModeView().getPlayerTypeComboBox4(), new Coordinate(4, -4, 0), 5,
 						playerHashMap, 3);
-			} else if (this.playerNum == 3
-			// this.getSetGameModeView().getThreePlayersRadioButton().isSelected()
-			) {
-				// playerNum = 3;
+			} else if (this.playerNum == 3) {
+
 				// red player: index 0
 				this.initializePlayer(this.getSetGameModeView().getPlayerTypeComboBox1(), new Coordinate(-4, 4, 0), 5,
 						playerHashMap, 0);
@@ -412,11 +405,8 @@ public class Controller implements ActionListener, KeyListener {
 				// blue player: index 4
 				this.initializePlayer(this.getSetGameModeView().getPlayerTypeComboBox5(), new Coordinate(0, -4, 4), 5,
 						playerHashMap, 4);
-			} else if (this.playerNum == 6
-			// this.getSetGameModeView().getSixPlayersRadioButton().isSelected()
-			) {
-				// playerNum = 6;
-				// isGameBoardView7 = true;
+			} else if (this.playerNum == 6) {
+
 				// red player: index 0
 				this.initializePlayer(this.getSetGameModeView().getPlayerTypeComboBox1(), new Coordinate(-6, 6, 0), 7,
 						playerHashMap, 0);
@@ -443,9 +433,7 @@ public class Controller implements ActionListener, KeyListener {
 				}
 			});
 
-			if (this.playerNum != -1
-			// && this.playerNum != 6
-			) {
+			if (this.playerNum != -1) {
 				this.game = new Game(playerHashMap, this.playerNum);
 				this.mapSizeGlobal = game.getGameMap().getMapSize();
 				this.getGame().setCurrentPlayerIndex(0);
@@ -462,33 +450,7 @@ public class Controller implements ActionListener, KeyListener {
 						}
 					}.run();      	
 	            }
-
-				// for ( Coordinate coord:
-				// this.game.getGameMap().getCoordinateMap().keySet() ) {
-				// if ( this.game.getGameMap().getCoordinateMap().get(coord) ==
-				// true ) {
-				// System.out.print(coord.toString());
-				// }
-				// }
-				// for (int i = 0; i < 6; i++) {
-				// if (this.getGame().getPlayerHashMap().get(i) != null) {
-				// System.out.println("player" + i);
-				// }
-				// }
 			}
-			// else if (this.playerNum == 6) {
-			// this.game = new Game(playerHashMap, this.playerNum);
-			// this.mapSizeGlobal = game.getGameMap().getMapSize();
-			// this.updateMist();
-			// this.addGameBoardViewListener();
-			// this.getGameBoardView().setVisible(true);
-			// this.getSetGameModeView().setVisible(false);
-			// for (int i = 0; i < 6; i++) {
-			// if (this.getGame().getPlayerHashMap().get(i) != null) {
-			// System.out.println("player" + i);
-			// }
-			// }
-			// }
 		} // end play button
 		else if (e.getSource().equals(this.getGameBoardView().getEndPlayButton())) {
 			endPlayOperation();
@@ -539,7 +501,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * 
+	 * this method will stop the timer on game board
 	 */
 	private void stopGameBoardViewTimer() {
 		gameBoardViewTimer.cancel();
@@ -796,7 +758,7 @@ public class Controller implements ActionListener, KeyListener {
 	private void updateMist() {
 		// Get the current view range list.
 		HashMap<Coordinate, Boolean> rangeMap = new HashMap<Coordinate, Boolean>();
-		// System.out.println(this.getGame().getCurrentPlayerIndex());
+
 		Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
 
 		// Update the current player's mist range.
@@ -810,14 +772,10 @@ public class Controller implements ActionListener, KeyListener {
 
 		// convert rangeMap into a HashMap of <String, Boolean> pair.
 		HashMap<String, Boolean> rangeStringBoolMap = new HashMap<String, Boolean>();
-		// rangeMap.forEach((coord, isVisible) -> {
-		// rangeStringBoolMap.put(coord.toString(), isVisible);
-		// });
+
 
 		for (Coordinate coord : rangeMap.keySet()) {
 			rangeStringBoolMap.put(coord.toString(), rangeMap.get(coord));
-			// if (rangeMap.get(coord) == true )
-			// System.out.println(coord.toString());
 		}
 
 		// Call updateMist method of GameBoardView5 class using new
