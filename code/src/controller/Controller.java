@@ -671,10 +671,20 @@ public class Controller implements ActionListener, KeyListener {
 			HashMap<Integer, Player> playerHashMap, int playerIndex) {
 		// initialize player in model
 		Player newPlayer;
-		if (comboBox.getSelectedItem().equals("AI")) {
-			newPlayer = new AIPlayer(initialCoord, this.playerNum, playerIndex);
-		} else {
-			newPlayer = new HumanPlayer(initialCoord, this.playerNum, playerIndex);
+		
+		if (this.playerNum == 6) {
+			if (comboBox.getSelectedItem().equals("AI")) {
+				newPlayer = new AIPlayer(initialCoord, 7, playerIndex);
+			} else {
+				newPlayer = new HumanPlayer(initialCoord, 7, playerIndex);
+			}
+		}
+		else {
+			if (comboBox.getSelectedItem().equals("AI")) {
+				newPlayer = new AIPlayer(initialCoord, 5, playerIndex);
+			} else {
+				newPlayer = new HumanPlayer(initialCoord, 5, playerIndex);
+			}
 		}
 		playerHashMap.put(playerIndex, newPlayer);
 
