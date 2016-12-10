@@ -1,18 +1,13 @@
 package warOfRobotCraft;
 
 import controller.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JLabel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-import model.Coordinate;
 import sun.applet.Main;
-import view.GameBoardView5;
 
 /**
  * this is the game system entry point
