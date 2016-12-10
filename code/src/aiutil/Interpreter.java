@@ -126,7 +126,7 @@ public class Interpreter {
 		for (i++; i < statement.length && !statement[i].equals("then"); i++) {
 			falseStatement += statement[i] + " ";
 		}
-//		If the determination is true, execute true statement. 
+		// If the determination is true, execute true statement. 
 		if (Boolean.parseBoolean(stack.pop())) {
 			runStatement(trueStatement.split(" "));
 		} else {
@@ -135,7 +135,13 @@ public class Interpreter {
 
 		return i;
 	}
-
+	
+	/**
+	 * This is a helper function to perform "for" loop, but its still in construction. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int forLoop(String[] statement, int i) {
 		int start;
 		int end;
@@ -144,6 +150,9 @@ public class Interpreter {
 	}
 
 	// Basic operations >>>>>>
+    /**
+     * This is a helper funciton of perform "+" operation of Forth
+     */
 	private void add() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
