@@ -437,6 +437,14 @@ public class Controller implements ActionListener, KeyListener {
 				this.getSetGameModeView().setVisible(false);
 
 				this.updateMist();
+				Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());
+				if(currentPlayer instanceof AIPlayer){
+	            	new Runnable() {
+						public void run() {
+							((AIPlayer)currentPlayer).startPlay();
+						}
+					}.run();      	
+	            }
 
 				// for ( Coordinate coord:
 				// this.game.getGameMap().getCoordinateMap().keySet() ) {
