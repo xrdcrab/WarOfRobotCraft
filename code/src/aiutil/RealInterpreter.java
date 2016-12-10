@@ -46,6 +46,12 @@ public class RealInterpreter {
 		return i;
 	}
 
+	/**
+	 * This is to define a variable name. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int defineVar(String[] statement, int i) {
 		i++;
 		String key = statement[i];
@@ -54,6 +60,12 @@ public class RealInterpreter {
 		return i;
 	}
 
+    /**
+     * This is to assign a value to a variable.
+     * @param statement
+     * @param i
+     * @return
+     */
 	private int setVar(String[] statement, int i) {
 		String key = this.stack.pop();
 		String value = this.stack.pop();
@@ -62,6 +74,12 @@ public class RealInterpreter {
 		return i;
 	}
 
+	/**
+	 * This is to query a variable to take the value of it. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int queryVariable(String[] statement, int i) {
 		String key = this.stack.pop();
 		String value = this.variableDeclarations.get(key);
