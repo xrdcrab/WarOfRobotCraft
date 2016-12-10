@@ -88,12 +88,21 @@ public class RealInterpreter {
 		return i;
 	}
 
+	/**
+	 * This is a helper function to implement "." in Forth. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int popStack(String[] statement, int i) {
 		System.out.println(this.stack.pop());
 		i++;
 		return i;
 	}
 
+	/**
+	 * This is a helper function to implement "random" in Forth 
+	 */
 	private void random() {
 		Random rand = new Random();
 		int value = Integer.parseInt(this.stack.pop());
