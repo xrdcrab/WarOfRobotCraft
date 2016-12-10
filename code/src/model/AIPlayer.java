@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Vector;
 
-import aiutil.RealInterpreter;
+import aiutil.AIEvent;
+import aiutil.AIEventListener;
+import aiutil.Interpreter;
 import javafx.util.Pair;
 
 public class AIPlayer extends Player {
@@ -146,7 +148,7 @@ public class AIPlayer extends Player {
     
     public void startPlay(){
     	 this.getCurrentRobot().getCode();
-    	 new RealInterpreter().run(this);
+    	 new Interpreter().run(this);
     	
     	activateEvent("end play", -1);
     }
