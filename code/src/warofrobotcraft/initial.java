@@ -1,4 +1,4 @@
-package warOfRobotCraft;
+package warofrobotcraft;
 
 import controller.*;
 

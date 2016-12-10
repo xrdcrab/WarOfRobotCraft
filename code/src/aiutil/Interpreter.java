@@ -19,7 +19,7 @@ import model.AIPlayer;
  *
  * @author seanw
  */
-public class RealInterpreter {
+public class Interpreter {
 
 	LinkedList<String> lines = new LinkedList<String>();
 	// Only stores the new define operations
@@ -88,12 +88,21 @@ public class RealInterpreter {
 		return i;
 	}
 
+	/**
+	 * This is a helper function to implement "." in Forth. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int popStack(String[] statement, int i) {
 		System.out.println(this.stack.pop());
 		i++;
 		return i;
 	}
 
+	/**
+	 * This is a helper function to implement "random" in Forth 
+	 */
 	private void random() {
 		Random rand = new Random();
 		int value = Integer.parseInt(this.stack.pop());
@@ -101,15 +110,23 @@ public class RealInterpreter {
 		this.stack.push(String.valueOf(num));
 	}
 
+	/**
+	 * This is a helper function to parse "if" statement in Forth.
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int ifStatement(String[] statement, int i) {
 		String trueStatement = "";
 		String falseStatement = "";
 		for (i++; i < statement.length && !statement[i].equals("else") && !statement[i].equals("then"); i++) {
 			trueStatement += statement[i] + " ";
 		}
+		
 		for (i++; i < statement.length && !statement[i].equals("then"); i++) {
 			falseStatement += statement[i] + " ";
 		}
+		// If the determination is true, execute true statement. 
 		if (Boolean.parseBoolean(stack.pop())) {
 			runStatement(trueStatement.split(" "));
 		} else {
@@ -118,7 +135,13 @@ public class RealInterpreter {
 
 		return i;
 	}
-
+	
+	/**
+	 * This is a helper function to perform "for" loop, but its still in construction. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int forLoop(String[] statement, int i) {
 		int start;
 		int end;
@@ -127,6 +150,9 @@ public class RealInterpreter {
 	}
 
 	// Basic operations >>>>>>
+    /**
+     * This is a helper funciton of perform "+" operation of Forth
+     */
 	private void add() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
@@ -226,6 +252,12 @@ public class RealInterpreter {
 	}
 
 	// Basic operations <<<<<
+	/**
+	 * This is a helper function to help the interpreter to omit the comments of the Forth script. 
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int omitComments(String[] statement, int i) {
 		if (statement[i].equals("") || statement[i].equals("\t")) {
 			i++;
@@ -240,7 +272,6 @@ public class RealInterpreter {
 				parenthesesStack.pop();
 			}
 			if (parenthesesStack.isEmpty()) {
-				// i++;
 				break;
 			}
 		}
@@ -262,6 +293,12 @@ public class RealInterpreter {
 	}
 
 	////////////////////////////////////////////////
+	/**
+	 * This is an important method of the interpreter. It take an array of string, and switch case 
+	 * for each element of the array. If the case is a keyword of the Forth, it execute an operation.  
+	 * If the string is neither defined word nor keyword, it is pushed into the stack. 
+	 * @param statement
+	 */
 	private void runStatement(String[] statement) {
 		for (int i = 0; i < statement.length; i++) {
 			if (statement[i].equals("") || statement[i].equals("\t")) {
@@ -491,7 +528,7 @@ public class RealInterpreter {
 	}
 
 	public static void main(String[] args) {
-		RealInterpreter t = new RealInterpreter();
+		Interpreter t = new Interpreter();
 		t.setStrings();
 		t.run();
 	}
