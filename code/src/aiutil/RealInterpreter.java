@@ -395,7 +395,11 @@ public class RealInterpreter {
             System.out.println("");
         }
     }
-
+/**
+ * This is a public method for running the interpreter by an aiPlayer
+ * @param aiPlayer
+ */
+    
     public void run(AIPlayer aiPlayer) {
     	this.aiPlayer = aiPlayer;
         LinkedList<String> statements = new LinkedList<String>();
