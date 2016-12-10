@@ -446,8 +446,8 @@ public class Robot {
         Robot r = new Robot(RobotType.scout, "a", 1, 1, 1, coor, 3, false, false, null);
         r.relativeDirectionToCoordinate(5);
 //        Test for getRing
-        System.out.println(coor.getRing(5));
-        System.out.println(r.relativeDirectionToCoordinate(5));
+//        System.out.println(coor.getRing(5));
+//        System.out.println(r.relativeDirectionToCoordinate(5));
     }
 
 }
