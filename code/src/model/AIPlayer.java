@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Vector;
 
+import aiutil.AIEvent;
+import aiutil.AIEventListener;
 import aiutil.RealInterpreter;
 import javafx.util.Pair;
 
