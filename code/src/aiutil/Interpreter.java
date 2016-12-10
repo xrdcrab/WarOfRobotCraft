@@ -19,7 +19,7 @@ import model.AIPlayer;
  *
  * @author seanw
  */
-public class RealInterpreter {
+public class Interpreter {
 
 	LinkedList<String> lines = new LinkedList<String>();
 	// Only stores the new define operations
@@ -110,15 +110,23 @@ public class RealInterpreter {
 		this.stack.push(String.valueOf(num));
 	}
 
+	/**
+	 * This is a helper function to parse "if" statement in Forth.
+	 * @param statement
+	 * @param i
+	 * @return
+	 */
 	private int ifStatement(String[] statement, int i) {
 		String trueStatement = "";
 		String falseStatement = "";
 		for (i++; i < statement.length && !statement[i].equals("else") && !statement[i].equals("then"); i++) {
 			trueStatement += statement[i] + " ";
 		}
+		
 		for (i++; i < statement.length && !statement[i].equals("then"); i++) {
 			falseStatement += statement[i] + " ";
 		}
+//		If the determination is true, execute true statement. 
 		if (Boolean.parseBoolean(stack.pop())) {
 			runStatement(trueStatement.split(" "));
 		} else {
@@ -500,7 +508,7 @@ public class RealInterpreter {
 	}
 
 	public static void main(String[] args) {
-		RealInterpreter t = new RealInterpreter();
+		Interpreter t = new Interpreter();
 		t.setStrings();
 		t.run();
 	}
