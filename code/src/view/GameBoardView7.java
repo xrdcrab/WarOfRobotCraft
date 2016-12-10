@@ -17,7 +17,7 @@ import javax.swing.JLabel;
  *
  * @author sophiafu
  */
-public class GameBoardView7 extends javax.swing.JFrame {
+public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
     
     private Timer currentRobotBlinkTimer = new Timer();
     private Class<?> gameBoardViewClass = GameBoardView7.class;
@@ -1847,4 +1847,10 @@ public class GameBoardView7 extends javax.swing.JFrame {
     public void setTimerLabel(javax.swing.JLabel timerLabel) {
         this.timerLabel = timerLabel;
     }
+
+	@Override
+	public void updateRobotDamaged(int playerPosition, String robotType, int attackPoint) {
+		// TODO Auto-generated method stub
+		
+	}
 }

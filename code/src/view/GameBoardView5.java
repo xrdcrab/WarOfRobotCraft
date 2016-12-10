@@ -26,7 +26,7 @@ import javax.swing.JLabel;
 /**
  * this class is to create the view the game board
  */
-public class GameBoardView5 extends javax.swing.JFrame {
+public class GameBoardView5 extends javax.swing.JFrame implements GameBoardView{
 
     /**
      *

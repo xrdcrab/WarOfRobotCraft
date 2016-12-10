@@ -44,6 +44,7 @@ public class Map {
 	 */
 	public void updateMist(Player currentPlayer) {
 		getCoordinateMap().forEach((coord, isVisible) -> {
+			System.out.print(currentPlayer);
                     if(currentPlayer.getViewRangeList().contains(coord)){
 //                        isVisible = false; //Changed 
                         getCoordinateMap().replace(coord, true);
