@@ -92,7 +92,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
         p4n4z0 = new javax.swing.JLabel();
         p5n5z0 = new javax.swing.JLabel();
         p6n6z0 = new javax.swing.JLabel();
-        p6n4n1 = new javax.swing.JLabel();
+        p6n5n1 = new javax.swing.JLabel();
         p5n4n1 = new javax.swing.JLabel();
         p4n3n1 = new javax.swing.JLabel();
         p3n2n1 = new javax.swing.JLabel();
@@ -172,8 +172,8 @@ public class GameBoardView7 extends javax.swing.JFrame {
         p2n4p2 = new javax.swing.JLabel();
         p3n5p2 = new javax.swing.JLabel();
         p4n6p2 = new javax.swing.JLabel();
-        p3n5p3 = new javax.swing.JLabel();
-        p2n4p3 = new javax.swing.JLabel();
+        p3n6p3 = new javax.swing.JLabel();
+        p2n5p3 = new javax.swing.JLabel();
         p1n4p3 = new javax.swing.JLabel();
         z0n3p3 = new javax.swing.JLabel();
         n1n2p3 = new javax.swing.JLabel();
@@ -287,7 +287,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
 
         p6n6z0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        p6n4n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p6n5n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
         p5n4n1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
@@ -447,9 +447,9 @@ public class GameBoardView7 extends javax.swing.JFrame {
 
         p4n6p2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        p3n5p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p3n6p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
-        p2n4p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
+        p2n5p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
         p1n4p3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Hexagon7.png"))); // NOI18N
 
@@ -605,7 +605,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
                             .addComponent(p6n4n2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
-                                .addComponent(p6n4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(p6n5n1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
                                 .addComponent(p6n6z0, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -624,7 +624,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(p2n4p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(p3n5p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(p3n6p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(286, 286, 286)
                         .addComponent(p4n6p2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -705,7 +705,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
                 .addComponent(n3n1p4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(495, 495, 495)
-                .addComponent(p2n4p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n5p3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
                 .addComponent(n2n4p6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -978,7 +978,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
                                     .addComponent(p6n4n2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
-                                        .addComponent(p6n4n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(p6n5n1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                         .addGap(82, 82, 82)
                                         .addComponent(p6n6z0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -998,7 +998,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
                             .addComponent(p2n4p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
-                                .addComponent(p3n5p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(p3n6p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                         .addGap(328, 328, 328)
                         .addComponent(p4n6p2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1085,7 +1085,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
                 .addComponent(n3n1p4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(p2n4p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(p2n5p3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(gameBoardPanel7Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
                 .addComponent(n2n4p6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1710,7 +1710,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
     private javax.swing.JLabel p2n2z0;
     private javax.swing.JLabel p2n3p1;
     private javax.swing.JLabel p2n4p2;
-    private javax.swing.JLabel p2n4p3;
+    private javax.swing.JLabel p2n5p3;
     private javax.swing.JLabel p2n6p4;
     private javax.swing.JLabel p2p1n3;
     private javax.swing.JLabel p2p2n4;
@@ -1722,7 +1722,7 @@ public class GameBoardView7 extends javax.swing.JFrame {
     private javax.swing.JLabel p3n3z0;
     private javax.swing.JLabel p3n4p1;
     private javax.swing.JLabel p3n5p2;
-    private javax.swing.JLabel p3n5p3;
+    private javax.swing.JLabel p3n6p3;
     private javax.swing.JLabel p3p1n4;
     private javax.swing.JLabel p3p2n5;
     private javax.swing.JLabel p3p3n6;
@@ -1747,8 +1747,8 @@ public class GameBoardView7 extends javax.swing.JFrame {
     private javax.swing.JLabel p6n1n5;
     private javax.swing.JLabel p6n2n4;
     private javax.swing.JLabel p6n3n3;
-    private javax.swing.JLabel p6n4n1;
     private javax.swing.JLabel p6n4n2;
+    private javax.swing.JLabel p6n5n1;
     private javax.swing.JLabel p6n6z0;
     private javax.swing.JLabel p6z0n6;
     private javax.swing.JLabel redTeam;
