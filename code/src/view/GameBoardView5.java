@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import java.awt.Color;
@@ -24,13 +19,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
- * this class is to create the view the game board
+ * this class is to create the view the game board for 5 players
  */
 public class GameBoardView5 extends javax.swing.JFrame implements GameBoardView{
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     private Timer currentRobotBlinkTimer = new Timer();
@@ -630,6 +622,59 @@ public class GameBoardView5 extends javax.swing.JFrame implements GameBoardView{
 
     }
 
+    /**
+     * this method is to initialize the robot panel as game started
+     * @param playerNum the number of players
+     */
+    public void initializeRobotPanel (int playerNum) {
+    	this.scoutRed.setVisible(true);
+		this.sniperRed.setVisible(true);
+		this.tankRed.setVisible(true);
+		
+    	if ( playerNum == 2 ) {   		
+    		this.scoutGreen.setVisible(true);
+    		this.sniperGreen.setVisible(true);
+    		this.tankGreen.setVisible(true);
+    		
+    		this.scoutOrange.setVisible(false);
+    		this.sniperOrange.setVisible(false);
+    		this.tankOrange.setVisible(false);
+    		
+    		this.scoutYellow.setVisible(false);
+    		this.sniperYellow.setVisible(false);
+    		this.tankYellow.setVisible(false);
+    		
+    		this.scoutBlue.setVisible(false);
+    		this.sniperBlue.setVisible(false);
+    		this.tankBlue.setVisible(false);
+    		
+    		this.scoutViolet.setVisible(false);
+    		this.sniperViolet.setVisible(false);
+    		this.tankViolet.setVisible(false);
+    	}
+    	else if ( playerNum == 3 ) {
+    		this.scoutGreen.setVisible(false);
+    		this.sniperGreen.setVisible(false);
+    		this.tankGreen.setVisible(false);
+    		
+    		this.scoutOrange.setVisible(false);
+    		this.sniperOrange.setVisible(false);
+    		this.tankOrange.setVisible(false);
+    		
+    		this.scoutYellow.setVisible(true);
+    		this.sniperYellow.setVisible(true);
+    		this.tankYellow.setVisible(true);
+    		
+    		this.scoutBlue.setVisible(true);
+    		this.sniperBlue.setVisible(true);
+    		this.tankBlue.setVisible(true);
+    		
+    		this.scoutViolet.setVisible(false);
+    		this.sniperViolet.setVisible(false);
+    		this.tankViolet.setVisible(false);
+    	}    	
+    }
+    
     public void updateMist(HashMap<String, Boolean> hashMap) {
         hashMap.forEach((coordString, isVisible) -> {
             getHexagonLabel(coordString).setEnabled(isVisible);
@@ -935,11 +980,6 @@ public class GameBoardView5 extends javax.swing.JFrame implements GameBoardView{
     }
 
     /**
-     *
-     * public static void main(String[] args) {
-     *
-     * }
-     *
      * @param homeButton the homeButton to set
      */
     public void setHomeButton(javax.swing.JButton homeButton) {

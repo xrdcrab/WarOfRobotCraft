@@ -26,7 +26,7 @@ public interface GameBoardView {
 	 public javax.swing.JButton getGiveUpButton();
 	 public javax.swing.JButton getHomeButton();
 	 public void setVisible(boolean b);
-
+	 public void initializeRobotPanel(int playerNum);
 	 
 
 }
