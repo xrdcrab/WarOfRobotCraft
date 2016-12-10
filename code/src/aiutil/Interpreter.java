@@ -48,9 +48,9 @@ public class Interpreter {
 
 	/**
 	 * This is to define a variable name. 
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
 	 */
 	private int defineVar(String[] statement, int i) {
 		i++;
@@ -62,9 +62,9 @@ public class Interpreter {
 
     /**
      * This is to assign a value to a variable.
-     * @param statement
-     * @param i
-     * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
      */
 	private int setVar(String[] statement, int i) {
 		String key = this.stack.pop();
@@ -76,9 +76,9 @@ public class Interpreter {
 
 	/**
 	 * This is to query a variable to take the value of it. 
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
 	 */
 	private int queryVariable(String[] statement, int i) {
 		String key = this.stack.pop();
@@ -90,9 +90,9 @@ public class Interpreter {
 
 	/**
 	 * This is a helper function to implement "." in Forth. 
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
 	 */
 	private int popStack(String[] statement, int i) {
 		System.out.println(this.stack.pop());
@@ -112,9 +112,9 @@ public class Interpreter {
 
 	/**
 	 * This is a helper function to parse "if" statement in Forth.
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
 	 */
 	private int ifStatement(String[] statement, int i) {
 		String trueStatement = "";
@@ -138,9 +138,9 @@ public class Interpreter {
 	
 	/**
 	 * This is a helper function to perform "for" loop, but its still in construction. 
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
 	 */
 	private int forLoop(String[] statement, int i) {
 		int start;
@@ -254,9 +254,9 @@ public class Interpreter {
 	// Basic operations <<<<<
 	/**
 	 * This is a helper function to help the interpreter to omit the comments of the Forth script. 
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer i
+	 * @return integer
 	 */
 	private int omitComments(String[] statement, int i) {
 		if (statement[i].equals("") || statement[i].equals("\t")) {
