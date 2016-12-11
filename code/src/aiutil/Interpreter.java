@@ -30,9 +30,9 @@ public class Interpreter {
 
 	/**
 	 * This method is to define a new operation, and put it into the operation dictionary. 
-	 * @param statement
-	 * @param i
-	 * @return
+	 * @param string, the statement
+	 * @param integer, i
+	 * @return integer
 	 */
 	private int define(String[] statement, int i) {
 		i++;
@@ -151,7 +151,7 @@ public class Interpreter {
 
 	// Basic operations >>>>>>
     /**
-     * This is a helper funciton of perform "+" operation of Forth
+     * This is a helper function of perform "+" operation of Forth
      */
 	private void add() {
 		Double a = Double.parseDouble(stack.pop());
@@ -159,91 +159,139 @@ public class Interpreter {
 		stack.push((a + b) + "");
 	}
 
+	/**
+     * This is a helper function of perform "-" operation of Forth
+     */
 	private void minus() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b - a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "*" operation of Forth
+     */
 	private void multiply() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((a * b) + "");
 	}
 
+	/**
+     * This is a helper function of perform "/" operation of Forth
+     */
 	private void divide() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b / a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "%" operation of Forth
+     */
 	private void mod() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b % a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "<" operation of Forth
+     */
 	private void lessThan() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b < a) + "");
 	}
 
+	/**
+     * This is a helper function of perform ">" operation of Forth
+     */
 	private void lessThanOrEqual() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b <= a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "=" operation of Forth
+     */
 	private void equal() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b == a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "!=" operation of Forth
+     */
 	private void notEqual() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b != a) + "");
 	}
 
+	/**
+     * This is a helper function of perform ">=" operation of Forth
+     */
 	private void largerThanOrEqual() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b >= a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "<=" operation of Forth
+     */
 	private void largerThan() {
 		Double a = Double.parseDouble(stack.pop());
 		Double b = Double.parseDouble(stack.pop());
 		stack.push((b > a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "&&" operation of Forth
+     */
 	private void and() {
 		Boolean a = Boolean.parseBoolean(stack.pop());
 		Boolean b = Boolean.parseBoolean(stack.pop());
 		stack.push((b && a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "||" operation of Forth
+     */
 	private void or() {
 		Boolean a = Boolean.parseBoolean(stack.pop());
 		Boolean b = Boolean.parseBoolean(stack.pop());
 		stack.push((b || a) + "");
 	}
 
+	/**
+     * This is a helper function of perform "!" operation of Forth
+     */
 	private void invert() {
 		Boolean a = Boolean.parseBoolean(stack.pop());
 		stack.push(!a + "");
 	}
 
+	/**
+     * This is a helper function of perform duplicate operation of Forth
+     */
 	private void duplicate() {
 		stack.push(stack.peek());
 	}
 
+	/**
+     * This is a helper function of perform drop operation of Forth
+     */
 	private void drop() {
 		stack.pop();
 	}
 
+	/**
+     * This is a helper function of perform sawp operation of Forth
+     */
 	private void swap() {
 		String a = stack.pop();
 		String b = stack.pop();
@@ -279,15 +327,24 @@ public class Interpreter {
 	}
 
 	//////////////// Robot operations ////////////////
+	/**
+     * This is a helper function of perform move operation of robot in forth
+     */
 	private void move() {
 		this.aiPlayer.move(Controller.mapSizeGlobal);
 	}
 
+	/**
+     * This is a helper function of perform shoot operation of robot in forth
+     */
 	private void shoot() {
 		this.aiPlayer.shoot(Integer.parseInt(this.stack.pop()), Controller.mapSizeGlobal);
 		this.stack.pop();
 	}
-
+	
+	/**
+     * This is a helper function of perform turn operation of robot in forth
+     */
 	private void turn() {
 		this.aiPlayer.turn(Integer.parseInt(this.stack.pop()));
 	}
@@ -418,6 +475,9 @@ public class Interpreter {
 		}
 	}
 
+	/**
+	 * this is the run AI robot function
+	 */
 	public void run() {
 		LinkedList<String> statements = new LinkedList<String>();
 		for (String line : lines) {

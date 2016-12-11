@@ -11,9 +11,7 @@ package view;
  */
 public class GameStartView extends javax.swing.JFrame {
 
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	/**
      * Creates new form GameStartView

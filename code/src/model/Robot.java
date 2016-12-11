@@ -72,7 +72,7 @@ public class Robot {
     private LinkedList<Coordinate> viewRangeList;
     
     /**
-     * 
+     * AI code
      */
     private String[] code;
 
@@ -140,7 +140,6 @@ public class Robot {
         code = new String[2];
         code[0] = ": play move move ;";
         code[1] = " play ;";
-//        code[1] = "move ;";
     }
 
     /**
@@ -214,14 +213,14 @@ public class Robot {
     }
 
     /**
-     * @return the coord
+     * @return the coordinate
      */
     public Coordinate getCoord() {
         return coord;
     }
 
     /**
-     * @param coord the coord to set
+     * @param coord the coordinate to set
      */
     public void setCoord(Coordinate coord) {
         this.coord = coord;

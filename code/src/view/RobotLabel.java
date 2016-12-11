@@ -96,6 +96,10 @@ public class RobotLabel extends JLabel {
     }
     
 
+    /**
+     * this method will update robot icon when robot turn
+     * @param direction, the turning direction
+     */
     public void updateRotation(int direction) {
         switch (direction) {
             case 0:

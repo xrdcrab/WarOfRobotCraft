@@ -85,27 +85,51 @@ public class RobotStatusView extends javax.swing.JPanel {
     private javax.swing.JLabel robotTypeLabel;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * this method will update robot name
+     * @param robotName
+     */
     public void updateRobotName(String robotName){
         robotNameLabel.setText(robotName);
     }
     
+    /**
+     * this method will update robot type
+     * @param robotType
+     */
     public void updateRobotType(String robotType){
         robotTypeLabel.setText(robotType);
     }
     
+    /**
+     * this method will update maximum health point
+     * @param maxHealthPoint
+     */
     public void updateHealthPointLimit(int maxHealthPoint){
         healthPointProgressBar.setMaximum(maxHealthPoint);
     }
     
+    /**
+     * this method will update the health point of a robot
+     * @param healthPoint
+     */
     public void updateHealthPoint(int healthPoint){
         healthPointProgressBar.setValue(healthPoint);
         healthPointValueLabel.setText(healthPoint + "");
     }
     
+    /**
+     * this method will update the maximum moving point of a robot 
+     * @param maxMovingPoint
+     */
     public void updateMovingPointLimit(int maxMovingPoint){
         movingPointProgressBar.setMaximum(maxMovingPoint);
     }
     
+    /**
+     * this method will update the moving point of a robot
+     * @param movingPoint
+     */
     public void updateMovingPoint(int movingPoint){
         movingPointProgressBar.setValue(movingPoint);
         movingPointValueLabel.setText(movingPoint + "");

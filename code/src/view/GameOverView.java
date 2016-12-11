@@ -81,6 +81,10 @@ public class GameOverView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_quitButtonActionPerformed
 
+    /**
+     * this method will set the string displayed on the game over window
+     * @param info, the string displayed on the window
+     */
     public void updateDisplayedInfo(String info){
         infoLabel.setText(info);
     }

@@ -82,6 +82,7 @@ public class Player {
 
     /**
      * this method is to set current robot.
+     * @param mapSize, the size of the map. 7 if this game has 6 players, 5 otherwise
      */
     public void goNextRobot(int mapSize) {
         this.scoutRobot.setViewRange(mapSize);

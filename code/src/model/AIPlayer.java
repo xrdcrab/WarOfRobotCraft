@@ -46,6 +46,7 @@ public class AIPlayer extends Player {
      *
      * @param initialCoord the initial coordinate for the player
      * @param mapSize the map size for the game
+     * @return AIPlayer
      */
     public AIPlayer(Coordinate initialCoord, int mapSize, int playerIndex) {
         super(initialCoord, mapSize, playerIndex);
@@ -55,6 +56,7 @@ public class AIPlayer extends Player {
     /**
      * this method is to scan all the coordinates the player can see, then store
      * the enemies' robots in the enemyMap.
+     * @param robotMap, the HashMap store the robot and map
      */
     public void scan(HashMap<Coordinate, LinkedList<Robot>> robotMap) {
         this.enemyMap = new HashMap<Coordinate, LinkedList<Robot>>();
@@ -145,7 +147,9 @@ public class AIPlayer extends Player {
 		return pair;
 	}
 
-    
+    /**
+     * this method can start AI robot's play
+     */
     public void startPlay(){
     	 this.getCurrentRobot().getCode();
     	 new Interpreter().run(this);

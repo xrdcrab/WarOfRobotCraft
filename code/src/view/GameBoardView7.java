@@ -1446,22 +1446,36 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonActionPerformed
 
-    
+    /**
+     * this method will update timer number
+     * @param number, the timer number
+     */
     public void updateTimerNumber(int number) {
         timerLabel.setText("" + number);
 
     }
+    
+    /**
+     * update the operation state displayed on the label
+     * @param state, the operations state
+     */
      public void updateOperationState(String state) {
         jLabel1.setText(state);
     }
     
      /**
-      * 
+      * this method is to initialize the robot panel as game started
+      * @param playerNum the number of players
       */
     public void initializeRobotPanel(int playerNum) {
 
     }
     
+    /**
+     * this method will get the hexagon label
+     * @param coordString, the coordinate
+     * @return the Jlabel
+     */
     public JLabel getHexagonLabel(String coordString) {
         try {
             Field labelField = gameBoardViewClass.getDeclaredField(coordString);
@@ -1472,6 +1486,10 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         }
     }
     
+    /**
+     * this method will update the mist on board when initial the game
+     * @param hashMap, the hash map of all grid
+     */
     public void updateMist(HashMap<String, Boolean> hashMap) {
         hashMap.forEach((coordString, isVisible) -> {
             getHexagonLabel(coordString).setEnabled(isVisible);
@@ -1483,6 +1501,12 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         });
     }
         
+    /**
+     * this method will get the robot type on the grid
+     * @param robotType, the robot type, could be "sniper", "scout" or "tank"
+     * @param playerPosition, the player index
+     * @return robotlabel, the robot on the grid
+     */
     private RobotLabel getRobotLabel(int playerPosition, String robotType) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
@@ -1493,6 +1517,12 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         }
     }
     
+    /**
+     * this method will set the robot label
+     * @param robotType, the robot type, could be "sniper", "scout" or "tank"
+     * @param playerPosition, the player index
+     * @param value
+     */
     private void setRobotLabel(int playerPosition, String robotType, JLabel value) {
         try {
             Field robotField = gameBoardViewClass.getDeclaredField("player" + playerPosition + "_" + robotType.toLowerCase());
@@ -1503,6 +1533,11 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         }
     }
     
+    /**
+     * update robot status when the robot died
+     * @param plaerPosition, the player that the robot belongs to
+     * @param robotType, the robot type, could be "sniper", "scout" or "tank"
+     */
     public void updateRobotDestruction(int playerPosition, String RobotType) {
         JLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         if (robotLabel != null) {
@@ -1511,6 +1546,10 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         }
     }
     
+    /**
+     * update current robot
+     * @param robotType, the robot type, could be "sniper", "scout" or "tank"
+     */
     public void updateCurrentRobot(String robotType) {
         // stop the previous timer
         if(previousPlayerPosition != -1){
@@ -1537,20 +1576,39 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
 
     }
 
+    /**
+     * update robot position when robot turned
+     * @param direction, the robot direction
+     * @param robotType, the robot type, could be "sniper", "scout" or "tank"
+     * @param playerPosition, the player index
+     */
     public void updateRobotTurned(int playerPosition, String robotType, int direction){
         ((RobotLabel)getRobotLabel(playerPosition, robotType)).updateRotation(direction);
     }
      
+    /**
+     * update current player when game continue
+     * @param playerPosition, the player index
+     */
     public void updateCurrentPlayer(int playerPosition) {
         previousPlayerPosition = currentPlayerPosition;
         currentPlayerPosition = playerPosition;
     }
 
+    /**
+     * the animation of robot move
+     */
     private void updateAnimationSplitXY(){
         animationSplitX = (expectedBounds.x - originalBounds.x) / 10;
         animationSplitY = (expectedBounds.y - originalBounds.y) / 10;
     }
     
+    /**
+     * update robot location when game running
+     * @param robotType, the robot type, could be "sniper", "scout" or "tank"
+     * @param playerPosition, the player index
+     * @param coordString, the coordinate of the robot
+     */
     public void updateRobotLocation(int playerPosition, String RobotType, String coordString) {
         RobotLabel robotLabel = getRobotLabel(playerPosition, RobotType.toLowerCase());
         JLabel hexagonLabel = getHexagonLabel(coordString);

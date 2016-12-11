@@ -42,6 +42,7 @@ public class Game {
     
 
 	/**
+	 * the constructor
      * @param playerHashMap
      * @param playerNumber
      * @param currentPlayer
