@@ -202,8 +202,17 @@ public class Game {
             	currentPlayer.getCurrentRobot().resetStatus();
             }
     	}
-    	// end the game if only one player alive
-    	else if (this.getAlivePlayerNumber() == 1){
+    	
+    	this.updateWinerIndex();
+        System.out.println("the winner is: player " + this.getWinnerPlayerIndex());
+		
+    }
+    
+    /**
+     * this method is to update the winner index
+     */
+    private void updateWinerIndex () {
+    	if (this.getAlivePlayerNumber() == 1){
 			// find the winner
     		// case 1: 2 players in the game
     		if (this.getPlayerNumber() == 2) {
@@ -247,8 +256,7 @@ public class Game {
 					this.setWinnerPlayerIndex(5);
 				}
 			}
-            System.out.println("the winner is: player " + this.getWinnerPlayerIndex());
-		}
+    	}
     }
 
     /**
@@ -289,9 +297,14 @@ public class Game {
                     	deadRobotList.add(new Pair<Integer, String>(key,"Tank"));
                     }
                 }
-                this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
-            }
+                
+                if (!traversedPlayer.isDead()) {
+                	this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
+                } 
+            }          
         }
+        System.out.println("alive player number:" + this.getAlivePlayerNumber());
+        this.updateWinerIndex();
         
         if ( !deadRobotList.isEmpty() ) {
         	return deadRobotList;
