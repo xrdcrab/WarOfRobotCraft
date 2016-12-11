@@ -203,7 +203,7 @@ public class Game {
             }
     	}
     	// end the game if only one player alive
-    	else if (this.getAlivePlayerNumber() == 1){
+    	if (this.getAlivePlayerNumber() == 1){
 			// find the winner
     		// case 1: 2 players in the game
     		if (this.getPlayerNumber() == 2) {
@@ -250,6 +250,57 @@ public class Game {
             System.out.println("the winner is: player " + this.getWinnerPlayerIndex());
 		}
     }
+    
+    /**
+     * 
+     */
+    private void updateWinerIndex () {
+    	if (this.getAlivePlayerNumber() == 1){
+			// find the winner
+    		// case 1: 2 players in the game
+    		if (this.getPlayerNumber() == 2) {
+				if ( !this.getPlayerHashMap().get(0).isDead() ) {
+					this.setWinnerPlayerIndex(0);
+				}
+				else {
+					this.setWinnerPlayerIndex(3);
+				}
+			}
+    		// case 2: 3 players in the game
+    		else if (this.getPlayerNumber() == 3) {
+    			if ( !this.getPlayerHashMap().get(0).isDead() ) {
+    				this.setWinnerPlayerIndex(0);
+				}
+				else if ( !this.getPlayerHashMap().get(2).isDead() ){
+					this.setWinnerPlayerIndex(2);
+				}
+				else {
+					this.setWinnerPlayerIndex(4);
+				}
+			}
+    		// case 3: 6 players in the game
+    		else if (this.getPlayerNumber() == 6) {
+    			if ( !this.getPlayerHashMap().get(0).isDead() ) {
+    				this.setWinnerPlayerIndex(0);
+				}
+				else if ( !this.getPlayerHashMap().get(1).isDead() ){
+					this.setWinnerPlayerIndex(1);
+				}
+				else if ( !this.getPlayerHashMap().get(2).isDead() ){
+					this.setWinnerPlayerIndex(2);
+				}
+				else if ( !this.getPlayerHashMap().get(3).isDead() ){
+					this.setWinnerPlayerIndex(3);
+				}
+				else if ( !this.getPlayerHashMap().get(4).isDead() ){
+					this.setWinnerPlayerIndex(4);
+				}
+				else {
+					this.setWinnerPlayerIndex(5);
+				}
+			}
+    	}
+    }
 
     /**
      * this method is to update the game when player perform actions: 
@@ -291,6 +342,8 @@ public class Game {
                 }
                 this.setAlivePlayerNumber(this.getAlivePlayerNumber() + 1);
             }
+            
+            this.updateWinerIndex();
         }
         
         if ( !deadRobotList.isEmpty() ) {

@@ -619,7 +619,16 @@ public class Controller implements ActionListener, KeyListener {
 				if (deadRobotList != null) {
 					for (Pair<Integer, String> deadRobot : deadRobotList) {
 						getGameBoardView().updateRobotDestruction(deadRobot.getKey(), deadRobot.getValue());
-
+						
+						if ( this.getGame().getAlivePlayerNumber() == 1  
+							||	this.getGame().getWinnerPlayerIndex() != 99 
+								) {						
+							this.gameOverView = new GameOverView();
+							this.gameOverView.getQuitButton().addActionListener(this);
+							this.getGameOverView().setVisible(true);
+							System.out.println("the winer index is:" + this.game.getWinnerPlayerIndex());
+							gameOverView.updateDisplayedInfo("Player " + game.getWinnerPlayerIndex() + " is the winner!");
+						}
 						System.out.println("the dead robot is:" + deadRobot.getKey() + deadRobot.getValue().toString());
 					}
 				}
