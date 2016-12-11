@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 /**
- *
- * @author seanw
+ * this class is to create an player status panel on the game board view
+ * from this panel we can clearly know the status for each player
  */
 public class PlayerStatusView extends javax.swing.JPanel {
 

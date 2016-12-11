@@ -440,6 +440,7 @@ public class Controller implements ActionListener, KeyListener {
 				this.addGameBoardViewListener();
 				this.getGameBoardView().setVisible(true);
 				this.getSetGameModeView().setVisible(false);
+				this.gameBoardView.initializeRobotPanel(this.playerNum);
 
 				this.updateMist();
 				Player currentPlayer = this.getGame().getPlayerHashMap().get(this.getGame().getCurrentPlayerIndex());

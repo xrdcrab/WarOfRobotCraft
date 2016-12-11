@@ -1455,6 +1455,12 @@ public class GameBoardView7 extends javax.swing.JFrame implements GameBoardView{
         jLabel1.setText(state);
     }
     
+     /**
+      * 
+      */
+    public void initializeRobotPanel(int playerNum) {
+
+    }
     
     public JLabel getHexagonLabel(String coordString) {
         try {
