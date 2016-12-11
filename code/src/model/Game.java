@@ -173,7 +173,6 @@ public class Game {
      * update current robot, current plater and determine the winner.
      */
     public void runPlay() {
-    	
         // end the current play if more than one player alive
     	if (this.getAlivePlayerNumber() > 1){
     		this.getPlayerHashMap().get(this.getCurrentPlayerIndex()).getCurrentRobot().sethasPlayed(true);

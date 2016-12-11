@@ -539,6 +539,14 @@ public class Controller implements ActionListener, KeyListener {
 	 * if the game is over.
 	 */
 	private void endPlayOperation() {
+		// update alive player number.
+		this.getGame().setAlivePlayerNumber(0);
+		for (Integer key : this.getGame().getPlayerHashMap().keySet()) {
+            Player traversedPlayer = this.getGame().getPlayerHashMap().get(key);
+            if (!traversedPlayer.isDead()) {
+				this.getGame().setAlivePlayerNumber(this.getGame().getAlivePlayerNumber() + 1);
+			}
+    	}
 		// if the game is not over
 		if (this.getGame().getAlivePlayerNumber() > 1) {
 			// update the game model
