@@ -157,7 +157,7 @@ public class Controller implements ActionListener, KeyListener {
 
 	private int shootDistance;
 	private Pair<Coordinate, Integer> shootTarget;
-	// private boolean isGameBoardView7;
+
 	private int playerNum;
 
 	/**
@@ -197,8 +197,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param game
-	 *            the game to set
+	 * @param game, the game to set
 	 */
 	public void setGame(Game game) {
 		this.game = game;
@@ -212,8 +211,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param gameStartView
-	 *            the gameStartView to set
+	 * @param gameStartView, the gameStartView to set
 	 */
 	public void setGameStartView(GameStartView gameStartView) {
 		this.gameStartView = gameStartView;
@@ -227,8 +225,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param setGameModelView
-	 *            the setGameModelView to set
+	 * @param setGameModelView, the setGameModelView to set
 	 */
 	public void setSetGameModeView(SetGameModeView setGameModeView) {
 		this.setGameModeView = setGameModeView;
@@ -274,8 +271,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param gameBoardView
-	 *            the gameBoardView to set
+	 * @param gameBoardView, the gameBoardView to set
 	 */
 	public void setGameBoardView(GameBoardView gameBoardView) {
 		this.gameBoardView = gameBoardView;
@@ -303,8 +299,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param shootDistance
-	 *            the shootDistance to set
+	 * @param shootDistance, the shootDistance to set
 	 */
 	public void setShootDistance(int shootDistance) {
 		this.shootDistance = shootDistance;
@@ -318,8 +313,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param shootTarget
-	 *            the shootTarget to set
+	 * @param shootTarget, the shootTarget to set
 	 */
 	public void setShootTarget(Pair<Coordinate, Integer> shootTarget) {
 		this.shootTarget = shootTarget;
@@ -333,8 +327,7 @@ public class Controller implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * @param gameBoardViewTimer
-	 *            the gameBoardViewTimer to set
+	 * @param gameBoardViewTimer, the gameBoardViewTimer to set
 	 */
 	public void setGameBoardViewTimer(Timer gameBoardViewTimer) {
 		this.gameBoardViewTimer = gameBoardViewTimer;
@@ -349,19 +342,20 @@ public class Controller implements ActionListener, KeyListener {
 			this.gameBoardView = new GameBoardView7();
 		} else {
 			if (this.getSetGameModeView().getThreePlayersRadioButton().isSelected()) {
-				// this.getGame().setPlayerNumber(3);
+
 				this.playerNum = 3;
 			} else {
-				// this.getGame().setPlayerNumber(2);
+
 				this.playerNum = 2;
 			}
 			this.gameBoardView = new GameBoardView5();
 		}
-		// this.updateMist();
+
 	}
 
 	/**
 	 * this method is to define the action for each button when clicked
+	 * @param e, the ActionEvent
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -511,8 +505,7 @@ public class Controller implements ActionListener, KeyListener {
 	/**
 	 * this method will reset the internal timer
 	 * 
-	 * @param countDwon,
-	 *            the time limit
+	 * @param countDwon, the time limit
 	 */
 	private void resetGameBoardViewTimer(int countDwon) {
 		gameBoardViewTimer.cancel();
@@ -599,8 +592,7 @@ public class Controller implements ActionListener, KeyListener {
 	/**
 	 * This method will implement robot shoot and update UI
 	 *
-	 * @param shootDistance
-	 *            the distance that the robot can shoot
+	 * @param shootDistance, the distance that the robot can shoot
 	 */
 	private void shootOperation(int shootDistance) {
 		if (this.getGame().getAlivePlayerNumber() == 1) {

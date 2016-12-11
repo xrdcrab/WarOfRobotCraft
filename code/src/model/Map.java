@@ -42,8 +42,7 @@ public class Map {
 	/**
 	 * this method is to update the mist when robot moved
 	 * 
-	 * @param currentPlayer
-	 *            the current player of the game
+	 * @param currentPlayer, the current player of the game
 	 */
 	public void updateMist(Player currentPlayer) {
 		getCoordinateMap().forEach((coord, isVisible) -> {
@@ -65,8 +64,7 @@ public class Map {
 	}
 
 	/**
-	 * @param mapSize
-	 *            the mapSize to set
+	 * @param mapSize, the mapSize to set
 	 */
 	public void setMapSize(int mapSize) {
 		this.mapSize = mapSize;
@@ -80,8 +78,7 @@ public class Map {
 	}
 
 	/**
-	 * @param coordinateMap
-	 *            the coordinateMap to set
+	 * @param coordinateMap, the coordinateMap to set
 	 */
 	public void setCoordinateMap(HashMap<Coordinate, Boolean> coordinateMap) {
 		this.coordinateMap = coordinateMap;

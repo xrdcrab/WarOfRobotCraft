@@ -32,10 +32,16 @@ public class AIEvent extends java.util.EventObject {
 		this.value = value;
 	}
 
+	/**
+	 * @param actionString the actionString to set
+	 */
 	public void setActionString(String actionString) {
         this.action = actionString;
     }
-
+	
+	/**
+	 * the constructor
+	 */
     public AIEvent(Object source) {
         super(source);
     }
